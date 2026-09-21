@@ -4,6 +4,10 @@ Ngày ghi lại: 2026-09-20. Tách từ quá trình thiết kế và làm protot
 
 Little Valley Cards đã hủy theo quyết định của người dùng sau chơi thử: “không có cảm giác gì”. Tài liệu này lưu cách tổ chức và tương tác với lá bài, không khẳng định UI đã được nghiệm thu hay cơ chế game đã tạo được cảm xúc.
 
+Ý tưởng mới về một world surface cuộn liên tục, square art-first tile và text-on-inspect đang được kiểm chứng trong [Continuous world surface paper test 01](CONTINUOUS-WORLD-SURFACE-PAPER-TEST-01.md). Hướng này chưa thay thế các quyết định bên dưới; nó tách compact world representation khỏi vertical detail card và có thể dẫn tới revision của tài liệu này sau paper-layout.
+
+[Recognition audit 04](CONTINUOUS-WORLD-RECOGNITION-AUDIT-04.md) đã sửa giả thuyết “zero text” thành **art-first, text by decision burden**. Crop state/landmark quen thuộc có thể chỉ hiện art khi nghỉ; item stack, Person, Project và opportunity vẫn cần name/status/preview theo context. Đây là kết quả paper audit, chưa phải usability validation với asset thật.
+
 ## 1. Những nguyên tắc đã thống nhất
 
 Một lá bài cần được nhận ra bằng **hình**, hiểu bằng **tên**, rồi bổ sung ý nghĩa bằng **description**. Cả ba cùng mô tả một sự vật hoặc một tình huống rõ ràng.

@@ -118,7 +118,7 @@ Dù điều khiển đã đạt, các câu hỏi sau vẫn cần câu trả lờ
 - **Nhịp chơi:** công việc có ý nghĩa hay chỉ là lặp thao tác?
 - **Tiến triển:** những thay đổi có khiến người chơi mong chờ ngày tiếp theo không?
 - **Khả năng đọc và hiểu:** có hiểu thế giới, trạng thái, chi phí và hệ quả trên màn hình điện thoại không?
-- **Một run và việc chơi lại:** năm vừa qua có tạo được câu chuyện riêng và lý do muốn thử một cuộc sống khác không?
+- **Tiến triển dài hạn:** save nhiều năm còn mở ra lựa chọn gì, và khi đã mở hết thì những vòng chơi nào vẫn có giá trị tự thân?
 
 Đây là những khía cạnh rút từ bản spec để giữ phạm vi đánh giá rõ ràng. Danh sách này chưa khẳng định đã bao quát hết mong muốn của người dùng.
 
