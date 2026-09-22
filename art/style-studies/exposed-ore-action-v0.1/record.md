@@ -1,7 +1,7 @@
 # Exposed Ore action study v0.1
 
 - Purpose: test whether Mine source art communicates the immediate verb `mine exposed Ore` without relying on the card title
-- Status: `candidate` for Mine action-art direction; not canonical and not runtime approved
+- Status: `approved reference` for Mine action-art direction; not runtime approved
 - Generation date: 2026-09-22
 - Tool/model: built-in `image_gen`; model metadata unavailable
 - Rendering reference: `art/approved/style-references/farm-high-key-style-reference-v0.1.png` — pixel construction, color behavior, edge treatment and material language only
@@ -10,7 +10,7 @@
 - Logical-size review: `processed/exposed-ore-action-preview-160-v0.1.png`
 - Transformation: point-filter resize to exact `512x512` and `160x160`; no crop; volatile PNG metadata stripped
 
-The project-level `STYLE.md` and `little-valley-cards-art-bible-v0.1.md` referenced by the local skill were not present in this repository. This study therefore uses the active approved rendering reference plus existing asset records; it does not claim a direction lock.
+The project-level `STYLE.md` and `little-valley-cards-art-bible-v0.1.md` referenced by the local skill were not present in this repository. This asset therefore uses the active approved rendering reference plus existing asset records. The user explicitly approved the resulting image direction on 2026-09-22.
 
 ## Exploration prompt
 
@@ -24,7 +24,8 @@ Use case: stylized-concept. Asset: Little Valley Cards paper-test square action 
 - Target: the bright continuous vein reads before secondary cave props.
 - Density: timber brace and lantern establish Mine context without competing with the strike.
 - Correction from placeholder: depicts mining in progress, not a hand holding a loose stone.
-- Continuity: pixel clusters, colored outlines and cool-teal cave shadows are compatible with the active reference; final continuity is not approved.
+- Continuity: pixel clusters, colored outlines and cool-teal cave shadows are compatible with the active reference; the user approved this result as a future art reference.
 - User review: approved verb readability on 2026-09-22 — the image communicates “use a pickaxe to mine the ore vein” without text.
 - User correction: because art already carries the verb, the card-bottom CTA is redundant; that line should describe the mechanical consequence/trade-off instead.
-- Direction status: promising candidate only. Must reproduce on a second action (`Safe Descent`) before the Mine action-art direction can be considered stable.
+- Approval decision: explicitly approved by the user on 2026-09-22 as one of the reviewed Mine/Fishing images.
+- Direction status: approved reference. The same first-person action grammar was reproduced on Direct Descent and Search Side Tunnel; runtime use still requires a separate slot/integration decision.

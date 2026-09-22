@@ -1,7 +1,7 @@
 # Eel Sighting opportunity study v0.1
 
 - Purpose: test whether a face-up Fishing opportunity can show why the player already knows the exact Catch before committing a Rod
-- Status: `candidate` for paper-test opportunity art; not canonical and not runtime approved
+- Status: `approved reference` for Eel opportunity art; not runtime approved
 - Generation date: 2026-09-22
 - Tool/model: built-in `image_gen`; model metadata unavailable
 - Composition input: `art/style-studies/landmark-river-fishing-spot-v0.1/processed/river-fishing-spot-512-v0.1.png`
@@ -36,4 +36,5 @@ Edit Image 1 into a Little Valley Cards square paper-test opportunity illustrati
 - No Rod appears, so the art does not imply that the Catch action has already happened.
 - User review: the informed project owner confirmed the final art reads as the intended pre-catch Eel opportunity after questioning how exact fish identity could be known before using the Rod.
 - Evidence limit: this confirms the design correction with an informed reviewer; a fresh participant must still distinguish Eel from a generic dark water trail without explanation.
-- The study is a candidate only; it does not approve the underlying landmark study or establish runtime Fishing art.
+- Approval decision: explicitly approved by the user on 2026-09-22 as one of the reviewed Mine/Fishing images.
+- Direction result: approved reference for a visible pre-catch Fishing opportunity. This does not approve the underlying generic River landmark or establish runtime Fishing art.

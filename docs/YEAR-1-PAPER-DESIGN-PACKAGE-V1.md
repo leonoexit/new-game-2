@@ -141,7 +141,7 @@ Coverage hiện có:
 
 Card geometry hiện hành nằm ở [on-table card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md). Mine/Fishing v0.2 proved square recognition but its internal pilot exposed noun/schema ambiguity. [v0.2.3](../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md) is the current action-art artifact: art carries the verb, tags carry cost/state, and description carries consequence/trade-off. Participant pass remains open.
 
-Tất cả new art có status `study`, không canonical/runtime.
+Bốn ảnh mới trong Mine/Fishing v0.2.3 đã được user duyệt làm `approved reference`; chúng chưa `runtime approved`. Các art còn lại giữ status riêng trong asset record và không được tự động promote.
 
 ## 9. Evidence ledger
 

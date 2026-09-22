@@ -1,7 +1,7 @@
 # Hidden Ore Route action study v0.1
 
 - Purpose: test whether a side-context action communicates `search/reveal Ore` and remains distinct from Direct Descent and Exposed Ore
-- Status: `candidate` for Mine action-art direction; not canonical and not runtime approved
+- Status: `approved reference` for Search Side Tunnel action art; not runtime approved
 - Generation date: 2026-09-22
 - Tool/model: built-in `image_gen`; model metadata unavailable
 - Direction inputs: [Exposed Ore v0.1](../exposed-ore-action-v0.1/record.md) and [Safe/Direct Descent v0.1](../safe-descent-action-v0.1/record.md) — first-person action contact, one focal target, restrained Mine context
@@ -26,4 +26,5 @@ Use case: stylized-concept. Asset: Little Valley Cards paper-test square action 
 - User review: the art clearly communicates searching/revealing Ore and is distinct from both mining and descending.
 - Semantic correction: participant reads this as entering a side space on the same level, not going deeper. `Depth +1` therefore conflicts with the art and must be removed.
 - Fixture role: reuse as `Search Side Tunnel`: pay AP, keep Depth, reveal an Ore source. The follow-up Exposed Ore card handles extraction.
-- Direction result: three action illustrations now support a repeatable first-person action grammar at paper-test level. They remain candidates, not approved references or runtime assets.
+- Approval decision: explicitly approved by the user on 2026-09-22 as one of the reviewed Mine/Fishing images.
+- Direction result: approved reference for the first-person search/reveal treatment. Together, the three Mine images establish a repeatable action-art grammar; none is runtime approved.

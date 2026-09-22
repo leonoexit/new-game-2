@@ -13,6 +13,7 @@ Participant: same informed project owner/designer. Đây là iteration evidence,
 - `Search Side Tunnel` communicates entering a same-level transition context that reveals Ore; it does not increase Depth or grant Ore immediately.
 - `Eel Sighting` represents a living Eel already visible below the rainy River surface. The Rod has not yet been used and no fish item has been acquired.
 - The assembled six-card fixture is acceptable to the informed owner.
+- The owner explicitly approved the four newly reviewed images as art; this is separate from fresh-player interaction comprehension and runtime integration.
 
 ## Resulting grammar
 

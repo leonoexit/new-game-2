@@ -1,7 +1,7 @@
 # Safe Descent action study v0.1
 
 - Purpose: reproduce the candidate Mine action-art direction on a second verb and test whether `descend safely` reads without title text
-- Status: `candidate` for Mine action-art direction; not canonical and not runtime approved
+- Status: `approved reference` for Direct Descent action art; not runtime approved
 - Generation date: 2026-09-22
 - Tool/model: built-in `image_gen`; model metadata unavailable
 - Direction input: [Exposed Ore action candidate v0.1](../exposed-ore-action-v0.1/record.md) — immediate first-person tool/body contact, central target, restrained Mine context
@@ -27,4 +27,5 @@ Use case: stylized-concept. Asset: Little Valley Cards paper-test square action 
 - User review: the image clearly communicates going down and reads as a different action from mining Exposed Ore.
 - Semantic limit: the image does not communicate `safe`, only `descend`. The player also rejected an unexplained `Gain Stone` consequence.
 - Fixture correction: use this art for a plain `Direct Descent`/fast route. Put `Depth +1` in a state tag; do not invent Stone output. The description should state the route trade-off, not repeat the depicted verb.
-- Direction result: the first-person body/tool-to-target action-art treatment reproduced across a second verb. Stable enough for further paper-test studies, but not a canonical/runtime art direction.
+- Approval decision: explicitly approved by the user on 2026-09-22 as one of the reviewed Mine/Fishing images.
+- Direction result: approved reference for the first-person body-to-route action treatment. It controls later Direct Descent studies but is not runtime approved.

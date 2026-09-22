@@ -4,7 +4,7 @@ Ngày dựng: 2026-09-22.
 
 Trạng thái: `[CURRENT CORRECTIVE FIXTURE]`; deterministic render QA và informed owner confirmation complete; fresh-participant check open.
 
-v0.2.3 integrates the three user-reviewed Mine action-art candidates and the information-hierarchy corrections from [internal iteration check 02](../mine-fishing-area-tableau-v0.2.2/pilot-results/internal-iteration-check-02.md). That review is informed design-owner evidence, not a fresh-player pass.
+v0.2.3 integrates three user-approved Mine action-art references and the information-hierarchy corrections from [internal iteration check 02](../mine-fishing-area-tableau-v0.2.2/pilot-results/internal-iteration-check-02.md). That review is informed design-owner evidence, not a fresh-player pass.
 
 ## 1. Current root grammar
 
@@ -32,14 +32,14 @@ The root card is `Eel Sighting`, not an already-owned Eel and not a generic spot
 
 ## 4. Art status
 
-The fixture references four `candidate` paper-test studies:
+The fixture references four user-approved art references:
 
 - [Exposed Ore action v0.1](../../art/style-studies/exposed-ore-action-v0.1/record.md)
 - [Direct Descent action v0.1](../../art/style-studies/safe-descent-action-v0.1/record.md)
 - [Search Side Tunnel action v0.1](../../art/style-studies/hidden-ore-route-action-v0.1/record.md)
 - [Eel Sighting opportunity v0.1](../../art/style-studies/eel-sighting-opportunity-v0.1/record.md)
 
-They are not approved references or runtime assets.
+The images are approved references for continued art production. They are not runtime approved, and their mechanics/content labels remain fixture values.
 
 ## 5. Retest
 
@@ -68,4 +68,4 @@ Includes full/mobile start strips, six `400x400` cards, `160x160` preview, order
 | Assembled-fixture informed owner confirmation | **Pass** |
 | Fresh participant comprehension | **Open** |
 
-All costs/names/rewards remain fixture values. No art or content is canonical/runtime approved.
+All costs/names/rewards remain fixture values. The four reviewed images are approved art references; no image is runtime approved and no fixture content is canonical.
