@@ -4,6 +4,8 @@ Ngày dựng và preflight: 2026-09-22.
 
 Trạng thái: `[FIXTURE]` paper-test kit; không phải UI prototype, topology decision, art canonical hay runtime approval.
 
+> **Area-container correction (2026-09-22):** kit v0.1 chỉ đại diện topology skeleton bằng một token cho mỗi Area. Theo [Area-container model 06](../../docs/CONTINUOUS-WORLD-AREA-CONTAINER-MODEL-06.md), Home/Town/River phải là large Area fields chứa interactive child cards. Không dùng v0.1 để chốt runtime hierarchy hoặc chạy participant pilot cuối; dựng v0.2 area-first trước.
+
 ## 1. Câu hỏi duy nhất
 
 Với cùng landmark, label, Home anchor và bốn task, người mới hiểu/nhớ world hai phía của Home (`M`) tốt đến đâu so với world khám phá chủ yếu theo một hướng (`T`)?

@@ -38,6 +38,7 @@ Nguồn chính:
 - Required common source có deterministic path hoặc substitute.
 - Person thay information/timing/flexibility; không là prerequisite duy nhất.
 - Root world chỉ biểu diễn semantic persistent node/state; graph không ánh xạ 1:1 thành tile.
+- Presentation root tổ chức theo Area field chứa child cards; Area identity không tự là một card/action node.
 - Buy/Sell 0 AP là paper baseline mạnh hơn cho vòng kế; chưa chốt.
 - Storage không cap/không perish là paper baseline sạch; small-cap và perishability không được gộp cùng arm.
 - Catch dùng atomic commitment làm paper baseline; graph vẫn giữ grammar abstract để final cost có thể đổi.
@@ -405,7 +406,8 @@ Shortroot record + Berry/Wild Herb record + River Fish record
 | Graph content | Primary layer |
 | --- | --- |
 | D0/Person announcements | Sticky HUD/day strip |
-| Home/Farm/River/Mine/source/building | Root semantic world |
+| Home/Farm/Town/River/Mountain/Coast | Root Area fields + landmark/anchor identity |
+| Plot/source/building/Market/Fishing Spot/Mine frontier | Interactive child cards trong Area |
 | Current Catch/Person/batch/frontier | Inline context marker |
 | Tool/item/owned Person/selected source | Sticky tray |
 | Project full requirement, collection, Mine history, ability rule | Inspect/overlay |
@@ -418,9 +420,9 @@ Shortroot record + Berry/Wild Herb record + River Fish record
 - Project/opportunity/Processor: L2; critical new branch L3.
 - A/C/E/J/K ability cannot be portrait-only; selected verb/eligibility/limit belongs to UI.
 
-Home-middle is next test fixture, not graph dependency. Switching Home-at-top must not change node/gate economy.
+Home-middle is next topology fixture, not graph dependency. Switching Home-at-top must not change Area contents, child-card rules hoặc node/gate economy.
 
-Square Mine/Town/River/Sea/Project/Fresh–Processed token coverage và counterbalanced protocol đã có trong paper-test kit. Gap còn lại là participant evidence, không còn là asset/protocol gap.
+Square Mine/Town/River/Sea/Project/Fresh–Processed token coverage và counterbalanced protocol đã có trong paper-test kit. Sau area-container correction, v0.1 chỉ pass topology-skeleton preflight; cần v0.2 Area fields trước participant evidence.
 
 ## 16. v0 → v1 changes
 
@@ -489,10 +491,11 @@ Completed in the 2026-09-22 integration pass:
 
 Still required:
 
-1. Run the counterbalanced orientation protocol with at least one new participant, then a broader sample if the protocol survives pilot.
-2. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
-3. Design/test `COL-N` longer collection horizon.
-4. Validate forecast presentation before selecting any storage cap.
+1. Rebuild the orientation boards as Area containers with identical child-card contents across M/T.
+2. Run the counterbalanced orientation protocol with at least one new participant, then a broader sample if the protocol survives pilot.
+3. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
+4. Design/test `COL-N` longer collection horizon.
+5. Validate forecast presentation before selecting any storage cap.
 
 ### 18.3. Chưa được kết luận
 

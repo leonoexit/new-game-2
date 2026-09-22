@@ -33,6 +33,7 @@ Trạng thái: paper-design package v1; không phải implementation spec hoặc
 - Required common source deterministic hoặc có recovery/substitute rõ.
 - Raw/Fresh và Processed giữ category/subtype/origin khác nhau.
 - World camera anchor/selected source không tốn AP trong paper topology fixture.
+- Continuous geography dùng Area field/container; Home/Town/River không mặc định là card ngang hàng với Plot, Person hoặc Project.
 
 ## 3. Minimum shared vocabulary
 
@@ -50,7 +51,7 @@ Names/counts không phải content lock.
 
 ## 4. Structural graph
 
-Canonical paper graph của package là [Year 1 progression dependency graph v1](YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md).
+Canonical paper graph của package là [Year 1 progression dependency graph v1](YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md). Presentation correction mới nhất là [Area-container model 06](CONTINUOUS-WORLD-AREA-CONTAINER-MODEL-06.md).
 
 ```text
 New Day info
@@ -131,6 +132,8 @@ Coverage hiện có:
 
 `[HYPOTHESIS]` Home-middle giữ hub/geography; Home-at-top dạy direction dễ hơn. Desk preflight pass nhưng participant validation chưa chạy, nên topology không được chốt.
 
+`[DIRECTION]` Kit v0.1 chỉ còn đại diện topology skeleton. Trước participant pilot phải dựng v0.2 với large Area fields chứa child cards; nếu không, test sẽ đo Place-card navigation thay vì continuous area-within-world model.
+
 Tất cả new art có status `study`, không canonical/runtime.
 
 ## 9. Evidence ledger
@@ -175,7 +178,8 @@ Tất cả new art có status `study`, không canonical/runtime.
 | Mine/Project triple gate audited | Pass |
 | Concrete Person mini-roster | Pass as fixture |
 | Square orientation asset coverage | Pass |
-| Orientation protocol preflight | Pass |
+| Orientation topology protocol preflight | Pass |
+| Area-container runtime-level representation | Open; v0.2 required |
 | New-player orientation data | Open |
 | Long collection arc `COL-N` | Open |
 | Final AP/calendar/prices/costs | Open by design |
@@ -193,11 +197,12 @@ Tất cả new art có status `study`, không canonical/runtime.
 
 ## 13. Next evidence, in order
 
-1. Run one counterbalanced new-player orientation pilot with the existing kit; revise protocol only from observed ambiguity.
-2. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
-3. Create/test `COL-N` as a longer record horizon without permanent miss.
-4. Test forecast presentation before selecting storage cap.
-5. Only then choose a narrower content/balance lock; implementation still needs explicit user authorization.
+1. Convert orientation kit to v0.2 Area-container boards while keeping child cards/tasks identical between topology arms.
+2. Run one counterbalanced new-player orientation pilot on v0.2; revise protocol only from observed ambiguity.
+3. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
+4. Create/test `COL-N` as a longer record horizon without permanent miss.
+5. Test forecast presentation before selecting storage cap.
+6. Only then choose a narrower content/balance lock; implementation still needs explicit user authorization.
 
 ## 14. Non-conclusions
 
