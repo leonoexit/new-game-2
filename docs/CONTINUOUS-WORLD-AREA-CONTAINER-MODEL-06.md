@@ -2,7 +2,9 @@
 
 Ngày correction: 2026-09-22.
 
-Trạng thái: paper-design correction sau package v1. Tài liệu phân biệt **geography container** với **interactive card**; không phải UI implementation spec hoặc topology final.
+> **SUPERSEDED — 2026-09-22.** Tài liệu này đã hiểu sai ý người dùng khi biến Area thành large box/container. Hướng đúng nằm ở [Explicit surface model 07](CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md): continuous surface tự biểu diễn geography; Area không có card, box hoặc parent node riêng. Giữ file này chỉ làm audit trail, không dùng làm direction hiện hành.
+
+Trạng thái: `SUPERSEDED`; không phải direction hiện hành.
 
 ## 1. Correction
 

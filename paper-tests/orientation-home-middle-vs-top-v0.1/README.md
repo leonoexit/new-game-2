@@ -4,7 +4,7 @@ Ngày dựng và preflight: 2026-09-22.
 
 Trạng thái: `[FIXTURE]` paper-test kit; không phải UI prototype, topology decision, art canonical hay runtime approval.
 
-> **Area-container correction (2026-09-22):** kit v0.1 chỉ đại diện topology skeleton bằng một token cho mỗi Area. Theo [Area-container model 06](../../docs/CONTINUOUS-WORLD-AREA-CONTAINER-MODEL-06.md), Home/Town/River phải là large Area fields chứa interactive child cards. Không dùng v0.1 để chốt runtime hierarchy hoặc chạy participant pilot cuối; dựng v0.2 area-first trước.
+> **Explicit-surface correction (2026-09-22):** kit v0.1 đã dùng sai representation level khi tạo token/card cho Home, Town và River. Theo [Explicit-surface model 07](../../docs/CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md), geography hiện trực tiếp trên continuous background; chỉ House, Supermarket, Fishing Spot, Mine Entrance, Plot, Project và active context có card/entity khi chúng mang gameplay meaning. Không dùng v0.1 cho participant pilot; dựng v0.2 không Area box/Place card trước.
 
 ## 1. Câu hỏi duy nhất
 

@@ -33,7 +33,7 @@ Trạng thái: paper-design package v1; không phải implementation spec hoặc
 - Required common source deterministic hoặc có recovery/substitute rõ.
 - Raw/Fresh và Processed giữ category/subtype/origin khác nhau.
 - World camera anchor/selected source không tốn AP trong paper topology fixture.
-- Continuous geography dùng Area field/container; Home/Town/River không mặc định là card ngang hàng với Plot, Person hoặc Project.
+- Continuous surface tự biểu diễn geography bằng terrain, paths, buildings, water và spatial clusters; Area không có card, box hoặc parent node riêng.
 
 ## 3. Minimum shared vocabulary
 
@@ -51,11 +51,11 @@ Names/counts không phải content lock.
 
 ## 4. Structural graph
 
-Canonical paper graph của package là [Year 1 progression dependency graph v1](YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md). Presentation correction mới nhất là [Area-container model 06](CONTINUOUS-WORLD-AREA-CONTAINER-MODEL-06.md).
+Canonical paper graph của package là [Year 1 progression dependency graph v1](YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md). Presentation correction mới nhất là [Explicit-surface model 07](CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md); Area-container model 06 đã superseded.
 
 ```text
 New Day info
-  ├─ Home/Farm → first output → Sell / Gift / Record / Process / Keep
+  ├─ House/Farm entities → first output → Sell / Gift / Record / Process / Keep
   ├─ Hedgerow/Woodlot → Forage + Project materials
   ├─ Mine → deterministic Depth → source/rule/branch checkpoints
   ├─ River → condition Catch → Fish record/use
@@ -123,16 +123,16 @@ Paper kit: [orientation-home-middle-vs-top v0.1](../paper-tests/orientation-home
 
 Coverage hiện có:
 
-- square Mine Entrance, Town, River spot, Coast/Sea;
+- square Mine Entrance, River spot, Coast/Sea và town-square environmental study;
 - Water Trough, Harvest Bench, Upper-Grove Footbridge;
 - Fresh/Processed Crop, Fish, Herb pairs;
-- Home/Farm/Grove/Field supporting study tokens;
+- House/Farm/Grove/Field supporting studies; Home/Town Place tokens chỉ còn giá trị historical/topology-skeleton;
 - sticky Home anchor, directional/opening cues, carried-source area;
 - four-task script, counterbalance và log fields.
 
 `[HYPOTHESIS]` Home-middle giữ hub/geography; Home-at-top dạy direction dễ hơn. Desk preflight pass nhưng participant validation chưa chạy, nên topology không được chốt.
 
-`[DIRECTION]` Kit v0.1 chỉ còn đại diện topology skeleton. Trước participant pilot phải dựng v0.2 với large Area fields chứa child cards; nếu không, test sẽ đo Place-card navigation thay vì continuous area-within-world model.
+`[DIRECTION]` Kit v0.1 chỉ còn đại diện topology skeleton. Trước participant pilot phải dựng v0.2 với House, Supermarket, Fishing Spot, Mine Entrance, Plot và Project đặt trực tiếp trên một continuous background; không dùng Area box hoặc Place card.
 
 Tất cả new art có status `study`, không canonical/runtime.
 
@@ -179,7 +179,7 @@ Tất cả new art có status `study`, không canonical/runtime.
 | Concrete Person mini-roster | Pass as fixture |
 | Square orientation asset coverage | Pass |
 | Orientation topology protocol preflight | Pass |
-| Area-container runtime-level representation | Open; v0.2 required |
+| Explicit-surface entity representation | Open; v0.2 required |
 | New-player orientation data | Open |
 | Long collection arc `COL-N` | Open |
 | Final AP/calendar/prices/costs | Open by design |
@@ -197,7 +197,7 @@ Tất cả new art có status `study`, không canonical/runtime.
 
 ## 13. Next evidence, in order
 
-1. Convert orientation kit to v0.2 Area-container boards while keeping child cards/tasks identical between topology arms.
+1. Convert orientation kit to v0.2 explicit-surface boards: no Area boxes/Place cards; keep exact entity set/tasks identical between topology arms.
 2. Run one counterbalanced new-player orientation pilot on v0.2; revise protocol only from observed ambiguity.
 3. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
 4. Create/test `COL-N` as a longer record horizon without permanent miss.
