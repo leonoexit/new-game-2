@@ -119,20 +119,21 @@ Mini-roster có economy tension thật nhưng không gate route. E/J chưa thêm
 
 ## 8. World/orientation package
 
-Paper kit: [orientation-home-middle-vs-top v0.1](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md).
+Current paper kit: [orientation explicit-surface v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md). [v0.1](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md) remains historical topology-skeleton evidence only.
 
 Coverage hiện có:
 
-- square Mine Entrance, River spot, Coast/Sea và town-square environmental study;
+- square House, Farm Plot, Supermarket, Mine Entrance, Fishing Spot và supporting environmental studies;
 - Water Trough, Harvest Bench, Upper-Grove Footbridge;
 - Fresh/Processed Crop, Fish, Herb pairs;
-- House/Farm/Grove/Field supporting studies; Home/Town Place tokens chỉ còn giá trị historical/topology-skeleton;
-- sticky Home anchor, directional/opening cues, carried-source area;
+- continuous M/T backgrounds with geography drawn directly and no Area/Place cards;
+- House/Farm supporting studies; Home/Town Place tokens chỉ còn giá trị historical/topology-skeleton;
+- sticky House anchor, opening cue, carried-source area;
 - four-task script, counterbalance và log fields.
 
 `[HYPOTHESIS]` Home-middle giữ hub/geography; Home-at-top dạy direction dễ hơn. Desk preflight pass nhưng participant validation chưa chạy, nên topology không được chốt.
 
-`[DIRECTION]` Kit v0.1 chỉ còn đại diện topology skeleton. Trước participant pilot phải dựng v0.2 với House, Supermarket, Fishing Spot, Mine Entrance, Plot và Project đặt trực tiếp trên một continuous background; không dùng Area box hoặc Place card.
+`[DIRECTION]` Kit v0.2 đã đặt cùng chín entity trực tiếp trên continuous background ở cả hai arm, không dùng Area box hoặc Place card. Bước kế tiếp là participant pilot; desk preflight không chốt topology.
 
 Tất cả new art có status `study`, không canonical/runtime.
 
@@ -179,7 +180,7 @@ Tất cả new art có status `study`, không canonical/runtime.
 | Concrete Person mini-roster | Pass as fixture |
 | Square orientation asset coverage | Pass |
 | Orientation topology protocol preflight | Pass |
-| Explicit-surface entity representation | Open; v0.2 required |
+| Explicit-surface entity representation | Pass as v0.2 fixture |
 | New-player orientation data | Open |
 | Long collection arc `COL-N` | Open |
 | Final AP/calendar/prices/costs | Open by design |
@@ -197,12 +198,11 @@ Tất cả new art có status `study`, không canonical/runtime.
 
 ## 13. Next evidence, in order
 
-1. Convert orientation kit to v0.2 explicit-surface boards: no Area boxes/Place cards; keep exact entity set/tasks identical between topology arms.
-2. Run one counterbalanced new-player orientation pilot on v0.2; revise protocol only from observed ambiguity.
-3. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
-4. Create/test `COL-N` as a longer record horizon without permanent miss.
-5. Test forecast presentation before selecting storage cap.
-6. Only then choose a narrower content/balance lock; implementation still needs explicit user authorization.
+1. Run one counterbalanced new-player orientation pilot on v0.2; revise protocol only from observed ambiguity.
+2. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
+3. Create/test `COL-N` as a longer record horizon without permanent miss.
+4. Test forecast presentation before selecting storage cap.
+5. Only then choose a narrower content/balance lock; implementation still needs explicit user authorization.
 
 ## 14. Non-conclusions
 

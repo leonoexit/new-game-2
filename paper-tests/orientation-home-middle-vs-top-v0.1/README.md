@@ -4,7 +4,7 @@ Ngày dựng và preflight: 2026-09-22.
 
 Trạng thái: `[FIXTURE]` paper-test kit; không phải UI prototype, topology decision, art canonical hay runtime approval.
 
-> **Explicit-surface correction (2026-09-22):** kit v0.1 đã dùng sai representation level khi tạo token/card cho Home, Town và River. Theo [Explicit-surface model 07](../../docs/CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md), geography hiện trực tiếp trên continuous background; chỉ House, Supermarket, Fishing Spot, Mine Entrance, Plot, Project và active context có card/entity khi chúng mang gameplay meaning. Không dùng v0.1 cho participant pilot; dựng v0.2 không Area box/Place card trước.
+> **Explicit-surface correction (2026-09-22):** kit v0.1 đã dùng sai representation level khi tạo token/card cho Home, Town và River. Theo [Explicit-surface model 07](../../docs/CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md), geography hiện trực tiếp trên continuous background; chỉ House, Supermarket, Fishing Spot, Mine Entrance, Plot, Project và active context có card/entity khi chúng mang gameplay meaning. Không dùng v0.1 cho participant pilot; dùng [explicit-surface kit v0.2](../orientation-explicit-surface-v0.2/README.md).
 
 ## 1. Câu hỏi duy nhất
 

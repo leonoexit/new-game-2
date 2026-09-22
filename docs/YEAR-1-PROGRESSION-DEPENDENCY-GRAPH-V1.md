@@ -16,7 +16,8 @@ Nguồn chính:
 - [Fishing resolution sensitivity 02](FISHING-RESOLUTION-SENSITIVITY-02.md)
 - [Mine/Project triple-gate audit 01](MINE-PROJECT-TRIPLE-GATE-AUDIT-01.md)
 - [Person mini-roster fixture 01](PERSON-MINI-ROSTER-FIXTURE-01.md)
-- [Orientation paper-test kit v0.1](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md)
+- [Orientation explicit-surface paper-test kit v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md)
+- [Orientation paper-test kit v0.1 — historical topology skeleton](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md)
 
 ## 1. Phân loại trạng thái
 
@@ -414,7 +415,7 @@ Shortroot record + Berry/Wild Herb record + River Fish record
 
 ### 15.1. [HYPOTHESIS] Label policy
 
-- Known Home/River/basic crop state: L0 after onboarding.
+- Known geography (river/coast), House and basic crop state: L0 after onboarding.
 - Item: L1; exact name on focus/selection.
 - Known Person: L1 + Heart/status; new Person L3.
 - Project/opportunity/Processor: L2; critical new branch L3.
@@ -422,7 +423,7 @@ Shortroot record + Berry/Wild Herb record + River Fish record
 
 Home-middle is next topology fixture, not graph dependency. `Home` ở đây là shorthand cho house/farm cluster coordinates, không phải Home Area card. Switching Home-at-top must not change entity rules hoặc node/gate economy.
 
-Square landmark/Project/Fresh–Processed art coverage và counterbalanced protocol đã có trong paper-test kit. Sau explicit-surface correction, v0.1 chỉ là historical topology skeleton vì dùng Place tokens; cần v0.2 với exact entities embedded trực tiếp trên continuous background trước participant evidence.
+Square entity/Project/Fresh–Processed art coverage và counterbalanced protocol đã có trong [v0.2 paper-test kit](../paper-tests/orientation-explicit-surface-v0.2/README.md). v0.1 chỉ là historical topology skeleton vì dùng Place tokens; v0.2 embeds cùng chín exact entities trực tiếp trên continuous background. Participant evidence vẫn chưa có.
 
 ## 16. v0 → v1 changes
 
@@ -491,11 +492,10 @@ Completed in the 2026-09-22 integration pass:
 
 Still required:
 
-1. Rebuild the orientation boards as continuous explicit surfaces with no Area containers/Place cards and an identical entity set across M/T.
-2. Run the counterbalanced orientation protocol with at least one new participant, then a broader sample if the protocol survives pilot.
-3. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
-4. Design/test `COL-N` longer collection horizon.
-5. Validate forecast presentation before selecting any storage cap.
+1. Run the counterbalanced v0.2 orientation protocol with at least one new participant, then a broader sample if the protocol survives pilot.
+2. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
+3. Design/test `COL-N` longer collection horizon.
+4. Validate forecast presentation before selecting any storage cap.
 
 ### 18.3. Chưa được kết luận
 

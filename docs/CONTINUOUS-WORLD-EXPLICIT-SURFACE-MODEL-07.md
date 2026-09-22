@@ -197,10 +197,12 @@ Graph node phải là state/action dependency, không phải địa danh present
 
 [Orientation kit v0.1](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md) dùng token `Town`, `Home`, `River` như Place cards. Nó chỉ còn giá trị lịch sử cho topology skeleton/art identity; không đại diện direction hiện hành.
 
-### 10.2. [DIRECTION] v0.2 cần test explicit surface
+### 10.2. [FIXTURE] v0.2 test explicit surface
+
+[Orientation explicit-surface kit v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md) đã hiện thực representation correction để chạy pilot:
 
 - Một continuous background dài, không Area box.
-- House, Plot, Supermarket, Store, Fishing Spot, Mine Entrance và Project đặt trực tiếp trên surface.
+- House, Plot, Supermarket, Fishing Spot, Mine Entrance và Project đặt trực tiếp trên surface.
 - Geography art/clustering tạo cảm giác home/town/river mà không card đại diện.
 - Task gọi exact entity: `Supermarket`, `Fishing Spot`, `Mine Entrance`, `House`.
 - So Home-middle vs Home-at-top bằng relative placement của entity clusters, không bằng sắp các Place cards.
@@ -213,7 +215,7 @@ Graph node phải là state/action dependency, không phải địa danh present
 2. `[DIRECTION]` Gameplay entities/cards nằm trực tiếp trên continuous world.
 3. `[HYPOTHESIS]` Town không cần tồn tại như gameplay entity; có thể chỉ là environmental cluster hoặc label tùy recognition.
 4. `[DIRECTION]` Home chỉ có entity card nếu House có action/state; không có Home Area card.
-5. `[DIRECTION]` Orientation v0.2 phải bỏ Area boxes và Place-card tokens.
+5. `[FIXTURE]` Orientation v0.2 đã bỏ Area boxes và Place-card tokens; participant validation chưa chạy.
 
 ## 12. Chưa kết luận
 
