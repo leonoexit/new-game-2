@@ -333,7 +333,7 @@ Collection record không consume nên không trực tiếp cạnh tranh item sau
 4. **+2G Processing vẫn quá dễ thành default ở A7 nếu output không có raw target.** Exact compatibility sửa đúng nguyên nhân hơn tăng Load cost.
 5. **Raw Herb target chứng minh Processor idle có thể là lựa chọn đúng.** Crop/Fish cần tương đương: Fresh request, condition record hoặc liquidity.
 6. **COL-1 reward có value vector thật:** 3G avoided cost + earlier access + distinct capability. Không quy đổi toàn bộ thành Gold.
-7. **Tallbean/Dewleaf choice chỉ hợp lệ khi target horizon được preview.** Nếu Herb context không có, Tallbean dominate theo price fixture.
+7. **Tallbean/Dewleaf choice chỉ hợp lệ khi actual Herb context/compatibility đã tồn tại và có thể inspect.** Không tạo future-target agenda để cứu choice; nếu Herb context không có, Tallbean dominate theo price fixture.
 8. **Keep đang yếu.** Cần forecast/request/storage sensitivity sau này; không giả định perishability để ép bán.
 
 ### 9.2. [DIRECTION] Handoff sang Person roster kernel audit

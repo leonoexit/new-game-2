@@ -55,6 +55,7 @@ Internal informed pilot trên v0.2 đã dừng ở Task B vì player phải dị
 - Mine Depth/checkpoint là separate status duy nhất trong bốn Area;
 - Weather/Season thuộc shallow always-visible global rail ngoài play tableau; Season + Today + Tomorrow + AP được đọc ngay và không bị hiểu như target;
 - future card art có thể thay Season/Weather identity field nhưng không đổi global scope hoặc square-target contract;
+- global `Tomorrow Targets` treatment bị informed owner reject vì biến kế hoạch tự quyết thành system agenda; không thêm to-do surface để cứu storage/Keep;
 - palette fields hỗ trợ Area identity; generated abstraction backgrounds là future art direction;
 - three-target Home đọc như expansion capacity, không phải missing card.
 

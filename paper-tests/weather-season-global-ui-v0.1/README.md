@@ -11,6 +11,7 @@ Package này tiếp tục từ [orientation v0.3.4](../orientation-area-tableau-
 - Weather là global state; không đặt `RAIN` lại trong Eel Sighting hoặc River header.
 - Mọi square trên Area tableau là interaction/commitment target.
 - Global chrome không thuộc Area tableau và không dùng AP-cost badge, stack slot hoặc consequence line của on-table card.
+- Rail mô tả world/resource state; không tổng hợp những việc player có thể tự chọn thành `Tomorrow Targets`, agenda hoặc recommended action.
 - Scroll/focus/inspect vẫn là `0 AP`; state ngoài viewport không reset.
 - Season length, final AP/day, Weather cadence và forecast depth vẫn chưa chốt. `DAY 5`, `SPRING`, `RAIN`, `SUNNY`, `WINDY`, `6 AP` chỉ là fixture values.
 
@@ -61,6 +62,7 @@ Treatment nào cho phép owner tìm `Season`, Weather hôm nay, forecast và AP 
 - always-visible `Tomorrow` là đủ; không cần disclosure/expanded forecast trong default chrome;
 - B và C được giữ làm comparator/audit trail, không phải current treatment;
 - art/card image có thể thay identity field của Season/Weather về sau, miễn global dock vẫn nằm ngoài play tableau và không tạo false target affordance.
+- [Target-horizon announcement v0.1](../target-horizon-announcement-v0.1/README.md) về sau bị informed owner reject: target ngày mai là player intent, không phải một field cần thêm vào accepted rail.
 
 Đây là informed-owner acceptance cho hierarchy/presentation, không phải fresh-player comprehension pass. Exact art replacement vẫn là future direction và chưa authorize raster generation.
 

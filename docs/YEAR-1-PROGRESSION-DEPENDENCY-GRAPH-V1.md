@@ -13,8 +13,12 @@ Nguồn chính:
 - [Person roster kernel audit 02](PERSON-ROSTER-KERNEL-AUDIT-02.md)
 - [Asset orientation audit 05](CONTINUOUS-WORLD-ASSET-ORIENTATION-AUDIT-05.md)
 - [Storage/Keep sensitivity 01](STORAGE-KEEP-SENSITIVITY-01.md)
+- [Forecast/Keep decision value 02](FORECAST-KEEP-DECISION-VALUE-02.md)
+- [Storage recurring-density slice 03](STORAGE-RECURRING-DENSITY-SLICE-03.md)
 - [Fishing resolution sensitivity 02](FISHING-RESOLUTION-SENSITIVITY-02.md)
 - [Mine/Project triple-gate audit 01](MINE-PROJECT-TRIPLE-GATE-AUDIT-01.md)
+- [Calendar/Project completion rerun 02](CALENDAR-PROJECT-COMPLETION-RERUN-02.md)
+- [COL-N long-horizon paper test 01](COL-N-LONG-HORIZON-PAPER-TEST-01.md)
 - [Person mini-roster fixture 01](PERSON-MINI-ROSTER-FIXTURE-01.md)
 - [Scrollable abstract-area tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md)
 - [Mine/Fishing area-tableau play contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md)
@@ -23,6 +27,7 @@ Nguồn chính:
 - [Mine/Fishing target/cost fixture v0.2.4](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md)
 - [Orientation explicit-surface paper-test kit v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md)
 - [Orientation paper-test kit v0.1 — historical topology skeleton](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md)
+- [Rejected target-horizon announcement scope](../paper-tests/target-horizon-announcement-v0.1/pilot-results/informed-owner-scope-correction-2026-09-22.md)
 
 ## 1. Phân loại trạng thái
 
@@ -50,6 +55,7 @@ Nguồn chính:
 - Catch dùng atomic commitment làm paper baseline; graph vẫn giữ grammar abstract để final cost có thể đổi.
 - On-table interaction targets dùng square 1:1; full rules ở detail UI. Chỉ independent non-action state không thể suy từ targets mới dùng status strip/rail; current global fixture giữ Mine Depth và bỏ Farm/Market/Fish summaries. Signed AP cost nằm ở upper corner.
 - An action node depicts its verb/target; an opportunity node depicts the visible target/context and receives the Tool/Item that supplies the verb. Tags carry cost/state/requirement; description carries consequence/trade-off. Noun-only labels, redundant CTAs and schema panels are insufficient.
+- Player tự quyết định mục tiêu/kế hoạch ngày mai. Global UI mô tả world/resource state; không tổng hợp optional actions thành system agenda, checklist hoặc `Tomorrow Targets`.
 
 ### 1.3. [HYPOTHESIS] Evidence constraints mang vào v1
 
@@ -61,7 +67,7 @@ Nguồn chính:
 6. A/C/K có evidence mạnh nhất; E/J là conditional candidate; D/I/M ở reserve.
 7. `COL-1` D3 là first-branch fixture, không đủ làm long-term collection arc.
 8. Home-middle vs Home-at-top không còn là topology question; next orientation fixture phải đo Area/card recognition trong vertical strip.
-9. `S4` chỉ tạo storage decision khi target horizon được forecast; perishability làm Sell/Process dominate trong arm hiện tại.
+9. `S4` chỉ bớt đoán khi actual external context đã tồn tại và có thể inspect. Weather-only không rank generic item; global `Tomorrow Targets` bị owner reject vì prescribe player intent; perishability vẫn làm Sell/Process dominate.
 10. Water Trough fail triple-gate shape nếu cùng đòi checkpoint access + Ore + fee + Work.
 
 ### 1.4. [FIXTURE] Vocabulary
@@ -187,11 +193,11 @@ Fishing output đi tới Sell/Gift/record/Process/Keep. Fresh Rain record cần 
 | --- | --- | --- | --- | --- | --- |
 | COL0 | [HYPOTHESIS] | First eligible family acquired | Auto record, không consume | Field Notes horizon | Item vẫn dùng nơi khác |
 | COL-1 | [FIXTURE] | Record any 3-of-4 Crop/Forage/Fish/Mine families | Choose Tallbean or Dewleaf Seed | New source/profile one restock early | Unchosen option returns later |
-| COL-N | [HYPOTHESIS] | Sau first-choice reward và thêm discovery | Chưa thiết kế | Long-calendar collection horizon | Không thêm trước khi reward shape rõ |
+| COL-N | [HYPOTHESIS] | Sau first-choice reward và thêm discovery | Themed relationship pages trong Journal; exact later slot còn mở | Source-choice hoặc transformation-choice reward | Backfill prior records; later discovery phải recoverable |
 
 ### 7.1. [HYPOTHESIS] v1 correction
 
-`COL-1` không được coi là toàn bộ collection progression. Calendar fixture hoàn thành nó D3 ở mọi arm; nó là first branch/choice, không đủ giữ S12/S18. Graph để `COL-N` explicit gap thay vì giả một checklist dài.
+`COL-1` không được coi là toàn bộ collection progression. Calendar fixture hoàn thành nó D3 ở mọi arm; nó là first branch/choice, không đủ giữ S12/S18. `COL-N` structure test loại flat checklist và submit bundle; themed relationship pages là candidate mạnh nhất nhưng chưa pass long-calendar timing vì content minimum thiếu một later recoverable discovery thật.
 
 ## 8. Processing branch
 
@@ -260,7 +266,7 @@ Graph không ghi price. Price table v2 chỉ là sensitivity fixture.
 - Gift thắng khi Heart có effect target đáng giá; không có Gold conversion cố định.
 - Project thắng khi capability cứu future AP/context.
 - Process thắng khi slot/AP/timing phù hợp hoặc target cần Processed.
-- Keep cần forecast category/state/context trong 1–3 ngày để có option value đọc được.
+- Keep có option value đọc được khi Weather ảnh hưởng timing hoặc một actual external context đã tồn tại và native inspect của nó nêu category/state/timing; không tạo global target forecast.
 - No-cap/no-perish là baseline kế; `S4` chỉ là small-cap comparator và `P1` perishability không carry.
 
 ## 11. Reveal bands v1
@@ -478,6 +484,11 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 | v0.2 action comprehension | Failed internal informed check at Task B |
 | v0.2.4 target/cost correction | Deterministic render + informed owner acceptance pass; fresh-player evidence unavailable |
 | v0.3.4 navigation fixture/pilot | Informed-owner acceptance; sticky index reads as UI focus, fresh-player evidence unavailable |
+| Forecast → Keep decision value | Weather-only passes AP/timing; actual context compatibility can inform a choice, but global `Tomorrow Targets` is rejected |
+| Recurring-density `S∞` vs `S4` | Known actual contexts create choice in both arms; `S4` also adds harvest-day housekeeping, so no cap selected |
+| Target-horizon announcement v0.1 | Rejected by informed owner: system agenda reduces player freedom; preserve only as audit trail |
+| Project completion rerun 02 | PJ-M/PJ-B no-fee keeps calendar timing; PJ-X permit creates Ore/allocation choice without guaranteed delay; Stone source contract remains open |
+| COL-N long-horizon test 01 | Relationship-page Journal passes structure/presentation/recovery, but minimum content fails long-calendar timing; flat checklist and submit bundle rejected |
 | Final AP/Season/Weather | Not selected |
 
 ## 18. v1 verdict
@@ -508,13 +519,18 @@ Completed in the 2026-09-22 integration pass:
 6. Mine/Fishing square fixture v0.2 + deterministic preflight; informed iterations produced v0.2.4 with approved art, true square targets, status strips and upper-corner signed AP.
 7. Global orientation v0.3→v0.3.4 informed-owner correction chain: Area index accepted, Weather moved to global scope, synthetic Farm/Market/Fish status removed, Mine Depth retained.
 8. Weather/Season global UI v0.1 informed-owner acceptance: always-visible shallow rail exposes Season, Today, Tomorrow and AP without reading as an on-table target.
+9. Forecast/Keep decision-value paper sensitivity separated Weather horizon from optional external-context information; exact reward was unnecessary in sample.
+10. One recurring-density storage slice: actual-context choices survive under `S∞`; `S4` adds one guided reservation and one burst-housekeeping event, so no cap is selected.
+11. Target-horizon announcement v0.1 informed-owner correction: reject all global `Tomorrow Targets` arms because player plans are self-directed; keep Weather world-state rail unchanged.
+12. Calendar/Project completion rerun 02: no-fee relief retains M/E/B timing in four decisive cells; selected PJ-X permit can still complete D2 by allocating CP3 Ore.
+13. COL-N long-horizon paper test 01: carry relationship pages as structural candidate, but keep COL-N open until a real later recoverable discovery exists.
 
 Still required:
 
 1. Retain fresh-player comprehension as an explicit risk until another tester becomes available.
-2. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
-3. Design/test `COL-N` longer collection horizon outside the River root tableau.
-4. Weather/Season default global presentation is accepted with Today + Tomorrow always visible; still test whether forecasted category/state creates enough Keep option value before selecting any storage cap.
+2. Define/test one later recoverable discovery/context, then rerun `COL-N` relationship-page timing; do not pad it with record count or submit tax.
+3. Resolve the current Stone-source contract before exact Project timing becomes a content schedule.
+4. When actual Person/request/Processor contexts receive detail UI, validate compatibility/recovery at their native source; do not create a global Tomorrow-target rail.
 5. Explore generated abstraction Area backgrounds separately while preserving card dominance and accepted index/navigation grammar.
 
 ### 18.3. Chưa được kết luận

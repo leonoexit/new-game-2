@@ -15,7 +15,7 @@ Trạng thái: paper sensitivity nối [Economy ledger v2](ECONOMY-LEDGER-V2-PAP
 
 ### 1.2. [DIRECTION]
 
-- Keep cần option value đọc được: forecast target, compatibility hoặc timing—not bonus vô cớ.
+- Keep cần option value đọc được từ actual world context, compatibility hoặc timing—not bonus vô cớ và không phải system-generated player agenda.
 - Storage pressure không được âm thầm biến mọi subsystem thành inventory management.
 - Perishability chỉ là arm riêng; không được giả định để ép Sell/Process.
 - Tool, Person, Gold, active Project progress và item đang nằm trong Processor queue không chiếm commodity storage trong test này.
@@ -40,7 +40,7 @@ State: 2 Fresh Shortroot, 0 material retained, first replant cần 4G.
 | --- | --- | --- |
 | `S∞` | Sell/Gift/Process/Keep cả hai | Keep miễn capacity nhưng vẫn mất 4G liquidity nếu không Sell |
 | `S4` | Như `S∞`; còn 2 slot | Không tạo decision mới |
-| `P1` | Sell/Process hôm nay hoặc mất Fresh target sau Sleep | Process/Sell bị đẩy quá mạnh trước khi target horizon rõ |
+| `P1` | Sell/Process hôm nay hoặc mất Fresh target sau Sleep | Process/Sell bị đẩy quá mạnh trước khi actual context horizon rõ |
 
 Kết quả: small cap không sửa first-output choice. Liquidity + target preview đã đủ tạo tension; perishability thêm urgency cưỡng ép.
 
@@ -84,12 +84,12 @@ State: 1 Fresh River Minnow, 1 Fresh Wild Herb, 1 Fresh Shortroot, 1 Wood; Rain 
 
 | Information horizon | `S∞` | `S4` |
 | --- | --- | --- |
-| Không có target forecast | Keep là option mơ hồ; Sell thường dominate | Forced allocation thành đoán |
-| Target category thấy trước 1–3 ngày | Keep có timing value | Tạo ranking hữu ích giữa item |
-| Exact item/state target thấy trước | Keep cạnh tranh rõ với Sell/Process | Cap tạo deliberate reservation |
-| Target có recovery xa hơn | Keep tùy liquidity | Có thể bỏ target hiện tại mà không fail save |
+| Không có visible option/context | Keep là option mơ hồ; Sell thường dominate | Forced allocation thành đoán |
+| Actual context category/timing đã biết | Keep có timing value | Tạo ranking hữu ích giữa item |
+| Actual context nêu exact accepted state | Keep cạnh tranh rõ với Sell/Process | Cap tạo deliberate reservation |
+| Context có recovery xa hơn | Keep tùy liquidity | Có thể bỏ opportunity hiện tại mà không fail save |
 
-`[DIRECTION]` Forecast nên cho category/state/context + earliest timing, không cần reveal toàn bộ reward pool.
+`[CORRECTED DIRECTION]` Khi external context thật sự tồn tại, native card/inspect nên cho accepted category/state + timing/recovery. Không tạo global future-target forecast hoặc reveal toàn bộ reward pool.
 
 ## 5. Person và subsystem overlap
 
@@ -101,11 +101,11 @@ State: 1 Fresh River Minnow, 1 Fresh Wild Herb, 1 Fresh Shortroot, 1 Wood; Rain 
 
 ## 6. Verdict
 
-1. `[HYPOTHESIS]` `S∞` vẫn là baseline sạch nhất cho vòng package hiện tại; Keep chỉ có decision value khi target horizon được forecast.
+1. `[HYPOTHESIS]` `S∞` vẫn là baseline sạch nhất cho vòng package hiện tại; Keep có decision value khi actual options/context/timing đủ đọc, không cần global target forecast.
 2. `[HYPOTHESIS]` `S4` tạo lựa chọn thật ở harvest burst và cross-system carry, nhưng double-punish A5 nếu mọi allocation còn tốn AP.
 3. `[DIRECTION]` Nếu test small cap tiếp, giữ Buy/Sell 0 AP và không thêm perishability trong cùng arm; nếu không sẽ không biết pressure đến từ đâu.
 4. `[HYPOTHESIS]` `P1` làm Sell/Process default, làm Fresh request punitive và đè lên calendar scarcity. Không carry làm baseline.
-5. `[DIRECTION]` Keep cần forecast 1–3 ngày theo category/state/context; không cần giá bonus riêng.
+5. `[CORRECTED DIRECTION]` Keep cần visible option/context/timing; không cần giá bonus riêng hoặc system-generated tomorrow agenda.
 6. `[DIRECTION]` Cap nếu có nên mở rộng bằng capability rõ hoặc storage module, không bằng Person bắt buộc.
 
 ## 7. Chưa kết luận
@@ -114,4 +114,17 @@ State: 1 Fresh River Minnow, 1 Fresh Wild Herb, 1 Fresh Shortroot, 1 Wood; Rain 
 - Stack chiếm slot theo unit hay theo stack ở game cuối.
 - Fresh có perish hay không.
 - Storage upgrade/cost.
-- Target forecast chính xác bao xa.
+- Actual Person/request/Processor context cho biết compatibility/recovery tới đâu mà không biến player plan thành system agenda.
+
+## 8. Follow-up evidence — Forecast / Keep decision value 02
+
+[Forecast / Keep decision value 02](FORECAST-KEEP-DECISION-VALUE-02.md) tách Weather horizon khỏi target horizon:
+
+- accepted Today + Tomorrow Weather giúp lập kế hoạch AP/timing nhưng không đủ rank generic owned items;
+- analytical comparator cho thấy actual external context cần timing + accepted category/state + recovery khi inspect;
+- exact reward và default 3-day forecast không cần cho bốn allocation cells;
+- `S∞` no-perish vẫn là baseline; `S4` chỉ bớt đoán khi actual external context tồn tại và vẫn chưa được chọn.
+
+[Informed-owner scope correction](../paper-tests/target-horizon-announcement-v0.1/pilot-results/informed-owner-scope-correction-2026-09-22.md) reject global `Tomorrow Targets`: player tự quyết định kế hoạch ngày mai; system không được biến optional planning thành agenda. Actual external context chỉ tự trình bày ở source/card/inspect của nó.
+
+[Storage recurring-density slice 03](STORAGE-RECURRING-DENSITY-SLICE-03.md) chạy một six-day comparator: `S4` thêm ba forced unit allocations qua hai pressure moments; một moment chỉ legible khi giả định actual context đã tồn tại, còn moment harvest burst là housekeeping. Kết quả cùng owner correction củng cố `S∞` no-perish baseline; không dùng prescriptive forecast UI để cứu cap.

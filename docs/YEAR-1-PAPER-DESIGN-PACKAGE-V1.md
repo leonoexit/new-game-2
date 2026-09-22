@@ -94,7 +94,7 @@ Không con số AP/cap/fee/price nào ở bảng là luật final.
 - Gift thắng khi Heart có target đủ giá trị; không quy đổi Heart thành Gold cố định.
 - Record lần đầu không consume.
 - Process thắng khi target/state/timing cần Processed hoặc slot/AP rảnh.
-- Keep thắng khi forecast category/state/context trong 1–3 ngày cho option value.
+- Keep có option value đọc được khi Weather ảnh hưởng timing hoặc một actual external context đã tồn tại và native inspect của nó nêu category/state/timing; không có global target forecast.
 
 ### 6.2. Fresh/Processed
 
@@ -152,6 +152,8 @@ Weather thuộc global UI scope, không phải Eel tag hoặc River state. Futur
 | --- | --- |
 | [Content minimum registry](CONTENT-MINIMUM-REGISTRY-01.md) | Shared names/tags/sources; no inferred Year 1 count |
 | [Calendar sensitivity](CALENDAR-SENSITIVITY-PAPER-SIMULATION-01.md) | A5/A7 + phase alignment constraints |
+| [Project completion rerun](CALENDAR-PROJECT-COMPLETION-RERUN-02.md) | M/B no-fee timing retained; selected PJ-X fee creates allocation fork, not fixed delay |
+| [COL-N long-horizon test](COL-N-LONG-HORIZON-PAPER-TEST-01.md) | relationship-page structure retained; current minimum content fails long-calendar timing |
 | [Economy ledger v2](ECONOMY-LEDGER-V2-PAPER-SENSITIVITY-01.md) | T0 market, sink shapes, exact compatibility |
 | [Storage sensitivity](STORAGE-KEEP-SENSITIVITY-01.md) | no-cap baseline; forecast required; perish rejected |
 | [Fishing sensitivity](FISHING-RESOLUTION-SENSITIVITY-02.md) | atomic commitment retained across four cells |
@@ -192,6 +194,7 @@ Weather thuộc global UI scope, không phải Eel tag hoặc River state. Futur
 | Storage/perishability arms separated | Pass |
 | Fishing resolution compared in decisive cells | Pass |
 | Mine/Project triple gate audited | Pass |
+| Project completion timing under selected fees | Pass as fixture; current Stone source remains open |
 | Concrete Person mini-roster | Pass as fixture |
 | Square orientation asset coverage | Pass |
 | Historical spatial orientation preflight | Pass, but superseded for pilot |
@@ -199,7 +202,7 @@ Weather thuộc global UI scope, không phải Eel tag hoặc River state. Futur
 | Square-card desk/mobile render QA | Pass |
 | Action/target comprehension | v0.2 failed; v0.2.4 passes deterministic render + informed owner acceptance; fresh-player evidence unavailable |
 | New-player orientation data | Open |
-| Long collection arc `COL-N` | Open |
+| Long collection arc `COL-N` | Structure candidate found; later-discovery timing still open |
 | Final AP/calendar/prices/costs | Open by design |
 | Final Area order/roster/content count | Open by design |
 
@@ -216,9 +219,9 @@ Weather thuộc global UI scope, không phải Eel tag hoặc River state. Futur
 ## 13. Next evidence, in order
 
 1. Retain fresh-player navigation/comprehension risk as open until another tester exists; do not relabel informed-owner acceptance.
-2. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
-3. Create/test `COL-N` as a longer collection horizon outside the River root tableau and without permanent miss.
-4. Test Weather/Season global presentation and forecast before selecting storage cap.
+2. Define/test one later recoverable discovery/context, then rerun `COL-N` relationship-page timing without flat-count padding or submit tax.
+3. Resolve the current Stone-source contract before treating Project fixture days as a content schedule.
+4. Validate future actual Person/request/Processor contexts at their native source; do not create a global tomorrow agenda.
 5. Explore generated abstraction Area backgrounds separately under the art skill; preserve card dominance and accepted index grammar.
 6. Only then choose a narrower content/balance lock; implementation still needs explicit user authorization.
 

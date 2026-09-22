@@ -155,6 +155,7 @@ Home-middle vs Home-at-top là câu hỏi spatial topology nên không còn đo 
 6. `[INFORMED-OWNER ACCEPTED]` Stable order + sticky Area-name index + neutral UI divider đọc như interface focus/scroll, không phải character movement.
 7. `[INFORMED-OWNER ACCEPTED]` Home/Commerce/River tự giải thích bằng card semantics và không cần synthetic Area state; Mine Depth/checkpoint là separate status duy nhất cần trong bốn Area hiện tại.
 8. `[INFORMED-OWNER ACCEPTED]` Weather/Season dùng always-visible shallow rail trong sticky global chrome ngoài play tableau: Season, Today Weather, Tomorrow Weather và remaining AP. Treatment không bị đọc như commitment target; future card art có thể thay identity field nhưng không đổi scope hoặc target grammar.
+9. `[INFORMED-OWNER REJECTED]` Không thêm global `Tomorrow Targets` rail. Kế hoạch ngày mai do player tự quyết định; system chỉ trình bày world/resource state và actual context tại native source của context đó.
 
 ## 10. Chưa kết luận
 
