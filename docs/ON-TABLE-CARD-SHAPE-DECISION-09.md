@@ -14,9 +14,11 @@ Square card ở trạng thái thường chỉ mang:
 
 - square art hoặc identity field;
 - name;
-- một đến ba badge quyết định quan trọng;
+- một đến ba tag quyết định quan trọng;
 - cost hoặc progress ngắn;
 - ready, locked, selectable hoặc persistent state.
+
+Các thành phần trên chưa đủ nếu player vẫn phải dịch schema thành hành động. Root grammar hiện hành là: **action art truyền immediate verb + target; opportunity art truyền visible target/context; title giữ identity/context; tag giữ cost/state/requirement; dòng mô tả giữ consequence/trade-off**. Với opportunity, Tool/Item được stack vào cung cấp verb. Dòng mô tả không lặp lại art như CTA. Persistent state card không nhận commit phải nói rõ `state/inspect only` và trỏ tới action target liên quan.
 
 Rule dài, provenance đầy đủ, exception, recovery và outcome sequence nằm trong focus/detail panel hoặc resolution sheet. Panel đó có thể là rectangle vì nó là UI overlay, không phải card trên tableau.
 
@@ -59,8 +61,9 @@ Nếu một horizontal strip về sau có verb/target riêng, nó phải đượ
 1. đây là card hay Area/status UI;
 2. card là gì;
 3. selectable/ready/locked/persistent;
-4. cost/progress quan trọng nhất;
-5. exact detail có thể inspect miễn phí.
+4. cost/state change quan trọng nhất;
+5. immediate verb từ action art, visible target từ opportunity art, hoặc `state only`;
+6. exact detail có thể inspect miễn phí.
 
 Ở focus/detail panel, participant phải tìm được:
 
@@ -72,7 +75,7 @@ Nếu một horizontal strip về sau có verb/target riêng, nó phải đượ
 
 ## 6. Evidence gate
 
-[Mine + Fishing Area-tableau fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md) là first shape-conformant paper artifact. Nó kiểm square recognition, two-column density, badge readability, status-strip distinction và state update; không cung cấp participant evidence cho tới khi comprehension pilot thực sự chạy.
+[Mine + Fishing Area-tableau fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md) là first shape-conformant paper artifact. [v0.2.3](../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md) là current action-art correction. Render QA kiểm square recognition, two-column density, tag readability, status-strip distinction và state update; fresh-participant comprehension vẫn open.
 
 Không promote tên, cost, mastery threshold, art study hoặc grid size trong fixture thành canonical/runtime content.
 
@@ -90,3 +93,7 @@ Không promote tên, cost, mastery threshold, art study hoặc grid size trong f
 - Header Area luôn hiện hay chỉ khi onboarding/focus.
 - Art-to-UI ratio trong square card.
 - Hover/focus/selected treatment và tap target padding.
+
+## 9. First comprehension correction
+
+[Internal informed pilot 01](../paper-tests/mine-fishing-area-tableau-v0.2/pilot-results/internal-informed-pilot-01.md) nhận đúng square-card silhouette nhưng dừng ở Task B: noun badges và detail schema không cho biết hành động một cách tự nhiên. [v0.2.1](../paper-tests/mine-fishing-area-tableau-v0.2.1/README.md) và [v0.2.2](../paper-tests/mine-fishing-area-tableau-v0.2.2/README.md) chứng minh verb text vẫn không đủ khi art là landmark hoặc post-action object. [v0.2.3](../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md) dùng ba action-art candidate để tách mining, downward transition và same-level discovery; đây là informed iteration evidence, chưa phải fresh-participant pass.

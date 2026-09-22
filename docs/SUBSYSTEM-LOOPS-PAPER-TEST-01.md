@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-21.
 
 Trạng thái: minimal-loop test tiếp nối [Year 1 route coverage test 01](YEAR-1-ROUTE-COVERAGE-TEST-01.md). Mục đích là thay placeholder bằng ba loop có objective shape khác nhau; không thiết kế content đầy đủ, combat, recipe list hoặc balance Year 1.
 
+> **Historical mechanics warning (2026-09-22):** Mine section giữ `Safe Tunnel / Veiled Vein` như evidence của vòng thử cũ, không phải current grammar. [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) tách Mine thành `Direct Descent` (`Depth +1`), `Search Side Tunnel` (reveal source cùng tầng) và `Exposed Ore` (extract source); descending không tự sinh Stone.
+
 ## 1. Phân loại trạng thái thiết kế
 
 ### 1.1. Điều người dùng đã chốt

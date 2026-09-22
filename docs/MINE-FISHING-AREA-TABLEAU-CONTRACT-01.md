@@ -4,7 +4,7 @@ Ngày: 2026-09-22.
 
 Mục đích: định hình người chơi **làm gì** khi focus Mine và các Area liên quan tới Fishing trong [scrollable area-tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md). Tài liệu hợp nhất evidence từ [Fishing resolution sensitivity 02](FISHING-RESOLUTION-SENSITIVITY-02.md) và [Mine checkpoint simulation 02](MINE-CHECKPOINT-PAPER-SIMULATION-02.md); không chốt final AP, content count, reward value, tool tier hoặc art.
 
-Paper artifact hiện hành: [Mine + Fishing square Area-tableau fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md). [v0.1](../paper-tests/mine-fishing-area-tableau-v0.1/README.md) được giữ làm portrait rule-text audit trail.
+Paper artifact hiện hành: [Mine + Fishing action-art fixture v0.2.3](../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md). [v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md) giữ first square-shape result và failed internal-pilot evidence; [v0.2.1](../paper-tests/mine-fishing-area-tableau-v0.2.1/README.md) và [v0.2.2](../paper-tests/mine-fishing-area-tableau-v0.2.2/README.md) là correction trail; [v0.1](../paper-tests/mine-fishing-area-tableau-v0.1/README.md) là portrait rule-text audit trail.
 
 ## 1. Shared contract
 
@@ -34,7 +34,9 @@ History, full pool, collection record và old checkpoints nằm trong inspect/ov
 ### 1.3. Card/panel shape
 
 - On-table Catch, Person, frontier, route và source cards dùng square `1:1`.
-- Root card chỉ mang art, name, 1–3 badge, short cost/progress và state.
+- Root card chỉ mang art, name, 1–3 tag, short consequence/trade-off và state.
+- Action card phải để art truyền immediate verb + target. Opportunity card phải cho thấy target/context đã được phát hiện; Tool/Item stack vào mới cung cấp verb. Title giữ identity/context, tag giữ cost/state/requirement, dòng mô tả giữ consequence/trade-off và không lặp lại art như CTA.
+- Persistent state card không nhận commit phải nói `state/inspect only` và chỉ player tới route/source target.
 - Full rule/preview/recovery nằm trong focus/detail panel rectangle hoặc resolution sheet.
 - Area header/background không có card border và không phải target.
 - River Record/mastery và Mine Depth/checkpoint dùng horizontal status strip khi không có verb riêng.
@@ -61,8 +63,8 @@ Nếu River chỉ có một interaction context, không cần thêm `Fishing Spo
 ### 2.2. Daily setup
 
 1. Area đọc Season/Weather và unlock state.
-2. Nó tạo một hoặc nhiều Catch opportunity hợp lệ.
-3. Catch card cho thấy trước exact fish/identity, condition và total commit cost.
+2. Nó tự reveal một hoặc nhiều Catch opportunity hợp lệ; không bắt player click một generic spot chỉ để mở target đã biết.
+3. Catch card cho thấy trước exact fish/identity, condition và total commit cost. Art phải cho thấy dấu hiệu/target trong nước để exact foreknowledge có cơ sở hình ảnh.
 4. Không có hidden failure roll trong baseline.
 
 Minimum fixture giữ:
@@ -122,28 +124,29 @@ Nếu Lake hoặc Coast chỉ thêm skin/pool mà không đổi decision, giữ 
 MINE visual language
 Depth 5 · current band: Baseline Tunnels  [horizontal status strip]
 
-[Current Frontier square] [Working Seam square — if ready]
-[Safe Tunnel square]      [Veiled Vein square]
+[Mine State square]       [Exposed Ore square — if ready]
+[Direct Descent square]   [Search Side Tunnel square]
 [Latest Checkpoint — only while relevant]
 ```
 
 `Mine Entrance` chỉ là card khi nó đang Locked/Collapsed và có unlock/repair action. Sau khi access ổn định, entrance trở thành identity/header hoặc anchor; player không phải play qua nó mỗi lần focus Mine.
 
-Depth là persistent state trên `Current Frontier`, không phải khoảng cách scroll và không yêu cầu một card cho mỗi floor.
+Depth là persistent state/tag trên `Mine State` và status strip, không phải khoảng cách scroll và không yêu cầu một card cho mỗi floor. `Mine State` không nhận commit; nếu status strip tự truyền đủ context thì square state card có thể bị bỏ ở revision sau.
 
 ### 3.2. Player turn
 
 ```text
-Focus Mine                         0 AP
-Inspect Current Frontier/routes    0 AP
-Choose one route                   informed choice
-Play Character + Tool → Route      commit cost
-Resolve required result            Depth +1 deterministic
-Resolve optional route result      known common or previewed category
-Refresh frontier/checkpoint state
+Focus Mine                              0 AP
+Inspect Mine State/actions              0 AP
+Choose one action                       informed choice
+Play Character + Tool → action card     commit cost
+Direct Descent                          Depth +1; no material
+Search Side Tunnel                      Depth +0; reveal an Ore source
+Extract Exposed Ore                     Depth +0; gain Ore; mark source spent
+Refresh frontier/source/checkpoint state
 ```
 
-Safe route luôn cho planning path; Person ability không là prerequisite. Veiled route có thể giấu exact optional result nhưng phải cho biết category/risk trước commit. Không route nào dùng hidden failure để chặn Depth baseline.
+`Direct Descent` luôn cho deterministic planning path; Person ability không là prerequisite. `Search Side Tunnel` là discovery ở cùng tầng, không giả vờ tăng Depth. `Exposed Ore` là extraction riêng sau khi source đã lộ. Không action nào dùng hidden failure để chặn Depth baseline.
 
 ### 3.3. Checkpoint grammar
 
@@ -151,14 +154,14 @@ Checkpoint phải đổi cách chơi, không chỉ tăng payout tier:
 
 | Checkpoint shape | Root-tableau consequence | Decision tạo ra |
 | --- | --- | --- |
-| Source unlock | thêm `Working Seam` khi ready | lấy Ore chắc chắn hay dùng AP để Descend |
-| Rule band | thay Safe/Veiled bằng speed/yield routes | đi nhanh hay lấy material |
+| Source unlock | thêm `Exposed Ore` khi ready | lấy Ore chắc chắn hay dùng AP để Descend/Search |
+| Rule band | thay action set hoặc cost/consequence đã preview | progress, discovery hay extraction |
 | Branch/context | hiện hai branch preview trước commit | chọn pool/context cho band kế |
 | Cross-system connection | thêm context card phù hợp vào Mine hoặc Area liên quan | mở horizon mới, không phải ending |
 
 Fixture hiện hành để test grammar:
 
-- CP3: Working Seam, `Extract` lấy Ore nhưng không tăng Depth;
+- CP3: Exposed Ore, `Extract` lấy Ore nhưng không tăng Depth;
 - CP6: `Slip Through` nhanh so với `Shore Up` chậm + yield;
 - CP9: preview `Deep Vein` so với `Underground Flow`;
 - CP12: cross-system connection chưa có content cuối.
@@ -192,7 +195,7 @@ Candidate này chỉ hợp lệ nếu nó thêm collection/Processing/choice kh�
 | Dimension | Fishing | Mine |
 | --- | --- | --- |
 | Core object | condition-bound Catch opportunity | persistent Current Frontier |
-| Main pressure | commit hôm nay hay bỏ opportunity | dùng AP cho Depth, yield hay source |
+| Main pressure | commit hôm nay hay bỏ opportunity | dùng AP cho progress, discovery hay extraction |
 | Persistence | record/mastery; Catch rotates | Depth/checkpoints giữ lâu dài |
 | Information | exact Catch/cost visible | Depth certain; optional reward có thể category-known |
 | Failure baseline | miss waits for recurrence | no loss of Depth |
@@ -203,31 +206,33 @@ Nếu cả hai chỉ trở thành `spend AP → random item`, design fail.
 
 ## 5. Current paper fixture
 
-v0.2 giữ play grammar của v0.1 nhưng chuyển root surface sang shape final: six square cards, River Record strip, Mine Depth strip, two-column density và rectangular detail panels. Numbers/names vẫn là fixture.
+v0.2 giữ play grammar của v0.1 nhưng chuyển root surface sang shape final. Internal informed pilot nhận ra card nhưng fail action comprehension vì noun/badge + schema panel. v0.2.1 và v0.2.2 cho thấy plain-language text vẫn không cứu được art mô tả sai thời điểm. v0.2.3 dùng action/target art và tách rõ `art = action hoặc visible opportunity target`, `tag = cost/state/requirement`, `description = consequence/trade-off`. Numbers/names vẫn là fixture; fresh-participant pass vẫn open.
 
 ### 5.1. Fishing decision card
 
 ```text
-RAIN EEL
-Condition: Rain · River
+EEL SIGHTING
+Requirement/condition tags: Rod · Rain
 Commit: 2 AP total [fixture]
 Result: Fresh · Fish · River · Rain
 Miss: returns on a later Rain/cycle
 ```
 
+`Eel Sighting` tự xuất hiện khi day/weather setup tạo opportunity. Eel còn sống phải nhìn thấy dưới mặt nước; đây chưa phải item. Không thêm một free-click `Ripples → reveal Eel` nếu reveal đó không tạo cost, choice hoặc uncertainty thật.
+
 Compare với một ordinary day có River Minnow và một competing Person/Project action. Log whether player understands exact cost, recurrence và item provenance trước commit.
 
 ### 5.2. Mine decision tableau
 
-Start at Depth 3 with Working Seam ready:
+Start at Depth 3 with Exposed Ore ready:
 
 ```text
-[Extract Seam: known Ore, no Depth]
-[Safe Tunnel: Depth +1 + known common]
-[Veiled Vein: Depth +1 + category-known result]
+[Exposed Ore: Depth +0; gain Ore; mark spent]
+[Direct Descent: Depth +1; no material]
+[Search Side Tunnel: Depth +0; reveal exact Ore source]
 ```
 
-Give 2–3 AP Mine budget and one outside opportunity. Log source-vs-depth choice, route comprehension and whether leaving Mine is understood to preserve state.
+Give 2–3 AP Mine budget and one outside opportunity. Log progress-vs-discovery-vs-extraction choice, action-art comprehension and whether leaving Mine is understood to preserve state.
 
 ### 5.3. Minimum test questions
 
@@ -250,7 +255,7 @@ Give 2–3 AP Mine budget and one outside opportunity. Log source-vs-depth choic
 ### [DIRECTION]
 
 - Fishing baseline là exact, face-up Catch opportunity với one informed atomic commit.
-- Mine baseline là deterministic Depth với informed route choice và mixed checkpoints.
+- Mine baseline là deterministic Depth through Direct Descent, plus separate discovery and extraction actions with mixed checkpoints.
 - Entrance/Spot card chỉ tồn tại khi có verb/state riêng; không thêm gateway card thừa.
 - River minimum đủ cho vòng đầu; Lake/Coast phải chứng minh decision dimension mới.
 

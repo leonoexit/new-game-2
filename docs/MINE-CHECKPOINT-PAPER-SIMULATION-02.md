@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-21.
 
 Mục đích: làm checkpoint thay đổi cách chơi thay vì chỉ trả resource khi Depth counter đạt mốc. Đây là variation test của Mine loop; không chốt số tầng, tên biome, combat, hazard hoặc reward Year 1.
 
+> **Historical mechanics warning (2026-09-22):** fixture `Safe Tunnel / Veiled Vein` bên dưới giữ nguyên để audit simulation, nhưng không còn là current Mine grammar. [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) và [v0.2.3](../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md) thay nó bằng `Direct Descent` (`Depth +1`, không tự cho Stone), `Search Side Tunnel` (`Depth +0`, reveal Ore source) và `Exposed Ore` (`Depth +0`, gain Ore, mark spent).
+
 ## 1. Phân loại trạng thái thiết kế
 
 ### 1.1. Điều người dùng đã chốt
@@ -230,4 +232,3 @@ Text burden:
 - Cách quay lại branch chưa chọn mà không tạo grind.
 - Mine Tool progression có làm Fast/Supplier mất cân bằng không.
 - Recognition của rule-band tile ở kích thước mobile.
-

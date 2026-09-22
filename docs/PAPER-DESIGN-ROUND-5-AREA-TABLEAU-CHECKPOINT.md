@@ -17,9 +17,9 @@ Phạm vi: sửa world presentation từ spatial surface thành scrollable abstr
 | --- | --- | --- |
 | World presentation | Spatial model retired; vertical abstract Area strip adopted | [Model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) |
 | Fishing | Face-up exact Catch + informed atomic commitment + record/mastery | [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) |
-| Mine | Persistent Current Frontier + deterministic Depth + route/checkpoint choices | [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) |
+| Mine | Persistent state + separate progress/discovery/extraction actions | [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) |
 | Card shape | Square 1:1 on-table cards; rectangle reserved for focus/detail UI; status kept as strips | [decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md) |
-| Play fixture | Shape-conformant River/Mine strip, six square cards, two status strips, detail/outcome/print sheets built + desk/mobile-preflighted | [fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md) |
+| Play fixture | v0.2 failed action comprehension; v0.2.3 replaces landmark/object placeholders with reviewed Mine action art and corrected state consequences | [v0.2 pilot](../paper-tests/mine-fishing-area-tableau-v0.2/pilot-results/internal-informed-pilot-01.md), [v0.2.3](../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md) |
 | Redundant gateways | Fishing Spot/Entrance only remain when they have their own verb/state | [Model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) |
 | Historical spatial work | Model 07 and orientation v0.2 marked superseded for pilot | [Model 07](CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md), [v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md) |
 
@@ -31,7 +31,7 @@ Scroll/focus River for free, inspect exact Catch, then make one informed atomic 
 
 ### Mine
 
-Scroll/focus Mine for free, inspect Current Frontier and available routes, then play Character + Tool into a route. Depth always advances on baseline Descend; route changes optional output. Checkpoints alternate source, rule-band and branch/context changes. Leaving the Area never resets Depth.
+Scroll/focus Mine for free, inspect Mine State and available actions, then play Character + Tool into one action. `Direct Descent` alone advances Depth; `Search Side Tunnel` keeps Depth and reveals an Ore source; `Exposed Ore` keeps Depth, yields Ore and becomes spent. Checkpoints may change the action set, source state or context. Leaving the Area never resets Depth.
 
 ## 4. Failure conditions
 
@@ -44,6 +44,6 @@ Scroll/focus Mine for free, inspect Current Frontier and available routes, then 
 
 ## 5. Next evidence gate
 
-Square fixture production và desk/mobile preflight đã hoàn tất. Bước kế tiếp là chạy một comprehension pilot trên [fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md), rồi sửa printed rule/badge hierarchy chỉ từ ambiguity quan sát được. Chưa có participant data.
+Internal informed pilot trên v0.2 đã dừng ở Task B vì player phải dịch schema thành verb. Informed iteration qua v0.2.1–v0.2.2 xác nhận text không thay được action art và loại hai consequence sai: descent không tự cho Stone; side-tunnel search không tăng Depth. Correction v0.2.3 đã pass deterministic render QA; bước kế là xem assembled fixture rồi chạy một fresh-participant comprehension pilot. Chưa có new-player data và chưa được gọi gate pass.
 
 Sau đó build orientation v0.3 như một vertical sequence của tight Area tableaus thay vì map comparison.

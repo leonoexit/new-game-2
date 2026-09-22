@@ -19,7 +19,8 @@ Nguồn chính:
 - [Scrollable abstract-area tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md)
 - [Mine/Fishing area-tableau play contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md)
 - [On-table square-card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md)
-- [Mine/Fishing square Area-tableau fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md)
+- [Mine/Fishing v0.2 failed informed pilot](../paper-tests/mine-fishing-area-tableau-v0.2/pilot-results/internal-informed-pilot-01.md)
+- [Mine/Fishing action-art fixture v0.2.3](../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md)
 - [Orientation explicit-surface paper-test kit v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md)
 - [Orientation paper-test kit v0.1 — historical topology skeleton](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md)
 
@@ -48,6 +49,7 @@ Nguồn chính:
 - Storage không cap/không perish là paper baseline sạch; small-cap và perishability không được gộp cùng arm.
 - Catch dùng atomic commitment làm paper baseline; graph vẫn giữ grammar abstract để final cost có thể đổi.
 - On-table graph nodes/cards dùng square 1:1; full rules ở detail UI, còn non-action Record/Depth summaries dùng status strips.
+- An action node depicts its verb/target; an opportunity node depicts the visible target/context and receives the Tool/Item that supplies the verb. Tags carry cost/state/requirement; description carries consequence/trade-off. Noun-only labels, redundant CTAs and schema panels are insufficient.
 
 ### 1.3. [HYPOTHESIS] Evidence constraints mang vào v1
 
@@ -66,7 +68,7 @@ Nguồn chính:
 
 - Crops: Shortroot, Tallbean, Dewleaf.
 - Sources/items: Hedgerow Berry, Fallen Wood, Plain Stone, Seam Ore, Wild Herb.
-- Catch: River Minnow, Rain Eel.
+- Catch: River Minnow; Eel under Rain condition (`Rain Eel` remains registry shorthand, not required root-card wording).
 - Projects: Water Trough `PJ-M`, Harvest Bench `PJ-B`, Upper-Grove Footbridge `PJ-X`.
 - Collection: Field Notes `COL-1`, record any 3-of-4 families → choose Tallbean/Dewleaf Seed.
 - Processing: identity-preserving Crop/Fish/Herb templates.
@@ -115,7 +117,7 @@ Nguồn chính:
 | F0 | [DECIDED]/[DIRECTION] | Save start/opening context | Inspect House/Farm entities on surface | Soil/crop actions | Farming may stand still; other entries remain |
 | R0-B | [HYPOTHESIS] | Hedgerow visible | Deterministic Berry collect | Gift supply/Forage record | Does not require harvest |
 | R0-W | [HYPOTHESIS] | Woodlot visible | Deterministic Wood collect | Project material | Does not require random batch |
-| MIN0 | [HYPOTHESIS] | Mine Entrance visible/actionable | Deterministic Depth through Safe route | Stone/checkpoints/branch | Person A not required |
+| MIN0 | [HYPOTHESIS] | Mine visible/actionable | Deterministic Depth through Direct Descent | checkpoints/action set | Person A not required; descent does not invent Stone yield |
 | FI0 | [HYPOTHESIS] | River spot visible/actionable | Common Catch attempt | Fish item/record/mastery | Does not require crop |
 | P0 | [DECIDED] | Person announced with valid context | Optional Gift | Person card + Heart | Miss → schedule later |
 
@@ -153,8 +155,8 @@ No first-harvest edge precedes R0/MIN0/FI0/P0.
 | ID | Status | Reveal trigger | Progress grammar | Opens/changes | Recovery |
 | --- | --- | --- | --- | --- | --- |
 | R1 | [HYPOTHESIS] | Interact deterministic source + one demand exists | Search/inspect Grove batch | Optional Wild Herb/variety | Batch later; core source deterministic |
-| MIN1 | [HYPOTHESIS] | Enter Mine | Descend Safe/Veiled; Depth deterministic | Current frontier | Depth persists through Sleep |
-| MIN-S | [HYPOTHESIS]/[FIXTURE] | First source checkpoint | Extract known material vs Descend | Seam Ore source | Extract later; no Depth loss |
+| MIN1 | [HYPOTHESIS] | Mine actionable | Direct Descent; Depth deterministic | Current frontier | Depth persists through Sleep |
+| MIN-S | [HYPOTHESIS]/[FIXTURE] | First source checkpoint | Search side tunnel → reveal source → extract Ore, or Descend instead | Exposed Ore source | Search/extract keep Depth; source can be used later |
 | MIN-R | [HYPOTHESIS]/[FIXTURE] | Rule-band checkpoint | Speed vs yield | Changes action rule temporarily | Both routes known; no blind fail |
 | MIN-B | [HYPOTHESIS]/[FIXTURE] | Branch/context checkpoint | Choose previewed context band | Ore/Herb/Fish cross-link | Unchosen branch returns later |
 | MIN-X | [HYPOTHESIS] | World-connection checkpoint | Persistent traversal | New topology/context | Not ending; exact content gated |
@@ -163,7 +165,7 @@ No first-harvest edge precedes R0/MIN0/FI0/P0.
 ### 5.1. [HYPOTHESIS] Shape separation
 
 - R1 là timing/opportunity source, không required random gate.
-- Mine là traversal/rule/context, không delivery Project.
+- Mine tách frontier progress, source discovery và extraction; không phải delivery Project.
 - PJ-X là optional infrastructure cross-link, không entry duy nhất cho Connector.
 - Ore/Stone có Sell vs Project allocation; Project capability không quy đổi thẳng thành Gold.
 
@@ -365,14 +367,15 @@ F0 → Shortroot F1–F5 → J0 liquidity
 ### 13.2. [FIXTURE] Connector
 
 ```text
-R0-W / MIN0 → deterministic Depth + Stone
-            → source/rule/context checkpoint
-            → optional PJ-X Upper Grove
+R0-W / MIN0 → deterministic Depth through Direct Descent
+            → Search Side Tunnel reveals an Ore source
+            → Exposed Ore yields material without Depth
+            → source/rule/context checkpoint → optional PJ-X Upper Grove
             → Wild Herb raw Gift/Process choice
 ```
 
 - First harvest absent.
-- A/J may improve choice; Safe/normal mode remains.
+- A/J may improve choice; Direct Descent remains available without Person support.
 - PJ-X fee/material is optional context gate, not Mine entry.
 
 ### 13.3. [FIXTURE] Collector
@@ -430,7 +433,7 @@ Inline on-table cards ở bảng trên dùng square `1:1`. Inspect/overlay có t
 
 Area order là presentation/navigation fixture, không phải graph dependency, geography hoặc travel distance. Changing scroll order must not change entity rules hoặc node/gate economy.
 
-Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. Spatial orientation v0.1/v0.2 chỉ còn historical fixtures. Mine/Fishing tableau v0.2 đã kiểm shape/density bằng desk/mobile render; global orientation v0.3 vẫn phải group cards thành abstract Area tableaus và đo recognition/scroll burden. Participant evidence vẫn chưa có.
+Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. Spatial orientation v0.1/v0.2 chỉ còn historical fixtures. Mine/Fishing tableau v0.2 đã kiểm shape/density; v0.2.3 đã kiểm deterministic render và informed action-art distinction. Global orientation v0.3 vẫn phải group cards thành abstract Area tableaus và đo recognition/scroll burden. Fresh-participant evidence vẫn chưa có.
 
 ## 16. v0 → v1 changes
 
@@ -453,6 +456,7 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 17. Completed square paper-token coverage; retired spatial orientation protocol after scroll/navigation clarification.
 18. Added abstract Area-tableau mapping and Mine/Fishing exact play-target contract.
 19. Locked square 1:1 on-table card geometry and rebuilt Mine/Fishing fixture with status/detail separation.
+20. Replaced Mine landmark/object placeholders with action art and separated progress, discovery and extraction consequences.
 
 ## 17. Acceptance audit
 
@@ -470,7 +474,9 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 | No exact day from arbitrary fixture | Pass |
 | Year 1 not ending/reset | Pass |
 | Scrollable Area-tableau contract | Pass as paper direction |
-| Mine/Fishing square-card fixture/QA | Pass as paper artifact; no participant data |
+| Mine/Fishing square-card render QA | Pass |
+| v0.2 action comprehension | Failed internal informed check at Task B |
+| v0.2.3 action-art correction | Deterministic render/informed iteration pass; fresh-participant retest open |
 | v0.3 navigation fixture/pilot | Not pass; not built/no participant data |
 | Final AP/Season/Weather | Not selected |
 
@@ -499,11 +505,11 @@ Completed in the 2026-09-22 integration pass:
 3. Concrete A/C/K mini-roster with registry Gift tags.
 4. Fishing atomic vs persistent rerun on four decisive cells.
 5. Mine/Project triple-gate ledger.
-6. Mine/Fishing square Area-tableau fixture v0.2 + deterministic desk/mobile preflight.
+6. Mine/Fishing square fixture v0.2 + deterministic preflight; internal informed test exposed action/schema ambiguity; v0.2.3 action-art correction built and render-verified.
 
 Still required:
 
-1. Run one comprehension pilot on the Mine/Fishing square Area-tableau fixture v0.2.
+1. Confirm the assembled v0.2.3 fixture and run one fresh-participant comprehension pilot.
 2. Build v0.3 vertical Area-strip fixture and run it with at least one new participant.
 3. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
 4. Design/test `COL-N` longer collection horizon.
