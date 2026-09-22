@@ -41,11 +41,13 @@ Rule dài, provenance đầy đủ, exception, recovery và outcome sequence n�
 | On-table playable/interaction target | Square 1:1 | Có | art, name, upper-corner cost, minimal state/requirement, consequence |
 | Focus/detail panel | Rectangle tùy viewport | UI panel, không giả làm root card | full rule, preview, recovery, provenance |
 | Area header/background | Band/field | Không | identity, palette, motif, scoped condition |
-| Record/mastery summary | Horizontal status strip | Không phải action target | persistent record/progress summary |
+| Independent persistent summary | Horizontal status strip/rail | Không phải action target | chỉ state không thể suy ra từ các target đang hiện |
 | Depth/checkpoint summary | Horizontal status strip | Không phải route target | Depth, band, next checkpoint/history cue |
-| Sticky HUD/tray | Strip/control | UI | AP, Character, Tool, day/condition |
+| Sticky HUD/tray | Strip/control hoặc card-like UI ngoài tableau | UI | AP, Character, Tool, Weather, Season, day/condition |
 
 Nếu một horizontal strip về sau có verb/target riêng, nó phải được redesign thành square card hoặc explicit control; không âm thầm biến status strip thành card.
+
+Không tạo status component chỉ để mọi Area có cùng schema. v0.3.4 loại Farm State, Market State và Fish Record vì card semantics đã tự giải thích; Mine Depth/checkpoint được giữ vì current Depth không thuộc riêng action card nào.
 
 ## 4. Tableau layout contract
 
@@ -77,7 +79,7 @@ Nếu một horizontal strip về sau có verb/target riêng, nó phải đượ
 
 ## 6. Evidence gate
 
-[Mine + Fishing Area-tableau fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md) là first shape-conformant paper artifact. [v0.2.4](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) là current target/cost correction. Render QA kiểm square recognition, density, upper-corner cost và status-strip distinction; informed owner acceptance pass, fresh-player evidence unavailable.
+[Mine + Fishing Area-tableau fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md) là first shape-conformant paper artifact. [v0.2.4](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) sửa target/cost grammar. [Global orientation v0.3.4](../paper-tests/orientation-area-tableau-v0.3.4/README.md) là current fixture: sticky Area index, semantic-only Home/Commerce/River và Mine Depth rail được informed owner accept. Fresh-player evidence unavailable.
 
 Không promote tên, cost, mastery threshold, art study hoặc grid size trong fixture thành canonical/runtime content.
 
@@ -95,6 +97,8 @@ Không promote tên, cost, mastery threshold, art study hoặc grid size trong f
 - Header Area luôn hiện hay chỉ khi onboarding/focus.
 - Art-to-UI ratio trong square card.
 - Hover/focus/selected treatment và tap target padding.
+- Exact Weather/Season card-like UI outside the play tableau.
+- Generated abstraction backgrounds that preserve card dominance and Area identity.
 
 ## 9. First comprehension correction
 

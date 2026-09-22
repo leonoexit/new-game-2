@@ -45,30 +45,31 @@ Theo [square-card decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md), mọi card n
 
 Root card chỉ giữ art, name, 1–3 badge quan trọng, short cost/progress và ready/locked/selectable/persistent state. Rule dài mở trong focus/detail panel rectangle; panel là UI overlay, không phải card mới trên tableau.
 
-Area header/background không có card border hoặc hit-target affordance. Record/mastery và Depth/checkpoint có thể dùng horizontal status strip khi chúng chỉ tóm tắt state và không có verb riêng.
+Area header/background không có card border hoặc hit-target affordance. Chỉ state độc lập thật sự, không thể suy ra từ các target đang hiện, mới dùng horizontal status strip/rail. Informed-owner orientation v0.3.4 giữ Mine Depth/checkpoint nhưng loại Farm State, Market State và Fish Record khỏi root tableau.
 
 ## 3. Ngôn ngữ bố cục
 
 ```text
 HOME / FARM visual band
-[House] [Plot] [Water Trough]
-[Storage] [Harvest Bench]
+[Farmhouse] [Plot]
+[Water Trough] [room for expansion]
 
-soft visual transition
+neutral UI divider
 
 COMMERCE visual band
-[Supermarket] [Person Today]
+[Supermarket] [Mira / active Person identity]
 
-soft visual transition
+neutral UI divider
 
 RIVER visual band
-[Today's Catch] [Fishing mastery/status]
+[Exact Catch opportunity]
 
-soft visual transition
+neutral UI divider
 
 MINE visual band
-[Current Frontier] [Safe Route] [Veiled Route]
-[Working Seam when unlocked]
+[Depth/checkpoint status rail]
+[Exposed Ore] [Direct Descent]
+[Search Side Tunnel] [room for expansion]
 ```
 
 Đây là thứ tự duyệt UI, không phải phía bắc/nam, gần/xa hoặc tuyến đường trong fiction.
@@ -100,6 +101,7 @@ Ví dụ:
 ## 5. Navigation contract
 
 - Manual scroll, search/index và anchor đều là navigation UI, mặc định 0 AP.
+- Với bốn Area hiện tại, informed owner đã yêu cầu sticky Area-name index. Index chỉ focus/scroll UI và active tab cho biết Area đang focus; nó không phải map hoặc travel control.
 - Anchor focus một Area hoặc entity; nó không teleport nhân vật trong simulation vì scroll chưa từng là travel.
 - Vị trí tương đối trong dải phải ổn định đủ để hình thành interface memory.
 - Unlock mới nên xuất hiện trong Area liên quan mà không re-order toàn bộ world strip tùy tiện.
@@ -115,6 +117,8 @@ Area được đọc bằng:
 - khoảng thở/chuyển cảnh nhẹ giữa nhóm;
 - header hoặc icon nhỏ nếu recognition cần;
 - stable order trong world strip.
+
+Flat palette fields đã hỗ trợ nhận Area một phần trong informed-owner check. Generated abstraction background là future art direction để tăng sinh động, chưa được tạo hoặc runtime-authorize trong v0.3.4.
 
 Không cần panel lớn, border bao quanh hoặc card đại diện Area. Việc dùng background band không tạo một parent object có thể target.
 
@@ -148,14 +152,17 @@ Home-middle vs Home-at-top là câu hỏi spatial topology nên không còn đo 
 3. `[DIRECTION]` World là một vertical strip của abstract Area tableaus.
 4. `[DIRECTION]` Card cùng Area đặt khít và chia sẻ visual language.
 5. `[DIRECTION]` Chỉ verb/state/opportunity cụ thể mới cần card.
-6. `[HYPOTHESIS]` Stable scroll order + soft transition đủ cho orientation; cần v0.3 fixture/pilot.
+6. `[INFORMED-OWNER ACCEPTED]` Stable order + sticky Area-name index + neutral UI divider đọc như interface focus/scroll, không phải character movement.
+7. `[INFORMED-OWNER ACCEPTED]` Home/Commerce/River tự giải thích bằng card semantics và không cần synthetic Area state; Mine Depth/checkpoint là separate status duy nhất cần trong bốn Area hiện tại.
+8. `[DIRECTION]` Weather/Season có thể dùng card-like global UI ngoài play tableau; chúng không phải on-table square targets.
 
 ## 10. Chưa kết luận
 
 - Header Area luôn hiện hay chỉ xuất hiện lúc onboarding/focus.
 - Một viewport chứa toàn Area hay cho phép Area dài hơn viewport.
 - Số cột và card density trên mobile.
-- Anchor/index luôn hiện hay chỉ mở qua overview.
-- Có Area-wide Weather badge hay Weather chỉ gắn trên opportunity card.
+- Runtime index luôn sticky hay collapse sau onboarding; paper fixture dùng sticky index vì owner đã cần index ở bốn Area.
+- Exact card-like treatment cho global Weather/Season ngoài play tableau.
+- Generated abstraction background cho từng Area và mức độ motif cần thiết ngoài palette.
 - Exact logical square-card size, badge hierarchy và accessibility reflow.
 - Fiction có travel cost riêng hay hoàn toàn không có travel system.

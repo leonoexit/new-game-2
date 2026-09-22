@@ -20,6 +20,7 @@ Phạm vi: sửa world presentation từ spatial surface thành scrollable abstr
 | Mine | Persistent state + separate progress/discovery/extraction actions | [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) |
 | Card shape | Square 1:1 on-table cards; rectangle reserved for focus/detail UI; status kept as strips | [decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md) |
 | Play fixture | v0.2 failed action comprehension; v0.2.4 now has approved action art, square-target/status-strip separation and upper-corner signed AP | [v0.2 pilot](../paper-tests/mine-fishing-area-tableau-v0.2/pilot-results/internal-informed-pilot-01.md), [v0.2.4](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) |
+| Global orientation | v0.3.4 accepted by informed owner: sticky Area index reads as UI focus, non-Mine synthetic state removed, Mine Depth retained, Weather moved to global scope | [v0.3.4](../paper-tests/orientation-area-tableau-v0.3.4/README.md) |
 | Redundant gateways | Fishing Spot/Entrance only remain when they have their own verb/state | [Model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) |
 | Historical spatial work | Model 07 and orientation v0.2 marked superseded for pilot | [Model 07](CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md), [v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md) |
 
@@ -27,11 +28,11 @@ Phạm vi: sửa world presentation từ spatial surface thành scrollable abstr
 
 ### Fishing
 
-Scroll/focus River for free, inspect exact Catch, then make one informed atomic commitment. Catch rotates with condition; record/mastery persists. River is enough for the minimum fixture. Lake/Coast should only become separate Area tableaus if they change a decision dimension, not merely the fish list.
+Scroll/focus River for free, inspect exact Catch, then make one informed atomic commitment. Catch rotates with condition. River root không có Fish Record/status rail; collection/mastery chỉ quay lại ngoài tableau nếu nó tạo decision value. River là đủ cho minimum fixture. Lake/Coast chỉ thành Area riêng nếu chúng đổi decision dimension, không chỉ đổi fish list.
 
 ### Mine
 
-Scroll/focus Mine for free, inspect Mine State and available actions, then play Character + Tool into one action. `Direct Descent` alone advances Depth; `Search Side Tunnel` keeps Depth and reveals an Ore source; `Exposed Ore` keeps Depth, yields Ore and becomes spent. Checkpoints may change the action set, source state or context. Leaving the Area never resets Depth.
+Scroll/focus Mine for free, inspect the Depth/checkpoint rail and available actions. `Direct Descent` alone advances Depth and keeps the `DEPTH +1` tag; `Search Side Tunnel` reveals an Ore source without a redundant `DEPTH +0` tag; Character + Pickaxe into `Exposed Ore` yields Ore and spends the source. Checkpoints may change the action set, source state or context. Leaving the Area never resets Depth.
 
 ## 4. Failure conditions
 
@@ -42,8 +43,17 @@ Scroll/focus Mine for free, inspect Mine State and available actions, then play 
 - Fishing and Mine both collapse to `spend AP → random resource`.
 - Lake/Coast are added only as more names/art without a planning difference.
 
-## 5. Next evidence gate
+## 5. Orientation evidence result
 
 Internal informed pilot trên v0.2 đã dừng ở Task B vì player phải dịch schema thành verb. Iteration qua v0.2.1–v0.2.3 sửa art và consequence; commitment check tiếp tục loại square status target và generic Tool. v0.2.4 đã pass deterministic render QA và informed-owner acceptance. Không có tester khác nên fresh-player evidence vẫn unavailable; product owner cho phép chuyển sang vertical Area-strip fixture với risk này được ghi rõ.
 
-Sau đó build orientation v0.3 như một vertical sequence của tight Area tableaus thay vì map comparison.
+[Orientation v0.3.4](../paper-tests/orientation-area-tableau-v0.3.4/README.md) đã hoàn thành vertical sequence và informed-owner correction chain. Evidence hiện tại:
+
+- sticky Area-name index cần ở bốn Area và đọc như UI focus/scroll, không phải movement;
+- Home/Commerce/River tự giải thích từ card semantics, không cần synthetic Area-state line;
+- Mine Depth/checkpoint là separate status duy nhất trong bốn Area;
+- Weather thuộc global chrome; future Weather/Season có thể là card-like UI ngoài play tableau;
+- palette fields hỗ trợ Area identity; generated abstraction backgrounds là future art direction;
+- three-target Home đọc như expansion capacity, không phải missing card.
+
+Fresh-player onboarding/orientation risk vẫn open vì không có tester mới. Không dùng informed-owner acceptance như fresh-player pass.

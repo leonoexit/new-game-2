@@ -77,7 +77,7 @@ Không branch nào cần first harvest để tồn tại. Branch rejoin bằng i
 | Fishing | atomic one-commit | global persistent xóa A5 scarcity, thêm A7 state | `[HYPOTHESIS]` |
 | Mine | deterministic Depth + mixed checkpoint | resource staircase yếu hơn | `[HYPOTHESIS]` |
 | Mine/Fishing presentation | abstract Area tableaus; target exact Catch/frontier/route | redundant Entrance/Spot gateway cards | `[DIRECTION]` |
-| On-table card shape | square 1:1; immediate verb + pay/get/change; ordered rectangular detail UI; Record/Depth as status strips | portrait primary, noun-only root hoặc schema dump | `[DECIDED]` |
+| On-table card shape | square 1:1; immediate verb + pay/get/change; ordered rectangular detail UI; only independent non-action state as status rail (currently Mine Depth) | portrait primary, noun-only root hoặc schema dump | `[DECIDED]` |
 | Processing | Load → Sleep, one slot, identity preserving | +2G/1 AP/one Sleep là numbers only | `[FIXTURE]` |
 | PJ-M/PJ-B | material + Work, no fee | fee + scarce material + Work triple-gates relief | `[HYPOTHESIS]` |
 | PJ-X | material + Work + selected permit comparator | không áp fee cho mọi Project | `[HYPOTHESIS]` |
@@ -134,14 +134,17 @@ Coverage hiện có:
 - sticky House anchor, opening cue, carried-source area;
 - four-task script, counterbalance và log fields.
 - Mine/Fishing v0.2 shape fixture + failed informed action-comprehension result; v0.2.4 target/cost correction accepted by informed owner.
+- Global Area orientation v0.3→v0.3.4 correction trail; v0.3.4 accepted by informed owner with sticky Area-name index, semantic-only Home/Commerce/River and Mine Depth rail.
 
 `[DECIDED]` Scroll không mô phỏng movement/geography, nên Home-middle vs Home-at-top không còn là câu hỏi topology hợp lệ.
 
-`[DIRECTION]` Fixture v0.3 cần xếp card cùng Area khít thành vertical strip, dùng visual transition thay map terrain và đo area/card recognition thay vì spatial recall.
+`[INFORMED-OWNER ACCEPTED]` v0.3.4 xếp card cùng Area thành vertical strip, dùng sticky Area-name index + neutral UI divider, và đọc như UI focus/scroll thay vì movement. Home/Commerce/River không cần synthetic Area state; Mine giữ Depth/checkpoint rail. Fresh-player risk vẫn open.
 
 Card geometry hiện hành nằm ở [on-table card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md). Mine/Fishing v0.2 exposed noun/schema ambiguity; v0.2.3 fixed art but retained a false square state target. [v0.2.4](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) is current: every square is a target, pure state is a strip, signed AP sits in the upper corner, and exact requirements replace generic Tool. Informed owner acceptance pass; fresh-player evidence unavailable.
 
 Bốn ảnh mới trong Mine/Fishing v0.2.3 đã được user duyệt làm `approved reference`; chúng chưa `runtime approved`. Các art còn lại giữ status riêng trong asset record và không được tự động promote.
+
+Weather thuộc global UI scope, không phải Eel tag hoặc River state. Future Weather/Season có thể dùng card-like UI ngoài play tableau. Flat palette fields hiện giúp Area identity một phần; generated abstraction backgrounds là future art direction, chưa runtime-authorize.
 
 ## 9. Evidence ledger
 
@@ -157,6 +160,7 @@ Bốn ảnh mới trong Mine/Fishing v0.2.3 đã được user duyệt làm `app
 | [Mine/Fishing v0.2 pilot](../paper-tests/mine-fishing-area-tableau-v0.2/pilot-results/internal-informed-pilot-01.md) | square recognition observed; action/schema comprehension failed at Task B |
 | [Mine/Fishing corrective fixture](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) | approved art + target/status separation + signed AP placement; informed owner pass |
 | [Scrollable Area model](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) | scroll is UI navigation, not travel or map |
+| [Global orientation v0.3.4](../paper-tests/orientation-area-tableau-v0.3.4/README.md) | sticky index accepted; synthetic non-Mine Area state and redundant tags removed; Mine Depth retained |
 | [Mine triple-gate audit](MINE-PROJECT-TRIPLE-GATE-AUDIT-01.md) | remove relief fees in next baseline |
 | [Kernel audit](PERSON-ROSTER-KERNEL-AUDIT-02.md) | A/C/K carry, E/J conditional, D/I/M reserve |
 | [Mini-roster fixture](PERSON-MINI-ROSTER-FIXTURE-01.md) | concrete Gift/economy/UI test set |
@@ -191,7 +195,7 @@ Bốn ảnh mới trong Mine/Fishing v0.2.3 đã được user duyệt làm `app
 | Concrete Person mini-roster | Pass as fixture |
 | Square orientation asset coverage | Pass |
 | Historical spatial orientation preflight | Pass, but superseded for pilot |
-| Scrollable Area-tableau representation | Mine/Fishing shape fixture pass; global v0.3 fixture open |
+| Scrollable Area-tableau representation | Global v0.3.4 informed-owner acceptance; fresh-player evidence unavailable |
 | Square-card desk/mobile render QA | Pass |
 | Action/target comprehension | v0.2 failed; v0.2.4 passes deterministic render + informed owner acceptance; fresh-player evidence unavailable |
 | New-player orientation data | Open |
@@ -211,11 +215,11 @@ Bốn ảnh mới trong Mine/Fishing v0.2.3 đã được user duyệt làm `app
 
 ## 13. Next evidence, in order
 
-1. Build v0.3 vertical Area-strip fixture using v0.2.4 target/status/cost grammar.
-2. Run informed-owner navigation/recognition check; retain fresh-player risk as open until another tester exists.
-3. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
-4. Create/test `COL-N` as a longer record horizon without permanent miss.
-5. Test forecast presentation before selecting storage cap.
+1. Retain fresh-player navigation/comprehension risk as open until another tester exists; do not relabel informed-owner acceptance.
+2. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
+3. Create/test `COL-N` as a longer collection horizon outside the River root tableau and without permanent miss.
+4. Test Weather/Season global presentation and forecast before selecting storage cap.
+5. Explore generated abstraction Area backgrounds separately under the art skill; preserve card dominance and accepted index grammar.
 6. Only then choose a narrower content/balance lock; implementation still needs explicit user authorization.
 
 ## 14. Non-conclusions

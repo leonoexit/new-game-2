@@ -39,7 +39,7 @@ History, full pool, collection record và old checkpoints nằm trong inspect/ov
 - Pure status không nhận commit phải là horizontal strip/control, không dùng square-card silhouette. Trong current fixture, mọi square đều là target.
 - Full rule/preview/recovery nằm trong focus/detail panel rectangle hoặc resolution sheet.
 - Area header/background không có card border và không phải target.
-- River Record/mastery và Mine Depth/checkpoint dùng horizontal status strip khi không có verb riêng.
+- Mine Depth/checkpoint dùng horizontal status rail vì state này không thuộc riêng action card nào. Informed-owner v0.3.4 loại Fish Record khỏi River root vì nó không mang quyết định hữu ích; collection/mastery nếu quay lại phải ở UI khác và phải chứng minh decision value.
 
 Shape contract đầy đủ nằm ở [on-table card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md).
 
@@ -52,8 +52,7 @@ Minimum River tableau:
 ```text
 RIVER visual language / condition badge
 
-[Today's Catch square] [active Person/context square]
-[Fishing Record / mastery horizontal status strip]
+[Exact Catch opportunity square]
 ```
 
 Player Rod/Character state nằm trong hand/HUD; không lặp một Rod card trong từng Area.
@@ -79,7 +78,6 @@ Focus River                           0 AP
 Inspect Today's Catch                 0 AP
 Play Character + Fishing Rod → Catch  atomic commitment
 Resolve                               acquire exact Fresh Fish
-                                      record first/condition catch
                                       remove/flip opportunity
 ```
 
@@ -87,9 +85,9 @@ Resolve                               acquire exact Fresh Fish
 
 Không có `Begin/Land` mặc định. Một named Long Catch sau này có thể có multi-day rule riêng nếu preview, recovery và provenance rõ.
 
-### 2.4. Fishing progression
+### 2.4. Fishing progression — future, outside River root
 
-Fishing progression dùng discovery/knowledge, không delivery bundle:
+Current orientation root không có Fish Record/mastery rail. Nếu Fishing progression được mở lại, nó phải nằm trong collection/inspect/global UI và dùng discovery/knowledge, không delivery bundle:
 
 - first catch tự ghi record, không consume item;
 - catch cùng location dưới condition khác nhau có thể tăng mastery;
@@ -196,7 +194,7 @@ Candidate này chỉ hợp lệ nếu nó thêm collection/Processing/choice kh�
 | --- | --- | --- |
 | Core object | condition-bound Catch opportunity | persistent Current Frontier |
 | Main pressure | commit hôm nay hay bỏ opportunity | dùng AP cho progress, discovery hay extraction |
-| Persistence | record/mastery; Catch rotates | Depth/checkpoints giữ lâu dài |
+| Persistence | Catch rotates; no River root status | Depth/checkpoints giữ lâu dài |
 | Information | exact Catch/cost visible | Depth certain; optional reward có thể category-known |
 | Failure baseline | miss waits for recurrence | no loss of Depth |
 | Growth | pool knowledge/choice | rule/source/branch checkpoints |
@@ -206,7 +204,7 @@ Nếu cả hai chỉ trở thành `spend AP → random item`, design fail.
 
 ## 5. Current paper fixture
 
-v0.2 giữ play grammar của v0.1 nhưng chuyển root surface sang shape final. Internal informed pilot nhận ra card nhưng fail action comprehension vì noun/badge + schema panel. v0.2.1 và v0.2.2 cho thấy plain-language text vẫn không cứu được art mô tả sai thời điểm. v0.2.3 sửa action/target art. v0.2.4 loại square status target giả, đặt signed AP ở góc trên và thay generic Tool bằng Pickaxe cụ thể. Numbers/names vẫn là fixture; fresh-player evidence không có, informed owner đã accept interaction hierarchy.
+v0.2 giữ play grammar của v0.1 nhưng chuyển root surface sang shape final. Internal informed pilot nhận ra card nhưng fail action comprehension vì noun/badge + schema panel. v0.2.1 và v0.2.2 cho thấy plain-language text vẫn không cứu được art mô tả sai thời điểm. v0.2.3 sửa action/target art. v0.2.4 loại square status target giả, đặt signed AP ở góc trên và thay generic Tool bằng Pickaxe cụ thể. [Orientation v0.3.4](../paper-tests/orientation-area-tableau-v0.3.4/README.md) tiếp tục cleanup: bỏ River record rail và Eel tags, chuyển Weather lên global UI scope, giữ riêng Mine Depth cùng `DEPTH +1` trên Direct Descent. Numbers/names vẫn là fixture; fresh-player evidence không có, informed owner đã accept interaction hierarchy và global orientation revision.
 
 ### 5.1. Fishing decision card
 

@@ -48,7 +48,7 @@ Nguồn chính:
 - Buy/Sell 0 AP là paper baseline mạnh hơn cho vòng kế; chưa chốt.
 - Storage không cap/không perish là paper baseline sạch; small-cap và perishability không được gộp cùng arm.
 - Catch dùng atomic commitment làm paper baseline; graph vẫn giữ grammar abstract để final cost có thể đổi.
-- On-table interaction targets dùng square 1:1; full rules ở detail UI, còn non-action Record/Depth summaries dùng status strips. Signed AP cost nằm ở upper corner.
+- On-table interaction targets dùng square 1:1; full rules ở detail UI. Chỉ independent non-action state không thể suy từ targets mới dùng status strip/rail; current global fixture giữ Mine Depth và bỏ Farm/Market/Fish summaries. Signed AP cost nằm ở upper corner.
 - An action node depicts its verb/target; an opportunity node depicts the visible target/context and receives the Tool/Item that supplies the verb. Tags carry cost/state/requirement; description carries consequence/trade-off. Noun-only labels, redundant CTAs and schema panels are insufficient.
 
 ### 1.3. [HYPOTHESIS] Evidence constraints mang vào v1
@@ -433,7 +433,7 @@ Inline on-table cards ở bảng trên dùng square `1:1`. Inspect/overlay có t
 
 Area order là presentation/navigation fixture, không phải graph dependency, geography hoặc travel distance. Changing scroll order must not change entity rules hoặc node/gate economy.
 
-Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. Spatial orientation v0.1/v0.2 chỉ còn historical fixtures. Mine/Fishing v0.2.4 đã kiểm deterministic render, action-art distinction, square-target/status-strip separation và signed AP placement với informed owner. Global orientation v0.3 vẫn phải group cards thành abstract Area tableaus và đo recognition/scroll burden. Fresh-player evidence unavailable.
+Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. Spatial orientation v0.1/v0.2 chỉ còn historical fixtures. Mine/Fishing v0.2.4 đã kiểm deterministic render, action-art distinction, square-target/status-strip separation và signed AP placement với informed owner. Global orientation [v0.3.4](../paper-tests/orientation-area-tableau-v0.3.4/README.md) đã group card thành abstract Area tableaus, thêm sticky Area index, bỏ synthetic non-Mine status và được informed owner accept. Fresh-player evidence unavailable.
 
 ## 16. v0 → v1 changes
 
@@ -477,7 +477,7 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 | Mine/Fishing square-card render QA | Pass |
 | v0.2 action comprehension | Failed internal informed check at Task B |
 | v0.2.4 target/cost correction | Deterministic render + informed owner acceptance pass; fresh-player evidence unavailable |
-| v0.3 navigation fixture/pilot | Not pass; not built/no participant data |
+| v0.3.4 navigation fixture/pilot | Informed-owner acceptance; sticky index reads as UI focus, fresh-player evidence unavailable |
 | Final AP/Season/Weather | Not selected |
 
 ## 18. v1 verdict
@@ -506,14 +506,15 @@ Completed in the 2026-09-22 integration pass:
 4. Fishing atomic vs persistent rerun on four decisive cells.
 5. Mine/Project triple-gate ledger.
 6. Mine/Fishing square fixture v0.2 + deterministic preflight; informed iterations produced v0.2.4 with approved art, true square targets, status strips and upper-corner signed AP.
+7. Global orientation v0.3→v0.3.4 informed-owner correction chain: Area index accepted, Weather moved to global scope, synthetic Farm/Market/Fish status removed, Mine Depth retained.
 
 Still required:
 
-1. Build v0.3 vertical Area-strip fixture from v0.2.4 grammar and run informed-owner navigation/recognition check.
-2. Retain fresh-player comprehension as an explicit risk until another tester becomes available.
-3. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
-4. Design/test `COL-N` longer collection horizon.
-5. Validate forecast presentation before selecting any storage cap.
+1. Retain fresh-player comprehension as an explicit risk until another tester becomes available.
+2. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
+3. Design/test `COL-N` longer collection horizon outside the River root tableau.
+4. Validate Weather/Season global presentation and forecast before selecting any storage cap.
+5. Explore generated abstraction Area backgrounds separately while preserving card dominance and accepted index/navigation grammar.
 
 ### 18.3. Chưa được kết luận
 
@@ -522,7 +523,7 @@ Still required:
 - Crop duration/yield/price.
 - Project quantity/Work and which optional-context Project retains a Gold fee.
 - Storage/perishability.
-- Final Area order, square-card logical size, badge hierarchy, density and navigation treatment.
+- Final runtime Area order, square-card logical size, badge hierarchy and density. Paper direction now includes sticky name index at four Areas; exact runtime collapse/sticky behavior remains open.
 - Person roster, identity, Gift preference hoặc final Heart cadence.
 - Fishing/Mine/Processing final balance.
 - Completion criteria hoặc ending.
