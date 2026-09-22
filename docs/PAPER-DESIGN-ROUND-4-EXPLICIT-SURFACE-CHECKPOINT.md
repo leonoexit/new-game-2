@@ -2,6 +2,8 @@
 
 Ngày: 2026-09-22.
 
+> **SUPERSEDED AS CURRENT DIRECTION.** User clarification tiếp theo xác định scroll không phải movement và game không có spatial map. Xem [round 5 Area-tableau checkpoint](PAPER-DESIGN-ROUND-5-AREA-TABLEAU-CHECKPOINT.md). Giữ round 4 làm audit trail.
+
 Phạm vi: sửa representation model sau clarification của user và dựng fixture orientation mới; vẫn không code/runtime prototype.
 
 ## 1. Correction đã khóa

@@ -2,7 +2,9 @@
 
 Ngày correction: 2026-09-22.
 
-Trạng thái: presentation direction sau user clarification. Không phải UI implementation spec hoặc topology final.
+> **SUPERSEDED — 2026-09-22.** Tài liệu này vẫn giả định world là một spatial surface/map. Clarification mới nhất xác định scroll chỉ là navigation UI qua các Area tableau trừu tượng, không phải movement hoặc geography. Direction hiện hành nằm ở [Scrollable area-tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md). Giữ file này làm audit trail.
+
+Trạng thái: `SUPERSEDED`; không dùng v0.2 spatial orientation fixture cho participant pilot.
 
 ## 1. Core correction
 

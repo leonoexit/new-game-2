@@ -16,6 +16,8 @@ Nguồn chính:
 - [Fishing resolution sensitivity 02](FISHING-RESOLUTION-SENSITIVITY-02.md)
 - [Mine/Project triple-gate audit 01](MINE-PROJECT-TRIPLE-GATE-AUDIT-01.md)
 - [Person mini-roster fixture 01](PERSON-MINI-ROSTER-FIXTURE-01.md)
+- [Scrollable abstract-area tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md)
+- [Mine/Fishing area-tableau play contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md)
 - [Orientation explicit-surface paper-test kit v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md)
 - [Orientation paper-test kit v0.1 — historical topology skeleton](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md)
 
@@ -38,8 +40,8 @@ Nguồn chính:
 - Farming, source, Mine, Fishing, collection, Processing, Project và Person có objective shape khác nhau.
 - Required common source có deterministic path hoặc substitute.
 - Person thay information/timing/flexibility; không là prerequisite duy nhất.
-- Root world chỉ biểu diễn semantic persistent node/state; graph không ánh xạ 1:1 thành tile.
-- Presentation root là continuous explicit surface; geography không có Area card/container, còn gameplay entities nằm trực tiếp tại world position.
+- Root world strip chỉ biểu diễn abstract Area groups và semantic persistent node/state; graph không ánh xạ 1:1 thành tile.
+- Scroll là navigation UI, không phải movement/travel. Area là visual/rulescope; exact Catch/frontier/route/source mới là playable targets.
 - Buy/Sell 0 AP là paper baseline mạnh hơn cho vòng kế; chưa chốt.
 - Storage không cap/không perish là paper baseline sạch; small-cap và perishability không được gộp cùng arm.
 - Catch dùng atomic commitment làm paper baseline; graph vẫn giữ grammar abstract để final cost có thể đổi.
@@ -53,7 +55,7 @@ Nguồn chính:
 5. Seed restock + selected optional-context fee là hai sink shape đủ cho vòng paper; relief Project không dùng fee trong baseline kế.
 6. A/C/K có evidence mạnh nhất; E/J là conditional candidate; D/I/M ở reserve.
 7. `COL-1` D3 là first-branch fixture, không đủ làm long-term collection arc.
-8. Home-middle nên là next orientation fixture, chưa phải topology quyết định.
+8. Home-middle vs Home-at-top không còn là topology question; next orientation fixture phải đo Area/card recognition trong vertical strip.
 9. `S4` chỉ tạo storage decision khi target horizon được forecast; perishability làm Sell/Process dominate trong arm hiện tại.
 10. Water Trough fail triple-gate shape nếu cùng đòi checkpoint access + Ore + fee + Work.
 
@@ -265,9 +267,9 @@ Exact day không được gắn vì cùng node dao động mạnh giữa A5/A7 v
 Reveal:
 
 - D0 day information;
-- House/Farm starting entities and surrounding geography;
+- House/Farm starting Area tableau and visible playable entities;
 - Hedgerow/Woodlot deterministic source;
-- River/Mine locked or actionable landmark theo starting topology;
+- River/Mine Area identity plus locked/actionable Catch/frontier state;
 - Person context hôm nay;
 - exact action hiện có, không full future tree.
 
@@ -407,23 +409,23 @@ Shortroot record + Berry/Wild Herb record + River Fish record
 | Graph content | Primary layer |
 | --- | --- |
 | D0/Person announcements | Sticky HUD/day strip |
-| Terrain/path/river/building cluster/landmark art | Continuous geography; không phải graph/card entity |
-| House/Plot/source/Supermarket/Fishing Spot/Mine frontier | Interactive entities đặt trực tiếp trên surface |
-| Current Catch/Person/batch/frontier | Inline context marker |
+| Area background/header/transition | Abstract visual/rulescope; không phải movement map hoặc card target |
+| House/Plot/source/Supermarket | Playable entities trong Area tableau liên quan |
+| Current Catch/Person/batch/Mine frontier/route | Inline playable context/state card |
 | Tool/item/owned Person/selected source | Sticky tray |
 | Project full requirement, collection, Mine history, ability rule | Inspect/overlay |
 
 ### 15.1. [HYPOTHESIS] Label policy
 
-- Known geography (river/coast), House and basic crop state: L0 after onboarding.
+- Known Area identity, House and basic crop state: L0 after onboarding.
 - Item: L1; exact name on focus/selection.
 - Known Person: L1 + Heart/status; new Person L3.
 - Project/opportunity/Processor: L2; critical new branch L3.
 - A/C/E/J/K ability cannot be portrait-only; selected verb/eligibility/limit belongs to UI.
 
-Home-middle is next topology fixture, not graph dependency. `Home` ở đây là shorthand cho house/farm cluster coordinates, không phải Home Area card. Switching Home-at-top must not change entity rules hoặc node/gate economy.
+Area order là presentation/navigation fixture, không phải graph dependency, geography hoặc travel distance. Changing scroll order must not change entity rules hoặc node/gate economy.
 
-Square entity/Project/Fresh–Processed art coverage và counterbalanced protocol đã có trong [v0.2 paper-test kit](../paper-tests/orientation-explicit-surface-v0.2/README.md). v0.1 chỉ là historical topology skeleton vì dùng Place tokens; v0.2 embeds cùng chín exact entities trực tiếp trên continuous background. Participant evidence vẫn chưa có.
+Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. v0.1/v0.2 chỉ còn historical spatial fixtures. v0.3 phải group cards thành abstract Area tableaus và đo recognition/scroll burden; participant evidence vẫn chưa có.
 
 ## 16. v0 → v1 changes
 
@@ -443,7 +445,8 @@ Square entity/Project/Fresh–Processed art coverage và counterbalanced protoco
 14. Kept atomic Fishing commitment after four-cell rerun; rejected global persistent resolution as baseline.
 15. Removed Gold fee from PJ-M/PJ-B paper baseline and retained PJ-X as selected strategic-fee comparator.
 16. Added concrete A/C/K mini-roster fixture without promoting identities or Gift schedule.
-17. Completed square paper-token coverage and orientation protocol preflight; participant validation remains open.
+17. Completed square paper-token coverage; retired spatial orientation protocol after scroll/navigation clarification.
+18. Added abstract Area-tableau mapping and Mine/Fishing exact play-target contract.
 
 ## 17. Acceptance audit
 
@@ -460,8 +463,8 @@ Square entity/Project/Fresh–Processed art coverage và counterbalanced protoco
 | Calendar miss has recovery | Pass |
 | No exact day from arbitrary fixture | Pass |
 | Year 1 not ending/reset | Pass |
-| Orientation kit/preflight | Pass |
-| Orientation validated with new player | Not pass; no participant data yet |
+| Scrollable Area-tableau contract | Pass as paper direction |
+| v0.3 navigation fixture/pilot | Not pass; not built/no participant data |
 | Final AP/Season/Weather | Not selected |
 
 ## 18. v1 verdict
@@ -492,10 +495,11 @@ Completed in the 2026-09-22 integration pass:
 
 Still required:
 
-1. Run the counterbalanced v0.2 orientation protocol with at least one new participant, then a broader sample if the protocol survives pilot.
-2. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
-3. Design/test `COL-N` longer collection horizon.
-4. Validate forecast presentation before selecting any storage cap.
+1. Build and desk-test the Mine/Fishing Area-tableau fixture.
+2. Build v0.3 vertical Area-strip fixture and run it with at least one new participant.
+3. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
+4. Design/test `COL-N` longer collection horizon.
+5. Validate forecast presentation before selecting any storage cap.
 
 ### 18.3. Chưa được kết luận
 
@@ -504,7 +508,7 @@ Still required:
 - Crop duration/yield/price.
 - Project quantity/Work and which optional-context Project retains a Gold fee.
 - Storage/perishability.
-- Home-middle/topology final.
+- Final Area order, card density and navigation treatment.
 - Person roster, identity, Gift preference hoặc final Heart cadence.
 - Fishing/Mine/Processing final balance.
 - Completion criteria hoặc ending.

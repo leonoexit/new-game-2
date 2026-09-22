@@ -28,12 +28,12 @@ Trạng thái: paper-design package v1; không phải implementation spec hoặc
 ### 2.2. [DIRECTION]
 
 - Distributed micro-objective network; không objective hub bắt buộc.
-- Root world chỉ giữ landmark, persistent state/capacity và active context marker.
+- Root world strip chỉ giữ Area tableau, persistent state/capacity và active context cần chơi.
 - Preview cost/scope/result trước commit; cancel trước commit không đổi state/resource.
 - Required common source deterministic hoặc có recovery/substitute rõ.
 - Raw/Fresh và Processed giữ category/subtype/origin khác nhau.
-- World camera anchor/selected source không tốn AP trong paper topology fixture.
-- Continuous surface tự biểu diễn geography bằng terrain, paths, buildings, water và spatial clusters; Area không có card, box hoặc parent node riêng.
+- Scroll/anchor/selected source không tốn AP; navigation UI không phải movement/travel.
+- World là vertical strip của abstract Area tableaus; card cùng Area đặt khít và chia sẻ visual language, không mô phỏng geography/map.
 
 ## 3. Minimum shared vocabulary
 
@@ -51,7 +51,7 @@ Names/counts không phải content lock.
 
 ## 4. Structural graph
 
-Canonical paper graph của package là [Year 1 progression dependency graph v1](YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md). Presentation correction mới nhất là [Explicit-surface model 07](CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md); Area-container model 06 đã superseded.
+Canonical paper graph của package là [Year 1 progression dependency graph v1](YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md). Presentation correction mới nhất là [Scrollable area-tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md); area-container model 06 và explicit-surface model 07 đã superseded.
 
 ```text
 New Day info
@@ -75,11 +75,12 @@ Không branch nào cần first harvest để tồn tại. Branch rejoin bằng i
 | Storage | no cap, no perish | `S4` comparator; `P1` perish không carry | `[HYPOTHESIS]` |
 | Fishing | atomic one-commit | global persistent xóa A5 scarcity, thêm A7 state | `[HYPOTHESIS]` |
 | Mine | deterministic Depth + mixed checkpoint | resource staircase yếu hơn | `[HYPOTHESIS]` |
+| Mine/Fishing presentation | abstract Area tableaus; target exact Catch/frontier/route | redundant Entrance/Spot gateway cards | `[DIRECTION]` |
 | Processing | Load → Sleep, one slot, identity preserving | +2G/1 AP/one Sleep là numbers only | `[FIXTURE]` |
 | PJ-M/PJ-B | material + Work, no fee | fee + scarce material + Work triple-gates relief | `[HYPOTHESIS]` |
 | PJ-X | material + Work + selected permit comparator | không áp fee cho mọi Project | `[HYPOTHESIS]` |
 | Person | A/C/K concrete fixture | E/J conditional; D/I/M reserve | `[HYPOTHESIS]` |
-| Topology | test Home-middle vs Home-at-top | chưa có participant winner | `[FIXTURE]` |
+| World navigation | vertical Area order + soft transitions | spatial topology/map metaphor rejected | `[DIRECTION]` |
 
 Không con số AP/cap/fee/price nào ở bảng là luật final.
 
@@ -119,21 +120,21 @@ Mini-roster có economy tension thật nhưng không gate route. E/J chưa thêm
 
 ## 8. World/orientation package
 
-Current paper kit: [orientation explicit-surface v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md). [v0.1](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md) remains historical topology-skeleton evidence only.
+Current model: [scrollable area-tableau 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md). [v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md) và [v0.1](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md) chỉ còn là historical spatial/topology evidence; không dùng cho pilot.
 
 Coverage hiện có:
 
 - square House, Farm Plot, Supermarket, Mine Entrance, Fishing Spot và supporting environmental studies;
 - Water Trough, Harvest Bench, Upper-Grove Footbridge;
 - Fresh/Processed Crop, Fish, Herb pairs;
-- continuous M/T backgrounds with geography drawn directly and no Area/Place cards;
+- historical continuous M/T boards and square studies reusable as art inputs;
 - House/Farm supporting studies; Home/Town Place tokens chỉ còn giá trị historical/topology-skeleton;
 - sticky House anchor, opening cue, carried-source area;
 - four-task script, counterbalance và log fields.
 
-`[HYPOTHESIS]` Home-middle giữ hub/geography; Home-at-top dạy direction dễ hơn. Desk preflight pass nhưng participant validation chưa chạy, nên topology không được chốt.
+`[DECIDED]` Scroll không mô phỏng movement/geography, nên Home-middle vs Home-at-top không còn là câu hỏi topology hợp lệ.
 
-`[DIRECTION]` Kit v0.2 đã đặt cùng chín entity trực tiếp trên continuous background ở cả hai arm, không dùng Area box hoặc Place card. Bước kế tiếp là participant pilot; desk preflight không chốt topology.
+`[DIRECTION]` Fixture v0.3 cần xếp card cùng Area khít thành vertical strip, dùng visual transition thay map terrain và đo area/card recognition thay vì spatial recall.
 
 Tất cả new art có status `study`, không canonical/runtime.
 
@@ -146,10 +147,12 @@ Tất cả new art có status `study`, không canonical/runtime.
 | [Economy ledger v2](ECONOMY-LEDGER-V2-PAPER-SENSITIVITY-01.md) | T0 market, sink shapes, exact compatibility |
 | [Storage sensitivity](STORAGE-KEEP-SENSITIVITY-01.md) | no-cap baseline; forecast required; perish rejected |
 | [Fishing sensitivity](FISHING-RESOLUTION-SENSITIVITY-02.md) | atomic commitment retained across four cells |
+| [Mine/Fishing tableau contract](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) | exact Catch/frontier/route play grammar; redundant gateways removed |
+| [Scrollable Area model](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) | scroll is UI navigation, not travel or map |
 | [Mine triple-gate audit](MINE-PROJECT-TRIPLE-GATE-AUDIT-01.md) | remove relief fees in next baseline |
 | [Kernel audit](PERSON-ROSTER-KERNEL-AUDIT-02.md) | A/C/K carry, E/J conditional, D/I/M reserve |
 | [Mini-roster fixture](PERSON-MINI-ROSTER-FIXTURE-01.md) | concrete Gift/economy/UI test set |
-| [Orientation audit](CONTINUOUS-WORLD-ASSET-ORIENTATION-AUDIT-05.md) + kit | square coverage/protocol ready; participant gap remains |
+| [Historical orientation audit](CONTINUOUS-WORLD-ASSET-ORIENTATION-AUDIT-05.md) + kits | square art reusable; spatial protocol retired |
 
 ## 10. Recovery matrix
 
@@ -179,12 +182,12 @@ Tất cả new art có status `study`, không canonical/runtime.
 | Mine/Project triple gate audited | Pass |
 | Concrete Person mini-roster | Pass as fixture |
 | Square orientation asset coverage | Pass |
-| Orientation topology protocol preflight | Pass |
-| Explicit-surface entity representation | Pass as v0.2 fixture |
+| Historical spatial orientation preflight | Pass, but superseded for pilot |
+| Scrollable Area-tableau representation | Contract pass; v0.3 fixture open |
 | New-player orientation data | Open |
 | Long collection arc `COL-N` | Open |
 | Final AP/calendar/prices/costs | Open by design |
-| Final topology/roster/content count | Open by design |
+| Final Area order/roster/content count | Open by design |
 
 ## 12. Strongest current conclusions
 
@@ -193,21 +196,22 @@ Tất cả new art có status `study`, không canonical/runtime.
 3. `[HYPOTHESIS]` Keep atomic Fishing as general baseline; reserve multi-day resolution for explicit special Catch content if needed.
 4. `[HYPOTHESIS]` Relief Project should not carry universal Gold fee; selected optional-context fee is enough strategic sink comparator.
 5. `[HYPOTHESIS]` A/C/K is a coherent minimum Person test roster without making Person mandatory.
-6. `[DIRECTION]` Home-middle is the first pilot arm, Home-at-top the comparator; topology remains open.
+6. `[DECIDED]` Scroll order is interface organization, not world topology or travel distance.
 7. `[DECIDED]` No paper result changes multi-year continuation.
 
 ## 13. Next evidence, in order
 
-1. Run one counterbalanced new-player orientation pilot on v0.2; revise protocol only from observed ambiguity.
-2. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
-3. Create/test `COL-N` as a longer record horizon without permanent miss.
-4. Test forecast presentation before selecting storage cap.
-5. Only then choose a narrower content/balance lock; implementation still needs explicit user authorization.
+1. Build and desk-test a minimal Mine/Fishing Area-tableau fixture from the new play contract.
+2. Build v0.3 vertical Area-strip fixture; then run one new-player navigation/recognition pilot.
+3. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
+4. Create/test `COL-N` as a longer record horizon without permanent miss.
+5. Test forecast presentation before selecting storage cap.
+6. Only then choose a narrower content/balance lock; implementation still needs explicit user authorization.
 
 ## 14. Non-conclusions
 
 - No final AP/day, Season length, Weather rate, price, Project quantity or Work total.
-- No final topology, world node count or runtime tile size.
+- No final Area order, card density, world node count or runtime tile size.
 - No canonical Person roster/Gift schedule/Heart cadence.
 - No canonical art promotion.
 - No final completion/ending design.
