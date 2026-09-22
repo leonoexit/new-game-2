@@ -18,6 +18,7 @@ Phạm vi: sửa world presentation từ spatial surface thành scrollable abstr
 | World presentation | Spatial model retired; vertical abstract Area strip adopted | [Model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) |
 | Fishing | Face-up exact Catch + informed atomic commitment + record/mastery | [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) |
 | Mine | Persistent Current Frontier + deterministic Depth + route/checkpoint choices | [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) |
+| Play fixture | River/Mine vertical strip, seven cards, resolution sheet and protocol built + desk-preflighted | [fixture v0.1](../paper-tests/mine-fishing-area-tableau-v0.1/README.md) |
 | Redundant gateways | Fishing Spot/Entrance only remain when they have their own verb/state | [Model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) |
 | Historical spatial work | Model 07 and orientation v0.2 marked superseded for pilot | [Model 07](CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md), [v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md) |
 
@@ -42,12 +43,6 @@ Scroll/focus Mine for free, inspect Current Frontier and available routes, then 
 
 ## 5. Next evidence gate
 
-Build a compact Mine/Fishing paper fixture showing:
+Fixture production và desk preflight đã hoàn tất. Bước kế tiếp là chạy một comprehension pilot trên [fixture v0.1](../paper-tests/mine-fishing-area-tableau-v0.1/README.md), rồi sửa printed rule chỉ từ ambiguity quan sát được.
 
-- one Rain Catch versus an outside opportunity;
-- one Mine state at Working Seam with source-vs-depth choice;
-- one scroll/focus instruction explicitly costing 0 AP;
-- state before/after resolution;
-- a short comprehension log for Catch recurrence, Mine persistence and exact action target.
-
-After that, build orientation v0.3 as a vertical sequence of tight Area tableaus rather than a map comparison.
+Sau đó build orientation v0.3 như một vertical sequence của tight Area tableaus thay vì map comparison.

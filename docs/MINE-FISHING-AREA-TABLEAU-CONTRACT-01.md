@@ -4,6 +4,8 @@ Ngày: 2026-09-22.
 
 Mục đích: định hình người chơi **làm gì** khi focus Mine và các Area liên quan tới Fishing trong [scrollable area-tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md). Tài liệu hợp nhất evidence từ [Fishing resolution sensitivity 02](FISHING-RESOLUTION-SENSITIVITY-02.md) và [Mine checkpoint simulation 02](MINE-CHECKPOINT-PAPER-SIMULATION-02.md); không chốt final AP, content count, reward value, tool tier hoặc art.
 
+Paper artifact hiện hành: [Mine + Fishing Area-tableau fixture v0.1](../paper-tests/mine-fishing-area-tableau-v0.1/README.md).
+
 ## 1. Shared contract
 
 ### 1.1. Navigation không phải play

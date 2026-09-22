@@ -18,6 +18,7 @@ Nguồn chính:
 - [Person mini-roster fixture 01](PERSON-MINI-ROSTER-FIXTURE-01.md)
 - [Scrollable abstract-area tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md)
 - [Mine/Fishing area-tableau play contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md)
+- [Mine/Fishing Area-tableau fixture v0.1](../paper-tests/mine-fishing-area-tableau-v0.1/README.md)
 - [Orientation explicit-surface paper-test kit v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md)
 - [Orientation paper-test kit v0.1 — historical topology skeleton](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md)
 
@@ -492,10 +493,11 @@ Completed in the 2026-09-22 integration pass:
 3. Concrete A/C/K mini-roster with registry Gift tags.
 4. Fishing atomic vs persistent rerun on four decisive cells.
 5. Mine/Project triple-gate ledger.
+6. Mine/Fishing Area-tableau fixture + desk preflight.
 
 Still required:
 
-1. Build and desk-test the Mine/Fishing Area-tableau fixture.
+1. Run one comprehension pilot on the Mine/Fishing Area-tableau fixture.
 2. Build v0.3 vertical Area-strip fixture and run it with at least one new participant.
 3. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
 4. Design/test `COL-N` longer collection horizon.

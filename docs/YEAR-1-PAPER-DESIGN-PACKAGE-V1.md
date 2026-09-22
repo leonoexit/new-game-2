@@ -148,6 +148,7 @@ Tất cả new art có status `study`, không canonical/runtime.
 | [Storage sensitivity](STORAGE-KEEP-SENSITIVITY-01.md) | no-cap baseline; forecast required; perish rejected |
 | [Fishing sensitivity](FISHING-RESOLUTION-SENSITIVITY-02.md) | atomic commitment retained across four cells |
 | [Mine/Fishing tableau contract](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) | exact Catch/frontier/route play grammar; redundant gateways removed |
+| [Mine/Fishing tableau fixture](../paper-tests/mine-fishing-area-tableau-v0.1/README.md) | vertical strip + before/after states + comprehension protocol |
 | [Scrollable Area model](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) | scroll is UI navigation, not travel or map |
 | [Mine triple-gate audit](MINE-PROJECT-TRIPLE-GATE-AUDIT-01.md) | remove relief fees in next baseline |
 | [Kernel audit](PERSON-ROSTER-KERNEL-AUDIT-02.md) | A/C/K carry, E/J conditional, D/I/M reserve |
@@ -201,7 +202,7 @@ Tất cả new art có status `study`, không canonical/runtime.
 
 ## 13. Next evidence, in order
 
-1. Build and desk-test a minimal Mine/Fishing Area-tableau fixture from the new play contract.
+1. Run one comprehension pilot on the Mine/Fishing Area-tableau fixture.
 2. Build v0.3 vertical Area-strip fixture; then run one new-player navigation/recognition pilot.
 3. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
 4. Create/test `COL-N` as a longer record horizon without permanent miss.
