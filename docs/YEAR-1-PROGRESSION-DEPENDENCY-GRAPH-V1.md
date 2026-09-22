@@ -18,7 +18,8 @@ Nguồn chính:
 - [Person mini-roster fixture 01](PERSON-MINI-ROSTER-FIXTURE-01.md)
 - [Scrollable abstract-area tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md)
 - [Mine/Fishing area-tableau play contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md)
-- [Mine/Fishing Area-tableau fixture v0.1](../paper-tests/mine-fishing-area-tableau-v0.1/README.md)
+- [On-table square-card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md)
+- [Mine/Fishing square Area-tableau fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md)
 - [Orientation explicit-surface paper-test kit v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md)
 - [Orientation paper-test kit v0.1 — historical topology skeleton](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md)
 
@@ -46,6 +47,7 @@ Nguồn chính:
 - Buy/Sell 0 AP là paper baseline mạnh hơn cho vòng kế; chưa chốt.
 - Storage không cap/không perish là paper baseline sạch; small-cap và perishability không được gộp cùng arm.
 - Catch dùng atomic commitment làm paper baseline; graph vẫn giữ grammar abstract để final cost có thể đổi.
+- On-table graph nodes/cards dùng square 1:1; full rules ở detail UI, còn non-action Record/Depth summaries dùng status strips.
 
 ### 1.3. [HYPOTHESIS] Evidence constraints mang vào v1
 
@@ -416,6 +418,8 @@ Shortroot record + Berry/Wild Herb record + River Fish record
 | Tool/item/owned Person/selected source | Sticky tray |
 | Project full requirement, collection, Mine history, ability rule | Inspect/overlay |
 
+Inline on-table cards ở bảng trên dùng square `1:1`. Inspect/overlay có thể là rectangle vì đó là UI panel. Area header/background và status strip không được nhận card border/hit-target affordance nếu không có verb riêng.
+
 ### 15.1. [HYPOTHESIS] Label policy
 
 - Known Area identity, House and basic crop state: L0 after onboarding.
@@ -426,7 +430,7 @@ Shortroot record + Berry/Wild Herb record + River Fish record
 
 Area order là presentation/navigation fixture, không phải graph dependency, geography hoặc travel distance. Changing scroll order must not change entity rules hoặc node/gate economy.
 
-Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. v0.1/v0.2 chỉ còn historical spatial fixtures. v0.3 phải group cards thành abstract Area tableaus và đo recognition/scroll burden; participant evidence vẫn chưa có.
+Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. Spatial orientation v0.1/v0.2 chỉ còn historical fixtures. Mine/Fishing tableau v0.2 đã kiểm shape/density bằng desk/mobile render; global orientation v0.3 vẫn phải group cards thành abstract Area tableaus và đo recognition/scroll burden. Participant evidence vẫn chưa có.
 
 ## 16. v0 → v1 changes
 
@@ -448,6 +452,7 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 16. Added concrete A/C/K mini-roster fixture without promoting identities or Gift schedule.
 17. Completed square paper-token coverage; retired spatial orientation protocol after scroll/navigation clarification.
 18. Added abstract Area-tableau mapping and Mine/Fishing exact play-target contract.
+19. Locked square 1:1 on-table card geometry and rebuilt Mine/Fishing fixture with status/detail separation.
 
 ## 17. Acceptance audit
 
@@ -465,6 +470,7 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 | No exact day from arbitrary fixture | Pass |
 | Year 1 not ending/reset | Pass |
 | Scrollable Area-tableau contract | Pass as paper direction |
+| Mine/Fishing square-card fixture/QA | Pass as paper artifact; no participant data |
 | v0.3 navigation fixture/pilot | Not pass; not built/no participant data |
 | Final AP/Season/Weather | Not selected |
 
@@ -493,11 +499,11 @@ Completed in the 2026-09-22 integration pass:
 3. Concrete A/C/K mini-roster with registry Gift tags.
 4. Fishing atomic vs persistent rerun on four decisive cells.
 5. Mine/Project triple-gate ledger.
-6. Mine/Fishing Area-tableau fixture + desk preflight.
+6. Mine/Fishing square Area-tableau fixture v0.2 + deterministic desk/mobile preflight.
 
 Still required:
 
-1. Run one comprehension pilot on the Mine/Fishing Area-tableau fixture.
+1. Run one comprehension pilot on the Mine/Fishing square Area-tableau fixture v0.2.
 2. Build v0.3 vertical Area-strip fixture and run it with at least one new participant.
 3. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
 4. Design/test `COL-N` longer collection horizon.
@@ -510,7 +516,7 @@ Still required:
 - Crop duration/yield/price.
 - Project quantity/Work and which optional-context Project retains a Gold fee.
 - Storage/perishability.
-- Final Area order, card density and navigation treatment.
+- Final Area order, square-card logical size, badge hierarchy, density and navigation treatment.
 - Person roster, identity, Gift preference hoặc final Heart cadence.
 - Fishing/Mine/Processing final balance.
 - Completion criteria hoặc ending.

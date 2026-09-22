@@ -4,7 +4,7 @@ Ngày: 2026-09-22.
 
 Mục đích: định hình người chơi **làm gì** khi focus Mine và các Area liên quan tới Fishing trong [scrollable area-tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md). Tài liệu hợp nhất evidence từ [Fishing resolution sensitivity 02](FISHING-RESOLUTION-SENSITIVITY-02.md) và [Mine checkpoint simulation 02](MINE-CHECKPOINT-PAPER-SIMULATION-02.md); không chốt final AP, content count, reward value, tool tier hoặc art.
 
-Paper artifact hiện hành: [Mine + Fishing Area-tableau fixture v0.1](../paper-tests/mine-fishing-area-tableau-v0.1/README.md).
+Paper artifact hiện hành: [Mine + Fishing square Area-tableau fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md). [v0.1](../paper-tests/mine-fishing-area-tableau-v0.1/README.md) được giữ làm portrait rule-text audit trail.
 
 ## 1. Shared contract
 
@@ -31,6 +31,16 @@ Root tableau chỉ giữ card hiện đang tạo quyết định:
 
 History, full pool, collection record và old checkpoints nằm trong inspect/overlay. Không trải mọi fish species hoặc Mine Depth thành permanent root cards.
 
+### 1.3. Card/panel shape
+
+- On-table Catch, Person, frontier, route và source cards dùng square `1:1`.
+- Root card chỉ mang art, name, 1–3 badge, short cost/progress và state.
+- Full rule/preview/recovery nằm trong focus/detail panel rectangle hoặc resolution sheet.
+- Area header/background không có card border và không phải target.
+- River Record/mastery và Mine Depth/checkpoint dùng horizontal status strip khi không có verb riêng.
+
+Shape contract đầy đủ nằm ở [on-table card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md).
+
 ## 2. Fishing tableau
 
 ### 2.1. Root shape
@@ -40,8 +50,8 @@ Minimum River tableau:
 ```text
 RIVER visual language / condition badge
 
-[Today's Catch]
-[Fishing Record / mastery summary]
+[Today's Catch square] [active Person/context square]
+[Fishing Record / mastery horizontal status strip]
 ```
 
 Player Rod/Character state nằm trong hand/HUD; không lặp một Rod card trong từng Area.
@@ -110,11 +120,10 @@ Nếu Lake hoặc Coast chỉ thêm skin/pool mà không đổi decision, giữ 
 
 ```text
 MINE visual language
-Depth 5 · current band: Baseline Tunnels
+Depth 5 · current band: Baseline Tunnels  [horizontal status strip]
 
-[Current Frontier]
-[Safe Tunnel] [Veiled Vein]
-[Working Seam — if unlocked/ready]
+[Current Frontier square] [Working Seam square — if ready]
+[Safe Tunnel square]      [Veiled Vein square]
 [Latest Checkpoint — only while relevant]
 ```
 
@@ -192,7 +201,9 @@ Candidate này chỉ hợp lệ nếu nó thêm collection/Processing/choice kh�
 
 Nếu cả hai chỉ trở thành `spend AP → random item`, design fail.
 
-## 5. First paper fixture
+## 5. Current paper fixture
+
+v0.2 giữ play grammar của v0.1 nhưng chuyển root surface sang shape final: six square cards, River Record strip, Mine Depth strip, two-column density và rectangular detail panels. Numbers/names vẫn là fixture.
 
 ### 5.1. Fishing decision card
 
@@ -234,6 +245,7 @@ Give 2–3 AP Mine budget and one outside opportunity. Log source-vs-depth choic
 - Fishing/Mine được chơi trong abstract Area tableaus.
 - Missing ordinary opportunity trì hoãn; không phá save.
 - Mine Depth không reset chỉ vì Sleep/rời Area.
+- On-table cards dùng square 1:1; detail panel rectangle không phải card.
 
 ### [DIRECTION]
 

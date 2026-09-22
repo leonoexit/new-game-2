@@ -24,6 +24,7 @@ Trạng thái: paper-design package v1; không phải implementation spec hoặc
 - Bỏ lỡ thông thường trì hoãn tới source/schedule/cycle sau.
 - Objective, completion và ending độc lập.
 - Save tiếp tục qua nhiều năm; Year 1 không phải ending/reset.
+- Mọi on-table card trên Area tableau dùng square `1:1`; portrait rectangle không phải primary card shape.
 
 ### 2.2. [DIRECTION]
 
@@ -76,6 +77,7 @@ Không branch nào cần first harvest để tồn tại. Branch rejoin bằng i
 | Fishing | atomic one-commit | global persistent xóa A5 scarcity, thêm A7 state | `[HYPOTHESIS]` |
 | Mine | deterministic Depth + mixed checkpoint | resource staircase yếu hơn | `[HYPOTHESIS]` |
 | Mine/Fishing presentation | abstract Area tableaus; target exact Catch/frontier/route | redundant Entrance/Spot gateway cards | `[DIRECTION]` |
+| On-table card shape | square 1:1; full rules in rectangular detail UI; Record/Depth as status strips | portrait primary cards hoặc rule text nhồi trên root | `[DECIDED]` |
 | Processing | Load → Sleep, one slot, identity preserving | +2G/1 AP/one Sleep là numbers only | `[FIXTURE]` |
 | PJ-M/PJ-B | material + Work, no fee | fee + scarce material + Work triple-gates relief | `[HYPOTHESIS]` |
 | PJ-X | material + Work + selected permit comparator | không áp fee cho mọi Project | `[HYPOTHESIS]` |
@@ -131,10 +133,13 @@ Coverage hiện có:
 - House/Farm supporting studies; Home/Town Place tokens chỉ còn giá trị historical/topology-skeleton;
 - sticky House anchor, opening cue, carried-source area;
 - four-task script, counterbalance và log fields.
+- Mine/Fishing v0.2 shape fixture: six square cards, River Record/Mine Depth strips, two-column mobile preview, detail/outcome/print sheets.
 
 `[DECIDED]` Scroll không mô phỏng movement/geography, nên Home-middle vs Home-at-top không còn là câu hỏi topology hợp lệ.
 
 `[DIRECTION]` Fixture v0.3 cần xếp card cùng Area khít thành vertical strip, dùng visual transition thay map terrain và đo area/card recognition thay vì spatial recall.
+
+Card geometry hiện hành nằm ở [on-table card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md). Mine/Fishing [fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md) là first shape-conformant artifact; desktop/mobile desk QA đã pass nhưng participant evidence vẫn open.
 
 Tất cả new art có status `study`, không canonical/runtime.
 
@@ -148,7 +153,8 @@ Tất cả new art có status `study`, không canonical/runtime.
 | [Storage sensitivity](STORAGE-KEEP-SENSITIVITY-01.md) | no-cap baseline; forecast required; perish rejected |
 | [Fishing sensitivity](FISHING-RESOLUTION-SENSITIVITY-02.md) | atomic commitment retained across four cells |
 | [Mine/Fishing tableau contract](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) | exact Catch/frontier/route play grammar; redundant gateways removed |
-| [Mine/Fishing tableau fixture](../paper-tests/mine-fishing-area-tableau-v0.1/README.md) | vertical strip + before/after states + comprehension protocol |
+| [Square-card decision](ON-TABLE-CARD-SHAPE-DECISION-09.md) | universal 1:1 root-card footprint; panel/status/header taxonomy |
+| [Mine/Fishing tableau fixture](../paper-tests/mine-fishing-area-tableau-v0.2/README.md) | six square cards + status strips + detail/outcome/print sheets + protocol |
 | [Scrollable Area model](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) | scroll is UI navigation, not travel or map |
 | [Mine triple-gate audit](MINE-PROJECT-TRIPLE-GATE-AUDIT-01.md) | remove relief fees in next baseline |
 | [Kernel audit](PERSON-ROSTER-KERNEL-AUDIT-02.md) | A/C/K carry, E/J conditional, D/I/M reserve |
@@ -184,7 +190,8 @@ Tất cả new art có status `study`, không canonical/runtime.
 | Concrete Person mini-roster | Pass as fixture |
 | Square orientation asset coverage | Pass |
 | Historical spatial orientation preflight | Pass, but superseded for pilot |
-| Scrollable Area-tableau representation | Contract pass; v0.3 fixture open |
+| Scrollable Area-tableau representation | Mine/Fishing shape fixture pass; global v0.3 fixture open |
+| Square-card desk/mobile render QA | Pass; participant comprehension open |
 | New-player orientation data | Open |
 | Long collection arc `COL-N` | Open |
 | Final AP/calendar/prices/costs | Open by design |
@@ -202,7 +209,7 @@ Tất cả new art có status `study`, không canonical/runtime.
 
 ## 13. Next evidence, in order
 
-1. Run one comprehension pilot on the Mine/Fishing Area-tableau fixture.
+1. Run one comprehension pilot on the Mine/Fishing square Area-tableau fixture v0.2.
 2. Build v0.3 vertical Area-strip fixture; then run one new-player navigation/recognition pilot.
 3. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
 4. Create/test `COL-N` as a longer record horizon without permanent miss.
@@ -212,7 +219,7 @@ Tất cả new art có status `study`, không canonical/runtime.
 ## 14. Non-conclusions
 
 - No final AP/day, Season length, Weather rate, price, Project quantity or Work total.
-- No final Area order, card density, world node count or runtime tile size.
+- No final Area order, card density, world node count, square logical size or runtime tile size.
 - No canonical Person roster/Gift schedule/Heart cadence.
 - No canonical art promotion.
 - No final completion/ending design.

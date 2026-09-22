@@ -39,6 +39,14 @@ Area không mặc định là:
 
 Nếu Area có một verb/state chung thật sự, verb/state đó được biểu diễn bằng card hoặc control cụ thể bên trong tableau—không biến toàn background thành hit target mơ hồ.
 
+### 2.1. On-table card shape
+
+Theo [square-card decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md), mọi card nằm trực tiếp trên Area tableau dùng footprint square `1:1`. Portrait rectangle không còn là primary on-table shape.
+
+Root card chỉ giữ art, name, 1–3 badge quan trọng, short cost/progress và ready/locked/selectable/persistent state. Rule dài mở trong focus/detail panel rectangle; panel là UI overlay, không phải card mới trên tableau.
+
+Area header/background không có card border hoặc hit-target affordance. Record/mastery và Depth/checkpoint có thể dùng horizontal status strip khi chúng chỉ tóm tắt state và không có verb riêng.
+
 ## 3. Ngôn ngữ bố cục
 
 ```text
@@ -149,4 +157,5 @@ Home-middle vs Home-at-top là câu hỏi spatial topology nên không còn đo 
 - Số cột và card density trên mobile.
 - Anchor/index luôn hiện hay chỉ mở qua overview.
 - Có Area-wide Weather badge hay Weather chỉ gắn trên opportunity card.
+- Exact logical square-card size, badge hierarchy và accessibility reflow.
 - Fiction có travel cost riêng hay hoàn toàn không có travel system.

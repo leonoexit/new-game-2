@@ -18,7 +18,8 @@ Phạm vi: sửa world presentation từ spatial surface thành scrollable abstr
 | World presentation | Spatial model retired; vertical abstract Area strip adopted | [Model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) |
 | Fishing | Face-up exact Catch + informed atomic commitment + record/mastery | [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) |
 | Mine | Persistent Current Frontier + deterministic Depth + route/checkpoint choices | [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) |
-| Play fixture | River/Mine vertical strip, seven cards, resolution sheet and protocol built + desk-preflighted | [fixture v0.1](../paper-tests/mine-fishing-area-tableau-v0.1/README.md) |
+| Card shape | Square 1:1 on-table cards; rectangle reserved for focus/detail UI; status kept as strips | [decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md) |
+| Play fixture | Shape-conformant River/Mine strip, six square cards, two status strips, detail/outcome/print sheets built + desk/mobile-preflighted | [fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md) |
 | Redundant gateways | Fishing Spot/Entrance only remain when they have their own verb/state | [Model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) |
 | Historical spatial work | Model 07 and orientation v0.2 marked superseded for pilot | [Model 07](CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md), [v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md) |
 
@@ -43,6 +44,6 @@ Scroll/focus Mine for free, inspect Current Frontier and available routes, then 
 
 ## 5. Next evidence gate
 
-Fixture production và desk preflight đã hoàn tất. Bước kế tiếp là chạy một comprehension pilot trên [fixture v0.1](../paper-tests/mine-fishing-area-tableau-v0.1/README.md), rồi sửa printed rule chỉ từ ambiguity quan sát được.
+Square fixture production và desk/mobile preflight đã hoàn tất. Bước kế tiếp là chạy một comprehension pilot trên [fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md), rồi sửa printed rule/badge hierarchy chỉ từ ambiguity quan sát được. Chưa có participant data.
 
 Sau đó build orientation v0.3 như một vertical sequence của tight Area tableaus thay vì map comparison.
