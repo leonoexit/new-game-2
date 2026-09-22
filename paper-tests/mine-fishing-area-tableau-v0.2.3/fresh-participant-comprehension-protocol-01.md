@@ -7,6 +7,7 @@ Mục tiêu: kiểm tra first-read comprehension của [v0.2.3](README.md) mà k
 ## 1. Materials
 
 - `boards/card-mobile-preview.png`
+- `boards/commitment-test-board.png`
 - `boards/scroll-strip-mobile-preview.png`
 - `boards/focus-detail-panels.png`, chỉ đưa sau khi participant đã chọn target
 - Sáu token/card vật lý nếu test trên bàn
@@ -39,7 +40,7 @@ Ghi:
 
 ## 4. Task B — physical commitment
 
-Đưa Character, Rod, Tool và Gift proxy.
+Đưa `commitment-test-board.png`. Nếu test vật lý, dùng Character, Rod, Tool và Gift proxy rời thay cho board này.
 
 Prompt:
 

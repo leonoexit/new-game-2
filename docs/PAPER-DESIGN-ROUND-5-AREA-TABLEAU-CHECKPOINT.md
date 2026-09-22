@@ -19,7 +19,7 @@ Phạm vi: sửa world presentation từ spatial surface thành scrollable abstr
 | Fishing | Face-up exact Catch + informed atomic commitment + record/mastery | [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) |
 | Mine | Persistent state + separate progress/discovery/extraction actions | [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) |
 | Card shape | Square 1:1 on-table cards; rectangle reserved for focus/detail UI; status kept as strips | [decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md) |
-| Play fixture | v0.2 failed action comprehension; v0.2.3 replaces landmark/object placeholders with reviewed Mine action art and corrected state consequences | [v0.2 pilot](../paper-tests/mine-fishing-area-tableau-v0.2/pilot-results/internal-informed-pilot-01.md), [v0.2.3](../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md) |
+| Play fixture | v0.2 failed action comprehension; v0.2.4 now has approved action art, square-target/status-strip separation and upper-corner signed AP | [v0.2 pilot](../paper-tests/mine-fishing-area-tableau-v0.2/pilot-results/internal-informed-pilot-01.md), [v0.2.4](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) |
 | Redundant gateways | Fishing Spot/Entrance only remain when they have their own verb/state | [Model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) |
 | Historical spatial work | Model 07 and orientation v0.2 marked superseded for pilot | [Model 07](CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md), [v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md) |
 
@@ -44,6 +44,6 @@ Scroll/focus Mine for free, inspect Mine State and available actions, then play 
 
 ## 5. Next evidence gate
 
-Internal informed pilot trên v0.2 đã dừng ở Task B vì player phải dịch schema thành verb. Informed iteration qua v0.2.1–v0.2.2 xác nhận text không thay được action art và loại hai consequence sai: descent không tự cho Stone; side-tunnel search không tăng Depth. Correction v0.2.3 đã pass deterministic render QA; bước kế là xem assembled fixture rồi chạy một fresh-participant comprehension pilot. Chưa có new-player data và chưa được gọi gate pass.
+Internal informed pilot trên v0.2 đã dừng ở Task B vì player phải dịch schema thành verb. Iteration qua v0.2.1–v0.2.3 sửa art và consequence; commitment check tiếp tục loại square status target và generic Tool. v0.2.4 đã pass deterministic render QA và informed-owner acceptance. Không có tester khác nên fresh-player evidence vẫn unavailable; product owner cho phép chuyển sang vertical Area-strip fixture với risk này được ghi rõ.
 
 Sau đó build orientation v0.3 như một vertical sequence của tight Area tableaus thay vì map comparison.

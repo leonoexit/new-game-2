@@ -133,13 +133,13 @@ Coverage hiện có:
 - House/Farm supporting studies; Home/Town Place tokens chỉ còn giá trị historical/topology-skeleton;
 - sticky House anchor, opening cue, carried-source area;
 - four-task script, counterbalance và log fields.
-- Mine/Fishing v0.2 shape fixture + failed informed action-comprehension result; v0.2.3 action-art correction for retest.
+- Mine/Fishing v0.2 shape fixture + failed informed action-comprehension result; v0.2.4 target/cost correction accepted by informed owner.
 
 `[DECIDED]` Scroll không mô phỏng movement/geography, nên Home-middle vs Home-at-top không còn là câu hỏi topology hợp lệ.
 
 `[DIRECTION]` Fixture v0.3 cần xếp card cùng Area khít thành vertical strip, dùng visual transition thay map terrain và đo area/card recognition thay vì spatial recall.
 
-Card geometry hiện hành nằm ở [on-table card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md). Mine/Fishing v0.2 proved square recognition but its internal pilot exposed noun/schema ambiguity. [v0.2.3](../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md) is the current action-art artifact: art carries the verb, tags carry cost/state, and description carries consequence/trade-off. Participant pass remains open.
+Card geometry hiện hành nằm ở [on-table card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md). Mine/Fishing v0.2 exposed noun/schema ambiguity; v0.2.3 fixed art but retained a false square state target. [v0.2.4](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) is current: every square is a target, pure state is a strip, signed AP sits in the upper corner, and exact requirements replace generic Tool. Informed owner acceptance pass; fresh-player evidence unavailable.
 
 Bốn ảnh mới trong Mine/Fishing v0.2.3 đã được user duyệt làm `approved reference`; chúng chưa `runtime approved`. Các art còn lại giữ status riêng trong asset record và không được tự động promote.
 
@@ -155,7 +155,7 @@ Bốn ảnh mới trong Mine/Fishing v0.2.3 đã được user duyệt làm `app
 | [Mine/Fishing tableau contract](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) | exact Catch/frontier/route play grammar; redundant gateways removed |
 | [Square-card decision](ON-TABLE-CARD-SHAPE-DECISION-09.md) | universal 1:1 root-card footprint; panel/status/header taxonomy |
 | [Mine/Fishing v0.2 pilot](../paper-tests/mine-fishing-area-tableau-v0.2/pilot-results/internal-informed-pilot-01.md) | square recognition observed; action/schema comprehension failed at Task B |
-| [Mine/Fishing corrective fixture](../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md) | reviewed Mine action art + corrected progress/discovery/extraction grammar; retest open |
+| [Mine/Fishing corrective fixture](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) | approved art + target/status separation + signed AP placement; informed owner pass |
 | [Scrollable Area model](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) | scroll is UI navigation, not travel or map |
 | [Mine triple-gate audit](MINE-PROJECT-TRIPLE-GATE-AUDIT-01.md) | remove relief fees in next baseline |
 | [Kernel audit](PERSON-ROSTER-KERNEL-AUDIT-02.md) | A/C/K carry, E/J conditional, D/I/M reserve |
@@ -193,7 +193,7 @@ Bốn ảnh mới trong Mine/Fishing v0.2.3 đã được user duyệt làm `app
 | Historical spatial orientation preflight | Pass, but superseded for pilot |
 | Scrollable Area-tableau representation | Mine/Fishing shape fixture pass; global v0.3 fixture open |
 | Square-card desk/mobile render QA | Pass |
-| Action-art comprehension | v0.2 failed informed check; v0.2.3 passes render/informed iteration only; fresh retest open |
+| Action/target comprehension | v0.2 failed; v0.2.4 passes deterministic render + informed owner acceptance; fresh-player evidence unavailable |
 | New-player orientation data | Open |
 | Long collection arc `COL-N` | Open |
 | Final AP/calendar/prices/costs | Open by design |
@@ -211,8 +211,8 @@ Bốn ảnh mới trong Mine/Fishing v0.2.3 đã được user duyệt làm `app
 
 ## 13. Next evidence, in order
 
-1. Confirm the assembled v0.2.3 correction, then run one fresh-participant comprehension pilot.
-2. Build v0.3 vertical Area-strip fixture; then run one new-player navigation/recognition pilot.
+1. Build v0.3 vertical Area-strip fixture using v0.2.4 target/status/cost grammar.
+2. Run informed-owner navigation/recognition check; retain fresh-player risk as open until another tester exists.
 3. Rerun calendar completion timing with PJ-M/PJ-B no fee and PJ-X selected fee.
 4. Create/test `COL-N` as a longer record horizon without permanent miss.
 5. Test forecast presentation before selecting storage cap.

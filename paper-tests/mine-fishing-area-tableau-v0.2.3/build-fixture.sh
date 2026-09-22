@@ -148,5 +148,27 @@ magick montage \
   -tile 3x2 -geometry 160x160+16+16 -background '#f8f0d4' -font "$FONT_REG" \
   "$BOARDS/card-mobile-preview.png"
 
+COMMITMENT="$BOARDS/commitment-test-board.png"
+magick -size 1000x940 xc:'#f8f0d4' \
+  -fill '#2d554f' -font "$FONT_BOLD" -pointsize 27 -gravity north -annotate +0+18 'COMMITMENT TEST · ROOT CARDS + LOOSE TOKENS' \
+  -fill '#60746e' -font "$FONT_REG" -pointsize 15 -annotate +0+55 'Move the loose tokens onto the card you would use. Explain the AP cost and result.' \
+  -fill '#315650' -stroke '#315650' -strokewidth 3 \
+  -draw 'roundrectangle 35,790 250,875 14,14 roundrectangle 275,790 490,875 14,14 roundrectangle 515,790 730,875 14,14 roundrectangle 755,790 970,875 14,14' \
+  -fill '#fff8df' -stroke none -font "$FONT_BOLD" -pointsize 21 -gravity northwest \
+  -annotate +73+820 'CHARACTER' -annotate +349+820 'ROD' -annotate +585+820 'TOOL' -annotate +796+820 'GIFT ITEM' \
+  "$COMMITMENT"
+
+place_scaled_card() {
+  local board="$1" slug="$2" x="$3" y="$4"
+  magick "$board" \( "$CARDS/$slug.png" -filter point -resize 290x290! \) -geometry "+$x+$y" -composite "$board"
+}
+
+place_scaled_card "$COMMITMENT" eel 35 85
+place_scaled_card "$COMMITMENT" person-today 355 85
+place_scaled_card "$COMMITMENT" mine-state 675 85
+place_scaled_card "$COMMITMENT" exposed-ore 35 405
+place_scaled_card "$COMMITMENT" direct-descent 355 405
+place_scaled_card "$COMMITMENT" search-side-tunnel 675 405
+
 magick mogrify -strip -define png:exclude-chunks=date,time "$CARDS"/*.png "$BOARDS"/*.png
 identify -format '%f %wx%h %[channels] opaque=%[opaque]\n' "$CARDS"/*.png "$BOARDS"/*.png

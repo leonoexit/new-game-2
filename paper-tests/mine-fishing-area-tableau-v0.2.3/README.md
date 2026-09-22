@@ -2,7 +2,7 @@
 
 Ngày dựng: 2026-09-22.
 
-Trạng thái: `[CURRENT CORRECTIVE FIXTURE]`; deterministic render QA và informed owner confirmation complete; fresh-participant check open.
+Trạng thái: `[SUPERSEDED CORRECTIVE FIXTURE]`; action/target art evidence remains valid. [v0.2.4](../mine-fishing-area-tableau-v0.2.4/README.md) supersedes its square state card, generic Tool mapping and bottom-row AP placement.
 
 v0.2.3 integrates three user-approved Mine action-art references and the information-hierarchy corrections from [internal iteration check 02](../mine-fishing-area-tableau-v0.2.2/pilot-results/internal-iteration-check-02.md). That review is informed design-owner evidence, not a fresh-player pass.
 
@@ -54,7 +54,7 @@ Then show one detail panel and ask the participant to resolve it in order.
 
 ## 6. Package and QA
 
-Includes full/mobile start strips, six `400x400` cards, `160x160` preview, ordered detail panels, corrected resolution sheet, printable sheet and deterministic builder.
+Includes full/mobile start strips, six `400x400` cards, `160x160` preview, a commitment test board with loose proxies, ordered detail panels, corrected resolution sheet, printable sheet and deterministic builder.
 
 | Check | Result |
 | --- | --- |

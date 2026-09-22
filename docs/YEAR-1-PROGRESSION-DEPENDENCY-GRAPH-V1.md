@@ -20,7 +20,7 @@ Nguồn chính:
 - [Mine/Fishing area-tableau play contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md)
 - [On-table square-card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md)
 - [Mine/Fishing v0.2 failed informed pilot](../paper-tests/mine-fishing-area-tableau-v0.2/pilot-results/internal-informed-pilot-01.md)
-- [Mine/Fishing action-art fixture v0.2.3](../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md)
+- [Mine/Fishing target/cost fixture v0.2.4](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md)
 - [Orientation explicit-surface paper-test kit v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md)
 - [Orientation paper-test kit v0.1 — historical topology skeleton](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md)
 
@@ -48,7 +48,7 @@ Nguồn chính:
 - Buy/Sell 0 AP là paper baseline mạnh hơn cho vòng kế; chưa chốt.
 - Storage không cap/không perish là paper baseline sạch; small-cap và perishability không được gộp cùng arm.
 - Catch dùng atomic commitment làm paper baseline; graph vẫn giữ grammar abstract để final cost có thể đổi.
-- On-table graph nodes/cards dùng square 1:1; full rules ở detail UI, còn non-action Record/Depth summaries dùng status strips.
+- On-table interaction targets dùng square 1:1; full rules ở detail UI, còn non-action Record/Depth summaries dùng status strips. Signed AP cost nằm ở upper corner.
 - An action node depicts its verb/target; an opportunity node depicts the visible target/context and receives the Tool/Item that supplies the verb. Tags carry cost/state/requirement; description carries consequence/trade-off. Noun-only labels, redundant CTAs and schema panels are insufficient.
 
 ### 1.3. [HYPOTHESIS] Evidence constraints mang vào v1
@@ -433,7 +433,7 @@ Inline on-table cards ở bảng trên dùng square `1:1`. Inspect/overlay có t
 
 Area order là presentation/navigation fixture, không phải graph dependency, geography hoặc travel distance. Changing scroll order must not change entity rules hoặc node/gate economy.
 
-Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. Spatial orientation v0.1/v0.2 chỉ còn historical fixtures. Mine/Fishing tableau v0.2 đã kiểm shape/density; v0.2.3 đã kiểm deterministic render và informed action-art distinction. Global orientation v0.3 vẫn phải group cards thành abstract Area tableaus và đo recognition/scroll burden. Fresh-participant evidence vẫn chưa có.
+Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. Spatial orientation v0.1/v0.2 chỉ còn historical fixtures. Mine/Fishing v0.2.4 đã kiểm deterministic render, action-art distinction, square-target/status-strip separation và signed AP placement với informed owner. Global orientation v0.3 vẫn phải group cards thành abstract Area tableaus và đo recognition/scroll burden. Fresh-player evidence unavailable.
 
 ## 16. v0 → v1 changes
 
@@ -476,7 +476,7 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 | Scrollable Area-tableau contract | Pass as paper direction |
 | Mine/Fishing square-card render QA | Pass |
 | v0.2 action comprehension | Failed internal informed check at Task B |
-| v0.2.3 action-art correction | Deterministic render/informed iteration pass; fresh-participant retest open |
+| v0.2.4 target/cost correction | Deterministic render + informed owner acceptance pass; fresh-player evidence unavailable |
 | v0.3 navigation fixture/pilot | Not pass; not built/no participant data |
 | Final AP/Season/Weather | Not selected |
 
@@ -505,12 +505,12 @@ Completed in the 2026-09-22 integration pass:
 3. Concrete A/C/K mini-roster with registry Gift tags.
 4. Fishing atomic vs persistent rerun on four decisive cells.
 5. Mine/Project triple-gate ledger.
-6. Mine/Fishing square fixture v0.2 + deterministic preflight; internal informed test exposed action/schema ambiguity; v0.2.3 action-art correction built and render-verified.
+6. Mine/Fishing square fixture v0.2 + deterministic preflight; informed iterations produced v0.2.4 with approved art, true square targets, status strips and upper-corner signed AP.
 
 Still required:
 
-1. Confirm the assembled v0.2.3 fixture and run one fresh-participant comprehension pilot.
-2. Build v0.3 vertical Area-strip fixture and run it with at least one new participant.
+1. Build v0.3 vertical Area-strip fixture from v0.2.4 grammar and run informed-owner navigation/recognition check.
+2. Retain fresh-player comprehension as an explicit risk until another tester becomes available.
 3. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
 4. Design/test `COL-N` longer collection horizon.
 5. Validate forecast presentation before selecting any storage cap.
