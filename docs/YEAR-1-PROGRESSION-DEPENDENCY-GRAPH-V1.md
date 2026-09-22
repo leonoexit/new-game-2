@@ -507,13 +507,14 @@ Completed in the 2026-09-22 integration pass:
 5. Mine/Project triple-gate ledger.
 6. Mine/Fishing square fixture v0.2 + deterministic preflight; informed iterations produced v0.2.4 with approved art, true square targets, status strips and upper-corner signed AP.
 7. Global orientation v0.3→v0.3.4 informed-owner correction chain: Area index accepted, Weather moved to global scope, synthetic Farm/Market/Fish status removed, Mine Depth retained.
+8. Weather/Season global UI v0.1 informed-owner acceptance: always-visible shallow rail exposes Season, Today, Tomorrow and AP without reading as an on-table target.
 
 Still required:
 
 1. Retain fresh-player comprehension as an explicit risk until another tester becomes available.
 2. Rerun calendar completion timing with PJ-M/PJ-B no-fee baseline and PJ-X selected fee.
 3. Design/test `COL-N` longer collection horizon outside the River root tableau.
-4. Validate Weather/Season global presentation and forecast before selecting any storage cap.
+4. Weather/Season default global presentation is accepted with Today + Tomorrow always visible; still test whether forecasted category/state creates enough Keep option value before selecting any storage cap.
 5. Explore generated abstraction Area backgrounds separately while preserving card dominance and accepted index/navigation grammar.
 
 ### 18.3. Chưa được kết luận

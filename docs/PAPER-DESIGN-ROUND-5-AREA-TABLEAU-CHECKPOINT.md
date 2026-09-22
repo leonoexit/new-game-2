@@ -21,6 +21,7 @@ Phạm vi: sửa world presentation từ spatial surface thành scrollable abstr
 | Card shape | Square 1:1 on-table cards; rectangle reserved for focus/detail UI; status kept as strips | [decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md) |
 | Play fixture | v0.2 failed action comprehension; v0.2.4 now has approved action art, square-target/status-strip separation and upper-corner signed AP | [v0.2 pilot](../paper-tests/mine-fishing-area-tableau-v0.2/pilot-results/internal-informed-pilot-01.md), [v0.2.4](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) |
 | Global orientation | v0.3.4 accepted by informed owner: sticky Area index reads as UI focus, non-Mine synthetic state removed, Mine Depth retained, Weather moved to global scope | [v0.3.4](../paper-tests/orientation-area-tableau-v0.3.4/README.md) |
+| Weather / Season global UI | v0.1 arm A accepted by informed owner: shallow always-visible Season + Today + Tomorrow + AP rail reads immediately and not as a playable target | [global UI v0.1](../paper-tests/weather-season-global-ui-v0.1/README.md) |
 | Redundant gateways | Fishing Spot/Entrance only remain when they have their own verb/state | [Model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md) |
 | Historical spatial work | Model 07 and orientation v0.2 marked superseded for pilot | [Model 07](CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md), [v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md) |
 
@@ -52,7 +53,8 @@ Internal informed pilot trên v0.2 đã dừng ở Task B vì player phải dị
 - sticky Area-name index cần ở bốn Area và đọc như UI focus/scroll, không phải movement;
 - Home/Commerce/River tự giải thích từ card semantics, không cần synthetic Area-state line;
 - Mine Depth/checkpoint là separate status duy nhất trong bốn Area;
-- Weather thuộc global chrome; future Weather/Season có thể là card-like UI ngoài play tableau;
+- Weather/Season thuộc shallow always-visible global rail ngoài play tableau; Season + Today + Tomorrow + AP được đọc ngay và không bị hiểu như target;
+- future card art có thể thay Season/Weather identity field nhưng không đổi global scope hoặc square-target contract;
 - palette fields hỗ trợ Area identity; generated abstraction backgrounds là future art direction;
 - three-target Home đọc như expansion capacity, không phải missing card.
 

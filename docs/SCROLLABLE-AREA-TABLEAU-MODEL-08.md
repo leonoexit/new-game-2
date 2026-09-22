@@ -154,7 +154,7 @@ Home-middle vs Home-at-top là câu hỏi spatial topology nên không còn đo 
 5. `[DIRECTION]` Chỉ verb/state/opportunity cụ thể mới cần card.
 6. `[INFORMED-OWNER ACCEPTED]` Stable order + sticky Area-name index + neutral UI divider đọc như interface focus/scroll, không phải character movement.
 7. `[INFORMED-OWNER ACCEPTED]` Home/Commerce/River tự giải thích bằng card semantics và không cần synthetic Area state; Mine Depth/checkpoint là separate status duy nhất cần trong bốn Area hiện tại.
-8. `[DIRECTION]` Weather/Season có thể dùng card-like global UI ngoài play tableau; chúng không phải on-table square targets.
+8. `[INFORMED-OWNER ACCEPTED]` Weather/Season dùng always-visible shallow rail trong sticky global chrome ngoài play tableau: Season, Today Weather, Tomorrow Weather và remaining AP. Treatment không bị đọc như commitment target; future card art có thể thay identity field nhưng không đổi scope hoặc target grammar.
 
 ## 10. Chưa kết luận
 
@@ -162,7 +162,7 @@ Home-middle vs Home-at-top là câu hỏi spatial topology nên không còn đo 
 - Một viewport chứa toàn Area hay cho phép Area dài hơn viewport.
 - Số cột và card density trên mobile.
 - Runtime index luôn sticky hay collapse sau onboarding; paper fixture dùng sticky index vì owner đã cần index ở bốn Area.
-- Exact card-like treatment cho global Weather/Season ngoài play tableau.
+- Exact final art cho Season/Weather fields và future forecast-upgrade depth; default paper presentation hiện giữ Today + Tomorrow luôn thấy.
 - Generated abstraction background cho từng Area và mức độ motif cần thiết ngoài palette.
 - Exact logical square-card size, badge hierarchy và accessibility reflow.
 - Fiction có travel cost riêng hay hoàn toàn không có travel system.

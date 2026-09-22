@@ -79,7 +79,7 @@ Không tạo status component chỉ để mọi Area có cùng schema. v0.3.4 lo
 
 ## 6. Evidence gate
 
-[Mine + Fishing Area-tableau fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md) là first shape-conformant paper artifact. [v0.2.4](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) sửa target/cost grammar. [Global orientation v0.3.4](../paper-tests/orientation-area-tableau-v0.3.4/README.md) là current fixture: sticky Area index, semantic-only Home/Commerce/River và Mine Depth rail được informed owner accept. Fresh-player evidence unavailable.
+[Mine + Fishing Area-tableau fixture v0.2](../paper-tests/mine-fishing-area-tableau-v0.2/README.md) là first shape-conformant paper artifact. [v0.2.4](../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) sửa target/cost grammar. [Global orientation v0.3.4](../paper-tests/orientation-area-tableau-v0.3.4/README.md) là current Area fixture. [Weather/Season global UI v0.1](../paper-tests/weather-season-global-ui-v0.1/README.md) informed-owner accept một shallow always-visible rail ngoài tableau; Season/Weather/AP đọc ngay mà không thành playable target. Fresh-player evidence unavailable.
 
 Không promote tên, cost, mastery threshold, art study hoặc grid size trong fixture thành canonical/runtime content.
 
@@ -97,7 +97,7 @@ Không promote tên, cost, mastery threshold, art study hoặc grid size trong f
 - Header Area luôn hiện hay chỉ khi onboarding/focus.
 - Art-to-UI ratio trong square card.
 - Hover/focus/selected treatment và tap target padding.
-- Exact Weather/Season card-like UI outside the play tableau.
+- Final Season/Weather field art và future forecast-upgrade depth; default paper UI đã chọn shallow global rail với Today + Tomorrow luôn thấy.
 - Generated abstraction backgrounds that preserve card dominance and Area identity.
 
 ## 9. First comprehension correction
