@@ -45,7 +45,7 @@ Tất cả schedule/economy/graph dùng cùng `[FIXTURE]` vocabulary:
 - Catch: River Minnow, Rain Eel.
 - Projects: Water Trough `PJ-M`, Harvest Bench `PJ-B`, Upper-Grove Footbridge `PJ-X`.
 - Processing: `[crop] Preserve`, `Dried [fish]`, `Prepared [herb]`, giữ subtype/origin.
-- Collection: `COL-1` record 3-of-4 family → chọn Tallbean/Dewleaf Seed; `COL-N` vẫn là explicit gap.
+- Collection: `COL-1` record 3-of-4 family → chọn Tallbean/Dewleaf Seed; `COL-N` relationship pages pass paper timing under independent source delivery `DL-6`, final cadence/value open.
 - Person test roster: Mira=A, Nell=C, Bram=K; identity/assignment chỉ là fixture.
 
 Names/counts không phải content lock.
@@ -70,16 +70,16 @@ Không branch nào cần first harvest để tồn tại. Branch rejoin bằng i
 
 | System | Baseline kế | Comparator/rejected signal | Status |
 | --- | --- | --- | --- |
-| Day capacity | A5 stress, A7 safety | A5 soft lock; A7 quá rộng | `[FIXTURE]` |
-| Season/calendar | 12/18 + sparse/dense Weather cells | phase alignment quan trọng ngang frequency | `[FIXTURE]` |
-| Buy/Sell | 0 AP, exact quantity preview | 1 AP batch đè A5 và tạo hoarding incentive | `[HYPOTHESIS]` |
+| Day capacity | A6 next paper baseline | A5 overload stress; A7 surplus guard | `[HYPOTHESIS]/[FIXTURE]` |
+| Season/calendar | S18 recovery baseline + WD/WS phase arms | S12 boundary stress; S15/S16 edge only | `[HYPOTHESIS]/[FIXTURE]` |
+| Buy/Sell | 0 AP commit; ordinary sale through Shipping Bin; Gold at end of day; exact quantity preview | 1 AP batch đè A5 và tạo hoarding incentive | `[PAPER BASELINE]/[SOURCE-BACKED]` |
 | Storage | no cap, no perish | `S4` comparator; `P1` perish không carry | `[HYPOTHESIS]` |
 | Fishing | atomic one-commit | global persistent xóa A5 scarcity, thêm A7 state | `[HYPOTHESIS]` |
 | Mine | deterministic Depth + mixed checkpoint | resource staircase yếu hơn | `[HYPOTHESIS]` |
 | Mine/Fishing presentation | abstract Area tableaus; target exact Catch/frontier/route | redundant Entrance/Spot gateway cards | `[DIRECTION]` |
 | On-table card shape | square 1:1; immediate verb + pay/get/change; ordered rectangular detail UI; only independent non-action state as status rail (currently Mine Depth) | portrait primary, noun-only root hoặc schema dump | `[DECIDED]` |
-| Processing | Load → Sleep, one slot, identity preserving | +2G/1 AP/one Sleep là numbers only | `[FIXTURE]` |
-| PJ-M/PJ-B | material + Work, no fee | fee + scarce material + Work triple-gates relief | `[HYPOTHESIS]` |
+| Processing | generic Fresh/Processed sale parity; no premium order; Processor utility deferred until actual content needs Processed state | universal +2G/+1G and artificial Pantry/Shop order rejected | `[OWNER DECIDED]/[DEFERRED]` |
+| PJ-M/PJ-B | `Q4`: one Wood + one secondary + 4 Progress, no fee | `Q6` deliberate comparator; `Q8` Work padding rejected | `[OWNER SELECTED PAPER BASELINE]` |
 | PJ-X | material + Work + selected permit comparator | không áp fee cho mọi Project | `[HYPOTHESIS]` |
 | Person | A/C/K concrete fixture | E/J conditional; D/I/M reserve | `[HYPOTHESIS]` |
 | World navigation | vertical Area order + soft transitions | spatial topology/map metaphor rejected | `[DIRECTION]` |
@@ -109,6 +109,9 @@ Không con số AP/cap/fee/price nào ở bảng là luật final.
 - Harvest Bench: Wood + Stone + Work baseline; relief phải reveal trước burst cliff.
 - Footbridge: optional context; permit comparator được giữ vì base Grove/Mine route vẫn hoạt động.
 - Contribution/progress giữ qua Sleep/Season/Year.
+- Product owner chọn `Q4`: một Wood + một secondary + 4 Progress cho M/B. `Q6` 6 Progress giữ làm deliberate comparator; `Q8` 8 Progress bị reject như timing padding.
+- Produce raw target dùng existing Bram Fresh Shortroot Gift. Fish không cần một premium Fresh target trong minimum baseline: Shipping Bin sale có 0 AP commit và trả Gold cuối ngày, trong khi generic Process-then-sell tốn Load 1 AP, chậm hơn và không tăng giá.
+- Processed không có universal sale uplift và không có Commerce Pantry/Shop premium trong active baseline. Processor không được tính là minimum economic branch cho tới khi actual recipe/Gift/Project/request cần Processed state; River giữ Catch only.
 
 ## 7. Person fixture
 
@@ -154,6 +157,21 @@ Weather thuộc global UI scope, không phải Eel tag hoặc River state. Futur
 | [Calendar sensitivity](CALENDAR-SENSITIVITY-PAPER-SIMULATION-01.md) | A5/A7 + phase alignment constraints |
 | [Project completion rerun](CALENDAR-PROJECT-COMPLETION-RERUN-02.md) | M/B no-fee timing retained; selected PJ-X fee creates allocation fork, not fixed delay |
 | [COL-N long-horizon test](COL-N-LONG-HORIZON-PAPER-TEST-01.md) | relationship-page structure retained; current minimum content fails long-calendar timing |
+| [Mine source/later-discovery audit](MINE-LATER-DISCOVERY-SOURCE-AUDIT-03.md) | CP6 Stone source direction; CP12 context meaningful but not proven late enough |
+| [Mine band cadence 04](MINE-BAND-CADENCE-PAPER-SIMULATION-04.md) | CP12 interaction D5/A5 or D4/A7; optional relationship, not long-calendar clock |
+| [Mine Stone refresh 05](MINE-STONE-REFRESH-PROJECT-TIMING-05.md) | Search once + persistent Sleep refresh; both Stone Projects retain recovery |
+| [COL-N later-context alternatives 02](COL-N-LATER-CONTEXT-ALTERNATIVES-02.md) | restock renewal passes choice shape but is a moving boundary; Processor conflict remains early; no timing pass |
+| [COL-N independent source cadence 03](COL-N-INDEPENDENT-SOURCE-CADENCE-AUDIT-03.md) | `DL-6` source response D13/D14; S12 miss and S18 complete with persistent recovery |
+| [AP / Season bracket narrowing 03](AP-SEASON-BRACKET-NARROWING-03.md) | A6/S18 next paper baseline; A5/S12 overload bound and A7 surplus guard retained |
+| [Project quantity/Work A6–S18 rerun 04](PROJECT-QUANTITY-WORK-A6-S18-RERUN-04.md) | `Q4` responsive and `Q6` deliberate both viable; `Q8` rejected; owner later selected `Q4` |
+| [Raw-target / Processing A6–S18 rerun 05](RAW-TARGET-PROCESSING-A6-S18-RERUN-05.md) | Historical test: Produce raw target passes; Fresh/Processed order comparators were later superseded; universal processed uplift rejected |
+| [Fresh/Processed native context options 06](FRESH-PROCESSED-NATIVE-CONTEXT-OPTIONS-06.md) | Kitchen and distributed bundles both viable; Person pair rejected; owner later selected D |
+| [Distributed Fresh/Processed context contract 07](DISTRIBUTED-FRESH-PROCESSED-CONTEXT-CONTRACT-07.md) | Historical D contract fully superseded: River request and Commerce premium target both removed |
+| Distributed context informed-owner wording check 01 | `Fresh Catch Request / Supply` target purpose failed; the proposed `Fish Buyer / Sell Fresh Fish` correction was later retracted |
+| Distributed context source audit | Original supports NPC/Request/Fisher role examples but no Fish Buyer; correction retracted; owner later removed the River premium target |
+| [Fish sale / Processing no-River-buyer rerun 08](FISH-SALE-PROCESSING-NO-RIVER-BUYER-RERUN-08.md) | River Catch only and Shipping Bin Fresh sale retained; its bounded Commerce target was later rejected as redundant |
+| [Commerce Processed target informed-owner test 09](COMMERCE-PANTRY-INFORMED-OWNER-TEST-09.md) | UI comprehension pass, system-necessity fail; Pantry/Shop order rejected despite clear wording |
+| [Help Wanted / Special Orders deferred roadmap 10](REQUEST-ORDER-DEFERRED-DEVELOPMENT-ROADMAP-10.md) | Help Wanted scheduled before Special Orders after core baseline; neither is current content or a Processing patch |
 | [Economy ledger v2](ECONOMY-LEDGER-V2-PAPER-SENSITIVITY-01.md) | T0 market, sink shapes, exact compatibility |
 | [Storage sensitivity](STORAGE-KEEP-SENSITIVITY-01.md) | no-cap baseline; forecast required; perish rejected |
 | [Fishing sensitivity](FISHING-RESOLUTION-SENSITIVITY-02.md) | atomic commitment retained across four cells |
@@ -194,7 +212,7 @@ Weather thuộc global UI scope, không phải Eel tag hoặc River state. Futur
 | Storage/perishability arms separated | Pass |
 | Fishing resolution compared in decisive cells | Pass |
 | Mine/Project triple gate audited | Pass |
-| Project completion timing under selected fees | Pass as fixture; current Stone source remains open |
+| Project completion timing under selected fees | Pass as fixture; CP6 Stone source arm shifts A5 PJ-X to D3 |
 | Concrete Person mini-roster | Pass as fixture |
 | Square orientation asset coverage | Pass |
 | Historical spatial orientation preflight | Pass, but superseded for pilot |
@@ -202,8 +220,10 @@ Weather thuộc global UI scope, không phải Eel tag hoặc River state. Futur
 | Square-card desk/mobile render QA | Pass |
 | Action/target comprehension | v0.2 failed; v0.2.4 passes deterministic render + informed owner acceptance; fresh-player evidence unavailable |
 | New-player orientation data | Open |
-| Long collection arc `COL-N` | Structure candidate found; later-discovery timing still open |
-| Final AP/calendar/prices/costs | Open by design |
+| Long collection arc `COL-N` | Paper timing pass under independent `DL-6` source delivery; exact cadence/value and fresh-player evidence open |
+| AP / Season bracket | A6/S18 next paper baseline; final Weather/prices/costs and product lock open |
+| Project quantity/Work on A6/S18 | `Q4` responsive selected by product owner; `Q6` comparator retained |
+| Fish sale / Processing | River Catch + Shipping Bin sale retained; no Processed premium. Processor positive utility is deferred/open and excluded from the minimum economic loop |
 | Final Area order/roster/content count | Open by design |
 
 ## 12. Strongest current conclusions
@@ -215,19 +235,23 @@ Weather thuộc global UI scope, không phải Eel tag hoặc River state. Futur
 5. `[HYPOTHESIS]` A/C/K is a coherent minimum Person test roster without making Person mandatory.
 6. `[DECIDED]` Scroll order is interface organization, not world topology or travel distance.
 7. `[DECIDED]` No paper result changes multi-year continuation.
+8. `[PAPER BASELINE]` A6/S18 is the next balance arm: A6 matches the 6 AP pre-relief peak; S18 contains the D14–D18 recovery cycle and both carried source-delivery sensitivities.
+9. `[OWNER SELECTED PAPER BASELINE]` M/B use `Q4`: one Wood + one secondary + 4 Progress; `Q6` remains comparator.
+10. `[OWNER DECIDED]` Processed sale has no universal uplift and no Pantry/Shop premium. Processor is a deferred utility shell, not a validated minimum economic branch; later actual content may require Processed state.
+11. `[OWNER SELECTED PAPER BASELINE]` River is Catch only. Ordinary Fresh Fish sale uses Shipping Bin at 0 AP with end-of-day payout; no River buyer/request is required.
 
 ## 13. Next evidence, in order
 
-1. Retain fresh-player navigation/comprehension risk as open until another tester exists; do not relabel informed-owner acceptance.
-2. Define/test one later recoverable discovery/context, then rerun `COL-N` relationship-page timing without flat-count padding or submit tax.
-3. Resolve the current Stone-source contract before treating Project fixture days as a content schedule.
-4. Validate future actual Person/request/Processor contexts at their native source; do not create a global tomorrow agenda.
-5. Explore generated abstraction Area backgrounds separately under the art skill; preserve card dominance and accepted index grammar.
+1. Continue comprehension checks with the product owner as the available informed tester; record that evidence accurately and do not relabel it as fresh-player acceptance.
+2. Continue the core Year 1 paper baseline; do not create another Processed premium target to make Processor appear complete.
+3. Keep [Help Wanted / Special Orders roadmap 10](REQUEST-ORDER-DEFERRED-DEVELOPMENT-ROADMAP-10.md) inactive until its dependency gates are met; then test Help Wanted before Special Orders.
+4. Retain generic market parity and Shipping Bin timing as paper baselines; do not add a generic Load tax, River buyer or Shop-order premium.
+5. Explore generated abstraction Area backgrounds separately under the art skill only with explicit art direction; preserve card dominance and accepted index grammar.
 6. Only then choose a narrower content/balance lock; implementation still needs explicit user authorization.
 
 ## 14. Non-conclusions
 
-- No final AP/day, Season length, Weather rate, price, Project quantity or Work total.
+- A6/S18 and Q4 are paper baselines, not final runtime/product locks; Weather rate, prices and target identities remain open.
 - No final Area order, card density, world node count, square logical size or runtime tile size.
 - No canonical Person roster/Gift schedule/Heart cadence.
 - No canonical art promotion.

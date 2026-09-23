@@ -19,6 +19,12 @@ Nguồn chính:
 - [Mine/Project triple-gate audit 01](MINE-PROJECT-TRIPLE-GATE-AUDIT-01.md)
 - [Calendar/Project completion rerun 02](CALENDAR-PROJECT-COMPLETION-RERUN-02.md)
 - [COL-N long-horizon paper test 01](COL-N-LONG-HORIZON-PAPER-TEST-01.md)
+- [Mine later-discovery/source audit 03](MINE-LATER-DISCOVERY-SOURCE-AUDIT-03.md)
+- [Mine band cadence paper simulation 04](MINE-BAND-CADENCE-PAPER-SIMULATION-04.md)
+- [Mine Stone refresh / Project timing 05](MINE-STONE-REFRESH-PROJECT-TIMING-05.md)
+- [COL-N later-context alternatives 02](COL-N-LATER-CONTEXT-ALTERNATIVES-02.md)
+- [COL-N independent source cadence audit 03](COL-N-INDEPENDENT-SOURCE-CADENCE-AUDIT-03.md)
+- [AP / Season bracket narrowing 03](AP-SEASON-BRACKET-NARROWING-03.md)
 - [Person mini-roster fixture 01](PERSON-MINI-ROSTER-FIXTURE-01.md)
 - [Scrollable abstract-area tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md)
 - [Mine/Fishing area-tableau play contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md)
@@ -62,7 +68,7 @@ Nguồn chính:
 1. A5 tạo choice nhưng `5-12-S` có soft lock-in; core graph không được đòi Expansion/burst relief hoàn tất trong một short sparse Season.
 2. A7 xóa phần lớn opportunity miss trong minimum slice; không dùng A7 làm bằng chứng một gate đủ đắt.
 3. Rain phase so với crop burst quan trọng ngang frequency; không gate core progression vào một Rain cụ thể.
-4. Fresh liquidity, raw target và processed target phải cùng tồn tại để Processing không dominate.
+4. Fresh and matching Processed sale giữ generic parity; không có premium buyer/order. Processor chỉ trở lại minimum graph khi actual recipe/Gift/Project/request tạo lý do Processed state.
 5. Seed restock + selected optional-context fee là hai sink shape đủ cho vòng paper; relief Project không dùng fee trong baseline kế.
 6. A/C/K có evidence mạnh nhất; E/J là conditional candidate; D/I/M ở reserve.
 7. `COL-1` D3 là first-branch fixture, không đủ làm long-term collection arc.
@@ -163,7 +169,7 @@ No first-harvest edge precedes R0/MIN0/FI0/P0.
 | R1 | [HYPOTHESIS] | Interact deterministic source + one demand exists | Search/inspect Grove batch | Optional Wild Herb/variety | Batch later; core source deterministic |
 | MIN1 | [HYPOTHESIS] | Mine actionable | Direct Descent; Depth deterministic | Current frontier | Depth persists through Sleep |
 | MIN-S | [HYPOTHESIS]/[FIXTURE] | First source checkpoint | Search side tunnel → reveal source → extract Ore, or Descend instead | Exposed Ore source | Search/extract keep Depth; source can be used later |
-| MIN-R | [HYPOTHESIS]/[FIXTURE] | Rule-band checkpoint | Speed vs yield | Changes action rule temporarily | Both routes known; no blind fail |
+| MIN-R | [HYPOTHESIS]/[FIXTURE] | Rule-band checkpoint | Speed vs yield; band may change exact source availability | Changes action/source rule temporarily | Revealed source persists; spent source refreshes after Sleep in paper arm |
 | MIN-B | [HYPOTHESIS]/[FIXTURE] | Branch/context checkpoint | Choose previewed context band | Ore/Herb/Fish cross-link | Unchosen branch returns later |
 | MIN-X | [HYPOTHESIS] | World-connection checkpoint | Persistent traversal | New topology/context | Not ending; exact content gated |
 | PJ-X | [HYPOTHESIS]/[FIXTURE] | Wood/Stone known + optional Upper Grove interest | Material + Work + optional permit | Upper-Grove context/source | R0/R1/Mine still work without it |
@@ -193,28 +199,30 @@ Fishing output đi tới Sell/Gift/record/Process/Keep. Fresh Rain record cần 
 | --- | --- | --- | --- | --- | --- |
 | COL0 | [HYPOTHESIS] | First eligible family acquired | Auto record, không consume | Field Notes horizon | Item vẫn dùng nơi khác |
 | COL-1 | [FIXTURE] | Record any 3-of-4 Crop/Forage/Fish/Mine families | Choose Tallbean or Dewleaf Seed | New source/profile one restock early | Unchosen option returns later |
-| COL-N | [HYPOTHESIS] | Sau first-choice reward và thêm discovery | Themed relationship pages trong Journal; exact later slot còn mở | Source-choice hoặc transformation-choice reward | Backfill prior records; later discovery phải recoverable |
+| COL-N | [HYPOTHESIS]/[FIXTURE] | Sau first-choice reward và chosen-seed output | Themed relationship pages + independent Seed-source response (`DL-6` comparator) | Source-choice hoặc transformation-choice reward | Backfill prior records; ready source choice persists |
 
 ### 7.1. [HYPOTHESIS] v1 correction
 
 `COL-1` không được coi là toàn bộ collection progression. Calendar fixture hoàn thành nó D3 ở mọi arm; nó là first branch/choice, không đủ giữ S12/S18. `COL-N` structure test loại flat checklist và submit bundle; themed relationship pages là candidate mạnh nhất nhưng chưa pass long-calendar timing vì content minimum thiếu một later recoverable discovery thật.
 
+Follow-up [independent source cadence 03](COL-N-INDEPENDENT-SOURCE-CADENCE-AUDIT-03.md) bổ sung source response có consequence ngoài Journal. `DL-6` đưa choice `continue vs diversify` tới D13/D14 độc lập với Season length; S12 miss và S18 complete/recover. Đây là paper timing pass, không phải final six-Sleep rule.
+
 ## 8. Processing branch
 
 | ID | Status | Reveal trigger | Progress grammar | Opens/changes | Recovery |
 | --- | --- | --- | --- | --- | --- |
-| PR0 | [HYPOTHESIS] | Broken/available Processor seen + at least one input category | World-state repair/activate, không bắt buộc là Project | One-slot conversion context | Other item uses remain |
+| PR0 | [DEFERRED] | Actual approved content needs Processed state | World-state repair/activate, không bắt buộc là Project | One-slot conversion context | Other item uses remain; Processor absent from minimum economic loop |
 | PR-C | [FIXTURE] | Fresh Crop + active Processor | Load → Sleep | `[crop] Preserve` | Keep/Sell/Gift raw instead |
-| PR-F | [FIXTURE] | Fresh Fish + active Processor | Load → Sleep | `Dried [fish]` | Fresh condition target may win |
+| PR-F | [FIXTURE] | Fresh Fish + active Processor | Load → Sleep | `Dried [fish]` | Shipping Bin/Keep remain valid; actual Processed use deferred |
 | PR-H | [FIXTURE] | Fresh Herb + active Processor | Load → Sleep | `Prepared [herb]` preserving origin | Fresh Person/Project target may win |
-| PR-S | [HYPOTHESIS] | Repeated category pressure | Specialized Processor/context | More option, not identical free slot | Base one-slot remains valid |
+| PR-S | [HYPOTHESIS] | Actual cross-identity one-slot conflict | Specialized Processor/context | More option, not identical free slot | Base one-slot remains valid; reconfiguration source still open |
 
 ### 8.1. [HYPOTHESIS] Compatibility invariant
 
 - Output retains Crop/Fish/Herb subtype/origin and adds Processed.
 - Processed is rejected by target requiring Fresh/Raw unless target explicitly accepts alternate state.
-- +2G uplift, Load 1 AP, one slot và one Sleep là sensitivity fixtures.
-- At least one raw target/liquidity horizon phải visible để Processor idle có thể đúng.
+- Generic Fresh/Processed market parity, Load 1 AP, one slot và one Sleep are the current paper baseline; universal +2G uplift is rejected.
+- No current premium target is carried. The transform templates remain compatibility fixtures only; do not count them as a positive branch until actual approved content needs Processed state.
 
 ## 9. Person overlay
 
@@ -391,12 +399,15 @@ Shortroot record + Berry/Wild Herb record + River Fish record
 → COL-1 Seed Choice
 → Tallbean cash profile OR Dewleaf Herb profile
 → condition Catch + identity-preserving Processing
-→ COL-N remains an explicit design gap
+→ chosen output enables independent Seed-source delivery
+→ Continue OR Diversify source profile at D13/D14 comparator
+→ COL-N relationship pages pass paper timing
 ```
 
 - Farm can stay small.
 - Rain Eel miss recovers on Rain later.
 - E/C may change timing/flexibility but no collection record requires them.
+- `DL-6` is a paper comparator, not a final restock rule; source offer persists if ignored.
 
 ## 14. Recovery graph
 
@@ -489,7 +500,21 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 | Target-horizon announcement v0.1 | Rejected by informed owner: system agenda reduces player freedom; preserve only as audit trail |
 | Project completion rerun 02 | PJ-M/PJ-B no-fee keeps calendar timing; PJ-X permit creates Ore/allocation choice without guaranteed delay; Stone source contract remains open |
 | COL-N long-horizon test 01 | Relationship-page Journal passes structure/presentation/recovery, but minimum content fails long-calendar timing; flat checklist and submit bundle rejected |
-| Final AP/Season/Weather | Not selected |
+| Mine source/later-discovery audit 03 | CP6 band-specific Stone source resolves grammar direction; CP9/CP12 pass meaning but not proven long-calendar timing |
+| Mine band cadence 04 | CP12 native interaction lands D5/A5 or D4/A7 across routes; relationship shape passes, long-calendar timing fails |
+| Mine Stone refresh 05 | Persistent source + Sleep refresh avoids one-shot Project lock and repeated Search tax; exact cadence remains fixture |
+| COL-N later-context alternatives 02 | Restock renewal gives a real continue/diversify choice but follows the tested Season boundary; Processor conflict remains D5–D8; no late-slot pass |
+| COL-N independent source cadence 03 | Six-Sleep delivery is the minimum robust comparator: source response D13/D14, S12 miss, S18 complete; exact cadence/value open |
+| AP / Season bracket narrowing 03 | A6/S18 selected as next paper baseline from exact workload/recovery thresholds; final product lock and Weather cadence remain open |
+| Project quantity/Work A6–S18 rerun 04 | Q4 responsive and Q6 deliberate both pass; Q8 Work padding fails; owner later selects Q4 |
+| Raw-target / Processing A6–S18 rerun 05 | Historical test: Bram passes Produce raw use; all order comparators were later superseded; universal Processed uplift rejected |
+| Fresh/Processed native context options 06 | K and D both pass; Person pair rejected as baseline dependency; owner later selects distributed D |
+| Distributed Fresh/Processed context contract 07 | Historical D contract fully superseded; neither River Supply nor Commerce premium target remains active |
+| Distributed context informed-owner wording check 01 | Owner did not understand `Fresh Catch Request`; proposed `Fish Buyer` correction was later retracted |
+| Distributed context source audit | No canonical Fish Buyer exists in source; do not invent one as an economy patch; owner later removed the River premium target |
+| [Fish sale / Processing no-River-buyer rerun 08](FISH-SALE-PROCESSING-NO-RIVER-BUYER-RERUN-08.md) | Catch-only River + Shipping Bin sale retained; bounded Commerce target later rejected as redundant |
+| [Commerce Processed target informed-owner test 09](COMMERCE-PANTRY-INFORMED-OWNER-TEST-09.md) | Presentation pass but system-necessity fail; understandable Pantry/Shop order rejected |
+| [Help Wanted / Special Orders deferred roadmap 10](REQUEST-ORDER-DEFERRED-DEVELOPMENT-ROADMAP-10.md) | Dependency schedule records Help Wanted before Special Orders after core baseline; neither is active content |
 
 ## 18. v1 verdict
 
@@ -524,21 +549,31 @@ Completed in the 2026-09-22 integration pass:
 11. Target-horizon announcement v0.1 informed-owner correction: reject all global `Tomorrow Targets` arms because player plans are self-directed; keep Weather world-state rail unchanged.
 12. Calendar/Project completion rerun 02: no-fee relief retains M/E/B timing in four decisive cells; selected PJ-X permit can still complete D2 by allocating CP3 Ore.
 13. COL-N long-horizon paper test 01: carry relationship pages as structural candidate, but keep COL-N open until a real later recoverable discovery exists.
+14. Mine later-discovery/source audit 03: carry band-specific Stone source and CP12 native interaction as one optional later-relationship candidate; neither changes accepted CP3 art/grammar.
+15. Mine band cadence 04: CP12 world connection is meaningful optional collection content but arrives before chosen-seed output in the current minimum; do not use Depth padding/tax to make it late.
+16. Mine Stone refresh 05: carry Search-once, persistent ready/spent source with Sleep refresh; Stone remains an allocation choice without locking the second Project.
+17. COL-N later-context alternatives 02: carry restock renewal and actual Processor conflict only as choice shapes. D13/S12 vs D19/S18 is a moving-boundary failure; reject unchosen-Seed checklist and Load-count specialization; do not rerun `N-REL` yet.
+18. COL-N independent source cadence 03: independent `DL-6` source delivery yields D13/D14 in both Season arms; `N-REL` now passes paper structure/recovery/timing without second-Seed checklist or forced subsystem route.
+19. AP / Season bracket narrowing 03: carry A6/S18 as next paper baseline. A6 exactly fits the pre-relief 6 AP peak; S18 contains the full D14–D18 recovery band and `DL-6`/`DL-8`.
+20. Project quantity/Work A6–S18 rerun 04: one Wood + one secondary remains sufficient for M/B; `Q4` 4 Progress and `Q6` 6 Progress create viable responsive/deliberate relief identities; reject `Q8` 8 Progress as padding.
+21. Product-owner follow-up selects `Q4` as next Project paper baseline. Raw-target/Processing rerun 05 rejects universal Processed uplift for generic parity/target-local value; its selective Fresh Fish order was a provisional comparator.
+22. Source audit + owner follow-up remove the River premium target. Rerun 08 retains Catch-only River, Shipping Bin Fresh sale and generic parity; its bounded Commerce target is later rejected as redundant.
+23. Commerce informed-owner test 09 passes presentation but exposes a content-purpose failure. Owner removes all Processed sale premiums and schedules Help Wanted then Special Orders as deferred post-core systems; Processor leaves the minimum economic loop until actual content needs it.
 
 Still required:
 
-1. Retain fresh-player comprehension as an explicit risk until another tester becomes available.
-2. Define/test one later recoverable discovery/context, then rerun `COL-N` relationship-page timing; do not pad it with record count or submit tax.
-3. Resolve the current Stone-source contract before exact Project timing becomes a content schedule.
-4. When actual Person/request/Processor contexts receive detail UI, validate compatibility/recovery at their native source; do not create a global Tomorrow-target rail.
+1. Continue comprehension checks with the product owner as the available informed tester; keep the evidence label distinct from fresh-player acceptance.
+2. Continue core Year 1 work without a placeholder Processed target; do not count Processor as a positive minimum branch.
+3. Keep [Help Wanted / Special Orders roadmap 10](REQUEST-ORDER-DEFERRED-DEVELOPMENT-ROADMAP-10.md) inactive until core dependency gates pass; then design Help Wanted before Special Orders.
+4. Keep Shipping Bin timing + generic market parity; do not add a Load tax, River buyer, Shop premium or Pantry order.
 5. Explore generated abstraction Area backgrounds separately while preserving card dominance and accepted index/navigation grammar.
 
 ### 18.3. Chưa được kết luận
 
 - Final Year 1 content quantity/name/order.
-- AP/day, Season length, Weather cadence/forecast.
+- Final AP/day and Season product lock; A6/S18 is only the next paper baseline. Weather cadence/forecast remains open.
 - Crop duration/yield/price.
-- Project quantity/Work and which optional-context Project retains a Gold fee.
+- `Q4` is owner-selected Project paper baseline; final runtime values remain unauthorized. `Q6` is comparator and `PJ-X` remains the selected optional-context permit comparator.
 - Storage/perishability.
 - Final runtime Area order, square-card logical size, badge hierarchy and density. Paper direction now includes sticky name index at four Areas; exact runtime collapse/sticky behavior remains open.
 - Person roster, identity, Gift preference hoặc final Heart cadence.

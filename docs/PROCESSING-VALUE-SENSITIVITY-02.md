@@ -223,6 +223,8 @@ Processing progression nên ưu tiên mở recipe/category hoặc specialization
 
 Đây chưa phải luật đã chốt.
 
+Follow-up [Raw-target / Processing A6–S18 rerun 05](RAW-TARGET-PROCESSING-A6-S18-RERUN-05.md) kiểm lại one-slot sau khi product owner chọn Project arm `Q4`. Universal `+2G` và `+1G` vẫn là eventual strict upgrade dưới `S∞`; next paper baseline chuyển sang generic market parity + bounded target-local Fresh/Processed value, giữ Load 1 AP + one Sleep + one slot.
+
 ### Chỗ còn mở
 
 - Exact sell values và Gold sinks.
@@ -231,4 +233,3 @@ Processing progression nên ưu tiên mở recipe/category hoặc specialization
 - Số building/slot theo Year 1.
 - Storage/capacity và perishability có tồn tại hay không.
 - Person ability tác động queue mà không thành combo bắt buộc.
-

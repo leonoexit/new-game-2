@@ -158,6 +158,12 @@ Một future `N-REL` timing rerun cần đúng **một** discovery/context class
 - một later source/restock profile mở từ world state, không từ fixed day;
 - một actual Processor specialization/context có input identity riêng.
 
+[Mine source audit 03](MINE-LATER-DISCOVERY-SOURCE-AUDIT-03.md) và [Mine band cadence 04](MINE-BAND-CADENCE-PAPER-SIMULATION-04.md) đã test Mine candidate: CP12 world connection + first native interaction pass relationship/recovery nhưng xảy ra D5/A5 hoặc D4/A7, sớm hơn chosen-seed output D7/D8. Vì vậy Mine connection chỉ là optional record, không phải long-horizon clock.
+
+Follow-up [later-context alternatives 02](COL-N-LATER-CONTEXT-ALTERNATIVES-02.md) so later Seed Restock với Processor specialization. Actual Processor conflict có meaning nhưng vẫn xuất hiện D5–D8. Seasonal source renewal tạo choice `continue vs diversify` mà không bắt grow cả hai Seed, nhưng D13/S12 và D19/S18 đều là cùng outcome “sau first Season”; đây là moving boundary, không phải long-calendar pass. `N-REL` chưa rerun và vẫn open.
+
+Follow-up [independent source cadence audit 03](COL-N-INDEPENDENT-SOURCE-CADENCE-AUDIT-03.md) test delivery lead time độc lập với Season. `DL-6` là minimum robust comparator: chosen output D7/D8 → source response D13/D14 trong cả S12/S18, nên S12 miss với persistent recovery và S18 complete. `N-REL` pass paper timing dưới arm này; exact delivery cadence/value chưa final.
+
 Guardrails:
 
 - không yêu cầu Mine/Weather/Processor cụ thể nếu nó biến một subsystem thành prerequisite duy nhất; dùng route alternative hoặc `any N-of-M` khi content thật tồn tại;

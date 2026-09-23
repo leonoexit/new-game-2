@@ -130,15 +130,21 @@ Rerun phát hiện một contract gap giữa historical registry và current Min
 
 Neutral 1 AP Stone source giữ phép so timing chạy được mà không phục hồi `Safe Tunnel → Stone`. Trước khi exact Project days trở thành content schedule, một vòng source audit phải chọn Stone đến từ source hiện hữu nào hoặc đổi Project requirement. Đây là content/system dependency, không phải lý do sửa Mine descent hay tạo runtime card ngay.
 
+Follow-up [Mine later-discovery/source audit 03](MINE-LATER-DISCOVERY-SOURCE-AUDIT-03.md) chọn band-specific Search → Exposed Stone → Extract làm next paper arm. Dưới CP6 source access, `PJ-X` earliest timing thành A5 D3 / A7 D2; neutral shim D2/D2 không còn là preferred source model. Stone refresh/quantity vẫn open tại bước audit đó.
+
+[Stone refresh / Project timing 05](MINE-STONE-REFRESH-PROJECT-TIMING-05.md) tiếp tục chọn persistent source refresh after Sleep làm baseline paper: Search một lần, later Stone Extract sau known recovery. Điều này giải availability cho cả `PJ-B` và `PJ-X`; exact Project quantity/Work/day vẫn open.
+
 ## 6. Verdict
 
 1. `[HYPOTHESIS STRENGTHENED]` `PJ-M`/`PJ-B` no-fee baseline loại Gold gate mà không làm mất calendar pressure: workload, reveal timing, material allocation và non-bankable peaks vẫn phân biệt bốn cells.
 2. `[HYPOTHESIS STRENGTHENED]` `PJ-X` selected fee tạo `open optional context vs keep/sell Ore` dưới fixture hiện tại; nó không nhất thiết trì hoãn D2.
 3. `[DIRECTION]` Giữ Project fees selected, không universal. Không thêm fee lại vào relief chỉ để ép completion muộn.
 4. `[DIRECTION]` Giữ các ngày D5/D7/D11... là fixture evidence, không promote thành exact Year 1 schedule.
-5. `[OPEN DEPENDENCY]` Current Stone source phải được định nghĩa trước một balance lock hoặc rerun quantitative tiếp theo.
+5. `[DIRECTION]` Current Stone source dùng band-specific Search → exact Stone source → Extract; source persist và refresh after Sleep trong paper baseline kế. Exact quantity/checkpoint/cadence vẫn cần quantitative rerun.
 6. `[OPEN]` Final AP/day, Season length, Weather cadence, Project quantity/Work, fee amount và source refresh vẫn chưa chốt.
 
 ## 7. Handoff
 
 Calendar completion rerun đủ để đóng action item “no-fee relief + selected optional fee” ở mức paper. Workstream hệ thống kế tiếp là `COL-N`: một collection horizon dài hơn `COL-1`, nằm ngoài River root tableau, có recovery và không trở thành checklist bắt buộc/ngầm định completion.
+
+Follow-up [Project quantity/Work A6–S18 rerun 04](PROJECT-QUANTITY-WORK-A6-S18-RERUN-04.md) thay neutral Stone shim bằng CP6 Search → Exposed Stone → Extract + Sleep refresh và chạy exact A6/S18 dates. `Q4` responsive và `Q6` deliberate đều viable, `Q8` bị reject; product owner sau đó chọn `Q4` làm paper baseline.

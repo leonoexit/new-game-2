@@ -361,3 +361,5 @@ Audit phải so A5 và A7 target density, Heart supply theo route, use hai lần
 - Fresh/processed request là content cuối.
 - `COL-1` grant một free Seed hoặc xuất hiện D3.
 - Heart/ability đáng bao nhiêu Gold.
+
+Follow-up [Raw-target / Processing A6–S18 rerun 05](RAW-TARGET-PROCESSING-A6-S18-RERUN-05.md) dùng owner-selected `Q4` trên A6/S18. Bram Fresh Shortroot Gift passes Produce raw-target need; Fish record-only fails vì không consume. Rerun rejects universal Processed `+2G/+1G` under `S∞` and carries target-local value with generic Fresh/Processed market parity as the next paper baseline.

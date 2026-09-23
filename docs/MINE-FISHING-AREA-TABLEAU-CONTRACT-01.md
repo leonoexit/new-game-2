@@ -95,6 +95,16 @@ Current orientation root không có Fish Record/mastery rail. Nếu Fishing prog
 - Fish item sau acquisition vẫn có thể Sell, Gift, Keep hoặc Process;
 - Processing giữ location/condition provenance nhưng không retroactively tạo Fresh Catch record.
 
+### 2.4.1. River target boundary after source audit
+
+[No-River-buyer rerun 08](FISH-SALE-PROCESSING-NO-RIVER-BUYER-RERUN-08.md) supersedes the earlier distributed Fresh request proposal. The minimum River root contains only the exact Catch target:
+
+```text
+[Exact Catch — Catch 2 AP]
+```
+
+After acquisition, a Fresh Fish may be placed in the source-backed `Shipping Bin`, kept, used by an independently valid future context, or Loaded into the Processor. There is no `Fresh Catch Request`, `Fish Buyer` or `Supply` target at River, and no Catch-vs-Supply comprehension test remains.
+
 ### 2.5. Khi nào thêm River/Lake/Coast
 
 Một Fishing Area mới chỉ đáng tồn tại nếu thay ít nhất một decision dimension:
@@ -163,6 +173,10 @@ Fixture hiện hành để test grammar:
 - CP6: `Slip Through` nhanh so với `Shore Up` chậm + yield;
 - CP9: preview `Deep Vein` so với `Underground Flow`;
 - CP12: cross-system connection chưa có content cuối.
+
+Follow-up [Mine later-discovery/source audit 03](MINE-LATER-DISCOVERY-SOURCE-AUDIT-03.md) giữ CP3 Ore fixture/art nguyên vẹn và test một future band-specific source arm: từ CP6, checkpoint preview có thể làm Stone available; Search vẫn reveal exact source và source target riêng mới Extract. Đây là paper direction để giải Stone-source gap, chưa authorize card/art hoặc đổi đè v0.2.4/v0.3.4.
+
+[Stone refresh / Project timing 05](MINE-STONE-REFRESH-PROJECT-TIMING-05.md) carry source persistence làm paper baseline: sau first Search, Exposed Stone đổi `ready → spent → ready after Sleep`; later unit không Search lại. Recovery cue ở native source/inspect, không thêm square status card hoặc global rail.
 
 Tên, cadence và cost đều chưa phải luật.
 

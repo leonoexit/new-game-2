@@ -312,3 +312,5 @@ Ledger cần thêm:
 - Person P/Q schedule, Gift preference hoặc Heart cap.
 - Processor cần nerf; dominance có thể đến từ target/economy còn thiếu.
 - Hết Season làm crop chết, reset hoặc kết thúc save.
+
+Follow-up [AP / Season bracket narrowing 03](AP-SEASON-BRACKET-NARROWING-03.md) dùng workload threshold thay vì total AP: A6 fit đúng pre-relief sunny peak 6 AP, trong khi A5 bắt buộc tràn và A7 tạo surplus. S18 là next recovery-horizon baseline vì chứa D14–D18 opportunity cycle và `DL-6`/`DL-8`; A5/S12 và A7 giữ vai trò regression bounds. Đây là paper baseline, không phải final lock.
