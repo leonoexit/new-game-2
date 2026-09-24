@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-21.
 
 Trạng thái: paper/constraint simulation dùng vocabulary trong [Content-minimum registry 01](CONTENT-MINIMUM-REGISTRY-01.md). Phép thử chạy Producer, Connector và Collector qua đủ ma trận `2 AP/day × 2 Weather cadence × 2 Season length`. Nó không chốt AP, lịch, crop duration, Project cost, Person schedule hoặc Season rule.
 
+V0 superseding note 2026-09-23: [consistency audit 37](FIRST-PLAYABLE-V0-CONSISTENCY-AUDIT-37.md) preserves this matrix as historical sensitivity. The current paper frame is A6/S18 with season-conditioned Weather RNG, Q4 M/B and immediate-replant Turnip D3/D5/D7; this matrix's fixed WD/WS Rain days and D3/D6/D9 cohort rhythm are separate fixtures. Its paid Grove Search and active Processing cells do not define the one-item V0 Grove or minimum economy.
+
 ## 1. Phân loại trạng thái
 
 ### 1.1. [DECIDED] Ranh giới kế thừa

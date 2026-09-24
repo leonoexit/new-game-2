@@ -4,6 +4,8 @@ Ngày ghi nhận: 2026-09-21.
 
 Trạng thái: mô hình thử để kiểm tra cấu trúc micro-objective. Chưa chốt số AP, số ngày, số luống, resource, recipe, phần thưởng, thứ tự mở khóa hoặc tên card. Không phải đặc tả triển khai.
 
+Cập nhật 2026-09-24: F9 dưới đây từng giả định cần một Project để giảm công tưới; cả ba Project đề xuất sau đó đã bị bác bỏ. [Farm action grammar và AP rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) là luật giấy hiện hành cho Watering Can, Rain, Sleep growth và Hand Harvest. F9 vẫn là câu hỏi lịch sử về cảm giác thao tác, không phải một Project/upgrade đã chọn.
+
 Đọc cùng [nghiên cứu progression Stardew Valley](STARDEW-PROGRESSION-REFERENCE.md) và [thiết kế UI card](CARD-UI-DESIGN.md).
 
 ## 1. Những tiền đề đang dùng

@@ -4,6 +4,10 @@ Ngày chạy: 2026-09-22.
 
 Trạng thái: quantitative paper rerun tiếp nối [AP / Season bracket narrowing 03](AP-SEASON-BRACKET-NARROWING-03.md), [Calendar/Project completion rerun 02](CALENDAR-PROJECT-COMPLETION-RERUN-02.md) và [Mine Stone refresh / Project timing 05](MINE-STONE-REFRESH-PROJECT-TIMING-05.md). Vòng này dùng `A6/S18` dưới cả `WD` và `WS`, loại một arm bị padding dominate, và ban đầu dừng ở hai bundle khả thi. Product owner sau đó chọn `Q4` làm paper baseline kế; đây vẫn chưa là runtime/content lock.
 
+Superseding note 2026-09-23: Q4 M/B and source/timing results remain active paper evidence; all PJ-X permit values are historical after owner-selected X0 no-fee in [permit audit 15](PJ-X-PERMIT-BOUNDARY-AUDIT-15.md).
+
+Final owner correction 2026-09-24: [package v1 §6.5](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) rejects all three Project designs outright. The Q4/M/B and PJ-X calculations below are historical exercises under invalid premises, not active evidence or future content specifications.
+
 ## 1. Fixed contract và scheduler
 
 ### 1.1. Inherited rules

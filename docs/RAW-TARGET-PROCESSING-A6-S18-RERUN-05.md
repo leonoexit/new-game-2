@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-22.
 
 Trạng thái: **superseded as an active Processing-value solution**. This paper economy rerun preserves the tested order arms as history; sections 10–11 record later owner decisions removing every Fresh/Processed premium order and deferring positive Processor utility. Không thêm generic Load tax, storage cap, perishability, global agenda hoặc runtime content.
 
+Additional superseding note 2026-09-23: the PJ-X 8G permit fixture is also historical after owner-selected X0 no-fee in [permit audit 15](PJ-X-PERMIT-BOUNDARY-AUDIT-15.md).
+
 ## 1. Fixed baseline
 
 - Project paper baseline: `Q4`.
@@ -210,7 +212,7 @@ Native source only:
 - Processor inspect: exact input/output, Load 1 AP, ready after Sleep, state compatibility change.
 - Processed Pantry Order at Commerce: accepted Processed state, one-unit limit, payout/recovery.
 
-Global Weather/Season rail remains Season, Today, Tomorrow Weather and AP only. No target summary, agenda, recommended action or square status card is added.
+Historical test presentation used Season, Today, Tomorrow Weather and AP on the global rail. Later owner correction removed Tomorrow from that rail: TV inside Farmhouse reports D+1 Weather for 0 AP; if TV is skipped, Sleep determines D+1 Weather without opening TV. No target summary, agenda, recommended action or square status card is added.
 
 ## 8. Verdict
 

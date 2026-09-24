@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-21.
 
 Trạng thái: coverage test trên [Year 1 progression dependency graph v0](YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V0.md). Phép thử kiểm tra dependency, reveal và reward shape; không cân bằng một mùa hoàn chỉnh. Tên route, lịch, reward và node bổ sung đều là fixture.
 
+V0 superseding note 2026-09-23: [consistency audit 37](FIRST-PLAYABLE-V0-CONSISTENCY-AUDIT-37.md) is the current reading. Any Upper-Grove reward or Wild Herb-after-Footbridge edge in the v0 route trace is historical hypothesis; ordinary Grove/Wild Herb does not require PJ-X, and the bridge still lacks a specified playable reward. Paid Grove Search and A/K ability-purpose claims in this older coverage test are not current V0 conclusions.
+
 ## 1. Phân loại trạng thái thiết kế
 
 ### 1.1. Điều người dùng đã chốt

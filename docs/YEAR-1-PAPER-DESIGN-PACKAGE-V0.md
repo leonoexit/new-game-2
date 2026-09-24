@@ -4,6 +4,8 @@ Ngày tổng hợp: 2026-09-21.
 
 Trạng thái: package tích hợp từ các paper simulation hiện có. `Year 1` là horizon nội dung cần thiết kế/cân bằng, không phải deadline, ending hoặc reset save. Tài liệu này không cho phép code/prototype và không biến fixture thành luật đã chốt.
 
+Superseding V0 note 2026-09-23: use [package v1](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) and [consistency audit 37](FIRST-PLAYABLE-V0-CONSISTENCY-AUDIT-37.md) for the current paper boundary. The Grove Search, Upper-Grove reward, Project fee, A/K ability-purpose, Heart cap and three-day Turnip rhythm in this earlier package are historical fixtures or hypotheses where later tests disagree. Preserve them as evidence, not active V0 rules.
+
 ## 0. Cách đọc trạng thái
 
 Mọi phần dùng bốn nhãn:

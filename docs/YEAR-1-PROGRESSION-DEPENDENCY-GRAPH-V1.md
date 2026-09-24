@@ -1,8 +1,10 @@
 # Year 1 progression dependency graph — v1
 
-Ngày tổng hợp: 2026-09-21; evidence integration pass: 2026-09-22.
+Ngày tổng hợp: 2026-09-21; evidence integration pass: 2026-09-22; post-removal consistency update: 2026-09-23.
 
 Trạng thái: graph v1 tích hợp content-minimum registry, calendar sensitivity, economy ledger v2 và Person kernel audit. `Year 1` là horizon content/balance, không phải ending, reset hoặc deadline. Graph dùng state/reveal bands; exact Season/day placement chỉ được ghi nơi sensitivity có bằng chứng, không suy từ fixture thành luật.
+
+Latest paper reading: [audit 40 §8](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md) sets visible Wild Herb in Rìa Rừng; [package §7.4](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) records the owner's Nell-only Person scope. **Package §6.5 rejects all three proposed Projects entirely**. [Farm rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) defines Watering Can/Sleep/Hand; [package §6.9–6.11](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) gives the working first-loop Seed/Field Notes/Mine scope and the limits of repeat Fish/Ore and paid profile access. Older Project, daily-stock, Stone/Wood and reward-at-restock nodes below are historical or broader-graph hypotheses, not current V0 requirements.
 
 Nguồn chính:
 
@@ -34,6 +36,27 @@ Nguồn chính:
 - [Orientation explicit-surface paper-test kit v0.2](../paper-tests/orientation-explicit-surface-v0.2/README.md)
 - [Orientation paper-test kit v0.1 — historical topology skeleton](../paper-tests/orientation-home-middle-vs-top-v0.1/README.md)
 - [Rejected target-horizon announcement scope](../paper-tests/target-horizon-announcement-v0.1/pilot-results/informed-owner-scope-correction-2026-09-22.md)
+- [Post-removal consistency/gap audit 11](CORE-YEAR-1-POST-REMOVAL-CONSISTENCY-GAP-AUDIT-11.md)
+- [Person ownership/minimum-roster audit 12](PERSON-OWNERSHIP-MINIMUM-ROSTER-AUDIT-12.md)
+- [Project/item/source consistency audit 13](PROJECT-ITEM-SOURCE-CONSISTENCY-AUDIT-13.md)
+- [Core content quantity boundary audit 14](CORE-CONTENT-QUANTITY-BOUNDARY-AUDIT-14.md)
+- [PJ-X permit boundary audit 15](PJ-X-PERMIT-BOUNDARY-AUDIT-15.md)
+- [Gold role after X0 audit 16](GOLD-ROLE-POST-X0-AUDIT-16.md)
+- [Core Year 1 lock-readiness audit 17](CORE-YEAR-1-LOCK-READINESS-AUDIT-17.md)
+- [Canonical minimum identity-entry audit 18](CANONICAL-MINIMUM-IDENTITY-ENTRY-AUDIT-18.md)
+- [Canonical identity direction audit 19](CANONICAL-IDENTITY-DIRECTION-AUDIT-19.md)
+- [Canonical crop identity audit 20](CANONICAL-CROP-IDENTITY-AUDIT-20.md)
+- [Canonical Catch identity audit 21](CANONICAL-CATCH-IDENTITY-AUDIT-21.md)
+- [Canonical source/item identity audit 22](CANONICAL-SOURCE-ITEM-IDENTITY-AUDIT-22.md)
+- [Canonical identity consolidated proposal 23](CANONICAL-IDENTITY-CONSOLIDATED-PROPOSAL-23.md)
+- [Year 1 content-volume scope audit 24](YEAR-1-CONTENT-VOLUME-SCOPE-AUDIT-24.md)
+- [First-playable AP/Season lock audit 25](FIRST-PLAYABLE-AP-SEASON-LOCK-AUDIT-25.md)
+- [PJ-X material/Work paper test 31](FIRST-PLAYABLE-PJ-X-MATERIAL-WORK-PAPER-TEST-31.md)
+- [Heart/Gift cadence paper test 32](FIRST-PLAYABLE-HEART-GIFT-CADENCE-PAPER-TEST-32.md)
+- [Bram/K purpose audit 33](FIRST-PLAYABLE-BRAM-K-PURPOSE-AUDIT-33.md)
+- [Bram functional-role review 34](FIRST-PLAYABLE-BRAM-FUNCTIONAL-ROLE-REVIEW-34.md)
+- [Mira/Nell target–Gift phase test 35](FIRST-PLAYABLE-MIRA-NELL-TARGET-GIFT-PHASE-TEST-35.md)
+- [Grove Batch contract 36](FIRST-PLAYABLE-GROVE-BATCH-CONTRACT-36.md)
 
 ## 1. Phân loại trạng thái
 
@@ -69,8 +92,8 @@ Nguồn chính:
 2. A7 xóa phần lớn opportunity miss trong minimum slice; không dùng A7 làm bằng chứng một gate đủ đắt.
 3. Rain phase so với crop burst quan trọng ngang frequency; không gate core progression vào một Rain cụ thể.
 4. Fresh and matching Processed sale giữ generic parity; không có premium buyer/order. Processor chỉ trở lại minimum graph khi actual recipe/Gift/Project/request tạo lý do Processed state.
-5. Seed restock + selected optional-context fee là hai sink shape đủ cho vòng paper; relief Project không dùng fee trong baseline kế.
-6. A/C/K có evidence mạnh nhất; E/J là conditional candidate; D/I/M ở reserve.
+5. After owner-selected G0, Seed restock/profile access is the complete minimum Gold sink shape. Long-horizon strategic accumulation is deferred; no replacement fee/order is inferred. Historical X0 Project fee comparisons are inactive after package §6.5.
+6. Historical kernel audit ranked A/C/K highest, but [Bram review 34](FIRST-PLAYABLE-BRAM-FUNCTIONAL-ROLE-REVIEW-34.md) and [Grove contract 36](FIRST-PLAYABLE-GROVE-BATCH-CONTRACT-36.md) leave K and A without demonstrated V0 targets. C's conditional Hold case is superseded by Season-persistent Herb; [package §7.2](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) replaces it with general 2-AP relief for Nell. E/J remain conditional, D/I/M reserve.
 7. `COL-1` D3 là first-branch fixture, không đủ làm long-term collection arc.
 8. Home-middle vs Home-at-top không còn là topology question; next orientation fixture phải đo Area/card recognition trong vertical strip.
 9. `S4` chỉ bớt đoán khi actual external context đã tồn tại và có thể inspect. Weather-only không rank generic item; global `Tomorrow Targets` bị owner reject vì prescribe player intent; perishability vẫn làm Sell/Process dominate.
@@ -78,11 +101,11 @@ Nguồn chính:
 
 ### 1.4. [FIXTURE] Vocabulary
 
-- Crops: Shortroot, Tallbean, Dewleaf.
-- Sources/items: Hedgerow Berry, Fallen Wood, Plain Stone, Seam Ore, Wild Herb.
-- Catch: River Minnow; Eel under Rain condition (`Rain Eel` remains registry shorthand, not required root-card wording).
-- Projects: Water Trough `PJ-M`, Harvest Bench `PJ-B`, Upper-Grove Footbridge `PJ-X`.
-- Collection: Field Notes `COL-1`, record any 3-of-4 families → choose Tallbean/Dewleaf Seed.
+- Crops: Turnip, Runner Bean, Lemon Balm. Historical paper aliases: Shortroot, Tallbean, Dewleaf.
+- Sources/items: Hedgerow Berry, Wood, Stone, Ore, Wild Herb.
+- Catch: Silver Minnow under the common River condition; Blue Eel under Rain. Historical aliases are River Minnow and Rain Eel.
+- Projects: **none selected** after package §6.5. Water Trough `PJ-M`, Harvest Bench `PJ-B` and Grove Footbridge `PJ-X` are rejected names and mechanics preserved only in historical tests.
+- Collection: Valley Journal; Field Notes `COL-1`, record any 3-of-4 families → choose Runner Bean/Lemon Balm Seed; later `COL-N` section is Connections.
 - Processing: identity-preserving Crop/Fish/Herb templates.
 - Price/cost/calendar numbers remain fixtures in their source docs; graph does not promote them.
 
@@ -90,34 +113,38 @@ Nguồn chính:
 
 ```text
                          New Day information D0
-                  Season · Weather · Person contexts
+                Season · Today Weather · Person contexts
                                    |
        +---------------------------+----------------------------+
        |                           |                            |
  House/Farm F0               World sources R0             River/Fishing FI0
        |                    Berry · Wood · Mine                  |
-  Shortroot path                  |                         Common Catch
-       |                     Mine Depth MIN0                Rain condition
+  Farmhouse → TV0              |                         Common Catch
+  D+1 Weather, 0 AP            |                         Rain condition
+  Sleep decides if skipped     |                         Fish record/use
+  Turnip path                     |                            |
+       |                     Mine Depth MIN0                     |
   First output F5                 |                            |
-       |                    Stone / Seam Ore               Fish record/use
+       |                       Stone / Ore                       |
   Output junction J0              |                            |
-  Sell Gift Record Keep           +------ Project inputs ------+
+  Sell Gift Record Keep           |                            |
        |                           |                            |
-       +---- PJ-M relief ---- Expansion ---- PJ-B burst         |
+       +---- optional Expansion (Clear/Till/Plant)              |
        |                           |                            |
        +---- Collection records COL0/COL-1 <--------------------+
        |                    choose Seed                          |
-       |                 Tallbean / Dewleaf                     |
+       |              Runner Bean / Lemon Balm                  |
        |                           |                            |
-       +--------------------- Processor PR0 --------------------+
-                              recipe discovery
-                          Fresh ↔ Processed targets
+       +----------- conditional Processed compatibility -------+
+                    inactive until approved content needs it
 
  Person acquisition/Heart overlays all branches when context exists:
- A/C/K evidence-backed; E/J conditional; no Person gates a base edge.
+ Nell's 2-AP same-day relief overlays all paid actions. Mira/Bram are deferred from playable V0, so have no active Gift/Heart edges. Nell's old Hold and crop-only Harvest Assist are inactive.
+ E/J remain conditional; no Person gates a base edge.
 
- Branches rejoin through item use, Project materials, collection records,
- Processing compatibility and optional world connections. H1 means several
+ Branches rejoin through item use and collection records. Wood/Ore/Stone
+ construction sinks are not active. Processing compatibility remains an inactive
+ template until approved content needs Processed state. H1 means several
  horizons are open; it is not completion, ending or reset.
 ```
 
@@ -125,10 +152,11 @@ Nguồn chính:
 
 | ID | Status | State/trigger | Action/progress | Opens | Recovery/invariant |
 | --- | --- | --- | --- | --- | --- |
-| D0 | [DECIDED] | New Day | Auto reveal Season, Weather, all Person contexts | Day planning | View/skip costs 0 AP |
+| D0 | [DECIDED] | New Day | Reveal Season, Today's Weather, all Person contexts | Day planning | View/skip costs 0 AP; D+1 Weather follows TV/Sleep contract |
+| TV0 | [OWNER CLARIFIED] | Character enters Farmhouse and reveals selectable sub-cards | Play TV for 0 AP on D to report D+1 Weather | Tomorrow Weather on the TV sub-card | Sleep uses the revealed result; if TV was skipped, Sleep determines D+1 Weather without opening TV; no global Tomorrow field |
 | F0 | [DECIDED]/[DIRECTION] | Save start/opening context | Inspect House/Farm entities on surface | Soil/crop actions | Farming may stand still; other entries remain |
 | R0-B | [HYPOTHESIS] | Hedgerow visible | Deterministic Berry collect | Gift supply/Forage record | Does not require harvest |
-| R0-W | [HYPOTHESIS] | Woodlot visible | Deterministic Wood collect | Project material | Does not require random batch |
+| R0-W | [DEFERRED FROM FIRST LOOP — §6.9] | Historical Woodlot source in Rìa Rừng | No active first-loop Collect target until Wood has a selected use | Paper identity retained, no Project substitute | Do not display an inert actionable card in the first-loop mockup |
 | MIN0 | [HYPOTHESIS] | Mine visible/actionable | Deterministic Depth through Direct Descent | checkpoints/action set | Person A not required; descent does not invent Stone yield |
 | FI0 | [HYPOTHESIS] | River spot visible/actionable | Common Catch attempt | Fish item/record/mastery | Does not require crop |
 | P0 | [DECIDED] | Person announced with valid context | Optional Gift | Person card + Heart | Miss → schedule later |
@@ -141,65 +169,64 @@ No first-harvest edge precedes R0/MIN0/FI0/P0.
 | --- | --- | --- | --- | --- | --- |
 | F1 | [DIRECTION] | Overgrown Soil + valid Tool | Clear state change | Empty Soil | Can do later |
 | F2 | [DIRECTION] | Empty Soil | Till state change | Tilled Soil | Persistent state |
-| F3-S | [FIXTURE] | Tilled Soil + Shortroot Seed | Plant | Growing Shortroot | Seed restock later |
-| F4 | [DIRECTION] | Growing Crop | Care/Weather + Sleep | Growth/Mature state | Miss Care delays in fixture |
-| F5 | [DIRECTION] | Mature Crop | Harvest | Fresh Crop + output junction | Crop cycle can resume later |
+| F3-S | [CANONICAL PAPER IDENTITY]/[WORKING AP RULE] | Tilled Soil + Turnip Seed | Plant one Seed for 1 AP | Growing Turnip `0/N` | Seed restock later |
+| F4 | [WORKING PAPER RULE — RERUN 41] | Growing Crop | Watering Can on one crop for 1 AP or Rain for 0 AP; at Sleep, Watered grants one growth | Growth/Mature state | Miss Water pauses growth; no extra Care action |
+| F5 | [WORKING PAPER RULE — RERUN 41] | Mature Crop | Hand on one crop for 1 AP | Printed Fresh output + Tilled Soil | Mature crop waits without Water; cycle can resume later |
 | J0 | [HYPOTHESIS] | First output acquired | Sell/Gift/record/Process/Keep target preview | Economy choices | No target is mandatory alone |
-| W0 | [HYPOTHESIS] | Manual maintenance cost understood | Inspect `PJ-M` | Relief horizon | Visible before workload cliff |
-| PJ-M | [HYPOTHESIS]/[FIXTURE] | W0 + known Wood/Ore sources | Material + Work; no-fee paper baseline | Water scope relief | Base Water remains valid |
+| W0 | [HISTORICAL PROJECT REVEAL] | Manual maintenance cost understood | Earlier `PJ-M` preview | Rejected Project relief premise after package §6.5 | Farm action rules now in rerun 41 |
+| PJ-M | [REJECTED DESIGN — HISTORICAL] | Earlier W0 + Wood/Ore | Q4 material + Work fixture only | Proposed Water scope relief was not grounded in the source games | No current or reserved card/cost/effect |
 | E0 | [DIRECTION] | Visible Overgrown capacity + chosen expansion | Clear/Till/Plant | More active plots/workload | Expansion optional |
 | F6 | [HYPOTHESIS] | Expanded active crop count | World/AP consequence, not objective card | Makes burst/maintenance pressure visible | Player may stop expanding |
-| W2/PJ-B | [HYPOTHESIS]/[FIXTURE] | Experience one expanded cohort peak | Material + Work; no-fee paper baseline | Harvest **or** Plant burst relief | Base verbs remain valid |
-| F-L | [FIXTURE] | Tallbean Seed chosen/bought | Long care commitment | Cash-oriented crop profile | Boundary creates tail, not death/reset |
-| F-H | [FIXTURE] | Dewleaf Seed chosen/bought | Medium care commitment | Crop + Herb cross-tag | Other seed returns later |
+| W2/PJ-B | [REJECTED DESIGN — HISTORICAL] | Experience one expanded cohort peak | Q4 material + Work fixture only | Proposed Harvest **or** Plant relief was never resolved | No current or reserved card/cost/effect |
+| F-L | [CANONICAL PAPER IDENTITY]/[FIXTURE VALUES] | Runner Bean Seed chosen/bought | Long care commitment | Cash-oriented crop profile | Boundary creates tail, not death/reset |
+| F-H | [CANONICAL PAPER IDENTITY]/[FIXTURE VALUES] | Lemon Balm Seed chosen/bought | Medium care commitment | Crop + Herb cross-tag | Other seed returns later |
 
 ### 4.1. [HYPOTHESIS] Farming ordering rules
 
-- `W0` reveal không chờ farm đã soft-lock; player thấy relief horizon trước/cùng lúc commitment tăng.
-- `PJ-M` bỏ Gold fee trong paper baseline kế vì Ore access/allocation + Work đã là gate; fee chỉ còn là rejected comparator arm.
-- `PJ-B` reveal sau khi burst cost có nghĩa, không từ save start.
-- `PJ-X` có thể giữ selected fee comparator vì chỉ mở optional context và base routes vẫn hoạt động.
+- Historical W0/PJ-M/PJ-B reveal and fee rules are rejected after [package §6.5](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md). [Rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) grounds Water and Hand: a two-Turnip Sunny renewal uses 6 AP, while immediate replant with two other Growing crops uses 8 AP and requires a player choice.
+- PJ-X and its invented Upper-Grove context are rejected; neither has a playable reward or reserved content slot.
 - Expansion-first vẫn hợp lệ; graph phải preview future Water/burst pressure trước commit.
-- Tallbean/Dewleaf không là linear tier. Một thiên cash/commitment, một thiên tag flexibility.
+- Runner Bean/Lemon Balm không là linear tier. Một thiên cash/commitment, một thiên tag flexibility.
 
 ## 5. Resource và Mine branch
 
 | ID | Status | Reveal trigger | Progress grammar | Opens/changes | Recovery |
 | --- | --- | --- | --- | --- | --- |
-| R1 | [HYPOTHESIS] | Interact deterministic source + one demand exists | Search/inspect Grove batch | Optional Wild Herb/variety | Batch later; core source deterministic |
-| MIN1 | [HYPOTHESIS] | Mine actionable | Direct Descent; Depth deterministic | Current frontier | Depth persists through Sleep |
-| MIN-S | [HYPOTHESIS]/[FIXTURE] | First source checkpoint | Search side tunnel → reveal source → extract Ore, or Descend instead | Exposed Ore source | Search/extract keep Depth; source can be used later |
-| MIN-R | [HYPOTHESIS]/[FIXTURE] | Rule-band checkpoint | Speed vs yield; band may change exact source availability | Changes action/source rule temporarily | Revealed source persists; spent source refreshes after Sleep in paper arm |
+| R1 | [V0 PAPER BASELINE — OWNER-REQUESTED DECISION] | New Day checks one five-slip appearance stack (one Herb, four blank) if Rìa Rừng / Woodland Edge has no Herb world card; independent of PJ-X | Exact visible Herb card; stack Hand and pay 1 AP to Collect into inventory | Optional Herb → Gift/Sell/record/Keep; no player Search or Grove gateway | At most one world card; persists through Sleep until Collect or Season change; stack resets each Season |
+| MIN1 | [WORKING FIRST LOOP — §6.9] | Mine actionable | Direct Descent 1 AP/Depth through CP3 | First Ore checkpoint | Depth persists; after CP3 do not show a further paid Descent without authored next reward |
+| MIN-S | [WORKING FIRST LOOP — §6.9] | CP3 first source checkpoint | Search side tunnel → reveal one Ore source → Extract once, or Descend instead | Ore records Mine Material family; Sell/Keep remain possible | Source waits until Extract; it does not refresh in this first-loop scope |
+| MIN-R | [LATER HYPOTHESIS, NOT FIRST LOOP] | Rule-band checkpoint beyond CP3 | Speed vs yield; band may change exact source availability | Would change action/source rule temporarily if authored | Old Stone refresh was tested for rejected Project demand; no active first-loop Stone reward |
 | MIN-B | [HYPOTHESIS]/[FIXTURE] | Branch/context checkpoint | Choose previewed context band | Ore/Herb/Fish cross-link | Unchosen branch returns later |
 | MIN-X | [HYPOTHESIS] | World-connection checkpoint | Persistent traversal | New topology/context | Not ending; exact content gated |
-| PJ-X | [HYPOTHESIS]/[FIXTURE] | Wood/Stone known + optional Upper Grove interest | Material + Work + optional permit | Upper-Grove context/source | R0/R1/Mine still work without it |
+| PJ-X | [REJECTED DESIGN — HISTORICAL] | Proposed optional Upper-Grove interest; no playable reward | X0 no-fee shape and quantities are void historical comparisons | No current or reserved Project card, action or reward under package §6.5 | Rìa Rừng/Mine/Farm/River work without it |
 
 ### 5.1. [HYPOTHESIS] Shape separation
 
 - R1 là timing/opportunity source, không required random gate.
 - Mine tách frontier progress, source discovery và extraction; không phải delivery Project.
-- PJ-X là optional infrastructure cross-link, không entry duy nhất cho Connector.
-- Ore/Stone có Sell vs Project allocation; Project capability không quy đổi thẳng thành Gold.
+- Vòng đầu hiện dừng ở CP3/first Ore theo package §6.9; Depth/Stone/branch sau CP3 chưa được tính là reward V0 khi thiếu mục đích.
+- Historical PJ-X was an optional infrastructure cross-link in old tests; the Project and its Upper-Grove premise are now rejected.
+- Ore/Stone retain Sell/Keep/Field Notes use but lose their old Project allocation; their resource purpose must be checked again.
 
 ## 6. Fishing branch
 
 | ID | Status | Reveal trigger | Progress grammar | Opens/changes | Recovery |
 | --- | --- | --- | --- | --- | --- |
-| FI-C | [FIXTURE] | Common River condition | Catch commitment | River Minnow + Fish record/use | Common Catch returns |
-| FI-R | [FIXTURE] | Rain at River | Catch commitment | Rain Eel + condition record/use | Rain/cycle later |
+| FI-C | [CANONICAL PAPER IDENTITY]/[FIXTURE VALUES] | Common River condition | Catch commitment | Silver Minnow + Fish record/use | Common Catch returns |
+| FI-R | [CANONICAL PAPER IDENTITY]/[FIXTURE VALUES] | Rain at River | Catch commitment | Blue Eel + condition record/use | Rain/cycle later |
 | FI-M | [HYPOTHESIS] | Catch across distinct known conditions | Repeated-use mastery/record | Information/source/choice reward | Missing condition delays |
 
 Atomic one-commit resolution là fixture mạnh nhất sau rerun bốn calendar cell. `2 AP` vẫn chỉ là sensitivity point. Persistent locked Catch xóa scarcity signal ở `5-12-S` và chỉ thêm state ở A7; graph giữ `Catch commitment` để final cost/content-specific long Catch có thể đổi mà không viết lại dependency.
 
-Fishing output đi tới Sell/Gift/record/Process/Keep. Fresh Rain record cần Fresh acquisition; processed item không retroactively tạo condition catch.
+Fishing output đi tới Sell/Gift/record/Keep trong minimum loop. `Process` chỉ xuất hiện nếu một actual approved context kích hoạt Processor; Fresh Rain record cần Fresh acquisition và processed item không retroactively tạo condition catch.
 
 ## 7. Collection branch
 
 | ID | Status | Reveal trigger | Progress grammar | Opens/changes | Recovery |
 | --- | --- | --- | --- | --- | --- |
-| COL0 | [HYPOTHESIS] | First eligible family acquired | Auto record, không consume | Field Notes horizon | Item vẫn dùng nơi khác |
-| COL-1 | [FIXTURE] | Record any 3-of-4 Crop/Forage/Fish/Mine families | Choose Tallbean or Dewleaf Seed | New source/profile one restock early | Unchosen option returns later |
-| COL-N | [HYPOTHESIS]/[FIXTURE] | Sau first-choice reward và chosen-seed output | Themed relationship pages + independent Seed-source response (`DL-6` comparator) | Source-choice hoặc transformation-choice reward | Backfill prior records; ready source choice persists |
+| COL0 | [HYPOTHESIS] | First eligible family acquired | Auto record, không consume | Valley Journal / Field Notes horizon | Item vẫn dùng nơi khác |
+| COL-1 | [WORKING FIRST LOOP — §6.9] | Record any 3-of-4 Crop/Forage/Fish/Mine families | Mark Seed choice pending; next New Day choose one free Runner Bean or Lemon Balm Seed | One new crop profile without a Turnip stock event | Unchosen option returns from a later source; date still open |
+| COL-N | [CANONICAL PAPER IDENTITY]/[FIXTURE VALUES] | Sau first-choice reward và chosen-seed output | Connections pages + independent Seed-source response (`DL-6` comparator) | Source-choice hoặc transformation-choice reward | Backfill prior records; ready source choice persists |
 
 ### 7.1. [HYPOTHESIS] v1 correction
 
@@ -229,19 +256,42 @@ Follow-up [independent source cadence 03](COL-N-INDEPENDENT-SOURCE-CADENCE-AUDIT
 | Node | Status | Condition | Effect class | Dependency rule |
 | --- | --- | --- | --- | --- |
 | P1 | [DECIDED] | First valid Gift | Acquire Person + Heart | Optional branch |
-| P2-A | [HYPOTHESIS] | Heart + unresolved optional uncertainty | Preview exact optional result | Safe/known route vẫn tồn tại |
-| P2-C | [HYPOTHESIS] | Heart + expiring opportunity | Hold one target through one Sleep | Opportunity returns without C |
-| P2-K | [HYPOTHESIS] | Heart + one/two Project targets | Split/focus same total Progress | Normal Work completes Project |
+| P2-A | [HISTORICAL ASSIGNMENT — DEFERRED FROM V0] | Mira Heart + unresolved optional uncertainty | Read Ahead would preview exact optional result, but no active V0 target is established under visible Grove/known River/Mine results | Do not hide required information to create an A target |
+| P2-C | [HISTORICAL NELL/C; RETIRED EFFECT] | Nell Heart + prior Sleep-expiring Herb fixture | Hold one uncollected target through one Sleep under old fixture only | D13→D14 case is superseded by Season-persistent Herb; not an active V0 effect |
+| P2-N | [WITHDRAWN NELL REPLACEMENT] | Nell Heart + paid Hand→Harvest on Mature Crop | Harvest Assist would waive AP on two Crop Harvests but not Hand→Herb Collect | Unsupported Hand exception and weak first-use exchange; [package §7.1](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) records why it is inactive |
+| P2-AP | [V0 PAPER RULE — NELL] | Nell owned + 1 Nell Heart; at most once/day | Activate for 0 AP; next payable AP costs use up to 2 AP of relief today, with any remainder paid normally | All paid actions including Water, Plant, Hand, Gift and Catch qualify; rejected Project Work has no target; 0-AP actions do not spend relief; unused relief expires at Sleep; see [package §7.2](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) |
+| P2-K | [HISTORICAL ASSIGNMENT — DEFERRED FROM V0] | Bram Heart + two eligible Project targets under old wording | Split/focus same total 2 Progress; no demonstrated benefit with even Q4 M/B requirements | Bram remains a named paper identity, but has no playable V0 card/Heart edge |
 | P2-E | [HYPOTHESIS candidate] | Printed optional E-slot | One exact alternative tag for one commit | Không thỏa core source slot |
 | P2-J | [HYPOTHESIS candidate] | Context with discovered alternate mode | Retune one action/Context/day | Normal mode đủ để progress |
 | P2-D/I/M | [DIRECTION reserve] | Grammar chưa đủ | Không dùng trong v1 dependency | Không tạo content để nuôi kernel |
 
-Concrete paper roster fixture dùng Mira=A, Nell=C và Bram=K với Berry/Wild Herb/Shortroot Gift tags. Identity, name, schedule và assignment đều vẫn là `[FIXTURE]`, không phải Year 1 roster commitment.
+Product owner previously selected `R3 — A+C+K` and later approved Mira=A, Nell=C and Bram=K as canonical paper names/role assignments. [Package §7.4](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) withdraws that three-role **first-playable minimum** in the requested scope review: only Nell is an active playable Person. Mira/Bram names and prior assignments remain historical/future content. Berry/Turnip Gift tags and schedules are historical fixtures; Nell's Wild Herb tag, appearance, cap and art remain V0 fixtures. Historical traces label the CR-S Gift item Shortroot.
+
+`P2-N` records a withdrawn replacement attempt for historical `P2-C`. `P2-AP` is Nell's current V0 paper ability. Mira/Bram P1/P2 edges are not in the working first-playable graph.
+
+[Package §7.3–7.4](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) checks them against current V0 rules: Mira A has no hidden decision-changing target, and her optional Catch AP discount overlaps Nell's broader relief; Bram K saves no Work on even Q4 M/B requirements. The requested review therefore carries Nell only in the working playable V0 roster. This changes the former `R3`/three-Person first-playable count, while preserving Mira/Bram as named later-content identities.
+
+The owner clarified that Nell's N counts **AP points, not actions**, then asked to settle the rule. [Package §7.2](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) selects a 2-AP budget for V0 paper play: it saves at most 2 AP per activation, fits a conditional D11 Catch, and can waive both Q4 Work actions. Gift is eligible; a stored Nell Heart can pay for a free later Nell Gift that restores the Heart while consuming 1 AP of relief and the Herb item. Once/day activation and Sleep expiry bound that interaction.
+
+[Heart/Gift test 32](FIRST-PLAYABLE-HEART-GIFT-CADENCE-PAPER-TEST-32.md) carries inherited `+1/−1`, cap 2 and same-day use as historical/conditional supply fixtures. [Bram audit 33](FIRST-PLAYABLE-BRAM-K-PURPOSE-AUDIT-33.md) shows current K has no Heart-worthy Q4 use. The no-output-increase K boundary remains historical if Bram returns; no Bram Heart cadence is active in V0. PJ-X cannot supply an assumed K target while its own reward is undefined.
+
+[Bram role review 34](FIRST-PLAYABLE-BRAM-FUNCTIONAL-ROLE-REVIEW-34.md) historically kept Bram in P0/P1 and marked P2-K open. The later [package §7.4](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) scope review defers the playable card, Gift and Heart edge until a useful ability exists.
+
+[Mira/Nell phase test 35](FIRST-PLAYABLE-MIRA-NELL-TARGET-GIFT-PHASE-TEST-35.md) historically gave P2-C a conditional Grove use after a real Herb Gift, but the later Season-persistent Herb baseline removes that Hold target. P2-A's old Grove Search scenario is also historical; exact River Catch and current M/B Mine source previews are baseline information, not Mira targets. Neither node's target frequency follows from Person appearance count.
+
+[Grove contract 36](FIRST-PLAYABLE-GROVE-BATCH-CONTRACT-36.md) historically recommended exact face-up Wild Herb and superseded test 35's paid Search. Its D13→D14 Hold/Collect use is itself superseded by [audit 40 §8](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md). Mira's historical A target remains unvalidated; she is deferred from playable V0 by package §7.4. Recovery node R1 does not route through PJ-X/Upper Grove.
+
+[Cadence test 38](FIRST-PLAYABLE-WILD-HERB-CADENCE-PAPER-TEST-38.md) remains a historical phase comparison for one-day Herb opportunities; it does not validate the newer shuffled appearance stack or Season-long persistence. [Role test 39](FIRST-PLAYABLE-MIRA-BRAM-ABILITY-OPTIONS-39.md) leaves P2-A and P2-K open: a Catch AP discount for Mira changes A's role, while a Mine Extract discount for Bram changes K and has weak net value. Neither is a selected graph edge.
+
+[Grove ontology audit 40 §8](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md) makes Rìa Rừng / Woodland Edge the V0 Wild Herb Area and defines automatic New-Day appearance, one visible card maximum, and Season-boundary cleanup. Hand Collect costs 1 AP. This is a paper baseline chosen in response to the owner's request, not fresh-player acceptance or a final product lock. Earlier `Grove Batch`/`G-V` source-card and Sleep-expiry cases are historical; `Upper Grove` is a rejected PJ-X premise, not a reserved Area.
+
+[Package §7.1](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) withdraws `P2-N`: D6 Herb Collect plus D10 Nell Gift cost 2 AP and consume the Herb, while the two proposed D11 Harvest discounts save only 2 AP. The extra Fish depended on a conditional Catch appearance, and the Crop-only exception to the shared Hand tool had no native reason.
 
 ### 9.1. [HYPOTHESIS] Limits
 
 - A: one preview per unresolved target; no reroll.
-- C: one held target active per Person; không re-extend cùng target.
+- Historical C: one held target; retired because the V0 Wild Herb remains through Sleep.
+- Nell Harvest Assist: withdrawn comparator only. Current P2-AP: 1 Nell Heart for 2 AP of same-day relief, at most once/day; Gift and all other paid actions qualify.
 - K: total Progress conserved; no per-day limit evidence.
 - E: tối đa một printed E-slot/commit; optional only.
 - J: one retuned action per Context/day; mode phải được discovery không qua Person.
@@ -256,24 +306,26 @@ Concrete paper roster fixture dùng Mira=A, Nell=C và Bram=K với Berry/Wild H
 - Một explicit market order có thể tốn AP nếu chính order là opportunity; không đánh thuế mọi transaction.
 - `1 AP/item` không thuộc v1.
 
-### 10.2. [FIXTURE] Gold sink edges
+### 10.2. [OWNER SELECTED SCOPE]/[FIXTURE VALUES] Gold sink edges
 
 ```text
-Fresh output → Sell-now → Seed restock / selected infrastructure fee
-Fresh output → Process → more Gold later, but Load + Sleep + slot
-Material      → Sell-now OR Project capability
+Fresh output → Sell-now → Seed restock / crop-profile access
+Fresh output → conditional Process → matching Processed state at market parity, with Load + Sleep + slot
+Material      → Sell-now / Keep / Field Notes record; former Project capability inactive
 Gift item     → Gold option OR Heart option
 COL-1         → avoided Seed cost + earlier source/capability choice
 ```
 
 Graph không ghi price. Price table v2 chỉ là sensitivity fixture.
 
+`G0` fixes the scope boundary, not the numbers: Seed renewal + crop-profile access/restock are sufficient for the minimum graph. No capability-purchase node is required before the paper baseline can proceed, and no long-horizon strategic Gold value is claimed.
+
 ### 10.3. [HYPOTHESIS] Non-dominance conditions
 
-- Sell thắng khi same-day liquidity mở Seed/relief.
+- Sell can fund Seed renewal or crop-profile access **from the next day after end-of-day Shipping Bin payout**; a same-day purchase needs Gold/Seed already held.
 - Gift thắng khi Heart có effect target đáng giá; không có Gold conversion cố định.
-- Project thắng khi capability cứu future AP/context.
-- Process thắng khi slot/AP/timing phù hợp hoặc target cần Processed.
+- Historical Project comparator: a capability would need a demonstrated future use; no such Project is active after package §6.5.
+- Process chỉ trở thành option khi approved content kích hoạt Processor; khi đó exact Processed target/state/timing phải justify Load, không chỉ slot/AP rảnh.
 - Keep có option value đọc được khi Weather ảnh hưởng timing hoặc một actual external context đã tồn tại và native inspect của nó nêu category/state/timing; không tạo global target forecast.
 - No-cap/no-perish là baseline kế; `S4` chỉ là small-cap comparator và `P1` perishability không carry.
 
@@ -367,16 +419,14 @@ Trigger: ít nhất hai branch có active next step và player có capability/so
 ### 13.1. [FIXTURE] Producer
 
 ```text
-F0 → Shortroot F1–F5 → J0 liquidity
-   → W0/PJ-M maintenance relief
-   → E0 expansion + Tallbean commitment
-   → W2/PJ-B burst relief
-   → PR-C / Fresh request / Sell-now
+F0 → Turnip F1–F5 → J0 liquidity
+   → E0 expansion + Runner Bean commitment
+   → Sell / Gift / Record / Keep
 ```
 
-- Person optional; Gift có thể delay relief nhưng không unlock nó.
-- Mine supplies Ore/Stone cross-link; deterministic path available.
-- Short Season may end with Tallbean/Project tail; save continues.
+- Person optional; Gift uses AP/item but does not unlock Farm verbs.
+- Mine's Ore/Stone construction cross-link is inactive after Project removal.
+- Short Season may leave a Runner Bean/expansion tail; save continues.
 
 ### 13.2. [FIXTURE] Connector
 
@@ -384,29 +434,29 @@ F0 → Shortroot F1–F5 → J0 liquidity
 R0-W / MIN0 → deterministic Depth through Direct Descent
             → Search Side Tunnel reveals an Ore source
             → Exposed Ore yields material without Depth
-            → source/rule/context checkpoint → optional PJ-X Upper Grove
-            → Wild Herb raw Gift/Process choice
+            → source/rule/context checkpoint; no active PJ-X/Upper Grove
+            → Wild Herb Gift/Record/Keep choice; conditional PR-H only after approved activation
 ```
 
 - First harvest absent.
 - A/J may improve choice; Direct Descent remains available without Person support.
-- PJ-X fee/material is optional context gate, not Mine entry.
+- PJ-X material/Work is a historical optional-context comparator, not Mine entry.
 
 ### 13.3. [FIXTURE] Collector
 
 ```text
-Shortroot record + Berry/Wild Herb record + River Fish record
+Turnip record + Berry/Wild Herb record + River Fish record
 → COL-1 Seed Choice
-→ Tallbean cash profile OR Dewleaf Herb profile
-→ condition Catch + identity-preserving Processing
+→ Runner Bean cash profile OR Lemon Balm Herb profile
+→ condition Catch + identity-preserving item records
 → chosen output enables independent Seed-source delivery
 → Continue OR Diversify source profile at D13/D14 comparator
-→ COL-N relationship pages pass paper timing
+→ COL-N Connections pages pass paper timing
 ```
 
 - Farm can stay small.
-- Rain Eel miss recovers on Rain later.
-- E/C may change timing/flexibility but no collection record requires them.
+- Blue Eel miss recovers on Rain later.
+- Optional Person abilities may change timing/flexibility, but no collection record requires them; historical C Hold is retired.
 - `DL-6` is a paper comparator, not a final restock rule; source offer persists if ignored.
 
 ## 14. Recovery graph
@@ -417,9 +467,9 @@ Shortroot record + Berry/Wild Herb record + River Fish record
 | Crop crosses Season boundary | Persistent tail or tested boundary policy | Automatic Year reset/death inferred |
 | Person missed | Next schedule; owned ability remains if Heart | Permanent Person loss |
 | Gift skipped | Next valid Gift schedule | Core route locked by Heart |
-| Grove batch missed | Batch/cycle later; deterministic substitute for core | Required unlock hostage to draw |
+| Wild Herb not collected today | Visible world card persists through Sleep until Collect or Season change; later appearance cycles continue | Required unlock hostage to one appearance |
 | Common Catch missed | Common condition later | Fishing branch permanently closes |
-| Rain Eel missed | Rain/cycle later | One Rain is sole completion window |
+| Blue Eel missed | Rain/cycle later | One Rain is sole completion window |
 | Mine day skipped | Depth persists | Reset to Entrance |
 | Mine branch chosen | Other branch later route/cycle | Permanent blind lock |
 | Project not done in Season | Continue later | Seasonal deadline removes core capability |
@@ -431,7 +481,8 @@ Shortroot record + Berry/Wild Herb record + River Fish record
 
 | Graph content | Primary layer |
 | --- | --- |
-| D0/Person announcements | Sticky HUD/day strip |
+| D0/Person announcements | Sticky HUD/day strip with Season, Today Weather and AP |
+| TV forecast for D+1 | TV sub-card inside Farmhouse; no global Tomorrow field |
 | Area background/header/transition | Abstract visual/rulescope; không phải movement map hoặc card target |
 | House/Plot/source/Supermarket | Playable entities trong Area tableau liên quan |
 | Current Catch/Person/batch/Mine frontier/route | Inline playable context/state card |
@@ -460,7 +511,7 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 4. Added Gold sink shapes and T0 transaction baseline without fixing prices.
 5. Added exact Fresh/Processed compatibility edges.
 6. Defined `COL-1` choice value and marked missing longer collection horizon `COL-N`.
-7. Added Processor repair/conversion shape while preserving identity.
+7. Added Processor repair/conversion shape while preserving identity; later owner decision moved it outside the minimum loop until approved content needs Processed state.
 8. Promoted A/C/K as evidence-backed; E/J conditional; D/I/M reserve.
 9. Added route-specific Heart supply implication and ability limits.
 10. Replaced exact day ambitions with state/reveal bands constrained by A5/A7 and S12/S18 results.
@@ -468,7 +519,7 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 12. Kept topology/presentation separate from graph mechanics.
 13. Added no-cap Storage baseline, small-cap comparator and rejected perishability arm.
 14. Kept atomic Fishing commitment after four-cell rerun; rejected global persistent resolution as baseline.
-15. Removed Gold fee from PJ-M/PJ-B paper baseline and retained PJ-X as selected strategic-fee comparator.
+15. Removed Gold fee from PJ-M/PJ-B paper baseline; later owner decision X0 also removed the PJ-X permit comparator from the active baseline.
 16. Added concrete A/C/K mini-roster fixture without promoting identities or Gift schedule.
 17. Completed square paper-token coverage; retired spatial orientation protocol after scroll/navigation clarification.
 18. Added abstract Area-tableau mapping and Mine/Fishing exact play-target contract.
@@ -484,9 +535,9 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 | Required source deterministic/substitute | Pass |
 | Objective shapes varied | Pass |
 | Person optional | Pass |
-| Processing non-universal | Pass by tag contract; balance still open |
+| Processing in minimum loop | Excluded/deferred; tag templates pass compatibility only |
 | Collection reward has choice value | Pass as fixture; long arc open |
-| Gold has recurring + strategic sink | Pass as fixture |
+| Gold role after X0 | `G0` owner-selected: Seed renewal/profile access is sufficient for the minimum; long-horizon strategic use is deferred |
 | Calendar miss has recovery | Pass |
 | No exact day from arbitrary fixture | Pass |
 | Year 1 not ending/reset | Pass |
@@ -495,7 +546,7 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 | v0.2 action comprehension | Failed internal informed check at Task B |
 | v0.2.4 target/cost correction | Deterministic render + informed owner acceptance pass; fresh-player evidence unavailable |
 | v0.3.4 navigation fixture/pilot | Informed-owner acceptance; sticky index reads as UI focus, fresh-player evidence unavailable |
-| Forecast → Keep decision value | Weather-only passes AP/timing; actual context compatibility can inform a choice, but global `Tomorrow Targets` is rejected |
+| Forecast → Keep decision value | Weather-only passes AP/timing when TV reveals D+1 Weather before allocation; if TV is skipped, Sleep's Weather decision is too late for earlier D choices. Actual context compatibility can inform a choice; global `Tomorrow Targets` is rejected |
 | Recurring-density `S∞` vs `S4` | Known actual contexts create choice in both arms; `S4` also adds harvest-day housekeeping, so no cap selected |
 | Target-horizon announcement v0.1 | Rejected by informed owner: system agenda reduces player freedom; preserve only as audit trail |
 | Project completion rerun 02 | PJ-M/PJ-B no-fee keeps calendar timing; PJ-X permit creates Ore/allocation choice without guaranteed delay; Stone source contract remains open |
@@ -505,7 +556,7 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 | Mine Stone refresh 05 | Persistent source + Sleep refresh avoids one-shot Project lock and repeated Search tax; exact cadence remains fixture |
 | COL-N later-context alternatives 02 | Restock renewal gives a real continue/diversify choice but follows the tested Season boundary; Processor conflict remains D5–D8; no late-slot pass |
 | COL-N independent source cadence 03 | Six-Sleep delivery is the minimum robust comparator: source response D13/D14, S12 miss, S18 complete; exact cadence/value open |
-| AP / Season bracket narrowing 03 | A6/S18 selected as next paper baseline from exact workload/recovery thresholds; final product lock and Weather cadence remain open |
+| AP / Season bracket narrowing 03 | A6/S18 selected from exact workload/recovery thresholds; owner later fixes it as the first-playable paper balance frame while Weather cadence remains open |
 | Project quantity/Work A6–S18 rerun 04 | Q4 responsive and Q6 deliberate both pass; Q8 Work padding fails; owner later selects Q4 |
 | Raw-target / Processing A6–S18 rerun 05 | Historical test: Bram passes Produce raw use; all order comparators were later superseded; universal Processed uplift rejected |
 | Fresh/Processed native context options 06 | K and D both pass; Person pair rejected as baseline dependency; owner later selects distributed D |
@@ -515,12 +566,36 @@ Square entity/Project/Fresh–Processed art coverage vẫn tái dùng được. 
 | [Fish sale / Processing no-River-buyer rerun 08](FISH-SALE-PROCESSING-NO-RIVER-BUYER-RERUN-08.md) | Catch-only River + Shipping Bin sale retained; bounded Commerce target later rejected as redundant |
 | [Commerce Processed target informed-owner test 09](COMMERCE-PANTRY-INFORMED-OWNER-TEST-09.md) | Presentation pass but system-necessity fail; understandable Pantry/Shop order rejected |
 | [Help Wanted / Special Orders deferred roadmap 10](REQUEST-ORDER-DEFERRED-DEVELOPMENT-ROADMAP-10.md) | Dependency schedule records Help Wanted before Special Orders after core baseline; neither is active content |
+| [Post-removal consistency/gap audit 11](CORE-YEAR-1-POST-REMOVAL-CONSISTENCY-GAP-AUDIT-11.md) | Removes stale active Process/price/request edges and ranks Person ownership/minimum roster as next core blocker |
+| [Person ownership/minimum-roster audit 12](PERSON-OWNERSHIP-MINIMUM-ROSTER-AUDIT-12.md) | Stable ownership/reward boundary; owner selected `R3 — A+C+K` minimum functional roster |
+| [Project/item/source consistency audit 13](PROJECT-ITEM-SOURCE-CONSISTENCY-AUDIT-13.md) | Q4 M/B and optional X source graph passes; old Safe-Mine Stone wording corrected to CP6 Search/Extract/refresh |
+| [Core content quantity boundary audit 14](CORE-CONTENT-QUANTITY-BOUNDARY-AUDIT-14.md) | Structural lower bounds narrowed; owner selected `B3 — M+B+X` minimum Project content |
+| [PJ-X permit boundary audit 15](PJ-X-PERMIT-BOUNDARY-AUDIT-15.md) | Owner selected X0 no-fee; XP permit retained only as rejected comparator evidence |
+| [PJ-X material/Work paper test 31](FIRST-PLAYABLE-PJ-X-MATERIAL-WORK-PAPER-TEST-31.md) | Conditional B/X AP and first-Stone allocation only. X-W recommendation withdrawn because Upper Grove has no specified playable reward; purpose must be tested before quantity |
+| [Heart/Gift cadence paper test 32](FIRST-PLAYABLE-HEART-GIFT-CADENCE-PAPER-TEST-32.md) | Three-per-Person S18 Gift windows are fixture ceilings; Bram Gifts can fit one corrected Turnip allocation, but K's present split has no demonstrated benefit under Q4 M/B. Heart values and schedule remain open |
+| [Bram/K purpose audit 33](FIRST-PLAYABLE-BRAM-K-PURPOSE-AUDIT-33.md) | Prior K saving used 3/3-Progress Projects; Q4 4/4 M/B removes the overflow. Conserved K remains user-decided, while +Progress alternatives fall outside that boundary and are not selected |
+| [Grove Batch contract 36](FIRST-PLAYABLE-GROVE-BATCH-CONTRACT-36.md) | Historical exact-Herb comparator avoided paid Search but used one-day expiry and a conditional Nell Hold. [Audit 40 §8](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md) supersedes that expiry and sets the direct-item Woodland Edge paper baseline |
+| [Gold role after X0 audit 16](GOLD-ROLE-POST-X0-AUDIT-16.md) | Owner selected G0; early Seed renewal/profile access defines the complete minimum Gold scope and long-horizon strategic value is deferred |
+| [Core Year 1 lock-readiness audit 17](CORE-YEAR-1-LOCK-READINESS-AUDIT-17.md) | Structural graph is coherent after G0; owner selected L-I so identity/quantity precedes exact numerical lock |
+| [Canonical minimum identity-entry audit 18](CANONICAL-MINIMUM-IDENTITY-ENTRY-AUDIT-18.md) | Owner selected ID1; functional graph slots remain fixed while current identities and alternatives receive deliberate review |
+| [Canonical identity direction audit 19](CANONICAL-IDENTITY-DIRECTION-AUDIT-19.md) | Owner selected ND-M mixed register; family candidates can now be compared under one shared rubric |
+| [Canonical crop identity audit 20](CANONICAL-CROP-IDENTITY-AUDIT-20.md) | Owner selected C-G: Turnip, Runner Bean and Lemon Balm; graph edges and values remain unchanged |
+| [Canonical Catch identity audit 21](CANONICAL-CATCH-IDENTITY-AUDIT-21.md) | Owner selected K-P: Silver Minnow and Blue Eel; Rain remains FI-R's exact eligibility condition |
+| [Canonical source/item identity audit 22](CANONICAL-SOURCE-ITEM-IDENTITY-AUDIT-22.md) | Superseded before selection when remaining naming work was consolidated; no source/item set was chosen |
+| [Canonical identity consolidated proposal 23](CANONICAL-IDENTITY-CONSOLIDATED-PROPOSAL-23.md) | Owner approved the complete remaining vocabulary; all structural-minimum identities are canonical at paper level |
+| [Year 1 content-volume scope audit 24](YEAR-1-CONTENT-VOLUME-SCOPE-AUDIT-24.md) | Owner selected V0: structural minimum is the complete first-playable balance set; later expansion waits for evidence |
+| [First-playable AP/Season lock audit 25](FIRST-PLAYABLE-AP-SEASON-LOCK-AUDIT-25.md) | Owner selected AS0: 6 AP/day and 18 days/Season fixed for first-playable paper balance; regression bounds retained |
+| [First-playable Weather narrowing 26](FIRST-PLAYABLE-WEATHER-CADENCE-PHASE-NARROWING-26.md) | WD/WS remain phase fixtures; owner-corrected TV/Sleep source and three-field global rail define Weather information timing |
+| [Weather generation paper test 27](FIRST-PLAYABLE-WEATHER-GENERATION-PAPER-TEST-27.md) | Historical equal-count Rain phase still shifts Q4 relief; owner later selected season-conditioned RNG, while its probabilities and recovery tuning remain open |
+| [Seasonal Weather RNG paper test 28](FIRST-PLAYABLE-SEASONAL-WEATHER-RNG-PAPER-TEST-28.md) | Historical all-Sunny three-day-burst route permits Q4 M/E/B; follow-up 30 corrects immediate Turnip repeat cadence and gives a separate dry route |
+| [Crop duration/yield paper test 29](FIRST-PLAYABLE-CROP-DURATION-YIELD-PAPER-TEST-29.md) | Historical 2/3/4 Care and one-output cycle recommended as working fixture; exact crop values and boundary survival not owner-selected |
+| [Seed/Sell price interaction paper test 30](FIRST-PLAYABLE-SEED-SELL-PRICE-PAPER-TEST-30.md) | Sale payout only at day end; a 4G opening wallet pre-funds first renewal; immediate Turnip repeats D3/D5/D7 still permit an all-Sunny Q4 M/E/B D8/D12/D18 route; prices open |
 
 ## 18. v1 verdict
 
 ### 18.1. [HYPOTHESIS] Graph result
 
-Graph v1 đủ cụ thể để chạy cùng crop/item/source/Project/collection/Processing vocabulary và đủ nhạy để biểu diễn Gold/AP/Weather tradeoff. Nó không cần objective hub trung tâm và không biến Person/Project thành universal gate.
+Graph v1 giữ crop/item/source/collection/Processing vocabulary để kiểm tra Gold/AP/Weather tradeoff. Project nodes and their completion traces are historical after package §6.5; Farm workload and material purpose need a new check. Graph không cần objective hub trung tâm.
 
 Các correction quan trọng nhất từ sensitivity:
 
@@ -529,7 +604,7 @@ Các correction quan trọng nhất từ sensitivity:
 - Weather phase được log bên cạnh frequency;
 - collection first choice tách khỏi long arc;
 - raw/processed target compatibility nằm trong graph;
-- only A/C/K evidence-backed cho dependency-free support;
+- Nell's historical C Hold has no V0 Herb target, and the crop-only Harvest Assist attempt was withdrawn; current P2-AP grants 2 AP of same-day relief for 1 Nell Heart. Mira/Bram's unvalidated A/K edges are deferred from the working first-playable scope by package §7.4;
 - exact calendar bands vẫn chưa được phép thành final content schedule.
 
 ### 18.2. [DIRECTION] Evidence status before balance/content lock
@@ -543,11 +618,11 @@ Completed in the 2026-09-22 integration pass:
 5. Mine/Project triple-gate ledger.
 6. Mine/Fishing square fixture v0.2 + deterministic preflight; informed iterations produced v0.2.4 with approved art, true square targets, status strips and upper-corner signed AP.
 7. Global orientation v0.3→v0.3.4 informed-owner correction chain: Area index accepted, Weather moved to global scope, synthetic Farm/Market/Fish status removed, Mine Depth retained.
-8. Weather/Season global UI v0.1 informed-owner acceptance: always-visible shallow rail exposes Season, Today, Tomorrow and AP without reading as an on-table target.
+8. Weather/Season global UI v0.1 informed-owner acceptance established a shallow rail that did not read as an on-table target. The later owner correction removes Tomorrow from that rail; TV inside Farmhouse is its only forecast action/surface.
 9. Forecast/Keep decision-value paper sensitivity separated Weather horizon from optional external-context information; exact reward was unnecessary in sample.
 10. One recurring-density storage slice: actual-context choices survive under `S∞`; `S4` adds one guided reservation and one burst-housekeeping event, so no cap is selected.
-11. Target-horizon announcement v0.1 informed-owner correction: reject all global `Tomorrow Targets` arms because player plans are self-directed; keep Weather world-state rail unchanged.
-12. Calendar/Project completion rerun 02: no-fee relief retains M/E/B timing in four decisive cells; selected PJ-X permit can still complete D2 by allocating CP3 Ore.
+11. Target-horizon announcement v0.1 informed-owner correction: reject all global `Tomorrow Targets` arms because player plans are self-directed. That result did not require changing the rail at the time; a later owner correction separately removed its Tomorrow Weather field.
+12. Calendar/Project completion rerun 02: no-fee relief retains M/E/B timing in four decisive historical cells; its then-selected PJ-X permit D2 example was later superseded by X0 no-fee and is not an active recipe.
 13. COL-N long-horizon paper test 01: carry relationship pages as structural candidate, but keep COL-N open until a real later recoverable discovery exists.
 14. Mine later-discovery/source audit 03: carry band-specific Stone source and CP12 native interaction as one optional later-relationship candidate; neither changes accepted CP3 art/grammar.
 15. Mine band cadence 04: CP12 world connection is meaningful optional collection content but arrives before chosen-seed output in the current minimum; do not use Depth padding/tax to make it late.
@@ -559,23 +634,50 @@ Completed in the 2026-09-22 integration pass:
 21. Product-owner follow-up selects `Q4` as next Project paper baseline. Raw-target/Processing rerun 05 rejects universal Processed uplift for generic parity/target-local value; its selective Fresh Fish order was a provisional comparator.
 22. Source audit + owner follow-up remove the River premium target. Rerun 08 retains Catch-only River, Shipping Bin Fresh sale and generic parity; its bounded Commerce target is later rejected as redundant.
 23. Commerce informed-owner test 09 passes presentation but exposes a content-purpose failure. Owner removes all Processed sale premiums and schedules Help Wanted then Special Orders as deferred post-core systems; Processor leaves the minimum economic loop until actual content needs it.
+24. Post-removal audit 11 removes stale active Processing/order edges and labels historical fixtures superseded.
+25. Product owner selects `R3 — A+C+K` as the minimum functional Person roster.
+26. Project/item/source audit 13 corrects the old Safe-Mine Stone wording and passes Q4 source recovery.
+27. Product owner selects `B3 — M+B+X` as the minimum Project-content boundary.
+28. Product owner selects `X0 — no fee`; all active M/B/X Projects use material + Work only.
+29. Gold audit 16 confirms early Seed renewal/profile access value; product owner selects `G0 — Seeds are enough` and defers long-horizon strategic Gold use.
+30. Lock-readiness audit 17 separates structural paper readiness from canonical identity/quantity, exact balance, fresh-player evidence and implementation authorization.
+31. Product owner selects `L-I — identity/quantity first`; audit 18 opens the identity-entry gate without adding content or promoting fixture names.
+32. Product owner selects `ID1 — deliberate identity pass`; audit 19 asks for a shared naming register before candidate generation.
+33. Product owner selects `ND-M — mixed register by family`; audit 20 opens the first exact family-name gate for the three fixed crop profiles.
+34. Product owner selects `C-G — Turnip · Runner Bean · Lemon Balm`; audit 21 opens the common/Rain Catch identity gate.
+35. Product owner selects `K-P — Silver Minnow · Blue Eel`; audit 22 opens the five-source/item identity gate while Rain remains FI-R's exact condition.
+36. Owner corrects the process: family-by-family naming gates are disproportionate. Audit 22 closes without selection and proposal 23 consolidates all remaining names into one review.
+37. Product owner approves proposal 23 in full; all minimum identities are now canonical at paper level and naming work closes.
+38. Product owner selects `V0`; the structural minimum becomes the complete first-playable balance set while later content expansion remains evidence-driven.
+39. Product owner selects `AS0`; 6 AP/day and 18 days/Season become the fixed first-playable paper balance frame. Owner testing is labeled informed-owner evidence.
+40. Product owner selects season-conditioned Weather RNG: Rain dates and seasonal counts are not fixed; D+1 uses the incoming Season's parameters at a boundary. Exact probabilities and detailed generation rules remain open.
+41. After [package §7.4](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) reviewed R3 against current A/C/K targets, the owner confirmed **Nell alone** as the first-playable Person roster. Mira/Bram names remain for later content; their P1/P2 edges are inactive in V0.
+42. [Package §6.4](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) historically recommended working `B2 — M+B`; §6.5 supersedes that recommendation.
+43. After questioning the logic of both source games, the owner directed removal of both Farm Projects. The owner then clarified that **all three proposed Projects should not exist at all**. [Package §6.5](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) rejects their identities and effects throughout the design. Former Project completion dates, Q4 Work targets and construction sinks are void historical fixtures.
+44. After the owner asked to resolve Farm, [Farm action grammar and AP rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) sets the working one-target Watering Can → Watered → Sleep growth → Hand Harvest paper rule. `Care` is not a separate action. The no-Project D1–D7 trace gives 6 AP for two-crop renewal and 8 AP for full four-crop expanded renewal on Sunny days.
+45. [Package §6.7–6.9](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) ran the integrated week and 0G sensitivity. The working first-loop source uses two opening Turnip Seeds, 0G, a continuously listed first-Season Turnip Seed, and a one-time Field Notes Seed choice on the following New Day. The first CP3 Ore has collection value; Woodlot Collect, CP6 Stone and repeat Ore are outside the current first-loop reward scope. Daily two-Seed stock and old reward-at-restock remain comparison fixtures.
 
 Still required:
 
-1. Continue comprehension checks with the product owner as the available informed tester; keep the evidence label distinct from fresh-player acceptance.
-2. Continue core Year 1 work without a placeholder Processed target; do not count Processor as a positive minimum branch.
-3. Keep [Help Wanted / Special Orders roadmap 10](REQUEST-ORDER-DEFERRED-DEVELOPMENT-ROADMAP-10.md) inactive until core dependency gates pass; then design Help Wanted before Special Orders.
-4. Keep Shipping Bin timing + generic market parity; do not add a Load tax, River buyer, Shop premium or Pantry order.
-5. Explore generated abstraction Area backgrounds separately while preserving card dominance and accepted index/navigation grammar.
+1. Carry [audit 40 §8](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md) as the V0 Wild Herb paper baseline and [package §7.2–7.4](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) as Nell's relief rule and the Nell-only first-playable roster. Check the shuffled five-slip generator against a real Nell first-Gift schedule before product lock; [Herb cadence test 38](FIRST-PLAYABLE-WILD-HERB-CADENCE-PAPER-TEST-38.md) remains a historical comparator. Mira/Bram ability and Heart cadence work belongs to a later content expansion, not this minimum. Nell's Heart cap and appearance dates remain fixtures.
+2. Carry [Farm rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md)'s Water/Sleep/Hand rule and [package §6.9–6.11](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md)'s first-loop scope check. Test 1-AP-per-crop Water interaction when a clickable prototype exists; price values, next-Season Seed eligibility, later material purpose and Weather probabilities remain open. [Seed/Sell test 30](FIRST-PLAYABLE-SEED-SELL-PRICE-PAPER-TEST-30.md)'s prices and old no-Rain Q4 route are historical comparators, not current completion evidence.
+3. Continue comprehension checks with the product owner as the available informed tester; keep the evidence label distinct from fresh-player acceptance.
+4. Continue core Year 1 work without a placeholder Processed target; do not count Processor as a positive minimum branch.
+5. Keep [Help Wanted / Special Orders roadmap 10](REQUEST-ORDER-DEFERRED-DEVELOPMENT-ROADMAP-10.md) inactive until core dependency gates pass; then design Help Wanted before Special Orders.
+6. Keep Shipping Bin timing + generic market parity; do not add a Load tax, River buyer, Shop premium, Pantry order or replacement Gold sink.
+7. Explore generated abstraction Area backgrounds separately while preserving card dominance and accepted index/navigation grammar.
 
 ### 18.3. Chưa được kết luận
 
 - Final Year 1 content quantity/name/order.
-- Final AP/day and Season product lock; A6/S18 is only the next paper baseline. Weather cadence/forecast remains open.
+- A6/S18 is fixed for first-playable paper balance but not final shipped/runtime balance. Weather cadence/forecast remains open.
 - Crop duration/yield/price.
-- `Q4` is owner-selected Project paper baseline; final runtime values remain unauthorized. `Q6` is comparator and `PJ-X` remains the selected optional-context permit comparator.
+- `Q4`/`Q6` M/B Work and X0 PJ-X costs are historical comparisons for rejected designs. No Project or Work target is selected or reserved; no replacement relief effect has been selected.
 - Storage/perishability.
-- Final runtime Area order, square-card logical size, badge hierarchy and density. Paper direction now includes sticky name index at four Areas; exact runtime collapse/sticky behavior remains open.
-- Person roster, identity, Gift preference hoặc final Heart cadence.
+- Final runtime Area order, square-card logical size, badge hierarchy and density. The sticky name index was accepted in the four-Area pilot; the fifth Rìa Rừng paper Area has not had an orientation check. Exact runtime collapse/sticky behavior remains open.
+- Historical `R3` and proposal 23 retain Mira/Nell/Bram as canonical paper names, but [package §7.4](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) withdraws the three-role first-playable minimum. Only Nell is an active V0 Person; her current ability is P2-AP. `Mira=A` and `Bram=K` remain historical assignments for later content. Nell's Gift preference, appearance schedule, Heart cap and final shipped balance remain open.
+- Minimum Gold scope is `G0`; final Seed/sell prices and any independently justified future purchase remain open, and no long-horizon strategic sink is claimed.
+- Paper-lock sequence is `L-I`; current names, final content quantity and numerical values remain open until their own gates close.
+- `ID1`/`ND-M` naming work is complete at paper level; external clearance/localization and art remain open.
 - Fishing/Mine/Processing final balance.
 - Completion criteria hoặc ending.

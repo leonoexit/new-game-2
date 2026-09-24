@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-21.
 
 Trạng thái: stress test sáu ngày dùng các loop trong [Subsystem loops paper test 01](SUBSYSTEM-LOOPS-PAPER-TEST-01.md). Phép thử đo AP, target cho Person ability và reveal load trong một mid-early slice; không phải opening, season calendar hoặc balance đã chốt.
 
+V0 superseding note 2026-09-23: [consistency audit 37](FIRST-PLAYABLE-V0-CONSISTENCY-AUDIT-37.md) and [Grove contract 36](FIRST-PLAYABLE-GROVE-BATCH-CONTRACT-36.md) keep the `Search Grove 1 AP` row below as a historical batch fixture. The recommended one-item V0 arm shows exact Wild Herb if present and charges 1 AP only to Collect. Processor activity in this older schedule is likewise outside the current V0 loop; its AP totals are not current route evidence.
+
 ## 1. Phân loại trạng thái thiết kế
 
 ### 1.1. Điều người dùng đã chốt

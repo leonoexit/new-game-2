@@ -118,9 +118,9 @@ State: 1 Fresh River Minnow, 1 Fresh Wild Herb, 1 Fresh Shortroot, 1 Wood; Rain 
 
 ## 8. Follow-up evidence — Forecast / Keep decision value 02
 
-[Forecast / Keep decision value 02](FORECAST-KEEP-DECISION-VALUE-02.md) tách Weather horizon khỏi target horizon:
+[Forecast / Keep decision value 02](FORECAST-KEEP-DECISION-VALUE-02.md) tách Weather horizon khỏi target horizon. Later owner correction moves D+1 Weather off the global rail and onto the 0 AP Farmhouse TV sub-card, so the result below applies only after proactive TV use before allocation:
 
-- accepted Today + Tomorrow Weather giúp lập kế hoạch AP/timing nhưng không đủ rank generic owned items;
+- proactively viewed TV forecast for D+1 helps AP/timing planning but does not rank generic owned items; the former global Tomorrow field was later removed;
 - analytical comparator cho thấy actual external context cần timing + accepted category/state + recovery khi inspect;
 - exact reward và default 3-day forecast không cần cho bốn allocation cells;
 - `S∞` no-perish vẫn là baseline; `S4` chỉ bớt đoán khi actual external context tồn tại và vẫn chưa được chọn.

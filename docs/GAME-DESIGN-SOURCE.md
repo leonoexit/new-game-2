@@ -513,6 +513,10 @@ Không được chỉ là cosmetic.
 
 # 12. Weather Forecast
 
+Owner clarification 2026-09-23 supersedes the unconditional `Tomorrow` knowledge wording below: TV is a Farmhouse sub-card. Playing it on day D costs 0 AP and reports D+1 Weather on TV; Sleep uses that forecast. If TV was skipped, Sleep determines D+1 Weather without opening TV. The global rail carries Season, Today Weather and AP, with no Tomorrow field. See [Weather narrowing 26](FIRST-PLAYABLE-WEATHER-CADENCE-PHASE-NARROWING-26.md) for the current information-timing boundary. The original text below is preserved as design history.
+
+Owner Weather direction 2026-09-23: Rain is RNG conditioned on the Season of the day generated. Exact Rain dates and seasonal Rain counts are not fixed; D+1 across a Season boundary uses the incoming Season. Seasonal probabilities and detailed generation rules remain open. See [Weather narrowing 26](FIRST-PLAYABLE-WEATHER-CADENCE-PHASE-NARROWING-26.md).
+
 Player mặc định biết:
 
 **Today**

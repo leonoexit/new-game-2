@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-22.
 
 Trạng thái: paper systems audit tiếp nối [Mine/Fishing area-tableau contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md), [Calendar/Project completion rerun 02](CALENDAR-PROJECT-COMPLETION-RERUN-02.md) và [COL-N long-horizon paper test 01](COL-N-LONG-HORIZON-PAPER-TEST-01.md). [Stardew rules](<../stardew rules.pdf>) và text extraction do owner cung cấp chỉ được dùng làm reference pattern; không copy dice, combat, map, multiplayer action hoặc win condition sang project này.
 
+Superseding note 2026-09-23: Stone/source conclusions remain active; the PJ-X permit comparator is historical after owner-selected X0 no-fee in [permit audit 15](PJ-X-PERMIT-BOUNDARY-AUDIT-15.md).
+
 Audit hỏi hai câu:
 
 1. Stone có native source nào mà không phục hồi `Direct Descent → Stone`?

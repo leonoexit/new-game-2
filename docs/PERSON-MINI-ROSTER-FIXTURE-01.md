@@ -4,6 +4,12 @@ Ngày dựng: 2026-09-22.
 
 Trạng thái: `[FIXTURE]` ba-Person paper roster để rerun Gift/Heart/economy contexts. Mira, Nell và Bram chỉ là study identities đang có portrait; không phải canonical roster, canonical name hoặc final ability assignment.
 
+Superseding notes 2026-09-23: [proposal 23](CANONICAL-IDENTITY-CONSOLIDATED-PROPOSAL-23.md) later made Mira=A, Nell=C and Bram=K canonical **paper identities/roles**; this file's Gift tags, schedule, Heart values, ability wording and art status remain fixtures. [Heart/Gift test 32](FIRST-PLAYABLE-HEART-GIFT-CADENCE-PAPER-TEST-32.md) finds no demonstrated Heart-worthy benefit for the current K split under even Q4 M/B Project requirements. The older economy/target claims below are historical hypotheses, not proof that gifting Bram is valuable in the present V0 route.
+
+Phase follow-up 2026-09-23: [test 35](FIRST-PLAYABLE-MIRA-NELL-TARGET-GIFT-PHASE-TEST-35.md) finds that Mira's Grove preview needs a genuinely hidden useful result; the River and current M/B Mine sources are already previewed. Nell's Herb Gift and Hold Open work together only in an accessible source/AP phase, not on every listed appearance. Target-density claims below are historical fixtures until Grove's actual batch contract is set.
+
+Grove follow-up 2026-09-23: [contract 36](FIRST-PLAYABLE-GROVE-BATCH-CONTRACT-36.md) recommends exact visible Wild Herb with no paid Search for the one-item V0 arm. Nell retains a conditional Hold Open use; Mira's preview text below has no evidenced V0 target. Do not treat the older hidden-batch example as a reason to charge Search AP.
+
 ## 1. Ranh giới
 
 ### 1.1. [DECIDED]
@@ -48,7 +54,7 @@ Exact compatibility:
 
 ### Nell — C Hold Open
 
-`Spend 1 Heart: One expiring Catch, Grove batch or optional request remains through one additional Sleep.`
+`Spend 1 Heart: One expiring Catch or Grove batch remains through one additional Sleep.`
 
 - Tối đa một held target active cho Nell.
 - Không re-extend cùng target.
@@ -82,13 +88,13 @@ Appearance không bắt player Gift. Gift preference item đều có recurring/d
 | Person | Gift opportunity cost | Ability target horizon | Non-dominance result |
 | --- | --- | --- | --- |
 | Mira | Berry 2G fixture + 1 action | Optional uncertainty L–H theo route | Gift thắng khi information tránh commitment xấu; Safe route vẫn đủ |
-| Nell | Wild Herb 4G/6G option + 1 action | Expiring target M–H | Gift/Heart cạnh tranh thật với Fresh target/Process; one-held limit ngăn deadline erasure |
+| Nell | Wild Herb sale/Keep option + 1 action | Expiring target M–H | Gift/Heart cạnh tranh thật với item allocation; one-held limit ngăn opportunity erasure |
 | Bram | Shortroot 4G liquidity + 1 action | Project overlap 0–M | K chỉ đáng khi hai Project/near-complete target cùng hiện; không tăng output |
 
 ### 5.1. A5
 
 - Mira: một Heart có thể chọn giữa Veiled result và Grove batch; không cover mọi uncertainty.
-- Nell: Gift Wild Herb có thể đẩy Fresh request/Process; nếu player không Gift, Catch/Grove vẫn recur.
+- Nell: Gift Wild Herb có thể đẩy Sell/Keep hoặc lần dùng khác của item; nếu player không Gift, Catch/Grove vẫn recur.
 - Bram: Shortroot Gift cạnh tranh Seed/restock liquidity; K không phải phí vận hành vì target Project có thể chưa overlap.
 
 ### 5.2. A7
@@ -103,7 +109,7 @@ Appearance không bắt player Gift. Gift preference item đều có recurring/d
 | --- | --- | --- |
 | A + C | Preview rồi giữ best opportunity | Tốn 2 Heart thuộc hai Person + two Gifts; no reroll, one-held |
 | A + K | Preview source rồi allocate Project | Hợp lệ; information không tạo material/progress |
-| C + K | Giữ request trong khi tập trung Project | Hợp lệ timing tradeoff; C không giữ Project deadline bắt buộc |
+| C + K | Giữ Catch/Grove opportunity trong khi tập trung Project | Hợp lệ timing tradeoff; C không giữ Project deadline bắt buộc |
 
 Không combo nào mở core source, tăng total Progress hoặc hoàn Catch miễn phí.
 

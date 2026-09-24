@@ -1,5 +1,7 @@
 # Informed-owner acceptance — Weather / Season global UI v0.1 — 2026-09-22
 
+Historical result note 2026-09-23: product owner subsequently removed Tomorrow Weather from the global rail and made the 0 AP Farmhouse TV sub-card the forecast surface. The verbatim responses and original acceptance below are preserved as evidence for the tested fixture, not the current Tomorrow-information contract.
+
 Tester: current product owner. Đây là informed-owner evidence, không phải fresh-player/new-player evidence.
 
 Stimulus: arm A `boards/stimulus-a-always-visible-rail.png`, sau khi owner đã xem comparison fixture A/B/C.

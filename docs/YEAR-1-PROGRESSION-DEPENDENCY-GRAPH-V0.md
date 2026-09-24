@@ -6,6 +6,8 @@ Trạng thái: dependency model tổng hợp các paper test farming, AP, resour
 
 Bản tổng hợp hiện hành nằm ở [Year 1 paper-design package v0](YEAR-1-PAPER-DESIGN-PACKAGE-V0.md). File này vẫn là graph chi tiết và evidence nguồn, không phải spec độc lập mới hơn package.
 
+Superseding V0 note 2026-09-23: the current graph is [v1](YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md), read with [consistency audit 37](FIRST-PLAYABLE-V0-CONSISTENCY-AUDIT-37.md). This older graph's Grove Search/Upper-Grove, Person ability, Gold-fee and crop-calendar edges are historical fixtures where they conflict with tests 30–36. Keep the historical route evidence; do not use its reward or timing as an active V0 contract.
+
 ## 1. Phân loại trạng thái thiết kế
 
 ### 1.1. Điều người dùng đã chốt

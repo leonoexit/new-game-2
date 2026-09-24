@@ -1,5 +1,7 @@
 # Paper design round 5 checkpoint — abstract Area tableaus
 
+Historical presentation note 2026-09-23: the Tomorrow Weather field mentioned below was later removed from the global rail by the product owner. The current rail has Season, Today Weather and AP; D+1 Weather comes from the 0 AP TV sub-card inside Farmhouse if played, or is determined by Sleep without opening TV. Earlier informed-owner UI results remain fixture history.
+
 Ngày: 2026-09-22.
 
 Phạm vi: sửa world presentation từ spatial surface thành scrollable abstract Area tableaus, rồi định hình play grammar cho Mine và Fishing. Không code/runtime prototype và không chốt balance/content count.

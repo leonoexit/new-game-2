@@ -97,7 +97,7 @@ Không promote tên, cost, mastery threshold, art study hoặc grid size trong f
 - Header Area luôn hiện hay chỉ khi onboarding/focus.
 - Art-to-UI ratio trong square card.
 - Hover/focus/selected treatment và tap target padding.
-- Final Season/Weather field art và future forecast-upgrade depth; default paper UI đã chọn shallow global rail với Today + Tomorrow luôn thấy.
+- Final Season/Weather field art và future forecast-upgrade depth; later owner correction keeps the shallow global rail for Season, Today Weather and AP, while Tomorrow forecast is shown by TV inside Farmhouse rather than an always-visible field.
 - Generated abstraction backgrounds that preserve card dominance and Area identity.
 
 ## 9. First comprehension correction

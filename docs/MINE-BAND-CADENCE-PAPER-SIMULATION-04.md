@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-22.
 
 Trạng thái: bounded timing simulation tiếp nối [Mine later-discovery/source audit 03](MINE-LATER-DISCOVERY-SOURCE-AUDIT-03.md). Test dùng current minimum Depth/checkpoint scale để hỏi CP12 world-connection interaction có thực sự là later discovery cho `COL-N` hay không. Không chốt final Depth count, AP/day, checkpoint interval, Project quantity hoặc Mine content.
 
+Superseding note 2026-09-23: Mine cadence/source results remain evidence; the PJ-X 8G permit fixture is historical after owner-selected X0 no-fee in [permit audit 15](PJ-X-PERMIT-BOUNDARY-AUDIT-15.md).
+
 ## 1. Fixed fixture
 
 - AP arms: A5 và A7.

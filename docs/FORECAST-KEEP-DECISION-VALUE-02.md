@@ -4,6 +4,10 @@ Ngày chạy: 2026-09-22.
 
 Trạng thái: paper sensitivity tiếp nối [Storage/Keep sensitivity 01](STORAGE-KEEP-SENSITIVITY-01.md), [Economy ledger v2](ECONOMY-LEDGER-V2-PAPER-SENSITIVITY-01.md) và [Weather/Season global UI v0.1](../paper-tests/weather-season-global-ui-v0.1/README.md). Analytical `H-C` improved item ranking, nhưng informed-owner review reject việc biến nó thành global `Tomorrow Targets` UI. Không chốt storage cap, price, Weather cadence, request content hoặc runtime UI.
 
+Superseding note 2026-09-23: any PJ-X permit example is historical after owner-selected X0 no-fee; the no-global-agenda and native-inspect conclusions remain active.
+
+TV information/presentation correction 2026-09-23: the product owner clarified that TV is a Farmhouse sub-card. Playing it on day D costs 0 AP and reports D+1 Weather on TV; Sleep uses that forecast. If TV was skipped, Sleep determines D+1 Weather without opening TV. The `H-W` cells below test the value of Tomorrow Weather **after proactive TV use**. The Sleep decision does not give that information before D's allocation choices. The global rail now carries only Season, Today Weather and AP; its former Tomorrow field is removed. The filled-rail UI result is historical presentation evidence, not the current information contract.
+
 ## 0. Owner scope correction
 
 [Target-horizon announcement v0.1](../paper-tests/target-horizon-announcement-v0.1/README.md) cho thấy `Tomorrow Targets` làm kế hoạch tự quyết của player đọc như việc system yêu cầu làm ngày tiếp theo. Do đó:
@@ -12,11 +16,11 @@ Trạng thái: paper sensitivity tiếp nối [Storage/Keep sensitivity 01](STOR
 - không tạo universal future-target forecast hoặc recommended-action list;
 - player tự đặt mục tiêu từ options, inventory, Weather và world state đang thấy;
 - actual Person availability, accepted request hoặc Processor completion chỉ tự hiển thị tại source/card/inspect của nó;
-- Weather/Season rail không đổi vì nó mô tả world state, không prescribe action.
+- Global rail still describes world state rather than prescribing action; the later owner correction removes its Tomorrow field and puts D+1 forecast on TV.
 
 ## 1. Câu hỏi
 
-Always-visible `Today + Tomorrow Weather` đã được informed owner accept về presentation. Bước này hỏi một câu khác:
+The historical UI fixture displayed `Today + Tomorrow Weather`; the owner later moved Tomorrow forecast access to TV only. This sensitivity asks a different question:
 
 > Forecast đó có đủ để biến `Keep` thành lựa chọn đọc được trước `Sell / Gift / Process`, đặc biệt khi storage bị giới hạn không?
 
@@ -32,7 +36,7 @@ Pass không có nghĩa `Keep` phải thắng. Pass nghĩa player có thể biế
 - `S∞`: không cap, không perish. `S4`: tối đa bốn commodity item-unit cuối ngày, không perish.
 - Không chạy lại `P1`; perishability đã làm Sell/Process dominate và không phải baseline.
 - Miss target thông thường trì hoãn tới recovery sau, không fail save.
-- Weather/Season rail A chỉ chứa Season, Today Weather, Tomorrow Weather và AP. Không âm thầm thêm request/Person/Project vào rail đã accept.
+- Current global rail chỉ chứa Season, Today Weather và AP. Tomorrow Weather appears on TV after proactive use; if TV is skipped, Sleep determines it without opening TV. Không thêm request/Person/Project vào rail.
 
 ### 2.2. Không được suy ra
 
@@ -46,7 +50,7 @@ Pass không có nghĩa `Keep` phải thắng. Pass nghĩa player có thể biế
 | Arm | Thông tin trước allocation | Vai trò |
 | --- | --- | --- |
 | `H0` | Today state only | Control: Keep dựa vào generic uncertainty |
-| `H-W` | Today + Tomorrow Weather từ accepted global rail | Đo Weather-only planning value |
+| `H-W` | Today Weather + D+1 forecast on TV after proactive 0 AP use | Đo Weather-only planning value khi forecast đã được reveal trước allocation |
 | `H-C` | `H-W` + known external context category/state/timing + recovery | Analytical comparator; chỉ hợp lệ nếu context đã thật sự tồn tại, không phải system-generated player target |
 | `H-X` | `H-C` + exact item và exact reward | Over-information comparator |
 
@@ -195,7 +199,7 @@ Không tạo target horizon surface riêng. Player plan vẫn implicit/self-dire
 
 ## 8. Storage verdict
 
-1. `[PAPER RESULT]` Accepted `Today + Tomorrow Weather` có planning value cho AP/opportunity timing nhưng không đủ làm generic owned-item ranking.
+1. `[PAPER RESULT — CONDITIONAL ON PROACTIVE TV]` D+1 Weather có planning value cho AP/opportunity timing sau khi player xem TV, nhưng không đủ làm generic owned-item ranking.
 2. `[PAPER RESULT]` Với external context đã tồn tại, category + state + timing + recovery đủ để inspect compatibility; exact reward không cần trong sample.
 3. `[PAPER RESULT]` `Today + Tomorrow` horizon đủ cho bốn allocation cells này; không có evidence cần 3-day exact forecast làm default.
 4. `[HYPOTHESIS RETAINED]` `S∞`, no-perish vẫn là baseline sạch. Visible Weather/actual-context information có thể tạo Keep value mà không cần cap.

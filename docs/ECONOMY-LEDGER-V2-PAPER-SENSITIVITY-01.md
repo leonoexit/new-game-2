@@ -2,7 +2,9 @@
 
 Ngày chạy: 2026-09-21.
 
-Trạng thái: paper economy sensitivity tiếp nối [Content-minimum registry 01](CONTENT-MINIMUM-REGISTRY-01.md) và [Calendar sensitivity 01](CALENDAR-SENSITIVITY-PAPER-SIMULATION-01.md). Tài liệu thêm Gold sinks, Buy/Sell AP arms, exact compatibility fixtures và một value model cho collection reward. Nó không chốt price, AP, storage, perishability hoặc reward cuối.
+Trạng thái: **partially superseded** paper economy sensitivity tiếp nối [Content-minimum registry 01](CONTENT-MINIMUM-REGISTRY-01.md) và [Calendar sensitivity 01](CALENDAR-SENSITIVITY-PAPER-SIMULATION-01.md). Buy/Sell `T0`, exact identity tags and collection-value work remain evidence. Every `+2G`, Processed premium, Pantry/request target and positive-Processing claim is historical after [post-removal audit 11](CORE-YEAR-1-POST-REMOVAL-CONSISTENCY-GAP-AUDIT-11.md). Every infrastructure-fee arm is also historical after owner-selected M/B no-fee and PJ-X `X0` in [permit audit 15](PJ-X-PERMIT-BOUNDARY-AUDIT-15.md). Tài liệu không chốt price, AP, storage, perishability hoặc reward cuối.
+
+Timing correction from [Seed/Sell price paper test 30](FIRST-PLAYABLE-SEED-SELL-PRICE-PAPER-TEST-30.md): ordinary Shipping Bin payout is at **end of day**. Any older “Gold hôm nay” row below is an end-of-day ledger, not permission to spend that sale Gold on a same-day Seed or fee. Fee/Processed-premium examples remain historical for the separate reasons above.
 
 ## 1. Phân loại trạng thái
 
@@ -328,7 +330,7 @@ Collection record không consume nên không trực tiếp cạnh tranh item sau
 ### 9.1. [HYPOTHESIS] Kết luận mạnh nhất
 
 1. **Seed restock + selected infrastructure fee đủ tạo hai Gold sink shape cho vòng test.** Chưa cần daily tax hoặc Processor fuel.
-2. **Fresh Sell có lý do thắng nhờ same-day liquidity.** First harvest có thể trả replant + `PJ-M`; Process một output làm fee trễ một ngày dù eventual Gold cao hơn.
+2. **[HISTORICAL CLAIM SUPERSEDED]** This row originally credited Fresh Sell with “same-day liquidity” for replant + `PJ-M`. Under the current Shipping Bin contract, Fresh sale Gold arrives at day end and can support **next-day** Seed renewal/profile access only; same-day replant needs pre-existing Gold or Seed. `PJ-M` has no Gold fee under Q4/G0. The older Process/fee comparison remains a historical ledger arm, not an active V0 reason to Sell.
 3. **Standard Buy/Sell 0 AP là baseline mạnh hơn cho vòng kế.** Batched 1 AP làm A5 peak nặng hơn và tạo batching/storage incentive ngoài scope; per-item AP bị loại khỏi test.
 4. **+2G Processing vẫn quá dễ thành default ở A7 nếu output không có raw target.** Exact compatibility sửa đúng nguyên nhân hơn tăng Load cost.
 5. **Raw Herb target chứng minh Processor idle có thể là lựa chọn đúng.** Crop/Fish cần tương đương: Fresh request, condition record hoặc liquidity.

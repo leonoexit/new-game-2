@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-22.
 
 Trạng thái: paper rerun nối [Calendar sensitivity 01](CALENDAR-SENSITIVITY-PAPER-SIMULATION-01.md), [Economy ledger v2](ECONOMY-LEDGER-V2-PAPER-SENSITIVITY-01.md), [Mine/Project triple-gate audit 01](MINE-PROJECT-TRIPLE-GATE-AUDIT-01.md) và current Mine grammar trong [Mine/Fishing contract 01](MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md). Rerun chỉ kiểm completion timing của `PJ-M`, Expansion, `PJ-B` và `PJ-X`; không chốt AP/day, Season length, Weather cadence, price, recipe, source topology hoặc Project quantity.
 
+Superseding note 2026-09-23: no-fee M/B and source timing remain evidence; the selected PJ-X permit arm is historical after owner-selected X0 no-fee in [permit audit 15](PJ-X-PERMIT-BOUNDARY-AUDIT-15.md).
+
 ## 1. Phạm vi và correction quan trọng
 
 Calendar 01 đã tính `PJ-M` và `PJ-B` bằng route bundle gồm material/source AP + Work, **không đưa Gold fee vào scheduler**. Vì vậy các ngày `M/E/B` của nó đã là timing của no-fee relief arm; không được mô tả như một fee-inclusive baseline rồi trừ Gold khỏi kết quả.

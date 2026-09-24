@@ -2,7 +2,13 @@
 
 Ngày audit: 2026-09-21.
 
-Trạng thái: paper audit tám ability kernel A/C/D/E/I/J/K/M bằng content, calendar và economy fixtures hiện hành. Đây không phải roster, Person identity, final wording hoặc balance approval. Tên ability, target count, Heart cadence và giới hạn đều là fixture/hypothesis.
+Trạng thái: paper audit tám ability kernel A/C/D/E/I/J/K/M bằng content, calendar và economy fixtures của thời điểm chạy. Đây không phải roster, Person identity, final wording hoặc balance approval. A/C/K boundaries remain reusable; request- and Processor-dependent target-density examples are historical after Processing/request removal and must not be read as active minimum-loop demand. Tên ability, target count, Heart cadence và giới hạn đều là fixture/hypothesis.
+
+Superseding K note 2026-09-23: [Bram purpose audit 33](FIRST-PLAYABLE-BRAM-K-PURPOSE-AUDIT-33.md) shows that K's earlier odd-Progress waste-prevention example does not apply to owner-selected Q4 M/B at 4 Progress each. The user-decided conserved-output boundary remains; current V0 does not yet demonstrate a useful K activation. Do not promote this audit's K target-density estimate without that purpose gate.
+
+Mira/Nell phase note 2026-09-23: [paper test 35](FIRST-PLAYABLE-MIRA-NELL-TARGET-GIFT-PHASE-TEST-35.md) narrows A/C target evidence. Active River Catch and M/B Mine sources already reveal their exact relevant result; Mira's useful hidden Grove result remains unspecified. Nell has a conditional Grove Hold Open case, but Wild Herb source phase can miss her first Gift. The density estimates below include historical request/Processor/Veiled examples and are not active V0 counts.
+
+Grove contract note 2026-09-23: [paper recommendation 36](FIRST-PLAYABLE-GROVE-BATCH-CONTRACT-36.md) makes the one authored Wild Herb opportunity face-up before Collect. Under that arm C retains a conditional busy-day hold, while A has no verified Grove target. The A carry verdict below is historical and needs a new native V0 purpose test.
 
 Nguồn dùng:
 

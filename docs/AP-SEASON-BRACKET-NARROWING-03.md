@@ -4,6 +4,10 @@ Ngày chạy: 2026-09-22.
 
 Trạng thái: paper constraint narrowing tiếp nối [Calendar sensitivity 01](CALENDAR-SENSITIVITY-PAPER-SIMULATION-01.md), [Calendar/Project completion rerun 02](CALENDAR-PROJECT-COMPLETION-RERUN-02.md), [Economy ledger v2](ECONOMY-LEDGER-V2-PAPER-SENSITIVITY-01.md) và [COL-N independent source cadence 03](COL-N-INDEPENDENT-SOURCE-CADENCE-AUDIT-03.md).
 
+Superseding note 2026-09-23: A6/S18 and WD/WS roles remain active paper evidence; any PJ-X permit reference is historical after owner-selected X0 no-fee in [permit audit 15](PJ-X-PERMIT-BOUNDARY-AUDIT-15.md).
+
+First-playable lock note 2026-09-23: product owner later selected `AS0` in [audit 25](FIRST-PLAYABLE-AP-SEASON-LOCK-AUDIT-25.md), fixing 6 AP/day and 18 days/Season for the remaining first-playable paper balance pass. A5/S12, A5/S18 and A7/S18 keep their regression roles. This is not fresh-player validation or final shipped balance.
+
 Repository không có executable scheduler; evidence hiện tại là explicit paper tables. Vì vậy vòng này chọn **next paper baseline và regression bounds**, không invent exact A6 Project days, không chốt final balance và không authorize runtime.
 
 ## 1. Câu hỏi narrowing

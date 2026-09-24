@@ -4,13 +4,15 @@ Ngày dựng: 2026-09-22.
 
 Trạng thái: `[REJECTED / SUPERSEDED]`; informed owner reject premise `Tomorrow Targets` vì nó biến kế hoạch tự quyết của player thành agenda do system giao. Giữ toàn bộ package làm audit trail. Không phải fresh-player evidence và không có runtime authorization.
 
+Later owner correction 2026-09-23: the historical rail described below no longer has a Tomorrow Weather field. D+1 Weather is reported by the 0 AP TV sub-card inside Farmhouse if played proactively; otherwise Sleep determines D+1 Weather without opening TV. The rejection of global `Tomorrow Targets` remains active.
+
 Fixture này đã thử trình bày `H-C` như một global Tomorrow-target surface ngoài [Weather/Season rail A](../weather-season-global-ui-v0.1/README.md). [Informed-owner scope correction](pilot-results/informed-owner-scope-correction-2026-09-22.md) cho thấy lỗi nằm ở premise, không phải arm layout: target ngày mai là kế hoạch do player tự chọn, nên một system surface liệt kê chúng làm mất cảm giác tự do.
 
 Không chọn A, B hoặc C. Không tạo revision thay thế cùng premise.
 
 ## Fixed contract
 
-- Weather rail A giữ nguyên Season + Today Weather + Tomorrow Weather + AP.
+- At the time of this rejected fixture, Weather rail A showed Season + Today Weather + Tomorrow Weather + AP; the later owner correction removed Tomorrow and moved D+1 Weather to TV.
 - Target horizon là global planning UI riêng; không phải on-table card, Area status hoặc commitment target.
 - Root chỉ cần báo có context ngày mai; inspect `0 AP` cho compatibility/timing/recovery.
 - Fixture dùng một Fresh target và một Processed target:

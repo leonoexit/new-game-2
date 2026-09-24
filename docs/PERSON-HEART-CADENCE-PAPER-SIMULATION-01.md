@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-21.
 
 Mục đích: kiểm tra Heart cap và timing qua nhiều lần Person xuất hiện, dùng ba ability kernel A/C/K đã có context. Phép thử đo stock/overflow/target coverage; không định giá quà, personality, story hoặc số Person Year 1.
 
+V0 superseding note 2026-09-23: [consistency audit 37](FIRST-PLAYABLE-V0-CONSISTENCY-AUDIT-37.md) keeps cap 2, `+1/−1`, same-day use and the three-Person calendar below as **fixtures**. Under [Grove contract 36](FIRST-PLAYABLE-GROVE-BATCH-CONTRACT-36.md), Mira A has no validated preview target; under Q4, Bram K has no demonstrated Work saving. Nell's Gift supply varies with Herb phase as [test 38](FIRST-PLAYABLE-WILD-HERB-CADENCE-PAPER-TEST-38.md) shows. This simulation's activation counts are supply ceilings, not current V0 uses.
+
 ## 1. Phân loại trạng thái thiết kế
 
 ### 1.1. Điều người dùng đã chốt
@@ -231,4 +233,3 @@ Chỉ thêm `mỗi ability một lần/ngày` nếu một ability cụ thể ph�
 - Tỉ lệ Gift người chơi thực sự chọn khi item economy đầy đủ.
 - Announcement load khi nhiều Person cùng xuất hiện.
 - Heart UI/accessibility và behavior khi Gift ở cap.
-

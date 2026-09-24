@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-21.
 
 Trạng thái: ledger test tiếp nối [Farming relief paper simulation 02](FARMING-RELIEF-PAPER-SIMULATION-02.md). Mục tiêu là thêm vừa đủ resource gates để kiểm tra `relief-first` có thật sự là lựa chọn, không thiết kế hoặc cân bằng toàn bộ economy. Tất cả giá, reward, source, requirement và lịch dưới đây là fixture.
 
+Superseding K note 2026-09-23: this document's K saving in §6 depends on two simultaneous **3-Progress** Projects. Owner-selected Q4 M/B now each require **4 Progress**, so normal 2-Progress Work has no overflow and the old one-Work saving does not transfer. [Bram purpose audit 33](FIRST-PLAYABLE-BRAM-K-PURPOSE-AUDIT-33.md) preserves the user-decided no-output-increase K boundary while marking its V0 use unresolved.
+
 ## 1. Phân loại trạng thái thiết kế
 
 ### 1.1. Điều người dùng đã chốt

@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-21.
 
 Trạng thái: paper test tiếp nối [Resource economy daily routes 02](RESOURCE-ECONOMY-DAILY-ROUTES-02.md). Phép thử tìm một resource loop có lựa chọn cho Rain/free-capacity window mà không biến common resource thành loot ngẫu nhiên bắt buộc. Không chốt area, deck, số card, expiry, Person ability hay Heart cadence.
 
+V0 follow-up 2026-09-23: [Grove contract 36](FIRST-PLAYABLE-GROVE-BATCH-CONTRACT-36.md) recommends an exact visible Wild Herb opportunity with 1-AP Collect for the current one-authored-item minimum. The six-card mixed batch, paid Search and A/C density examples below remain historical fixtures; do not treat Wood/Berry/Fiber/Mushroom as approved Grove outputs or this simulation as evidence that Mira has an active V0 preview target.
+
 ## 1. Phân loại trạng thái thiết kế
 
 ### 1.1. Điều người dùng đã chốt

@@ -2,7 +2,11 @@
 
 Ngày dựng: 2026-09-22.
 
-Trạng thái: `[CURRENT WEATHER / SEASON UI FIXTURE]`; arm A được informed owner accept. Không phải fresh-player evidence và không có runtime authorization.
+Trạng thái: `[HISTORICAL WEATHER / SEASON UI FIXTURE — TOMORROW FIELD SUPERSEDED]`; arm A được informed owner accept về hierarchy/non-target appearance, nhưng product owner sau đó bỏ Tomorrow khỏi global rail. Không phải fresh-player evidence và không có runtime authorization.
+
+Later owner clarification 2026-09-23: TV is a selectable Farmhouse sub-card. Playing it on day D costs 0 AP and reports D+1 Weather on TV; Sleep uses that forecast. If TV was not played, Sleep determines D+1 Weather without opening TV. The current global rail carries Season, Today Weather and AP, with no Tomorrow field. This fixture tested a **filled** Tomorrow field and its presentation; that field is superseded. The rail remains a state display rather than the TV action target. No historical board or acceptance response is rewritten.
+
+The revised three-field rail and TV report have not received a separate visual comprehension result. This does not undo the owner's contract correction or turn the old four-field board into current evidence.
 
 Package này tiếp tục từ [orientation v0.3.4](../orientation-area-tableau-v0.3.4/README.md) mà không mở lại bài test Area orientation. Nó chỉ thử treatment cho `Day / Season / Weather / AP` trong sticky global chrome nằm **ngoài play tableau**.
 
@@ -27,7 +31,7 @@ Treatment nào cho phép owner tìm `Season`, Weather hôm nay, forecast và AP 
 - forecast ngày mai luôn hiện, không cần mở panel;
 - silhouette cố ý rộng và dính vào chrome để khác root card.
 
-Đây là treatment được informed owner chọn: cung cấp `Today + Tomorrow` không cần interaction phụ và không bị đọc như playable target.
+This was the treatment selected in the historical test. Its `Tomorrow` field was later removed by owner correction; the shallow non-target rail treatment remains useful evidence.
 
 ### B — collapsible forecast
 
@@ -59,7 +63,7 @@ Treatment nào cho phép owner tìm `Season`, Weather hôm nay, forecast và AP 
 
 - arm A không bị hiểu là nơi commit Character/Tool/Item;
 - Season, Weather hôm nay, Weather ngày mai và AP được tìm thấy ngay;
-- always-visible `Tomorrow` là đủ; không cần disclosure/expanded forecast trong default chrome;
+- the historical filled `Tomorrow` field was understood, but it was later removed from default chrome;
 - B và C được giữ làm comparator/audit trail, không phải current treatment;
 - art/card image có thể thay identity field của Season/Weather về sau, miễn global dock vẫn nằm ngoài play tableau và không tạo false target affordance.
 - [Target-horizon announcement v0.1](../target-horizon-announcement-v0.1/README.md) về sau bị informed owner reject: target ngày mai là player intent, không phải một field cần thêm vào accepted rail.
@@ -71,7 +75,7 @@ Treatment nào cho phép owner tìm `Season`, Weather hôm nay, forecast và AP 
 Fixture có thể hỗ trợ chọn information hierarchy và interaction model. Nó không authorize:
 
 - runtime implementation;
-- Season length, Weather mechanics/cadence hoặc future forecast upgrade depth; acceptance chỉ chọn `Today + Tomorrow` cho default global presentation;
+- Season length, Weather mechanics/cadence hoặc future forecast upgrade depth; historical acceptance of `Today + Tomorrow` does not override the later TV-only forecast correction;
 - sửa card Eel Sighting, River tableau hoặc v0.3.4;
 - claim fresh-player comprehension.
 

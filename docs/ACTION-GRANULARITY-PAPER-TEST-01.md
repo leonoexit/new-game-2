@@ -4,6 +4,8 @@ Ngày chạy: 2026-09-21.
 
 Trạng thái: paper test tiếp nối [AP economy paper test 01](AP-ECONOMY-PAPER-TEST-01.md). Tài liệu so sánh các cách xác định phạm vi của một action; không chốt mô hình, số AP, capacity của Tool, số crop hay chi phí các động từ.
 
+Later Farm resolution 2026-09-24: [rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) uses the existing Watering Can on one Growing Crop for 1 AP and the Hand on one Mature Crop for 1 AP as a working first-playable paper rule. The upgrade/automation possibilities below remain old comparisons; no Water Trough, Harvest Bench or replacement relief has been selected.
+
 ## 1. Phân loại trạng thái thiết kế trước khi thử
 
 ### 1.1. Điều người dùng đã chốt

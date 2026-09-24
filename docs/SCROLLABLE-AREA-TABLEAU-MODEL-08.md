@@ -56,6 +56,12 @@ HOME / FARM visual band
 
 neutral UI divider
 
+RÌA RỪNG / WOODLAND EDGE visual band
+[Hedgerow] [Woodlot]
+[Wild Herb world item, if present]
+
+neutral UI divider
+
 COMMERCE visual band
 [Supermarket] [Mira / active Person identity]
 
@@ -72,7 +78,7 @@ MINE visual band
 [Search Side Tunnel] [room for expansion]
 ```
 
-Đây là thứ tự duyệt UI, không phải phía bắc/nam, gần/xa hoặc tuyến đường trong fiction.
+Đây là thứ tự duyệt UI, không phải phía bắc/nam, gần/xa hoặc tuyến đường trong fiction. Rìa Rừng là Area thứ năm trong [Wild Herb V0 paper decision](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md), thêm sau informed-owner pilot bốn Area; nó chưa có acceptance về orientation hoặc art. Hedgerow/Woodlot là các card hiện có được nhóm tại đây; Wild Herb là card vật phẩm xuất hiện trực tiếp trong Area, không phải một `Grove Batch` gateway.
 
 ## 4. Khi nào một thứ là card
 
@@ -101,7 +107,7 @@ Ví dụ:
 ## 5. Navigation contract
 
 - Manual scroll, search/index và anchor đều là navigation UI, mặc định 0 AP.
-- Với bốn Area hiện tại, informed owner đã yêu cầu sticky Area-name index. Index chỉ focus/scroll UI và active tab cho biết Area đang focus; nó không phải map hoặc travel control.
+- Với bốn Area của informed-owner pilot, owner đã yêu cầu sticky Area-name index. Rìa Rừng được thêm sau pilot vào V0 paper baseline; index vẫn chỉ focus/scroll UI và active tab cho biết Area đang focus, không phải map hoặc travel control.
 - Anchor focus một Area hoặc entity; nó không teleport nhân vật trong simulation vì scroll chưa từng là travel.
 - Vị trí tương đối trong dải phải ổn định đủ để hình thành interface memory.
 - Unlock mới nên xuất hiện trong Area liên quan mà không re-order toàn bộ world strip tùy tiện.
@@ -153,8 +159,8 @@ Home-middle vs Home-at-top là câu hỏi spatial topology nên không còn đo 
 4. `[DIRECTION]` Card cùng Area đặt khít và chia sẻ visual language.
 5. `[DIRECTION]` Chỉ verb/state/opportunity cụ thể mới cần card.
 6. `[INFORMED-OWNER ACCEPTED]` Stable order + sticky Area-name index + neutral UI divider đọc như interface focus/scroll, không phải character movement.
-7. `[INFORMED-OWNER ACCEPTED]` Home/Commerce/River tự giải thích bằng card semantics và không cần synthetic Area state; Mine Depth/checkpoint là separate status duy nhất cần trong bốn Area hiện tại.
-8. `[INFORMED-OWNER ACCEPTED]` Weather/Season dùng always-visible shallow rail trong sticky global chrome ngoài play tableau: Season, Today Weather, Tomorrow Weather và remaining AP. Treatment không bị đọc như commitment target; future card art có thể thay identity field nhưng không đổi scope hoặc target grammar.
+7. `[INFORMED-OWNER ACCEPTED FOR THE FOUR-AREA PILOT]` Home/Commerce/River tự giải thích bằng card semantics và không cần synthetic Area state; Mine Depth/checkpoint là separate status duy nhất cần trong pilot đó. Rìa Rừng là paper extension sau pilot, chưa được kiểm tra orientation.
+8. `[INFORMED-OWNER ACCEPTED / LATER OWNER CORRECTED]` Weather/Season dùng shallow rail trong sticky global chrome ngoài play tableau. Current fields are Season, Today Weather and remaining AP; the former Tomorrow field was removed on 2026-09-23. The rail treatment was not read as a commitment target. Tomorrow forecast is available through the 0 AP TV sub-card inside Farmhouse; if TV is skipped, Sleep determines next-day Weather without opening TV.
 9. `[INFORMED-OWNER REJECTED]` Không thêm global `Tomorrow Targets` rail. Kế hoạch ngày mai do player tự quyết định; system chỉ trình bày world/resource state và actual context tại native source của context đó.
 
 ## 10. Chưa kết luận
@@ -163,7 +169,7 @@ Home-middle vs Home-at-top là câu hỏi spatial topology nên không còn đo 
 - Một viewport chứa toàn Area hay cho phép Area dài hơn viewport.
 - Số cột và card density trên mobile.
 - Runtime index luôn sticky hay collapse sau onboarding; paper fixture dùng sticky index vì owner đã cần index ở bốn Area.
-- Exact final art cho Season/Weather fields và future forecast-upgrade depth; default paper presentation hiện giữ Today + Tomorrow luôn thấy.
+- Exact final art cho Season/Today Weather fields và future forecast-upgrade depth; Tomorrow forecast is shown by TV, not as an always-visible global field.
 - Generated abstraction background cho từng Area và mức độ motif cần thiết ngoài palette.
 - Exact logical square-card size, badge hierarchy và accessibility reflow.
 - Fiction có travel cost riêng hay hoàn toàn không có travel system.
