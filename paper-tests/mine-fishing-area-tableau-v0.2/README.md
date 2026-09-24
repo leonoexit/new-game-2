@@ -4,7 +4,7 @@ Ngày dựng và desk/mobile preflight: 2026-09-22.
 
 Trạng thái: `[SUPERSEDED FOR NEXT PILOT]`. Render preflight pass; [internal informed pilot 01](pilot-results/internal-informed-pilot-01.md) dừng ở Task B vì action grammar không rõ. [v0.2.3](../mine-fishing-area-tableau-v0.2.3/README.md) là current corrective fixture. Không phải final UI, balance, content list, art approval hoặc runtime implementation; chưa có new-player data.
 
-Fixture hiện thực [Mine & Fishing area-tableau contract 01](../../docs/MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md), [scrollable Area model 08](../../docs/SCROLLABLE-AREA-TABLEAU-MODEL-08.md) và [square-card decision 09](../../docs/ON-TABLE-CARD-SHAPE-DECISION-09.md).
+Fixture hiện thực [Mine & Fishing area-tableau contract 01](../../docs/current/MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md), [scrollable Area model 08](../../docs/current/SCROLLABLE-AREA-TABLEAU-MODEL-08.md) và [square-card decision 09](../../docs/current/ON-TABLE-CARD-SHAPE-DECISION-09.md).
 
 ## 1. Điểm khác v0.1
 

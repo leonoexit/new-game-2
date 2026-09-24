@@ -4,9 +4,9 @@ Ngày dựng và preflight: 2026-09-22.
 
 Trạng thái: `[SUPERSEDED FIXTURE]`; không phải UI prototype, current pilot, topology decision, canonical world map, art approval hay runtime approval.
 
-> **SUPERSEDED FOR PILOT — 2026-09-22.** Fixture này vẫn tạo cảm giác bản đồ bằng terrain, path và world coordinates. Clarification hiện hành là [scrollable abstract-area tableau model 08](../../docs/SCROLLABLE-AREA-TABLEAU-MODEL-08.md): scroll là navigation UI, không phải movement hoặc geography. Giữ v0.2 làm audit trail/art study; không chạy participant pilot. Fixture kế tiếp phải là v0.3 area-tableau strip.
+> **SUPERSEDED FOR PILOT — 2026-09-22.** Fixture này vẫn tạo cảm giác bản đồ bằng terrain, path và world coordinates. Clarification hiện hành là [scrollable abstract-area tableau model 08](../../docs/current/SCROLLABLE-AREA-TABLEAU-MODEL-08.md): scroll là navigation UI, không phải movement hoặc geography. Giữ v0.2 làm audit trail/art study; không chạy participant pilot. Fixture kế tiếp phải là v0.3 area-tableau strip.
 
-Kit này từng thay v0.1 trong spatial-surface pass. Nó áp dụng [Continuous-world explicit-surface model 07](../../docs/CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md), nay cũng đã superseded.
+Kit này từng thay v0.1 trong spatial-surface pass. Nó áp dụng [Continuous-world explicit-surface model 07](../../docs/evidence/CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md), nay cũng đã superseded.
 
 ## 1. Representation contract
 

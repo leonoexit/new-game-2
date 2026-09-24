@@ -4,7 +4,7 @@ Ngày dựng và desk preflight: 2026-09-22.
 
 Trạng thái: `[FIXTURE]` để kiểm play grammar và comprehension; không phải final UI, balance, content list, art approval hoặc runtime implementation.
 
-Fixture hiện thực [Mine & Fishing area-tableau contract 01](../../docs/MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) trên [scrollable Area model 08](../../docs/SCROLLABLE-AREA-TABLEAU-MODEL-08.md).
+Fixture hiện thực [Mine & Fishing area-tableau contract 01](../../docs/current/MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md) trên [scrollable Area model 08](../../docs/current/SCROLLABLE-AREA-TABLEAU-MODEL-08.md).
 
 ## 1. Câu hỏi cần kiểm
 
