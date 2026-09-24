@@ -390,7 +390,7 @@ Coverage hiện có:
 
 `[INFORMED-OWNER ACCEPTED]` v0.3.4 xếp card cùng Area thành vertical strip, dùng sticky Area-name index + neutral UI divider, và đọc như UI focus/scroll thay vì movement. Home/Commerce/River không cần synthetic Area state; Mine giữ Depth/checkpoint rail. Fresh-player risk vẫn open.
 
-Card geometry hiện hành nằm ở [on-table card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md). Mine/Fishing v0.2 exposed noun/schema ambiguity; v0.2.3 fixed art but retained a false square state target. [v0.2.4](../../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) is current: every square is a target, pure state is a strip, signed AP sits in the upper corner, and exact requirements replace generic Tool. Informed owner acceptance pass; fresh-player evidence unavailable.
+Card geometry hiện hành nằm ở [on-table card shape decision 09](ON-TABLE-CARD-SHAPE-DECISION-09.md); §10 của tài liệu đó ghép nguồn → đích → phí → kết quả cho các hành động vòng đầu sau khi Farm/Herb/Nell/Mine đã đổi luật. Mine/Fishing v0.2 exposed noun/schema ambiguity; v0.2.3 fixed art but retained a false square state target. [v0.2.4](../../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) is the latest **interaction hierarchy** fixture: every square is a target, pure state is a strip, signed AP sits in the upper corner, and exact requirements replace generic Tool. Informed owner acceptance passes for that hierarchy; its old content list is not V0 and fresh-player evidence is unavailable.
 
 Bốn ảnh mới trong Mine/Fishing v0.2.3 đã được user duyệt làm `approved reference`; chúng chưa `runtime approved`. Các art còn lại giữ status riêng trong asset record và không được tự động promote.
 

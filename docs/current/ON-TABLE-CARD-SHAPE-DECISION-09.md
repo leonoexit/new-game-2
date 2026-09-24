@@ -103,3 +103,37 @@ Không promote tên, cost, mastery threshold, art study hoặc grid size trong f
 ## 9. First comprehension correction
 
 [Internal informed pilot 01](../../paper-tests/mine-fishing-area-tableau-v0.2/pilot-results/internal-informed-pilot-01.md) nhận đúng square-card silhouette nhưng dừng ở Task B: noun badges và detail schema không cho biết hành động một cách tự nhiên. v0.2.1–v0.2.3 sửa text/art nhưng [commitment check 04](../../paper-tests/mine-fishing-area-tableau-v0.2.3/pilot-results/informed-commitment-check-04.md) cho thấy square `Mine State` vẫn đọc như target và generic Tool không khớp movement. [v0.2.4](../../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md) sửa hai lỗi đó; informed owner accepted, fresh-player evidence vẫn unavailable.
+
+## 10. Ghép card grammar cho vòng chơi đầu hiện hành (2026-09-24)
+
+`[WORKING INTEGRATION; NO NEW CONTENT OR ART]` Bảng này ghép luật đã có trong [package v1 §6.6–6.11, §7.2](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md), [Farm rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) và [Wild Herb §8](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md) vào cùng một ngữ pháp **nguồn → đích → commit → kết quả**. Con số AP của Catch, Gift, Mine và giá Seed vẫn là fixture giấy; bảng không khóa asset hoặc cách bố trí hand/tray runtime. `Character` ở Mine/River/Nell dùng đúng mapping của [fixture v0.2.4](../../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md); Farm/Herb dùng đúng Tool/Item cụ thể của luật mới.
+
+| Đích hoặc surface đang hiện | Nguồn đưa vào / cách commit | Phí gốc trong fixture | Thay đổi sau đúng một commit |
+| --- | --- | --- | --- |
+| Tilled Soil | Một Seed hợp lệ lên đúng plot | 1 AP | Seed bị tiêu; plot thành một Growing Crop `0/N`. |
+| Growing Crop chưa Watered hôm nay | Watering Can lên đúng crop | 1 AP | Chỉ crop đó được đánh dấu Watered; growth chỉ resolve một lần tại Sleep. |
+| Mature Crop | Hand lên đúng crop | 1 AP | Nhận một Fresh output; plot trở lại Tilled Soil. |
+| Wild Herb hiện ngửa tại Rìa Rừng | Hand lên đúng Herb world card | 1 AP | Bỏ world card; thêm một Wild Herb item vào inventory. |
+| Exact River Catch đang được chào | Character + Rod lên Catch | 2 AP | Nhận exact Fresh Fish, cơ hội Catch đó được resolve. Không có River buyer riêng. |
+| Direct Descent khi chưa tới CP3 | Character lên route | 1 AP | Depth +1; không nhận vật liệu. |
+| Search Side Tunnel ở CP3 | Character lên Search | 1 AP | Hiện một Exposed Ore source; Depth không đổi. |
+| Exposed Ore đã hiện | Character + Pickaxe lên Ore | 1 AP | Nhận Ore, source thành spent; Depth không đổi. Không tự refresh trong vòng đầu. |
+| Nell xuất hiện theo lịch | Character + Wild Herb item lên Nell; Gift hợp lệ | 1 AP | Tiêu item; lần đầu giữ Nell; nhận 1 Nell Heart. Gift tối đa một lần/ngày là luật Person hiện hành. |
+| Nell đã sở hữu, còn Heart | Kích hoạt chính Nell, không cần Nell xuất hiện hôm nay | 1 Heart, 0 AP | Tối đa một lần/ngày, tạo 2 AP relief cho các phí tiếp theo cùng ngày; credit còn lại hết ở Sleep. Vị trí card/control Nell đã sở hữu trong UI chưa chọn. |
+
+`0 AP` cần phân biệt: scroll/focus/inspect chỉ đổi UI, còn Buy, TV và kích hoạt Nell **là commit gameplay** dù không trừ AP. Buy phải kiểm Gold có ngay lúc mua; Shipping Bin chỉ trả Gold cuối ngày. TV sub-card hiển thị dự báo D+1 nếu được chơi, không tạo trường Tomorrow Weather toàn cục. Field Notes tự ghi family khi nhận output và cho chọn Seed ở New Day kế tiếp; record/pending state không cần giả làm square target chỉ để đều hình với card khác. Exact placement của shop listing, Shipping Bin và Field Notes choice trong UI vẫn mở.
+
+Nell xuất hiện trong world theo lịch để nhận Gift, kể cả sau khi đã kết bạn. Lá Nell đã sở hữu dùng để kích hoạt ability bất kỳ ngày nào đủ Heart; lịch xuất hiện chỉ giới hạn cơ hội Gift, không giới hạn ability. Hai surface này trỏ tới **cùng một Person identity**, nên Gift sau không sinh thêm bản sao Nell. Vị trí hiển thị lá đã sở hữu vẫn là câu hỏi UI, không được giải bằng cách buộc Nell phải có mặt hôm đó.
+
+Không bày square target cho `Care`, Rain, `Forage Search`, `Grove Batch`, Woodlot Collect, CP6 Stone, paid Descent sau CP3, Project, Mira hoặc Bram trong vòng đầu. Rain là điều kiện ngày: crop ngoài trời được Watered kể cả nếu Plant sau khi ngày mưa bắt đầu, không có Water commit 0 AP. Một crop đã Watered hoặc Mature không nhận lại Water action; Herb còn trên bàn qua Sleep cho tới khi Collect hoặc đổi Season. Mine Depth là status rail, không nhận token.
+
+**Phí hiển thị.** Upper-corner AP của một target phải phản ánh **số AP sẽ trả nếu commit ngay với trạng thái hiện tại**; focus/preview vẫn nêu phí gốc, nguồn tiêu và kết quả chính xác. Khi Nell relief còn, số AP phải trả có thể là 0 dù phí gốc là 1 hoặc 2; UI cần cho thấy phần chênh là credit Nell, không ngụ ý hành động vốn miễn phí. Đây là contract thông tin suy ra từ luật preview-before-commit và relief tự áp vào hành động có phí tiếp theo, chưa có kiểm đọc trên giao diện. Giữ một commit riêng cho mỗi crop Watered; việc giữ Can đang chọn để chạm crop tiếp theo chỉ là giả thuyết thao tác cho prototype, không giảm AP hoặc đổi số target.
+
+**Bốn kiểm tra nhất quán trước khi vẽ card mới:**
+
+1. Rain D3: sau khi Plant, crop được Watered tự động; không hiện một nút Water 0 AP để người chơi bấm thêm.
+2. Crop đạt Mature sau Sleep: Water biến mất/khóa; Hand Harvest vẫn cần 1 AP và item chưa có trước commit.
+3. Sau CP3 Extract: Ore hết, Depth giữ 3, không còn target tiêu AP mà chưa có reward được authored.
+4. Gift Herb cho Nell rồi kích hoạt cùng ngày: Heart tăng trước, sau đó credit tự trừ vào các hành động có phí tiếp theo; AP preview phải cập nhật theo thứ tự đó.
+
+Các kiểm tra này chỉ xác nhận contract logic. Mẫu orientation v0.3.4 còn Water Trough và Mira vì được dựng trước khi content bị rút; nó không phải danh sách card V0 để sao lại. Chưa có mẫu tích hợp tương tác, quan sát cảm giác Watering Can hoặc fresh-player comprehension cho toàn bộ hàng trong bảng.
