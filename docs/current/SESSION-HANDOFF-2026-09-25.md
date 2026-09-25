@@ -1,210 +1,65 @@
 # Prompt bàn giao — Little Valley Cards — 2026-09-25
 
-Hãy tiếp tục dự án **Little Valley Cards** tại:
-`/Volumes/LeNguyen02SSD/Programming/new-game-2`
+Hãy tiếp tục dự án **Little Valley Cards** trong repo `/Volumes/LeNguyen02SSD/Programming/new-game-2`. Trao đổi với tôi bằng **tiếng Việt**; tên card, Tool, action và state dùng **tiếng Anh nhất quán**. Đây là dự án **thiết kế luật giấy và thử nghiệm**, chưa có gameplay runtime. Đọc `AGENTS.md`, `README.md` và các contract hiện hành trước khi sửa.
 
-Đây là prompt bàn giao sau phiên thiết kế Mine/Fishing và thử nhiều prototype. Hãy làm việc với tôi bằng **tiếng Việt**, nhưng **mọi tên lá, trạng thái, action và nút trong game phải dùng tiếng Anh nhất quán**. Không trộn tên tiếng Việt vào UI tiếng Anh. Chọn tên dễ hiểu, không bê nguyên thuật ngữ của game tham khảo chỉ để giống nguồn.
+## 1. Điểm nối của phiên mới
 
-## 1. Điểm tiếp tục quan trọng nhất
+Phiên này đã dừng có chủ ý. **Việc đầu tiên của phiên mới là chuẩn hóa danh sách Region V0 và quan hệ giữa nhãn `Region`/`Area` trong danh mục lá.** Tôi đã nói sẽ làm việc đó ở phiên mới, nên đừng giải quyết nó trong phần bàn giao. Bắt đầu từ World hierarchy đã ghi, đối chiếu workbook và các Area cũ, rồi đề xuất một ánh xạ cụ thể để tôi duyệt nếu nó thay đổi card identity hoặc vị trí của nội dung. Đừng mặc định mọi ví dụ `Coop`/`Barn`/`Greenhouse`/`Shed` đã là lá hoạt động V0.
 
-Tôi đã coi **khung cơ chế Mine và Fishing là chốt để đi tiếp**. Điều này không có nghĩa code, art, taxonomy chi tiết và cân bằng đã hoàn thiện.
+Sau **mỗi action hoàn tất**, hãy báo ngắn kết quả và đề xuất **đúng một action tiếp theo**. Đừng hỏi tôi từng micro step như Tool, item, output thường tình: suy ra theo thứ tự **quyết định của tôi → contract Little Valley Cards mới nhất → Stardew video game/board game → lựa chọn chuyển thể có ghi nhãn**. Chỉ đưa tôi duyệt ngã rẽ lớn về identity/state, quan hệ chứa/thay lá, AP/action, tiến trình hoặc kinh tế. Không lấy nguồn tham khảo ghi đè quyết định riêng của dự án.
 
-Trợ lý đề xuất dựng bản chơi tích hợp một ngày Farm–Mine–Fishing; tôi đã trả lời rõ: **“không cần thiết, bỏ qua luôn.”** Không tự dựng lại, không biến bước đó thành điều kiện để tiếp tục thiết kế.
+## 2. Những gì phiên này đã hoàn tất
 
-Ngay trước yêu cầu bàn giao, trợ lý đề xuất bước tiếp theo là **thiết kế nâng Tool, bắt đầu với hiệu ứng Pickaxe**, đối chiếu hướng tăng sức phá của nguồn với Mine mới; sau đó mới đặt phí, nơi và thời điểm nâng. Đây là điểm nối hợp lý cho phiên mới, **chưa có hiệu ứng nâng mới nào được tôi duyệt**.
+### Mine và nâng Pickaxe
 
-Hãy bắt đầu bằng việc đọc quyết định mới nhất, đối chiếu tài liệu nâng Tool, rồi đề xuất một phương án Pickaxe cụ thể theo `state → action → consequences`. Không quay lại hỏi có muốn tiếp tục Mine/Fishing hay dựng bản một ngày không.
+- [Mine contract](MINE-CURRENT-CONTRACT-01.md) đã khóa CG-17/19/20: ba nguồn thấy sẵn, `Character + Pickaxe → Break` là một commit; `Next` miễn phí dưới từng ô, đổi riêng nguồn chưa xử lý; `Descend` là commit 0 AP sau khi lộ lối. Không dùng lại `Search/Extract`, phí lật hoặc vòng quay lại hữu hạn từ prototype cũ.
+- Mỗi tầng có sáu instance hữu hạn, ba hiện một lúc. Tầng đầu: 2 `Rock`, 2 `Ore Rock` thường, 2 `Ore Rock` state `Dense`; từ tầng hai: 2 Rock, 4 Dense. Một Rock mỗi tầng giấu lối, Rock kia cho `Nothing Found`. Ore Rock cho 1 Ore. `Next` không reroll kết quả đã gán. Khi cạn nguồn ngoài bàn, Next khóa; khi đã xử lý hết, lối xuống chắc chắn lộ. Rời Mine và `Sleep` giữ nguyên tầng, pool, thứ tự, spent và lối; chỉ Descend tạo tầng mới.
+- `Break` phí 1 AP trên Rock/Ore Rock thường, Dense 3 AP với Pickaxe thường hoặc 2 AP với Copper Pickaxe. Cầm Copper tự giảm phí khi chạm Dense; không thêm nhát phá hoặc tăng Ore. Trong Item, `Upgrade` tiêu 3 Ore, 0 Gold, 0 AP để đổi ngay identity Pickaxe → Copper Pickaxe. Các lá Dense chờ sẵn để hiệu ứng nâng có chỗ dùng. Không thêm Furnace, Coal, Bar, Blacksmith hoặc thời gian chờ.
 
-## 2. Những gì đã đạt được
+### Fishing
 
-### 2.1. Nền card grammar và mục đích output đã có
+- [Fishing contract](FISHING-CURRENT-CONTRACT-01.md) khóa CG-18/22/23/24 và đóng phạm vi Fishing V0: River có ba instance cùng identity `Fishing Spot`, nhìn giống nhau; người chơi không thấy odds. Mỗi ngày gán ẩn đúng một spot 25%, một 50%, một 75%. `Character + Fishing Rod → Cast` trên spot chưa spent tốn 1 AP dù thành công hay `No Bite`; mỗi spot chỉ Cast một lần/ngày. Thành công nhận đúng 1 `Silver Minnow`, Fish duy nhất V0. `Sleep` mở lại ba spot và xáo odds một lần; rời/vào River không reroll. Không có `Next`, minigame thời gian thực hay state hiển thị odds. Fish có thể giữ hoặc gửi Shipping Bin; giá bán chưa khóa.
+- `Blue Eel`, exact `Catch`, Leaving/Lingering và đề xuất Quiet Water/Ripples/Splashing Fish chỉ là lịch sử thử. Các fixture cũ chưa được migrate thành Fishing V0.
 
-- Card grammar mô tả **loại lá → nơi thuộc về → tương tác → biến đổi**. Chọn nguồn rồi chạm đích là lớp thao tác, không phải bản chất grammar.
-- Character là Person card; Hand, Watering Can, Fishing Rod, Pickaxe là Tool card.
-- Item là loại lá, không đồng nghĩa lá đã ở khu inventory. Fish là Item/Fish; các identity cá giữ nguyên khi được bắt và đưa vào Item.
-- Supermarket là Building; Shipping Bin và TV là Equipment. Farmhouse là Building; TV ở trong Farmhouse. Equipment không tự thêm hệ thống trang bị.
-- Bách Khoa ghi từng identity khi chính lá ấy lần đầu được thấy, không đợi sở hữu và không thưởng Seed. State mới không tự tạo identity mới.
-- Fish dùng để bán qua Shipping Bin; giữ luật chọn số lượng/xác nhận gửi, tiền trả cuối ngày. Giá Fish chưa chốt và fixture tích hợp cũ chưa triển khai bán Fish.
-- Ore dùng **trực tiếp để nâng Tool**. Chưa cần Furnace–Coal–Bar. Không tự đưa chuỗi này trở lại.
-- Farm đã có loop khá rõ; tôi không yêu cầu thiết kế lại. Những lỗi UI nhỏ không phải ưu tiên hiện tại.
+### Farm, Watering Can và Field
 
-### 2.2. Mine — luật mới nhất đã chốt, CG-17
+- Một lá đất tương ứng **một luống**; Watering Can V0 tưới **một crop/1 AP**, không tự biến nâng cấp thành tưới một khối 2×2 hay nhiều lá cùng lúc. Watering Can upgrade đa đích chưa là luật.
+- [Farm land contract](FARM-V0-LAND-AND-PLOT-CONTRACT-01.md) khóa Field V0 có **8 vị trí đất cố định từ đầu**: 2 `Soil` trống, 3 `Soil` có bụi, 3 lá đá riêng. Tám vị trí là sức chứa riêng của Field; Farmhouse/Shipping Bin/Building ở Home **không** trừ đất Field. Không có kề nhau, khoảng cách hoặc lưới 2×4 mang ý nghĩa gameplay.
+- Dọn bụi: `Sickle → Soil` có bụi, 1 AP, cùng lá Soil đổi hình sang trống, không item. Dọn đá: `Hoe → Field Rock`, 1 AP, lá đá bị thay **tại đúng vị trí cũ** bằng `Soil` trống, nhận 1 `Stone`. `Field Rock` là tên làm việc để phân biệt đá trong Field với `Rock` Mine. `Hoe → Soil` trống để `Till`, 1 AP, đổi **state của cùng identity Soil** thành đã cày. `Empty Soil`, `Overgrown Soil`, `Tilled Soil` là state đọc/lọc, không là ba Bách Khoa identity. Plant đổi Soil đã cày → Crop identity; Harvest trả lại Soil đã cày. Vị trí không sinh thêm khi Clear/Till/Plant/Harvest.
+- Công dụng, giá bán và nguồn khác của `Stone` được hoãn tới giai đoạn **đổ nội dung**, không xóa Stone reward vì hiện chưa có nơi tiêu. Đừng mở một cuộc hỏi đáp riêng cho mỗi item bổ sung.
 
-Mental model: **đối tượng đang thấy → quyết định tác động → trả công → nhận hệ quả**. Hành động là phá đá; không cần giả lập di chuyển.
+### World, card grammar và UI
 
-Tên tiếng Anh:
+- [World nested-card architecture](WORLD-NESTED-CARD-ARCHITECTURE-01.md) khóa mental model CG-35–42: màn đầu có lá `World`; chơi World mở tableau Region; chạm `Home` mở Home với `Field`, `Farmhouse`, `Shipping Bin` và các lá Home thực có; chạm Field mới thấy đất/crop/đá; chạm Farmhouse thấy `TV` và `Bed`. Bản thân card là nút tương tác của object; card có thể chứa card con, đổi state hoặc cả hai. Container có thể hữu hạn/vô hạn theo từng loại, không có trần chung.
+- CG-42 ghi quy tắc vận hành V0: mỗi lần chỉ một tableau; chạm container mở con, Back về đúng cha, 0 AP và không commit; breadcrumb/Back là UI, không là card. Back/reopen không hoàn tác, refresh, Sleep hoặc nhân bản card. Một panel/focus đang phủ đóng trước khi Back về cha. Vị trí cuộn/focus và bộ lọc giữ trong ngày nếu target còn hiện; sau Sleep bộ lọc Field về `Tất cả`. Nguồn Hand/Tool/Item đang chọn có thể đi qua các tầng để chạm target thật; container/Back không tiêu nguồn. Panel độc lập hoặc sang ngày hủy nguồn tạm theo UI defaults.
+- [Field presentation contract](WORLD-GROUP-PRESENTATION-CONTRACT-01.md): nhóm hiển thị, lọc và dòng tóm tắt là **UI trong Field**, không tạo identity, AP, reward hay Bách Khoa. Mặc định hiện mọi lá. Tách mục lọc Soil trống, Soil đã cày, Crop Growing/Mature và vật cản; số đếm tính từ đủ tám vị trí, kể cả lá bị lọc ẩn. Farmhouse/Bin ở Home, không phải lá được bộ lọc Field giữ hiện.
+- Bách Khoa ghi **identity khi chính lá đó lần đầu hiện**, không ghi sẵn cả nhánh chỉ vì World/Home được mở. TV ở Farmhouse là commit dự báo D+1 0 AP; `Bed` đã được người dùng nhắc là lá thật nhưng loại/action cụ thể chưa định nghĩa trong contract riêng.
+- Nguồn tham khảo người dùng cung cấp là [stardew_point_and_click_world_design.md](../../stardew_point_and_click_world_design.md). Đã đối chiếu hướng World → Region → Object → Action tại [crosswalk](../evidence/WORLD-ARCHITECTURE-REFERENCE-CROSSWALK-01.md). Nguồn tham khảo không tự thành luật Little Valley Cards.
+- Đã thêm `AGENTS.md` để phiên sau theo thứ tự nguồn và xử lý các micro step theo lô.
 
-- **Rock:** đá thường; phá có thể nhận tài nguyên, lộ lối xuống hoặc không có gì.
-- **Ore Rock:** đá nhìn thấy có quặng, thay tên làm việc cũ **Exposed Ore**; phá để nhận **Ore**.
-- **Ore:** Item output, identity riêng với nguồn Ore Rock.
-- **Break:** hành động Character + Pickaxe tác động lên đá và trả AP.
-- **Next:** nút bên dưới từng lá để đổi riêng ô đó.
-- **Descend:** hành động dùng lối xuống để sang tầng.
+## 3. Trạng thái repo lúc bàn giao
 
-Luật hiện hành:
+- Nhánh làm việc là `main`, remote `origin` là `https://github.com/leonoexit/new-game-2.git`. Phiên bàn giao này được commit và push theo yêu cầu của chủ dự án; **kiểm `git status --short --branch` và `git log -1` ngay khi bắt đầu phiên mới** để xác nhận checkout thực tế.
+- Repo vẫn là **paper design**: `docs/current/` có contract và workbook `LITTLE-VALLEY-CARD-REGISTER-V0.xlsx`; `docs/evidence/` giữ đối chiếu/đề xuất; `paper-tests/` và `art/` giữ prototype/style study. Chưa có game runtime phản ánh toàn bộ CG-17–42, save/load gameplay, visual QA mobile hoặc fresh-player test mới. Đừng gọi việc chốt contract là đã triển khai code.
+- [Decision log](ON-TABLE-CARD-SHAPE-DECISION-09.md) có lịch sử CG-01–42 và UI decisions; một số hàng cũ cố ý giữ nguyên để thấy provenance, với ghi chú mới chỉ ra quyết định thay thế. [Danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) đã cập nhật Mine/Fishing/Field và các identity liên quan. `README.md` chỉ tới các nguồn hiện hành.
+- [Area tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md), registry Year 1, một số fixture và prototype chứa snapshot Farm phẳng, `Tilled Soil` identity riêng, Mine Search/Extract hoặc Fishing exact Catch. Chỉ dùng làm chứng cứ lịch sử khi mâu thuẫn với contract mới. `FISHING-V0-LOCK-PROPOSAL-01.md` cũng là đề xuất trước khi chốt.
+- Kiểm tra tài liệu cuối phiên: `git diff --check` qua; `python3 scripts/check_markdown_links.py` báo **955 liên kết nội bộ, 0 lỗi**. Workbook XLSX đọc được và XML hợp lệ. Không tuyên bố test runtime CG-17–42 vì chưa có runtime tương ứng.
 
-1. Có **3 lá mở sẵn**. Không có action lật ô hoặc trả phí xem lá.
-2. Character + Pickaxe → Rock/Ore Rock → Break trả AP → giải kết quả. Nếu đã phá và nhận Ore thì **không có phí Extract thứ hai**.
-3. Không muốn xử lý một lá thì dùng Next ngay dưới lá đó. Đổi riêng ô này; hai ô kia giữ nguyên. Next không mất AP, không phải Break.
-4. Lá bỏ qua sẽ xuất hiện lại. Vòng luân phiên tiếp tục **không giới hạn một vòng quay lại**, cho tới khi sang tầng khác.
-5. Trạng thái từng lá được giữ. Không tự reset nguồn đã xử lý để nhận thưởng lần nữa.
-6. Lộ lối xuống chưa tự chuyển tầng; phải chọn Descend.
-7. Rời Mine vẫn lưu tiến độ, trạng thái các lá, bàn và vị trí trong vòng luân phiên; trở lại tiếp tục từ đó.
+## 4. Các bước tiếp theo, theo thứ tự
 
-Chưa khóa số lá/tầng, phân bố, lượng Ore, phí Break/Descend và chi tiết cadence ngày mới. Không coi bộ 6 lá hoặc phí 1 AP của các prototype cũ là luật cuối. Câu tôi chốt “mỗi action 1 AP” vừa rồi nằm trong thảo luận Fishing, đã được ghi thành phí Cast; chưa được áp ngầm lên tất cả action khác trong game.
+1. **Phiên mới:** đọc `AGENTS.md`, World architecture, decision log CG-35–42 và sheet V0; kiểm trạng thái Git. Sau đó đề xuất **danh sách Region V0 cụ thể** và quy tắc ánh xạ `Region` với `Area` cũ. Chỉ trình tôi duyệt phần làm đổi identity/nơi xuất hiện hoặc cây chứa. Đừng mở lại Farm/Mine/Fishing đã chốt chỉ vì thuật ngữ cũ còn trong fixture.
+2. Khi tôi chốt taxonomy, đồng bộ `WORLD-NESTED-CARD-ARCHITECTURE-01.md`, decision log, workbook và README/contract nào thật sự bị ảnh hưởng. Phân biệt lá `Home`, `Field`, Farmhouse, River, Mine, forest Region/Area theo cây mới; bảo toàn các loop và AP đã khóa.
+3. Sau đó mới xử lý các ranh giới cấu trúc còn mở có ảnh hưởng gameplay: `Bed`/đường Sleep trong Farmhouse; danh sách lá Home hoạt động V0; cách các lá Region khác dẫn tới tableau con. Chỉ chọn một action kế tiếp sau mỗi kết quả, không gom thành hàng loạt câu hỏi nhỏ.
+4. Khi có nhu cầu triển khai, migrate prototype/fixture cũ theo contract mới, viết kiểm tra meaningful cho state/persistence và thử đọc trên mobile. Đây là backlog triển khai; không ép dựng bản tích hợp một ngày chỉ để chứng minh tài liệu. Chủ dự án trước đây đã bỏ qua đề xuất đó.
 
-Phân biệt với nguồn: Stardew video game có các ore node nhìn thấy và phá để nhận Ore. Board game dùng action/dice/Mine Map, kết quả Ore cho Ore trực tiếp. Chuỗi Search → Exposed Ore → Extract là thiết kế cũ của dự án, không phải chuỗi nguyên bản bắt buộc phải giữ.
+## 5. Known bugs, edge cases và điểm dễ nhầm
 
-### 2.3. Fishing — hướng mới nhất, CG-18
+- **Rủi ro tài liệu:** các đoạn lịch sử trong `docs/current/`, workbook cũ trong commit trước và fixture có thể trái contract mới. Ưu tiên quyết định mới nhất và contract chuyên cơ chế; không âm thầm khôi phục World dạng Area phẳng, `Tilled Soil` identity riêng, đá Field là hình Soil, Fishing odds hiện trên lá hoặc phí Mine cũ.
+- **Chưa có runtime/persistent save:** đi ra rồi vào lại Mine/River/Field phải giữ state trong luật; reload trên đĩa sẽ cần lưu instance ID, pool/thứ tự Mine, Rock nào giấu lối, spent, odds Fishing ẩn, Fish nhận, tám vị trí Field và card/state đang chiếm. Đừng báo các edge case này đã được code xử lý.
+- **Mine:** `Next` không tạo bản sao instance hoặc reroll Rock; nguồn spent không hồi thưởng sau Sleep; khi pool ngoài bàn cạn thì Next vô hiệu; `Descend` bỏ nguồn tầng cũ sau khi báo trước. Nếu đủ 3 Ore nâng Copper giữa ngày, Dense tiếp theo phải dùng phí 2 AP; Rock và Ore Rock thường vẫn 1 AP.
+- **Fishing:** ba spot giống nhau về hiển thị, nhưng gán 25/50/75 ẩn; inspect/Back/reload không lộ hoặc đổi odds. Cast hụt vẫn tốn 1 AP và spent; Cast bị từ chối không rút RNG. Sleep xáo đúng một lần, tránh reroll bằng đóng/mở River.
+- **Field:** bụi là state của Soil, đá là lá riêng **được thay** bởi Soil sau Clear; Hoe Till Soil trống không tạo identity `Tilled Soil`. Không cộng thêm vị trí thứ chín; Building ở Home không ăn vào tám suất Field. Bách Khoa chỉ ghi `Field Rock` khi lá đá hiện, `Stone` khi item nhận, không ghi Soil thay thế là identity mới nếu Soil đã thấy.
+- **Điều hướng:** Back đóng overlay/focus trước; chọn Tool qua container không commit lên container; chỉ target hợp lệ trả AP. Khi target đã biến mất/bị lọc ẩn, không giữ focus sai. Bộ lọc Field sau Sleep về `Tất cả`; trạng thái crop/đá/spent vẫn theo luật riêng, không reset vì lọc.
+- **Còn mở rõ ràng:** taxonomy Region/Area; `Bed`/Sleep UI; bố cục Back/breadcrumb và thử trên điện thoại; thứ tự/hình sáu vật cản; giá Fish; công dụng Stone khi đổ nội dung; nâng Tool sau Copper; refresh/save runtime. Đây không phải bằng chứng có bug runtime hiện hữu.
 
-Tôi muốn **xác suất và một chút kỹ năng đọc cơ hội**, không phải phản xạ real time.
-
-Luật đã xác nhận:
-
-1. **3 điểm câu mở sẵn.** Hình/trạng thái trên lá biểu thị xác suất có cá. Có thể đổi cả tên hiển thị để dễ phân biệt.
-2. Character + Fishing Rod → chọn điểm câu → **Cast**.
-3. **Mỗi Cast hợp lệ tốn đúng 1 AP**, có Fish hay **No Bite** vẫn phải trả, không hoàn phí khi hụt.
-4. Kết quả dùng xác suất của **trạng thái người chơi đã thấy trước commit**.
-5. Sau khi giải kết quả, trạng thái các điểm câu **có thể thay đổi**. No Bite vẫn là một Cast đã thực hiện nên cũng kích hoạt bước cập nhật này.
-6. “Có thể đổi” không bắt buộc cả ba điểm đều đổi sau mọi Cast. Chưa chốt phân bố chuyển trạng thái hoặc bắt điểm vừa câu phải xấu đi.
-7. Đọc thông tin, chọn nguồn, xem/đổi lá không làm mới cơ hội miễn phí. Thiếu AP hoặc target không hợp lệ thì không commit, không đổi state.
-8. Không có đồng hồ đếm ngược, Hook đúng thời điểm, Reel/Ease hoặc bộ đếm Leaving/Lingering trong hướng hiện tại.
-
-Tên trạng thái **chỉ mới là đề xuất**, chưa duyệt cuối:
-
-| Tên đề xuất | Dấu hiệu | Xác suất tương đối |
-| --- | --- | --- |
-| Quiet Water | Nước yên, chưa thấy cá | Thấp |
-| Ripples | Gợn nước/bóng cá | Trung bình |
-| Splashing Fish | Cá quẫy rõ | Cao, không bảo đảm |
-
-Đây dự kiến là state của điểm câu, không tự thành ba identity. Tên cơ sở/taxonomy Fishing Spot, phần trăm, nhóm cá, giới hạn khai thác, cadence khi rời Area/Sleep chưa chốt. Không tự ghi mọi identity cá vào Bách Khoa chỉ vì thấy dấu hiệu chung trên mặt nước.
-
-### 2.4. Nghiên cứu và các hướng đã thử, không phải luật hiện tại
-
-- Đối chiếu Stardew board và Fantasy Life; nguồn và phần tự thiết kế được tách trong tài liệu. Fantasy Life 3DS và Fantasy Life i không được đánh đồng.
-- Đã thử hình Exposed Ore có mảnh nứt làm điểm yếu. Tôi thấy hình rõ nhưng cơ chế vẫn cấn. Không phát triển tiếp trò tìm điểm yếu trên hình.
-- Mine v0.1: trả AP Dig để lật, rồi trả thêm Extract; nhóm mới thay nhóm cũ, một vòng quay lại. Đã bị CG-17 thay thế.
-- Mine v0.2: thấy target sẵn, xử lý xong bổ sung một ô; đá chắn không cho Item. Cũng chưa phải CG-17 vì chưa có Next từng ô/loop liên tục và khác ý nghĩa Rock mới.
-- Fishing v0.1: Fish hiện sẵn, Catch làm cá khác tiến tới Leaving. Tôi đã chơi, thấy không ấn tượng và khó phân biệt state; không lấy làm cơ chế tiếp theo.
-- Các ý tưởng giật cần đúng lúc bị bác vì real time. Reel/Ease, tín hiệu Strong Pull và chọn kiểu kéo chưa được chốt.
-
-## 3. Trạng thái codebase và tài liệu
-
-### 3.1. Nguồn chuẩn cần đọc
-
-Mọi đường dẫn bên dưới thuộc `/Volumes/LeNguyen02SSD/Programming/new-game-2`:
-
-- `docs/current/ON-TABLE-CARD-SHAPE-DECISION-09.md`: §10, đặc biệt **CG-17 và CG-18**, là nguồn quyết định chính. Có ghi chú đầu phần danh mục về các snapshot cũ.
-- `docs/current/MINE-FISHING-REFERENCE-DIRECTIONS-02.md`: §11 là Mine cuối; §2–10 là nghiên cứu/prototype lịch sử.
-- `docs/current/FISHING-LOOP-PROPOSAL-01.md`: **§5 là Fishing hiện tại**, gồm Cast 1 AP; §2–4 là các hướng cũ.
-- `docs/current/ORE-USE-REFERENCE-AND-PROPOSAL-01.md`: §4–5 là đối chiếu nguồn; §7 là định hướng tác dụng Tool. Đầu file đã ghi điểm tiếp tục sau CG-17/18 và việc bỏ qua bản tích hợp một ngày.
-- `docs/current/LITTLE-VALLEY-CARD-REGISTER-V0.xlsx`: một sheet `Lá bài V0`, danh mục đã audit 28 dòng A7:K34 ở mốc cũ; **chưa migrate theo Mine/Fishing mới**.
-- `stardew rules.pdf`: rulebook board do tôi cung cấp. Trang 17 Mine, 18 Fishing, 20 nâng Tool. Không cần tìm lại toàn bộ từ đầu.
-
-Các file hiện có chứa nhiều lớp lịch sử. Nếu đoạn cũ nói Search/Extract, chỉ có CP3, trả phí lật, một vòng quay lại, hoãn Fishing hoặc chưa chốt Mine, **không dùng nó phủ quyết CG-17/18 và chỉ đạo cuối phiên**.
-
-### 3.2. Các artifact đang có
-
-| Thư mục | Nội dung và giới hạn |
-| --- | --- |
-| `paper-tests/integrated-card-grammar-v0.1/` | Fixture HTML/JS grammar cũ. Không phải bản tích hợp một ngày mới. Vẫn có Mine/Fishing baseline; chưa nâng Tool. |
-| `paper-tests/mine-dig-flip-v0.1/` | Prototype trả AP đào-lật; giữ làm lịch sử. |
-| `paper-tests/mine-visible-action-v0.2/` | Prototype thấy target rồi xử lý/bổ sung ô; giữ làm lịch sử. |
-| `paper-tests/fishing-opportunities-v0.1/` | Before They Leave; hai scene cố định, bảng so lần thử; bị hướng CG-18 thay thế. UI tiếng Anh. |
-| `art/style-studies/exposed-ore-weak-point-v0.1/` | Một study điểm yếu, hai lần chỉnh, source PNG, bản 512/160px, mockup lá vuông 224px, script dựng khung, prompts và record. Chưa approved/runtime. |
-
-Ba prototype riêng có `fixture.html`, `engine.js`, `ui.js`, `logic-check.cjs`, `README.md`. Fixture tích hợp dùng `fixture.js` thay vì engine/ui riêng. Các prototype là HTML/JS độc lập, không phải runtime được phát hành; không có dependency/server bắt buộc để người dùng tự mở file.
-
-**Chưa có prototype đúng toàn bộ Mine CG-17 hoặc Fishing CG-18.** Chưa migrate workbook, chưa triển khai nâng Tool, chưa thêm taxonomy mới vào runtime. Các prototype lưu trạng thái qua Farm trong phiên JS; reload/test reset bắt đầu lại. Không được gọi đó là persistent save trên đĩa.
-
-### 3.3. Git và thay đổi chưa commit
-
-Repo đang có thay đổi chưa commit từ nhiều lượt; không phải tất cả do lượt mới nhất. Bảo toàn, không revert hàng loạt, không tự commit/push.
-
-Tracked modified:
-
-```text
-README.md
-docs/current/CONTENT-MINIMUM-REGISTRY-01.md
-docs/current/MINE-FISHING-AREA-TABLEAU-CONTRACT-01.md
-docs/current/ON-TABLE-CARD-SHAPE-DECISION-09.md
-docs/current/SCROLLABLE-AREA-TABLEAU-MODEL-08.md
-docs/current/YEAR-1-PAPER-DESIGN-PACKAGE-V1.md
-```
-
-Untracked đã thấy trong phiên, cộng file bàn giao này:
-
-```text
-art/style-studies/exposed-ore-weak-point-v0.1/
-docs/current/FISHING-LOOP-PROPOSAL-01.md
-docs/current/LITTLE-VALLEY-CARD-REGISTER-V0.xlsx
-docs/current/MINE-FISHING-REFERENCE-DIRECTIONS-02.md
-docs/current/ORE-USE-REFERENCE-AND-PROPOSAL-01.md
-docs/current/SESSION-HANDOFF-2026-09-25.md
-paper-tests/fishing-opportunities-v0.1/
-paper-tests/integrated-card-grammar-v0.1/
-paper-tests/mine-dig-flip-v0.1/
-paper-tests/mine-visible-action-v0.2/
-```
-
-Đầu phiên mới chạy `git status --short` để biết trạng thái thực; đừng dùng `git diff --stat` một mình để đếm việc đã làm vì nó không bao gồm các artifact untracked.
-
-### 3.4. Những kiểm tra đã thực hiện
-
-- Mine v0.1: model qua các trường hợp phí nguyên tử, không peek/nhận trùng, vòng quay lại, xuống ở 0 AP, Farm/Sleep; 720 hoán vị có nhãn tương ứng 60 thứ tự nội dung.
-- Mine v0.2: qua 60 thứ tự nội dung và 200 lượt tạo có seed; refill một ô, giữ lối xuống, chi phí và state.
-- Fishing v0.1: 67 state chuỗi Catch đủ AP / 37 kết thúc; kiểm thời điểm cá rời/cá mới tới, AP, không bắt trùng, hàng chờ hữu hạn và Farm.
-- JS syntax, tham chiếu HTML tĩnh và `git diff --check` đã kiểm. Các count trên là kết quả tại thời điểm dựng artifact, không phải test cơ chế CG-17/18.
-- Tôi đã chơi các prototype và đưa feedback; đó là review của chủ dự án đã biết luật, không phải fresh-player study.
-- QA browser tự động với file local từng bị chặn. Không dùng localhost/CDP/đường vòng để vượt lệnh chặn. Không tuyên bố đã QA trực quan trên điện thoại. Art study từng được xem bằng công cụ ảnh tĩnh, không đồng nghĩa browser QA.
-
-Khi sửa code tương ứng mới chạy lại các check thích hợp:
-
-```sh
-node paper-tests/mine-dig-flip-v0.1/logic-check.cjs
-node paper-tests/mine-visible-action-v0.2/logic-check.cjs
-node paper-tests/fishing-opportunities-v0.1/logic-check.cjs
-```
-
-Không lặp tất cả test chỉ vì bắt đầu một lượt thảo luận thiết kế.
-
-## 4. Bước tiếp theo chính xác
-
-1. Đọc CG-17/18 và §7 tài liệu Ore/Tool; giữ Mine/Fishing mới làm nền. Tôi đã bỏ qua bản chơi một ngày, không dựng hoặc đề nghị lại.
-2. **Bắt đầu từ hiệu ứng nâng Pickaxe**, trước bảng giá. Mục đích đã duyệt của Ore là nâng Tool trực tiếp.
-3. Định hướng nguồn trước đây: Pickaxe tăng sức phá, giảm số nhát với cùng vật cản và cho phá vật cản lớn hơn; không tự tăng Ore rơi ra. Đề xuất cách biểu diễn hợp lý bằng lá/action trên Mine mới. Chưa được giả định HP/độ cứng/nhiều nhát đã tồn tại hoặc một nhát nguồn luôn bằng 1 AP.
-4. Viết một trường hợp `state → action → consequences` so Pickaxe thường với cấp nâng đầu tiên. Nêu rõ tác dụng có ý nghĩa gì và phần nào là chuyển đổi thiết kế, phần nào có từ nguồn. Nếu cần thêm loại đá hoặc state để hiệu ứng có nghĩa, ghi đó là đề xuất cần xét, không lén thêm nội dung để hợp thức hóa nâng cấp.
-5. Sau khi hiệu ứng rõ và được duyệt, mới thiết kế số Ore, Gold nếu có, nơi/thời điểm nâng và identity qua các cấp. Không tự nhập Blacksmith hoặc thời gian chờ của nguồn vào dự án.
-6. Sau Pickaxe mới xét Tool khác theo ưu tiên. Watering Can từng được định hướng tăng phạm vi/sức chứa theo nguồn; Fishing Rod chưa chốt hiệu ứng mới trên xác suất. Không tự mặc định Rod +x% hoặc mỗi Tool dùng cùng một thang nâng.
-7. Chỉ migrate workbook/code theo những quyết định đã đủ rõ khi đến lượt triển khai thích hợp. Việc còn backlog này không phải lý do chặn thiết kế nâng Tool hoặc ép tôi test lại hai loop.
-
-Các đề xuất nâng cũ **đã rút**: miễn AP lần đầu mỗi ngày, Pickaxe +1 Ore, gói phí chung 1 Ore, các timing trước/sau Sleep của gói đó. Đừng khôi phục như thể đã được duyệt. Yêu cầu “theo bản gốc” nói về tác dụng tham chiếu; cách đưa vào game lá bài phải rõ, không bê nguyên hệ thống chuyển động.
-
-## 5. Bugs, edge cases và giới hạn cần nhớ
-
-Đây chủ yếu là **khoảng trống thiết kế/migration**, không có bằng chứng model đang fail các test đã chạy:
-
-- Tài liệu cũ, workbook và prototype chưa đồng bộ với CG-17/18; dễ tiếp tục nhầm cơ chế đã bỏ. Đây là rủi ro lớn nhất khi chuyển phiên.
-- Mine: Next cần luân phiên từng ô mà không nhân đôi cùng instance trên bàn, mất tiến độ hoặc hồi thưởng nguồn spent. Xử lý khi mọi nguồn đã phá, khi pool nhỏ hơn số ô, và vị trí lối xuống trong vòng chưa được triển khai đúng luật cuối.
-- Mine: lưu sau rời Area đã chốt; thời điểm refresh/Sleep/ngày mới và persistence qua reload chưa được chốt/triển khai. Không đồng nhất hai việc này.
-- Fishing: giải kết quả bằng xác suất trước Cast, sau đó mới cập nhật mặt nước; không được dùng state mới để âm thầm đổi odds của hành động vừa chọn.
-- Fishing: No Bite vẫn trả 1 AP và cập nhật state; thiếu AP/target không hợp lệ thì không làm gì. Tránh double commit khi chạm lặp hoặc animation.
-- Fishing: Next/inspect/reopen không được reroll state miễn phí. Chưa chốt Fishing có Next như Mine hay không; đừng mặc định phải có.
-- Fishing: state phải dễ đọc. Leaving/Lingering đã bị tôi nhận xét khó phân biệt. Tên Quiet Water/Ripples/Splashing Fish vẫn chỉ đề xuất, chưa có art hoặc test hiểu mới.
-- Fishing: nếu luôn chỉ chọn xác suất cao nhất thì kỹ năng có thể rất nhẹ. Đây là điều cần quan sát về sau, không tự thêm minigame, xác suất ẩn hoặc hình phạt để “sửa” khi tôi chưa yêu cầu.
-- Prototype Fishing cũ có Catch chắc chắn 1/2 AP và departure theo số Catch; **không phải luật Fishing hiện tại** dù code test pass.
-- Prototype Mine v0.2 khiến quặng thường có lợi hơn đá cùng phí vì đều mở lá mới; không coi đó là bằng chứng cân bằng cho CG-17.
-- Chưa có nâng Tool, vùng tưới/refill, loại đá/độ cứng chuẩn, giá Fish hoặc mức phí nâng. Không nói chúng đã chạy trong code.
-- Không cần sửa lỗi UI nhỏ, art hoặc làm lại các demo trước khi xử lý bước nâng Pickaxe tôi đang đi tới.
-
-## 6. Cách phối hợp với tôi
-
-- Đề xuất cụ thể, nói rõ đã chốt hay đang thử; không hỏi lại các quyết định đã có.
-- Đừng kéo dài bằng nhiều lớp giả định không cần thiết. Tôi thường cần thấy action thật có ý nghĩa gì trước khi quan tâm UI hoặc con số.
-- Tôi cho phép tự giải quyết thao tác UI thường tình; chỉ hỏi khi cần chọn bản chất luật hoặc đánh đổi lớn không thể suy ra.
-- Không coi những giải pháp bạn tự đề xuất là tôi đã duyệt nếu tôi chỉ đồng ý một phần cụ thể.
-- Giữ lời giải thích tiếng Việt, game bằng tiếng Anh. Không tự đổi tên game/card sang tiếng Việt.
-- Không tự commit/push, không tự mở một task mới hoặc dựng bản tích hợp một ngày đã bị bỏ qua.
-
-**Hãy bắt đầu phiên tiếp theo bằng một đề xuất hiệu ứng nâng Pickaxe trên Mine mới, có ví dụ trước/sau. Đọc nguồn đã lưu trước; đừng bắt đầu lại việc tìm cơ chế Mine hoặc Fishing.**
+**Hãy bắt đầu bằng taxonomy `Region`/`Area` V0 ở phiên mới. Sau khi hoàn tất một action, luôn đề xuất đúng một action tiếp theo.**

@@ -6,7 +6,15 @@ Mục đích: chọn bộ content fixture nhỏ nhất đủ để Producer, Con
 
 **Phạm vi lá/entity V0 hiện hành:** tra [danh mục card grammar §10](ON-TABLE-CARD-SHAPE-DECISION-09.md) trước khi dùng bất kỳ tên nào bên dưới. Registry này giữ các tên và phép thử lịch sử, kể cả `Field Notes` reward, Runner Bean/Lemon Balm Seed chưa có nguồn, Project đã bị bác bỏ và nguồn ngoài vòng đầu; chúng không tự trở thành card V0. Khi hai tài liệu khác nhau, danh mục card grammar V0 có ưu tiên cho loại lá, nơi xuất hiện và trạng thái quyết định.
 
+**Field V0 · CG-38/39:** [Farm land contract 01](FARM-V0-LAND-AND-PLOT-CONTRACT-01.md) chốt tám vị trí trong lá `Field` ở tầng dưới Home: 2 Soil trống, 3 Soil có bụi và 3 lá đá. Sickle 1 AP dọn bụi, đổi ảnh trong Soil; Hoe 1 AP đập lá đá, thay bằng Soil trống ở cùng vị trí và nhận 1 Stone. Các dòng lịch sử bên dưới về Farm phẳng, sức chứa khác hoặc đất mở thêm theo tiến độ không thay quyết định này.
+
+**Till V0 · CG-40:** Hoe lên Soil trống, 1 AP, đổi trạng thái/ảnh của **cùng lá Soil** sang đã cày. `Tilled Soil` là tên state để đọc/lọc, không là identity/Bách Khoa riêng. Plant vẫn đổi Soil đã cày thành Crop identity; Harvest trả về Soil đã cày.
+
+**Stone · CG-41:** Clear đá Field vẫn trả Stone. Công dụng/giá bán/nguồn khác của Stone được hoãn đến giai đoạn đổ nội dung; không lấy các recipe hoặc Project lịch sử bên dưới làm luật hiện hành.
+
 **Mine update · 2026-09-25:** registry bên dưới còn giữ `Search → Exposed Ore → Extract`, Stone source và cadence Sleep của phép thử cũ. Gameplay Mine CG-17/19/20, gồm `Break / Next / Descend`, phí và refresh, nằm trong [Mine contract 01](MINE-CURRENT-CONTRACT-01.md). Không lấy các hàng Mine lịch sử ở đây để ghi đè nguồn hoặc phí đã chốt.
+
+**Fishing update · 2026-09-25:** §5 giữ fixture hai Fish để đọc chứng cứ cũ. [Fishing contract 01](FISHING-CURRENT-CONTRACT-01.md) là V0 hiện hành: ba `Fishing Spot` với odds ẩn, `Cast` 1 AP, một output `Silver Minnow`. `Blue Eel`/Rain Catch không nằm trong roster V0; không lấy hàng FI-R hoặc exact `Catch` bên dưới để thêm lại Fish thứ hai.
 
 **Taxonomy correction CG-06/07 · 2026-09-24:** Character là Person card, Hand là Tool card; Fish là Item nhóm Fish; cây hoang dã, cây đang trồng và nông sản thu hoạch là Item nhóm Crop. Farmhouse là Building card thuộc Farm, chứa TV sub-card. Các tag `Forage` và phép chia raw item bên dưới là nhãn thử lịch sử nếu chúng xung đột với phân loại này.
 
@@ -156,7 +164,7 @@ Crop harvest và Catch ở §3/§5 cũng là raw item; bảng này chỉ chứa 
 
 `I-BER` và `I-WOD` giữ early planning không hostage bởi draw. `I-HRB` tồn tại để thử opportunity timing; nếu Wild Herb là requirement duy nhất của unlock nền thì fixture fail.
 
-## 5. Fishing output fixture
+## 5. Fishing output fixture — lịch sử trước CG-24
 
 | ID | [FIXTURE] Tên | Condition | Tags | Miss/recovery | Phép thử |
 | --- | --- | --- | --- | --- | --- |
@@ -169,7 +177,7 @@ Crop harvest và Catch ở §3/§5 cũng là raw item; bảng này chỉ chứa 
 - Một Rain Catch buộc calendar sensitivity đo missed opportunity và recovery.
 - Thêm Lake/Sea Catch lúc này chủ yếu tăng content count; location expansion chưa cần để phân biệt hai Weather cadence.
 
-Atomic hay persistent Catch vẫn mở. Registry chỉ cố định identity/condition để các resolution model có cùng input.
+Đoạn trên giữ identity/condition cho các phép thử cũ. V0 hiện hành dùng một output và cadence ở [Fishing contract 01](FISHING-CURRENT-CONTRACT-01.md).
 
 ## 6. Processing output fixture
 

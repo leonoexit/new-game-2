@@ -1,6 +1,6 @@
 # Fishing — đề xuất loop 01
 
-Ngày 2026-09-25. **Hướng mới nhất ở §5/CG-18: ba điểm câu mở sẵn, xác suất theo trạng thái; cập nhật cơ hội sau Cast đã được duyệt.** Chủ dự án đã thử §4 và thấy chưa ấn tượng, khó phân biệt trạng thái. §2–4 và [prototype v0.1](../../paper-tests/fishing-opportunities-v0.1/fixture.html) là lịch sử, chưa thể hiện luật mới. Tên lá, trạng thái và control trong game dùng tiếng Anh; phần giải thích thiết kế dùng tiếng Việt.
+Ngày 2026-09-25. **Tài liệu này là lịch sử đề xuất; [Fishing contract 01](FISHING-CURRENT-CONTRACT-01.md) đã chốt V0 qua CG-24.** §5/CG-18 ghi giai đoạn thử ba điểm câu với state hiện odds; CG-21 thử phí tăng theo odds. Cả hai cách trình bày đã bị ba `Fishing Spot` giống nhau với odds ẩn thay thế. CG-23 chốt làm mới qua `Sleep`; CG-24 chốt một Fish đại diện `Silver Minnow`. §2–5 và [prototype v0.1](../../paper-tests/fishing-opportunities-v0.1/fixture.html) giữ lịch sử, không áp các bảng phí/state hoặc hai Fish output cũ cho Fishing V0. Tên lá, trạng thái và control trong game dùng tiếng Anh; phần giải thích thiết kế dùng tiếng Việt.
 
 ## 1. Những gì đang có
 
@@ -79,13 +79,13 @@ Kiểm logic đã đạt 67 trạng thái chuỗi Catch đủ AP / 37 kết thú
 
 Mental model: đọc tín hiệu của đối tượng đang thấy → chọn nơi đáng bỏ công → Character + Fishing Rod → Cast trả AP → nhận Fish hoặc No Bite. Kỹ năng nhẹ nằm ở đọc thông tin và phân bổ AP, không phải bấm nhanh hoặc đếm lượt rời đi.
 
-**Phí đã được chủ dự án chốt:** mỗi Cast hợp lệ trả **1 AP**, bất kể có Fish hay No Bite; không hoàn phí khi không bắt được cá. Đây là phí action câu cá, không phải phí riêng cho từng thao tác chọn nguồn, xem lá hoặc cập nhật trạng thái. Không áp thay đổi này ngầm lên các action Farm/Mine/commerce đã có.
+**Phí đã chốt ở CG-18 và giữ sau CG-22:** mỗi Cast hợp lệ trả **1 AP**, bất kể có Fish hay No Bite; không hoàn phí khi không bắt được cá. CG-21 từng đề xuất đánh đổi AP theo odds, nhưng đã bị CG-22 sửa lại thành **các spot cùng phí**. [Gói mới nhất](FISHING-V0-LOCK-PROPOSAL-01.md) giữ 1 AP cho mỗi Cast. Chọn nguồn, xem lá không có phí riêng. Không áp thay đổi này ngầm lên các action Farm/Mine/commerce đã có.
 
 ### Thứ tự resolve
 
 1. Giữ trạng thái hiển thị hiện tại để người chơi chọn. Xem thông tin/chọn nguồn không mất AP và không đổi trạng thái.
 2. Kiểm nguồn, target và AP tại Cast commit. Không hợp lệ thì từ chối toàn bộ, không trả phí hoặc làm mới cơ hội.
-3. Trả **1 AP**, giải kết quả bằng xác suất gắn với **trạng thái người chơi đã chọn trước commit**. Nhận Fish vào Item hoặc No Bite; cả hai đều giữ phí đã trả. Không đổi trạng thái trước rồi dùng một tỷ lệ khác với thông tin đã thấy.
+3. Tại thời điểm CG-18, trả **1 AP** và giải kết quả bằng xác suất gắn với state đã thấy trước commit. **CG-22 thay cách thấy thông tin:** tỷ lệ của spot được chọn là ẩn, và các spot cùng phí. Nhận Fish vào Item hoặc No Bite; cả hai đều giữ phí đã trả. Không đổi odds sau commit rồi dùng nó để giải ngược lần Cast vừa thực hiện.
 4. Sau kết quả, cập nhật trạng thái các điểm câu theo quy tắc chuyển sẽ thiết kế. **No Bite vẫn là một Cast đã thực hiện**, nên cũng kích hoạt bước này. Không đòi phải nhận Fish mới cập nhật.
 
 “Có thể thay đổi” không có nghĩa cả ba điểm phải đổi sau mọi Cast; một hoặc nhiều điểm có thể giữ trạng thái. Chưa khóa cách sinh trạng thái hoặc bắt điểm vừa câu phải xấu đi. Đổi/xem lá không được dùng để tạo lại xác suất miễn phí; việc có control Next cụ thể cho Fishing chưa phải điều kiện bắt buộc của luật này. Không có cập nhật theo đồng hồ hoặc thời gian người chơi suy nghĩ. Cadence ngày mới/rời Area chưa được quyết định từ luật này.
@@ -98,6 +98,6 @@ Mental model: đọc tín hiệu của đối tượng đang thấy → chọn n
 | Ripples | Gợn nước/bóng cá thoáng qua | Trung bình |
 | Splashing Fish | Cá quẫy rõ trên mặt nước | Cao, không phải bảo đảm |
 
-Ba tên trên mô tả **state của điểm câu**, chưa được duyệt thành ba identity hoặc loại lá mới. Tên cơ sở Fishing Spot/taxonomy của target, phần trăm, loài cá nhận được, phân bố state, refresh ngày và giới hạn khai thác còn cần thiết kế. Phí Cast đã chốt 1 AP. Fish vẫn Item/Fish và dùng để bán; chỉ ghi identity cá khi cá thực sự được thấy, không coi hình dấu hiệu chung đã tiết lộ mọi loài.
+Ba tên trên là **đề xuất lịch sử về state thấy được**, nay không còn là cách trình bày đang theo. Gói mới nhất dùng ba instance `Fishing Spot` giống nhau, odds ẩn và cùng phí; tỷ lệ cụ thể, Fish output và cadence vẫn cần duyệt. Fish vẫn Item/Fish và dùng để bán; chỉ ghi identity cá khi cá thực sự được thấy.
 
-Chưa dựng prototype xác suất mới hoặc cập nhật workbook. Bản Leaving/Lingering không còn là cơ chế đang theo. Ưu tiên khi thử tiếp: làm trạng thái khác nhau rõ bằng hình và tên, cho biết xác suất trước commit, ghi riêng kết quả Cast và trạng thái mới để kiểm người chơi hiểu được điều gì vừa đổi.
+Chưa dựng prototype xác suất mới hoặc cập nhật workbook. Bản Leaving/Lingering không còn là cơ chế đang theo. [Gói Fishing V0 mới nhất](FISHING-V0-LOCK-PROPOSAL-01.md) đề xuất cách đánh cược với odds ẩn; không được trích số hoặc cadence của gói đó như quyết định đã chốt. Ưu tiên khi thử tiếp: kiểm người chơi hiểu ba spot như nhau, mỗi lần Cast trả AP dù hụt, và không có cách xem/đổi để reroll miễn phí.

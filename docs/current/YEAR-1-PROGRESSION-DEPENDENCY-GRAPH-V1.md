@@ -4,6 +4,8 @@ Ngày tổng hợp: 2026-09-21; evidence integration pass: 2026-09-22; post-remo
 
 Trạng thái: graph v1 tích hợp content-minimum registry, calendar sensitivity, economy ledger v2 và Person kernel audit. `Year 1` là horizon content/balance, không phải ending, reset hoặc deadline. Graph dùng state/reveal bands; exact Season/day placement chỉ được ghi nơi sensitivity có bằng chứng, không suy từ fixture thành luật.
 
+**Fishing update · 2026-09-25:** các node exact `Catch`, FI-R/Blue Eel và Rain eligibility bên dưới là graph/fixture lịch sử, không phải roster V0. [Fishing contract 01](FISHING-CURRENT-CONTRACT-01.md) chốt ba Spot odds ẩn, 1 AP/Cast và một Fish output `Silver Minnow`; không lấy graph cũ để thêm lại Blue Eel hoặc phí 2 AP.
+
 Latest paper reading: [audit 40 §8](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md) sets visible Wild Herb in Rìa Rừng; [package §7.4](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) records the owner's Nell-only Person scope. **Package §6.5 rejects all three proposed Projects entirely**. [Farm rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) defines Watering Can/Sleep/Hand; [package §6.9–6.11](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) gives the working first-loop Seed/Field Notes/Mine scope and the limits of repeat Fish/Ore and paid profile access. Older Project, daily-stock, Stone/Wood and reward-at-restock nodes below are historical or broader-graph hypotheses, not current V0 requirements.
 
 Nguồn chính:
@@ -167,11 +169,12 @@ No first-harvest edge precedes R0/MIN0/FI0/P0.
 
 | ID | Status | Reveal trigger | Progress grammar | Opens/changes | Recovery |
 | --- | --- | --- | --- | --- | --- |
-| F1 | [DIRECTION] | Overgrown Soil + valid Tool | Clear state change | Empty Soil | Can do later |
-| F2 | [DIRECTION] | Empty Soil | Till state change | Tilled Soil | Persistent state |
-| F3-S | [CANONICAL PAPER IDENTITY]/[WORKING AP RULE] | Tilled Soil + Turnip Seed | Plant one Seed for 1 AP | Growing Turnip `0/N` | Seed restock later |
+| F1-B | [CG-39 DECIDED] | Một trong 3 Soil có bụi ở Field + Sickle sẵn từ đầu | Clear 1 AP trên lá Soil | Cùng Soil đổi ảnh thành đất trống; không item | Có thể làm sau; bụi không tự mọc lại qua Sleep |
+| F1-R | [CG-39 DECIDED] | Một trong 3 lá đá ở Field + Hoe sẵn từ đầu | Clear 1 AP trên lá đá | Lá đá được thay bằng Soil trống ở cùng vị trí; nhận 1 Stone | Có thể làm sau; không tạo vị trí đất thứ chín |
+| F2 | [CG-40 DECIDED] | Soil trống; 2 lá có sẵn lúc đầu | Hoe → Soil, Till 1 AP | Cùng Soil đổi ảnh/state sang đã cày | 0 Soil đã cày lúc đầu; Harvest trả về state đã cày; Field tối đa 8 vị trí |
+| F3-S | [CANONICAL PAPER IDENTITY]/[WORKING AP RULE] | Soil đã cày + Turnip Seed | Plant one Seed for 1 AP | Growing Turnip `0/N` | Seed restock later |
 | F4 | [WORKING PAPER RULE — RERUN 41] | Growing Crop | Watering Can on one crop for 1 AP or Rain for 0 AP; at Sleep, Watered grants one growth | Growth/Mature state | Miss Water pauses growth; no extra Care action |
-| F5 | [WORKING PAPER RULE — RERUN 41] | Mature Crop | Hand on one crop for 1 AP | Printed Fresh output + Tilled Soil | Mature crop waits without Water; cycle can resume later |
+| F5 | [WORKING PAPER RULE — RERUN 41] | Mature Crop | Hand on one crop for 1 AP | Printed Fresh output + Soil ở state đã cày | Mature crop waits without Water; cycle can resume later |
 | J0 | [HYPOTHESIS] | First output acquired | Sell/Gift/record/Process/Keep target preview | Economy choices | No target is mandatory alone |
 | W0 | [HISTORICAL PROJECT REVEAL] | Manual maintenance cost understood | Earlier `PJ-M` preview | Rejected Project relief premise after package §6.5 | Farm action rules now in rerun 41 |
 | PJ-M | [REJECTED DESIGN — HISTORICAL] | Earlier W0 + Wood/Ore | Q4 material + Work fixture only | Proposed Water scope relief was not grounded in the source games | No current or reserved card/cost/effect |
@@ -204,7 +207,7 @@ No first-harvest edge precedes R0/MIN0/FI0/P0.
 
 - R1 là timing/opportunity source, không required random gate.
 - Mine tách frontier progress, source discovery và extraction; không phải delivery Project.
-- Vòng đầu hiện dừng ở CP3/first Ore theo package §6.9; Depth/Stone/branch sau CP3 chưa được tính là reward V0 khi thiếu mục đích.
+- Vòng Mine trong phép thử này dừng ở CP3/first Ore theo package §6.9; Depth/Stone/branch sau CP3 của **Mine** chưa được tính là reward V0. Stone nhận từ Clear lá đá **Field** theo CG-39 vẫn là output; CG-41 hoãn công dụng của nó đến giai đoạn đổ nội dung.
 - Historical PJ-X was an optional infrastructure cross-link in old tests; the Project and its Upper-Grove premise are now rejected.
 - Ore/Stone retain Sell/Keep/Field Notes use but lose their old Project allocation; their resource purpose must be checked again.
 

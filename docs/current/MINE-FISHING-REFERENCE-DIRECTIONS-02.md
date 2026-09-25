@@ -1,6 +1,6 @@
 # Mine & Fishing — hai hướng tham khảo 02
 
-Ngày: 2026-09-25. Trạng thái mới nhất: **Mine CG-17/19/20 được tổng hợp ở [Mine contract 01](MINE-CURRENT-CONTRACT-01.md)**; §11 giữ quyết định Mine CG-17, §2–10 giữ lịch sử nghiên cứu/thử. Fishing hiện hành ở [Fishing proposal §5](FISHING-LOOP-PROPOSAL-01.md#5-ba-điểm-câu-với-xác-suất-theo-trạng-thái--cg-18). Đọc cùng [card grammar §10](ON-TABLE-CARD-SHAPE-DECISION-09.md).
+Ngày: 2026-09-25. Trạng thái mới nhất: **Mine CG-17/19/20 được tổng hợp ở [Mine contract 01](MINE-CURRENT-CONTRACT-01.md)**; §11 giữ quyết định Mine CG-17, §2–10 giữ lịch sử nghiên cứu/thử. Fishing hiện hành ở [Fishing contract 01](FISHING-CURRENT-CONTRACT-01.md) qua CG-24. Đọc cùng [card grammar §10](ON-TABLE-CARD-SHAPE-DECISION-09.md).
 
 ## 1. Phạm vi quyết định · CG-14
 

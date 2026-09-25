@@ -2,6 +2,8 @@
 
 Ngày đối chiếu: 2026-09-25. Trạng thái: **CG-11/13/19 giữ hướng Ore và tác dụng Tool; CG-20 đã chốt Mine/Copper cụ thể trong [Mine contract 01](MINE-CURRENT-CONTRACT-01.md). Fixture chưa triển khai.** Gói miễn AP lần đầu/+Ore cũ đã rút; không nhầm với giảm phí Break theo cấp Tool tại §8. Đọc cùng [card grammar §10](ON-TABLE-CARD-SHAPE-DECISION-09.md) và [danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx).
 
+**Cập nhật CG-26:** Farm V0 chỉ dùng Watering Can thường, Water từng crop 1 AP; không có nâng Can trong V0. Bảng phạm vi/sức chứa ở §4/7 là tham chiếu sau V0. Copper Pickaxe theo CG-20 vẫn thuộc V0.
+
 **Cập nhật CG-14:** tạm dừng thông số/triển khai nâng Tool, thiết kế gameplay Mine rồi Fishing trước. Hai nguồn tham khảo cơ chế là [board và Fantasy Life](MINE-FISHING-REFERENCE-DIRECTIONS-02.md). §7 giữ lịch sử định hướng tác dụng Tool; không bắt loop mới có hit/độ cứng hoặc cấm xem xét dice/map.
 
 **Điểm tiếp tục sau CG-17/18:** chủ dự án coi khung chơi Mine và Fishing đã chốt, đồng thời **bỏ qua việc dựng bản chơi tích hợp một ngày**. CG-20 đã duyệt [gói Mine/Copper](MINE-AND-COPPER-PICKAXE-LOCK-PROPOSAL-01.md) sau [phép thử challenge hữu hạn](PICKAXE-MINE-CHALLENGE-PAPER-TEST-01.md). Các mô tả Search → Exposed Ore → Extract hoặc “hoãn fishing” bên dưới là lịch sử; dùng [Mine contract 01](MINE-CURRENT-CONTRACT-01.md) cho luật Mine hiện hành.
@@ -102,7 +104,7 @@ Trong board, Water cơ bản đã di chuyển tất cả crop một bước và 
 
 ## 6. Lựa chọn cách ghép · CG-12, được làm rõ bởi CG-13
 
-Hướng Ore trực tiếp phù hợp cách trả phí của board. Watering Can/Pickaxe là hai Tool hiện có cần đối chiếu tiếp; Rod không được mặc định vào cùng thang kim loại. Chưa có luật nâng nào đủ điều kiện bật trong fixture.
+Hướng Ore trực tiếp phù hợp cách trả phí của board. Tại thời điểm CG-12, Watering Can/Pickaxe là hai Tool cần đối chiếu tiếp; Rod không được mặc định vào cùng thang kim loại. Sau đó CG-20 đã chốt nâng Copper Pickaxe cho V0, còn CG-26 hoãn nâng Watering Can sang sau V0. Fixture hiện chưa triển khai các luật nâng.
 
 | Lựa chọn | Thay đổi cần làm | Quan hệ với yêu cầu lấy nguyên bản |
 | --- | --- | --- |
@@ -115,7 +117,7 @@ CG-13 làm rõ giới hạn chuyển đổi: giữ tác dụng của video game 
 
 ## 7. Hiệu ứng nâng theo bản gốc — CG-13
 
-Sau khi xem bảng video game, chủ dự án xác nhận **cần theo bản gốc**. Quyết định này áp dụng cho tác dụng nâng cấp đang được thảo luận. Dùng các cấp Thường → Copper → Steel → Gold → Iridium và bảng nguồn ở §4; không dùng dãy cộng sản lượng tự đặt.
+Sau khi xem bảng video game, chủ dự án xác nhận **cần theo bản gốc** cho hướng nâng Tool được thảo luận ở CG-13. Các cấp Thường → Copper → Steel → Gold → Iridium và bảng nguồn ở §4 là tham chiếu; CG-26 đã loại nâng Watering Can khỏi phạm vi V0. Không dùng dãy cộng sản lượng tự đặt.
 
 | Tool | Tác dụng được chọn | Số liệu nguồn dùng làm chuẩn |
 | --- | --- | --- |
@@ -134,11 +136,13 @@ Nguồn số liệu: [Watering Cans](https://wiki.stardewvalley.net/Watering_Can
 
 ### 7.2. Phần phải nối vào biểu diễn V0
 
-1. **Farm:** xác định quan hệ vị trí giữa các plot để vùng 3 ô thẳng/5 ô thẳng/3×3/6×3 có nghĩa. Cho xem trước vùng được tưới và commit Water trên vùng đó; cây vẫn chuyển Watered, tăng trưởng tại Sleep và cần Hand Harvest. Cơ chế chứa nước/refill chưa có trong fixture; các số sức chứa hiện là chuẩn nguồn, chưa phải hệ thống đang chạy.
+1. **Farm:** CG-25 chốt một lá đất = một luống, mỗi lá chứa tối đa một crop. Phương án trước đây là xác định vị trí giữa các plot, xem trước vùng 3 ô thẳng/5 ô thẳng/3×3/6×3 rồi commit Water trên vùng đó. **Đây là phương án cũ, không phải luật V0:** chủ dự án nhận thấy ép nhiều luống được tưới đồng thời sẽ cứng nhắc trong card game. CG-26 chốt Farm V0 chỉ dùng Can thường, Water từng crop 1 AP và tăng trưởng tại Sleep. Không có Can nâng cấp hoặc chứa nước/refill trong V0; số phạm vi/sức chứa nguồn chỉ để tham khảo sau V0.
 2. **Mine:** xác định loại vật cản và sức phá/số nhát cần thiết trước khi bật nâng Pickaxe. Generic Exposed Ore chưa có loại node hay độ cứng; không tự gọi nó là Copper Node. Giữ Search làm lộ nguồn, khai thác hoàn tất mới nhận Ore và làm nguồn spent; Depth không đổi. Cách biểu diễn tiến độ phá và quy đổi thao tác/AP còn phải thiết kế. Một nhát trong nguồn không mặc định bằng một action 1 AP của V0.
 3. **Phí và nơi nâng:** CG-11 vẫn chọn tiêu Ore trực tiếp, chưa cần Furnace–Coal–Bar. Bảng tiền + 5 Bar, Blacksmith và hai ngày chờ ở §4 là luật video game; chưa tự nhập các phần đó vào V0. Số lượng/loại Ore, phí Gold nếu có, nơi/thời điểm nâng chưa chốt sau khi rút gói 1 Ore cũ.
 
 Đây là công việc nối cơ chế theo tác dụng nguồn đã chọn, không phải lý do quay lại miễn AP/+Ore hoặc nhập Mine dice của board. Fixture hiện vẫn là bản chưa nâng, chưa có layout vùng tưới, refill hay độ cứng nguồn. Không mở nguồn Ore lặp hoặc thêm vật cản mới chỉ từ quyết định về Tool này.
+
+**Đã chốt ở CG-26:** giữ Watering Can thường trong Farm V0 và hoãn nâng Can cho đến khi Farm có một thử thách có thể chỉ ra tác dụng nâng rõ ràng. Vòng hiện có tưới từng crop 1 AP; hai luống chạy được trong phép thử AP, còn bốn luống tạo lựa chọn trì hoãn tưới/trồng hoặc chờ Rain. Không thêm refill vào Can thường chỉ để tạo lý do tăng sức chứa, không thêm state khô hạn/loại crop mới chỉ để nâng cấp có tác dụng, và không đổi một Water commit thành tưới nhiều lá tùy ý. Khi nghiên cứu lại sau V0, cần thiết kế hiệu ứng và thử AP trước khi chốt phí Ore/cấp Can.
 
 ## 8. Pickaxe trên Mine — CG-19
 

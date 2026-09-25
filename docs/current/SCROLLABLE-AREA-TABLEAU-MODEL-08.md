@@ -2,15 +2,21 @@
 
 Ngày correction: 2026-09-22.
 
-Trạng thái: direction hiện hành cho cách trình bày world. Tài liệu này supersede spatial interpretation trong [explicit-surface model 07](../evidence/CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md).
+Trạng thái: **snapshot trình bày cũ, đã được CG-35/36 thay thế về cấu trúc World/Home/Field**. Đọc [kiến trúc lá lồng tableau](WORLD-NESTED-CARD-ARCHITECTURE-01.md) cho mô hình hiện hành. Tài liệu này vẫn ghi lại lý do bỏ spatial movement và các ví dụ lịch sử; scroll/focus trong một tableau vẫn là navigation 0 AP.
 
 **Card grammar correction · 2026-09-24:** chủ dự án đã chốt World và Area là card identity theo ontology; xem [danh mục lá/entity V0 trong decision 09 §10](ON-TABLE-CARD-SHAPE-DECISION-09.md). Những đoạn dưới đây nói Area không phải card chỉ còn đúng theo nghĩa **không bắt buộc là lá target vuông trên tableau**. `Rìa Rừng` là tên bối cảnh trong Area rừng lớn hơn, không phải Area/card riêng. Sơ đồ Area và tên lá lịch sử bên dưới không thay thế danh mục V0 hiện hành.
 
 **Mine gameplay correction · 2026-09-25:** sơ đồ Mine ở §3 đã đổi sang ba ô mở sẵn theo [Mine contract 01](MINE-CURRENT-CONTRACT-01.md). Các ví dụ CP3/`Search`/`Exposed Ore` còn lại là snapshot presentation cũ; CG-17/19/20 chốt `Break`, `Next`, `Descend`, phí và tầng. Nguyên tắc Area/scroll của tài liệu này vẫn dùng được.
 
+**Fishing gameplay correction · 2026-09-25:** ví dụ exact `Catch`/hai loài bên dưới là snapshot cũ. [Fishing contract 01](FISHING-CURRENT-CONTRACT-01.md) chốt ba `Fishing Spot` giống nhau, odds ẩn, `Cast` 1 AP và một Fish output `Silver Minnow`; nguyên tắc cuộn Area vẫn dùng được.
+
+**Farm correction · CG-27/35/36:** sơ đồ `[Farmhouse] [Plot]` ở §3 chỉ là snapshot cũ. [Farm land contract 01](FARM-V0-LAND-AND-PLOT-CONTRACT-01.md) chốt 0 Tilled Soil, 2 Empty Soil có thể cày ngay và các ô đất khác bị vật cản **trong Field**. Farmhouse/Shipping Bin là lá ở Home, không tiêu suất đất Field. Vị trí các lá không tạo chi phí di chuyển hay luật kề nhau.
+
+**Lọc đất · CG-29/31/33/34:** [Field presentation contract 01](WORLD-GROUP-PRESENTATION-CONTRACT-01.md) đặt bộ lọc tùy chọn và dòng tóm tắt **trong Field**. Lọc là UI, còn Field là lá thật. `Tilled Soil` và `Empty Soil` là hai mục riêng. Mô tả lọc trực tiếp ở Farm và Farmhouse/Bin luôn hiện khi lọc là snapshot trước CG-35/36.
+
 ## 1. Core correction
 
-Game **không có bản đồ**. World được trình bày như một dải giao diện cuộn dọc gồm nhiều **Area tableau trừu tượng**.
+Ở snapshot này, game **không có bản đồ** và World được trình bày như một dải giao diện cuộn dọc gồm nhiều **Area tableau trừu tượng**. CG-35 thay dải phẳng này bằng lá `World` mở tableau Region, rồi các lá container lồng tiếp như `Home` → `Field`.
 
 Vuốt lên/xuống là thao tác tìm và focus nội dung khác trong giao diện. Nó không đại diện cho nhân vật đi bộ, không mô phỏng khoảng cách và không tự tiêu AP, thời gian hoặc Energy.
 

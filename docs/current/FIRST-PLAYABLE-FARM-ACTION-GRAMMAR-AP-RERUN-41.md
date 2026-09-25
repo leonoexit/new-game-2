@@ -4,6 +4,14 @@ Ngày: 2026-09-24.
 
 Trạng thái: **working paper rule after owner request to resolve Farm**. This document replaces the old Project-assisted Farm schedule for first-playable paper tests. It does not set final crop prices, Weather probabilities, crop durations/yields or runtime implementation. Water Trough, Harvest Bench and Grove Footbridge are rejected designs, not later unlocks.
 
+**CG-25/26 (2026-09-25):** chủ dự án chốt một lá đất = một luống, tối đa một crop trên lá tại một thời điểm. Hai luống mở đầu và hai luống mở rộng trong phép thử §3 chỉ là giả định để tính AP, chưa chốt tổng số luống của game. Bảng §2 là luật Watering Can thường của Farm V0; nâng Can được hoãn sang sau V0.
+
+**CG-27 (2026-09-25):** [Farm land contract 01](FARM-V0-LAND-AND-PLOT-CONTRACT-01.md) thay giả định hai luống đã cày có sẵn: Farm bắt đầu với **0 Soil đã cày và 2 Soil trống không bị cản**. D1 của bảng §3 là trace cũ, không còn là trạng thái mở đầu hiện hành. Clear/Till được cập nhật bởi CG-39/40 ngay dưới.
+
+**CG-38/39 (2026-09-25):** [Farm land contract 01](FARM-V0-LAND-AND-PLOT-CONTRACT-01.md) chốt Field có tám vị trí: 2 Soil trống, 3 Soil có bụi, 3 lá đá. `Clear` bụi bằng Sickle 1 AP đổi ảnh trong lá Soil, không item; `Clear` đá bằng Hoe 1 AP thay lá đá bằng Soil trống tại vị trí cũ và nhận 1 Stone. Bảng §3 vẫn là trace AP cũ dùng hai luống đã cày mở đầu, không thay trạng thái V0 hiện hành.
+
+**CG-40 (2026-09-25):** `Till` nay dùng Hoe lên Soil trống, **1 AP**, đổi ảnh/state **trong cùng identity Soil** sang đã cày. `Tilled Soil` trong bảng/trace cũ bên dưới là tên state, không phải identity/Bách Khoa riêng. Harvest trả về Soil đã cày. Phí/Tool Till không còn mở.
+
 ## 1. What the source games establish
 
 | Source | Actual farming relationship | What this card game carries |
@@ -17,10 +25,11 @@ The exact AP values below are **Little Valley Cards** paper costs, not rules att
 
 | Event | Legal target and cost | Immediate result | At Sleep |
 | --- | --- | --- | --- |
-| Plant | Seed on one Tilled Soil; **1 AP** | Consume one Seed; place one Growing Crop at `0/N` | Can gain the day's first growth if Watered |
+| Till | Reusable **Hoe** on one empty Soil; **1 AP** | Same Soil card changes visual/state to tilled; no item | Ready to Plant now |
+| Plant | Seed on one tilled Soil; **1 AP** | Consume one Seed; card at that position changes identity to Growing Crop at `0/N` | Can gain the day's first growth if Watered |
 | Water | Reusable **Watering Can** on one unwatered Growing Crop; **1 AP** | Mark that crop Watered for today; a second Water has no effect | If Watered, growth `+1`, maximum once this day |
 | Rain | All outdoor Growing Crops, including crops planted later that day; **0 AP** | They count as Watered today without a Water action | Each gains at most one growth |
-| Harvest | Reusable **Hand / Bàn tay** on one Mature Crop; **1 AP** | Gain the printed Fresh output; return that plot to Tilled Soil | No further growth on the harvested crop |
+| Harvest | Reusable **Hand / Bàn tay** on one Mature Crop; **1 AP** | Gain the printed Fresh output; return that position to Soil in tilled state | No further growth on the harvested crop |
 
 `Care` is **not** a separate card, action or AP cost. In older traces it meant a successful daily Watered resolution. At Sleep, a Growing Crop that was not Watered stays at its current growth; it does not die. Reaching `N/N` at Sleep makes it Mature on the next day. Mature single-harvest crops need no Water, remain visible until Hand Harvest, and do not produce an item automatically. A crop cannot receive two growth points from Water plus Rain or repeated Tool use on the same day.
 

@@ -8,6 +8,8 @@ Trạng thái: paper-design package v1; không phải implementation spec hoặc
 
 **Mine update · 2026-09-25:** các đoạn CP3, `Search`, `Exposed Ore`, `Extract` và phí Mine trong package là phép thử cũ. [Mine contract 01](MINE-CURRENT-CONTRACT-01.md) ghi gameplay Mine CG-17/19/20 hiện hành. Workbook đã cập nhật dòng Mine; fixture cũ chưa migrate.
 
+**Fishing update · 2026-09-25:** các trace exact `Catch` 2 AP, Blue Eel khi Rain và hai Fish output trong package là phép thử cũ. [Fishing contract 01](FISHING-CURRENT-CONTRACT-01.md) ghi V0 hiện hành: ba spot giống nhau, odds ẩn, Cast 1 AP và một Fish output `Silver Minnow`. Không thêm lại `Blue Eel` từ các trace cũ.
+
 **Taxonomy correction CG-06/07 · 2026-09-24:** Character thuộc Person, Hand thuộc Tool, Fish là Item/Fish, cây hoang dã/cây đang trồng/nông sản thu hoạch là Item/Crop. Farmhouse là Building card thuộc Farm và chứa TV sub-card theo FH-01 đã được duyệt. Những nhãn `Forage` trong trace cũ không định nghĩa card type hiện hành.
 
 **Taxonomy correction CG-09 · 2026-09-25:** Supermarket là Building card ở Commerce. Shipping Bin và TV cùng thuộc loại Thiết bị (Equipment), lần lượt ở Home/Farm và bên trong Farmhouse. `Sub-card` mô tả quan hệ chứa của TV; các tương tác đã chốt giữ nguyên.
@@ -89,7 +91,7 @@ Không branch nào cần first harvest để tồn tại. Branch rejoin bằng i
 | --- | --- | --- | --- |
 | Day capacity | 6 AP/day fixed for first-playable paper balance | A5 overload stress; A7 surplus guard | `[OWNER SELECTED FIRST-PLAYABLE FRAME]` |
 | Season/calendar | 18 days/Season fixed; WD/WS phase arms still open | S12 boundary stress; S15/S16 edge only | `[OWNER SELECTED FRAME]/[WEATHER OPEN]` |
-| Farm action grammar | [Rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md): Plant one Seed/plot 1 AP; Watering Can waters one Growing Crop for 1 AP; Rain counts as Watered; Sleep advances growth once; Hand harvests one Mature Crop for 1 AP. `Care` is the daily growth result, not another action. | Board game's global Water Crops/automatic Harvest is a different model. No Project relief, batch Tool upgrade or separate Care card is selected. | `[WORKING PAPER RULE AFTER OWNER REQUEST]` |
+| Farm action grammar | [Rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md): Plant one Seed/plot 1 AP; Watering Can waters one Growing Crop for 1 AP; Rain counts as Watered; Sleep advances growth once; Hand harvests one Mature Crop for 1 AP. `Care` is the daily growth result, not another action. [Farm land contract 01](FARM-V0-LAND-AND-PLOT-CONTRACT-01.md) supersedes the old two-Tilled-Soil opening with 0 Tilled/2 Empty. | Board game's global Water Crops/automatic Harvest is a different model. No Project relief, batch Tool upgrade or separate Care card is selected. | `[CG-27 OPENING LOCK; FARM AP RULE STILL WORKING]` |
 | Buy/Sell | 0 AP commit; ordinary sale through Shipping Bin; Gold at end of day; exact quantity preview | 1 AP batch đè A5 và tạo hoarding incentive | `[PAPER BASELINE]/[SOURCE-BACKED]` |
 | First-loop Seed source | §6.9: two Turnip Seeds in opening inventory, 0G; Turnip Seed listed without a per-day quantity cap in Commerce during the first paper Season; Field Notes Seed choice at the next New Day after qualifying | §6.7–6.8's two-Seed-per-day restock and 4G wallet are comparison arms, not current source rules | `[WORKING PAPER RULE; PRICES STILL FIXTURES]` |
 | Storage | no cap, no perish | `S4` comparator; `P1` perish không carry | `[HYPOTHESIS]` |

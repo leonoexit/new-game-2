@@ -2,7 +2,7 @@
 
 Ngày: 2026-09-22.
 
-**Cập nhật 2026-09-25 · CG-17/18/19/20:** Mine hiện hành nằm ở [Mine contract 01](MINE-CURRENT-CONTRACT-01.md), Fishing ở [Fishing proposal §5](FISHING-LOOP-PROPOSAL-01.md#5-ba-điểm-câu-với-xác-suất-theo-trạng-thái--cg-18). Contract bên dưới là lịch sử presentation/fixture từ trước các quyết định này: `Search`, `Exposed Ore`, `Extract`, CP3, exact Catch và phí của chúng không còn là luật gameplay Mine/Fishing hiện hành. Giữ các đoạn đó làm evidence UI, không dùng làm danh sách target hoặc action mới.
+**Cập nhật 2026-09-25 · CG-17–24:** Mine hiện hành nằm ở [Mine contract 01](MINE-CURRENT-CONTRACT-01.md), Fishing ở [Fishing contract 01](FISHING-CURRENT-CONTRACT-01.md). Contract bên dưới là lịch sử presentation/fixture từ trước các quyết định này: `Search`, `Exposed Ore`, `Extract`, CP3, exact Catch và phí của chúng không còn là luật gameplay Mine/Fishing hiện hành. Giữ các đoạn đó làm evidence UI, không dùng làm danh sách target hoặc action mới.
 
 Mục đích: định hình người chơi **làm gì** khi focus Mine và các Area liên quan tới Fishing trong [scrollable area-tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md). Tài liệu hợp nhất evidence từ [Fishing resolution sensitivity 02](../evidence/FISHING-RESOLUTION-SENSITIVITY-02.md) và [Mine checkpoint simulation 02](../evidence/MINE-CHECKPOINT-PAPER-SIMULATION-02.md); không chốt final AP, content count, reward value, tool tier hoặc art.
 

@@ -4,9 +4,9 @@ Repository này hiện chứa luật giấy, chứng cứ thử nghiệm và ngh
 
 ## Bắt đầu từ đâu
 
-1. [Card grammar hiện hành](docs/current/ON-TABLE-CARD-SHAPE-DECISION-09.md) chốt loại lá, nơi thuộc về, tương tác và biến đổi. [Mine contract hiện hành](docs/current/MINE-CURRENT-CONTRACT-01.md) ghi luật CG-17/19/20; sheet [danh mục lá V0](docs/current/LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) đã cập nhật Mine, còn các dòng Fishing cần migrate CG-18.
+1. [Card grammar hiện hành](docs/current/ON-TABLE-CARD-SHAPE-DECISION-09.md) chốt loại lá, nơi thuộc về, tương tác và biến đổi. [Kiến trúc World lồng tableau](docs/current/WORLD-NESTED-CARD-ARCHITECTURE-01.md) ghi World → Region (`Home`) → các lá Home (`Field`, `Farmhouse`); [Farm land contract](docs/current/FARM-V0-LAND-AND-PLOT-CONTRACT-01.md) ghi trạng thái đất và sức chứa Field; [Field presentation contract](docs/current/WORLD-GROUP-PRESENTATION-CONTRACT-01.md) ghi bộ lọc và dòng tóm tắt trong Field; [Mine contract](docs/current/MINE-CURRENT-CONTRACT-01.md) ghi luật CG-17/19/20; [Fishing contract](docs/current/FISHING-CURRENT-CONTRACT-01.md) ghi luật V0 qua CG-24 với một Fish đại diện. [Danh mục lá V0](docs/current/LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) ghi identity liên quan.
 2. [Bản tổng hợp Year 1](docs/current/YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) giữ luật giấy và kết quả thử; các tên/phần thưởng lịch sử trong đó không tự trở thành lá V0.
-3. [Sơ đồ phụ thuộc](docs/current/YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md) giải thích nguồn, hành động và phần thưởng đã được thử. [Mô hình Area](docs/current/SCROLLABLE-AREA-TABLEAU-MODEL-08.md) mô tả cách trình bày world.
+3. [Sơ đồ phụ thuộc](docs/current/YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md) giải thích nguồn, hành động và phần thưởng đã được thử. [Mô hình Area cũ](docs/current/SCROLLABLE-AREA-TABLEAU-MODEL-08.md) lưu snapshot trước CG-35 để đối chiếu.
 
 ## Cấu trúc
 
