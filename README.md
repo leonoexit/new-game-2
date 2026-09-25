@@ -4,9 +4,9 @@ Repository này hiện chứa luật giấy, chứng cứ thử nghiệm và ngh
 
 ## Bắt đầu từ đâu
 
-1. [Bản tổng hợp Year 1 đang dùng](docs/current/YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) là điểm vào cho luật vòng đầu và trạng thái quyết định.
-2. [Sơ đồ phụ thuộc](docs/current/YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md) giải thích nguồn, hành động và phần thưởng.
-3. [Quy tắc card trên bàn](docs/current/ON-TABLE-CARD-SHAPE-DECISION-09.md) và [mô hình Area](docs/current/SCROLLABLE-AREA-TABLEAU-MODEL-08.md) là nguồn hiện hành cho presentation. Luật hành động cụ thể nằm trong các contract được bản tổng hợp dẫn tới.
+1. [Card grammar hiện hành](docs/current/ON-TABLE-CARD-SHAPE-DECISION-09.md) chốt loại lá, nơi thuộc về, tương tác và biến đổi. [Mine contract hiện hành](docs/current/MINE-CURRENT-CONTRACT-01.md) ghi luật CG-17/19/20; sheet [danh mục lá V0](docs/current/LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) đã cập nhật Mine, còn các dòng Fishing cần migrate CG-18.
+2. [Bản tổng hợp Year 1](docs/current/YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) giữ luật giấy và kết quả thử; các tên/phần thưởng lịch sử trong đó không tự trở thành lá V0.
+3. [Sơ đồ phụ thuộc](docs/current/YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md) giải thích nguồn, hành động và phần thưởng đã được thử. [Mô hình Area](docs/current/SCROLLABLE-AREA-TABLEAU-MODEL-08.md) mô tả cách trình bày world.
 
 ## Cấu trúc
 
@@ -19,6 +19,6 @@ Repository này hiện chứa luật giấy, chứng cứ thử nghiệm và ngh
 | `art/style-studies/` | Nghiên cứu hình ảnh, gồm cả ý tưởng game đã bị bác bỏ; không phải asset runtime. |
 | `scripts/` | Công cụ kiểm tính toàn vẹn repository; không chứa gameplay. |
 
-Thứ tự ưu tiên khi hai nguồn mâu thuẫn: quyết định mới của chủ dự án trong `docs/current/YEAR-1-PAPER-DESIGN-PACKAGE-V1.md`, rồi contract hiện hành mà bản đó dẫn tới, sau đó mới tới chứng cứ cũ. `tmp/` và `output/` là dữ liệu tạo tạm, không đưa vào Git.
+Khi hai nguồn mâu thuẫn về **loại lá, nơi xuất hiện hoặc card identity**, dùng card grammar và sheet V0 ở trên. Với luật giấy khác, đối chiếu quyết định mới nhất của chủ dự án trong tài liệu hiện hành rồi mới xem chứng cứ cũ. `tmp/` và `output/` là dữ liệu tạo tạm, không đưa vào Git.
 
 Kiểm liên kết nội bộ sau khi đổi cấu trúc: `python3 scripts/check_markdown_links.py`.

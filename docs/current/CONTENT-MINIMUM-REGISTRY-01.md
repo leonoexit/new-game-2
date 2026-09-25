@@ -4,6 +4,14 @@ Ngày lập: 2026-09-21.
 
 Mục đích: chọn bộ content fixture nhỏ nhất đủ để Producer, Connector và Collector dùng chung một vocabulary trong các vòng calendar/economy sensitivity kế tiếp. Tài liệu này không phải danh sách content Year 1, không chốt balance, không cho phép code/prototype và không biến tên hay rule fixture thành luật.
 
+**Phạm vi lá/entity V0 hiện hành:** tra [danh mục card grammar §10](ON-TABLE-CARD-SHAPE-DECISION-09.md) trước khi dùng bất kỳ tên nào bên dưới. Registry này giữ các tên và phép thử lịch sử, kể cả `Field Notes` reward, Runner Bean/Lemon Balm Seed chưa có nguồn, Project đã bị bác bỏ và nguồn ngoài vòng đầu; chúng không tự trở thành card V0. Khi hai tài liệu khác nhau, danh mục card grammar V0 có ưu tiên cho loại lá, nơi xuất hiện và trạng thái quyết định.
+
+**Mine update · 2026-09-25:** registry bên dưới còn giữ `Search → Exposed Ore → Extract`, Stone source và cadence Sleep của phép thử cũ. Gameplay Mine CG-17/19/20, gồm `Break / Next / Descend`, phí và refresh, nằm trong [Mine contract 01](MINE-CURRENT-CONTRACT-01.md). Không lấy các hàng Mine lịch sử ở đây để ghi đè nguồn hoặc phí đã chốt.
+
+**Taxonomy correction CG-06/07 · 2026-09-24:** Character là Person card, Hand là Tool card; Fish là Item nhóm Fish; cây hoang dã, cây đang trồng và nông sản thu hoạch là Item nhóm Crop. Farmhouse là Building card thuộc Farm, chứa TV sub-card. Các tag `Forage` và phép chia raw item bên dưới là nhãn thử lịch sử nếu chúng xung đột với phân loại này.
+
+**Taxonomy correction CG-09 · 2026-09-25:** Supermarket là Building card ở Commerce. Shipping Bin và TV cùng thuộc loại Thiết bị (Equipment), lần lượt ở Home/Farm và bên trong Farmhouse. `Sub-card` mô tả quan hệ chứa của TV; các tương tác đã chốt giữ nguyên.
+
 Trạng thái cập nhật 2026-09-23: **partially superseded for Processing utility and Mine source topology**. Crop/item/Project/collection vocabulary remains reusable. Processing templates remain compatibility fixtures only; every requirement below that Processor create a positive minimum-loop branch, premium, request or raw-vs-Processed economic win is historical and is superseded by [post-removal audit 11](../evidence/CORE-YEAR-1-POST-REMOVAL-CONSISTENCY-GAP-AUDIT-11.md). Stone sourcing now follows Search-once → persistent source → Extract → Sleep refresh; Direct Descent never grants Stone.
 
 Canonical paper identity update 2026-09-23: [crop identity audit 20](../evidence/CANONICAL-CROP-IDENTITY-AUDIT-20.md) replaces the active crop labels `Shortroot / Tallbean / Dewleaf` with `Turnip / Runner Bean / Lemon Balm`. Historical test logs keep the old labels; roles, tags, access and numerical fixtures are unchanged.

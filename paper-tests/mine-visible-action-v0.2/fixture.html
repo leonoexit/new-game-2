@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mine · Thấy rồi làm</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#f3efdf;color:#203c39;font:16px system-ui,sans-serif}
+  main{max-width:780px;margin:auto;padding:24px 16px}h1{font-size:28px;margin:0 0 8px}h2{font-size:19px}
+  p{line-height:1.6}small,.muted{color:#596961}.tag{font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+  button{font:inherit;cursor:pointer;border:1px solid #69887d;border-radius:8px;background:#fffdf5;color:inherit;padding:10px 14px;min-height:44px}
+  button:disabled{opacity:.5;cursor:default}button:focus-visible{outline:3px solid #d99332;outline-offset:3px}
+  button[aria-pressed=true]{background:#234e45;color:white}.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}
+  #stats{background:#234e45;color:#fff9e8;padding:13px;border-radius:8px;justify-content:space-between}
+  #board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}
+  .card{aspect-ratio:1;display:flex;flex-direction:column;justify-content:space-between;text-align:left;padding:12px;border:2px solid #6b8b7d;border-radius:5px;min-width:0}
+  .card .symbol{font-size:36px;align-self:center}.card .name{font-size:14px;font-weight:700}.card .cost{font-size:12px}
+  .card.hidden{background:repeating-linear-gradient(135deg,#d6dccc,#d6dccc 12px,#cbd4c3 12px,#cbd4c3 24px)}
+  .card.ore{background:#dcf0ed}.card.depth{background:#f6dda7}.card.empty,.card.spent{background:#e5e6dc;color:#596961}
+  #message{padding:12px 14px;background:#fffaf0;border-left:4px solid #be8737;min-height:68px;line-height:1.5}
+  details{margin-top:24px;border-top:1px solid #bac5b7;padding-top:14px}li{margin:8px 0;line-height:1.5}
+  #log{max-height:240px;overflow:auto;padding-left:24px;font-size:14px}.secondary{font-size:14px}
+  [hidden]{display:none!important}@media(max-width:430px){main{padding:16px 10px}.card{padding:8px}.card .symbol{font-size:25px}.card .name{font-size:12px}#board{gap:6px}.card .cost{font-size:11px}}
+</style>
+<main>
+  <div class="tag">Little Valley Cards · Bản so sánh v0.2</div>
+  <h1>Mine · Thấy rồi làm</h1>
+  <p class="muted">Không trả phí để xem. Trả công khai thác hoặc phá đá; đối tượng kế tiếp tự hiện sau đó.</p>
+  <div id="stats" class="row" aria-label="Trạng thái"></div>
+  <h2 id="stage"></h2><p id="context"></p>
+  <div id="sources" class="row" aria-label="Chọn nguồn hành động">
+    <button id="character" aria-pressed="false">Character</button>
+    <span>+</span><button id="pickaxe" aria-pressed="false">Pickaxe</button>
+  </div>
+  <div id="board" aria-label="Các ô đang hiện"></div>
+  <div id="message" role="status" aria-live="polite"></div>
+  <div class="row">
+    <button id="leave">Về Farm · 0 AP</button>
+    <button id="resume">Trở lại Mine · 0 AP</button><button id="farmWork">Làm việc Farm · 1 AP</button><button id="sleep">Sleep → 6 AP</button>
+  </div>
+  <details><summary>Luật của tầng mẫu</summary>
+    <ul>
+      <li>Tầng có 6 lá: 2 Exposed Ore, 3 đá chắn và 1 lối xuống. Ba đối tượng đầu hiện sẵn, không mất AP. Lối xuống nằm trong ba lá phía sau.</li>
+      <li>Character + Pickaxe → Exposed Ore: trả 1 AP, nhận 1 Ore. Chỉ có một lần trả phí để lấy quặng.</li>
+      <li>Character + Pickaxe → đá chắn: trả 1 AP, dọn đá khỏi ô. Không tạo Item Stone.</li>
+      <li>Sau khai thác hoặc phá đá, lá kế tiếp hiện ngay tại ô vừa dọn, không thu thêm phí. Hai đối tượng khác giữ nguyên.</li>
+      <li>Lối xuống đã thấy ở lại cho tới khi bạn chọn xuống. Character → lối xuống: 0 AP, Depth +1 và kết thúc tầng mẫu.</li>
+      <li>Không cần đổi nhóm hoặc vòng quay lại trong bản này, vì lá chưa xử lý không bị đẩy khỏi bàn.</li>
+      <li>Về Farm miễn phí; Sleep hồi 6 AP và giữ tiến độ. Chọn lại nguồn sau mỗi hành động. Đây là các thông số tạm để thử.</li>
+    </ul>
+  </details>
+  <details><summary>Nhật ký hành động</summary><ol id="log"></ol></details>
+  <details><summary>Điều khiển phép thử</summary>
+    <p><a href="../mine-dig-flip-v0.1/fixture.html">Mở bản cũ: đào để lật</a></p><p>Hai nút dưới bắt đầu lượt thử mới, thay toàn bộ tiến độ hiện tại. Tình huống 2 AP bắt đầu với ít nhất một nguồn quặng và chưa thấy lối xuống. Tải lại trang cũng bắt đầu lượt mới.</p>
+    <div class="row"><button id="newRun" class="secondary">Bắt đầu tầng mới · 6 AP</button><button id="focusRun" class="secondary">Tình huống 2 AP</button></div>
+  </details>
+</main>
+<script src="engine.js"></script><script src="ui.js"></script>
+</html>

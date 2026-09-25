@@ -2,6 +2,8 @@
 
 Ngày: 2026-09-22.
 
+**Cập nhật 2026-09-25 · CG-17/18/19/20:** Mine hiện hành nằm ở [Mine contract 01](MINE-CURRENT-CONTRACT-01.md), Fishing ở [Fishing proposal §5](FISHING-LOOP-PROPOSAL-01.md#5-ba-điểm-câu-với-xác-suất-theo-trạng-thái--cg-18). Contract bên dưới là lịch sử presentation/fixture từ trước các quyết định này: `Search`, `Exposed Ore`, `Extract`, CP3, exact Catch và phí của chúng không còn là luật gameplay Mine/Fishing hiện hành. Giữ các đoạn đó làm evidence UI, không dùng làm danh sách target hoặc action mới.
+
 Mục đích: định hình người chơi **làm gì** khi focus Mine và các Area liên quan tới Fishing trong [scrollable area-tableau model 08](SCROLLABLE-AREA-TABLEAU-MODEL-08.md). Tài liệu hợp nhất evidence từ [Fishing resolution sensitivity 02](../evidence/FISHING-RESOLUTION-SENSITIVITY-02.md) và [Mine checkpoint simulation 02](../evidence/MINE-CHECKPOINT-PAPER-SIMULATION-02.md); không chốt final AP, content count, reward value, tool tier hoặc art.
 
 Latest interaction artifact: [Mine + Fishing target/cost fixture v0.2.4](../../paper-tests/mine-fishing-area-tableau-v0.2.4/README.md). Nó kiểm hierarchy target/cost, **không phải danh sách nội dung V0 hiện tại**. [Package §6.9–6.11](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) giới hạn Mine vòng đầu ở Ore đầu CP3, chưa có paid Descent/repeated material reward tiếp theo. [v0.2](../../paper-tests/mine-fishing-area-tableau-v0.2/README.md) giữ first square-shape result và failed internal-pilot evidence; [v0.2.1](../../paper-tests/mine-fishing-area-tableau-v0.2.1/README.md)–[v0.2.3](../../paper-tests/mine-fishing-area-tableau-v0.2.3/README.md) là correction trail; [v0.1](../../paper-tests/mine-fishing-area-tableau-v0.1/README.md) là portrait rule-text audit trail.
@@ -124,7 +126,9 @@ Current minimum chỉ cần River. Hai expansion hypothesis để test sau, khô
 
 Nếu Lake hoặc Coast chỉ thêm skin/pool mà không đổi decision, giữ chúng như content set trong cùng Fishing grammar thay vì tạo Area mới.
 
-## 3. Mine tableau
+## 3. Mine tableau — lịch sử fixture trước CG-17
+
+Các mục §3.1–3.5 dưới đây ghi cách trình bày và phép thử `Direct Descent / Search / Extract` cũ. [Mine contract 01](MINE-CURRENT-CONTRACT-01.md) thay chúng ở cấp gameplay; chỉ giữ các nguyên tắc UI không xung đột, như focus/inspect không tốn AP và Depth là status.
 
 ### 3.1. Root shape
 
@@ -254,7 +258,9 @@ Give 2–3 AP Mine budget and one outside opportunity. Log progress-vs-discovery
 4. Participant có hiểu Catch có thể rotate nhưng Mine Depth vẫn giữ không?
 5. Mine/Fishing có tạo hai kiểu planning khác nhau hay cùng đọc như resource vending machine?
 
-## 6. Status
+## 6. Status của fixture lịch sử
+
+Các nhãn `[DECIDED]`, `[DIRECTION]` và `[OPEN]` dưới đây phản ánh thời điểm fixture được viết, không phải Mine/Fishing CG-17/18/19 hiện hành.
 
 ### [DECIDED]
 

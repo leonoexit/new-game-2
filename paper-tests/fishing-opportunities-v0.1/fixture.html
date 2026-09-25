@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fishing · Before They Leave</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#edf3ef;color:#203f48;font:16px system-ui,sans-serif}main{max-width:780px;margin:auto;padding:24px 16px}h1{font-size:28px;margin:5px 0 10px}h2{font-size:19px;margin:18px 0 8px}p,li{line-height:1.55}.tag{font-size:12px;letter-spacing:.09em;text-transform:uppercase}.muted{color:#587079}
+button{font:inherit;color:inherit;background:#fffef6;border:1px solid #67858b;border-radius:8px;min-height:44px;padding:10px 14px;cursor:pointer}button:disabled{opacity:.55;cursor:default}button:focus-visible,summary:focus-visible{outline:3px solid #d29532;outline-offset:3px}button[aria-pressed=true]{background:#244f5d;color:white}.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}#stats{background:#244f5d;color:#fffdf1;padding:13px;border-radius:8px;justify-content:space-between}
+#board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}.slot{min-width:0}.card{width:100%;aspect-ratio:1;border-radius:5px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:10px;background:#dcedeb;border:2px solid #6b9297}.card.eel{background:#dce5f2}.card.leaving{border:3px solid #ac682f;background:#fbebcf}.card.empty{background:#e7ece6}.name{font-size:clamp(10px,2.8vw,16px);font-weight:700}.fish{width:60%;height:34%;color:#2c606b}.eel .fish{color:#3c5884}.badge{font-size:clamp(10px,2.7vw,13px);font-weight:700}.cost{font-size:clamp(11px,2.8vw,14px)}.timer{font-size:12px;line-height:1.4;text-align:center;margin:8px 0}.source-note{font-size:13px}
+#message{background:#fffdf2;border-left:4px solid #be8737;padding:13px;line-height:1.5;min-height:72px}#inventory{padding:12px 0;border-top:1px solid #b6c9c8}details{margin-top:20px;border-top:1px solid #b6c9c8;padding-top:14px}summary{cursor:pointer}li{margin:8px 0}#log{max-height:230px;overflow:auto;padding-left:24px;font-size:14px}.attempt{padding:12px;background:#f9fbf3;border:1px solid #bdcfca;border-radius:6px;margin:10px 0;font-size:14px;line-height:1.5}.test-controls{margin-top:24px;padding:14px;background:#e3ece7;border-radius:8px}.test-controls h2{margin-top:0}.test-controls p{font-size:14px;margin-bottom:0}[hidden]{display:none!important}
+@media(max-width:430px){main{padding:16px 10px}#board{gap:6px}.card{padding:7px}.timer{font-size:11px}.row{gap:6px}}
+</style>
+<main>
+  <div class="tag">Little Valley Cards · Fishing study v0.1</div>
+  <h1>Before They Leave</h1>
+  <p class="muted">Choose which fish to catch first. Fish only move after a successful Catch — take your time.</p>
+  <div id="stats" class="row" aria-label="Trip status"></div>
+  <h2 id="stage"></h2><p id="context"></p>
+  <div id="sources" class="row" aria-label="Action sources">
+    <button id="character" aria-pressed="false">Character</button><span>+</span><button id="rod" aria-pressed="false">Fishing Rod</button>
+  </div>
+  <div id="board" aria-label="Available fish"></div>
+  <div id="message" role="status" aria-live="polite"></div>
+  <div class="row"><button id="leave">Return to Farm · 0 AP</button><button id="resume">Return to River · 0 AP</button><button id="farmWork">Farm work · 1 AP</button></div>
+  <h2>Inventory</h2><div id="inventory"></div>
+  <section class="test-controls" aria-label="Playtest controls">
+    <h2>Try a different order</h2>
+    <p>These controls start a fresh test with the same fish and arrivals. Your previous attempt appears below. They are not in-game actions.</p>
+    <div class="row"><button id="retry">Retry same scene · 4 AP</button><button id="priority">One Last Chance</button><button id="choice">Two Departures</button></div>
+  </section>
+  <section id="comparison" hidden><h2>Previous attempts</h2><div id="attempts"></div></section>
+  <details><summary>How to play</summary><ul>
+    <li>Select Character + Fishing Rod, then tap a Fish. A valid Catch always succeeds. Silver Minnow costs 1 AP; Blue Eel costs 2 AP.</li>
+    <li><strong>Leaving</strong> means this fish will leave after you catch one other fish. Catch it now to keep it.</li>
+    <li><strong>Lingering</strong> fish can stay through more Catches. The number below each card is how many other Catches remain before it leaves.</li>
+    <li>Each successful Catch advances every other fish by one step, even when it costs 2 AP. Chosen fish are caught before departures resolve.</li>
+    <li>New fish fill empty slots after departures. Arrivals do not lose a step immediately. The test has 6 fish in total; arrivals stop when the queue is empty.</li>
+    <li>Reading, choosing sources, invalid actions and returning to Farm do not advance fish. The river stays saved while you visit Farm in this test.</li>
+    <li>There is no real-time timer, random failure or free refresh. Rain is fixed so Blue Eel can appear.</li>
+  </ul></details>
+  <details><summary>Action log</summary><ol id="log"></ol></details>
+</main>
+<script src="engine.js"></script><script src="ui.js"></script>
+</html>

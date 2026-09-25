@@ -4,6 +4,10 @@ Ngày correction: 2026-09-22.
 
 Trạng thái: direction hiện hành cho cách trình bày world. Tài liệu này supersede spatial interpretation trong [explicit-surface model 07](../evidence/CONTINUOUS-WORLD-EXPLICIT-SURFACE-MODEL-07.md).
 
+**Card grammar correction · 2026-09-24:** chủ dự án đã chốt World và Area là card identity theo ontology; xem [danh mục lá/entity V0 trong decision 09 §10](ON-TABLE-CARD-SHAPE-DECISION-09.md). Những đoạn dưới đây nói Area không phải card chỉ còn đúng theo nghĩa **không bắt buộc là lá target vuông trên tableau**. `Rìa Rừng` là tên bối cảnh trong Area rừng lớn hơn, không phải Area/card riêng. Sơ đồ Area và tên lá lịch sử bên dưới không thay thế danh mục V0 hiện hành.
+
+**Mine gameplay correction · 2026-09-25:** sơ đồ Mine ở §3 đã đổi sang ba ô mở sẵn theo [Mine contract 01](MINE-CURRENT-CONTRACT-01.md). Các ví dụ CP3/`Search`/`Exposed Ore` còn lại là snapshot presentation cũ; CG-17/19/20 chốt `Break`, `Next`, `Descend`, phí và tầng. Nguyên tắc Area/scroll của tài liệu này vẫn dùng được.
+
 ## 1. Core correction
 
 Game **không có bản đồ**. World được trình bày như một dải giao diện cuộn dọc gồm nhiều **Area tableau trừu tượng**.
@@ -28,9 +32,9 @@ Area là một nhóm presentation/rulescope ổn định:
 - có thể scope Weather, pool, unlock hoặc rule;
 - giữ state khi nằm ngoài viewport.
 
-Area không mặc định là:
+Theo ontology hiện hành Area là card identity, nhưng Area không mặc định là:
 
-- một card;
+- một lá target vuông trên tableau;
 - một box cần mở;
 - một điểm trên bản đồ;
 - một khoảng cách;
@@ -73,14 +77,14 @@ RIVER visual band
 neutral UI divider
 
 MINE visual band
-[Depth/checkpoint status rail]
-[Direct Descent until CP3]
-[Search Side Tunnel at CP3] [Exposed Ore if revealed]
+[Depth status rail]
+[Visible source 1] [Visible source 2] [Visible source 3]
+[Next under each source] [Descend when a route is revealed]
 ```
 
-Đây là sơ đồ rulescope, **không phải danh sách card runtime** hoặc phía bắc/nam, gần/xa, tuyến đường trong fiction. Rìa Rừng là Area thứ năm trong [Wild Herb V0 paper decision](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md), thêm sau informed-owner pilot bốn Area; nó chưa có acceptance về orientation hoặc art. Wild Herb là card vật phẩm xuất hiện trực tiếp trong Area, không phải một `Grove Batch` gateway. Woodlot Collect hiện không được bày như target vòng đầu vì Wood chưa có công dụng đã chọn. Water Trough bị bác bỏ; Mira không thuộc roster playable V0. Sau Ore đầu, không bày paid Descent tiếp khi chưa có reward mới được authored ([package §6.9](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md)).
+Đây là sơ đồ rulescope, **không phải danh sách card runtime** hoặc phía bắc/nam, gần/xa, tuyến đường trong fiction. Ba ô Mine dùng nguồn `Rock`/`Ore Rock` theo [Mine contract 01](MINE-CURRENT-CONTRACT-01.md); sơ đồ không chọn tổ hợp nguồn hoặc phí `Descend`. Rìa Rừng là Area thứ năm trong [Wild Herb V0 paper decision](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md), thêm sau informed-owner pilot bốn Area; nó chưa có acceptance về orientation hoặc art. Wild Herb là card vật phẩm xuất hiện trực tiếp trong Area, không phải một `Grove Batch` gateway. Woodlot Collect hiện không được bày như target vòng đầu vì Wood chưa có công dụng đã chọn. Water Trough bị bác bỏ; Mira không thuộc roster playable V0. Đoạn package §6.9 về dừng paid Descent sau Ore đầu là phạm vi fixture lịch sử, không khóa tầng Mine CG-17.
 
-## 4. Khi nào một thứ là card
+## 4. Khi nào một thứ là target card trên tableau
 
 Một object/context nên là card nếu ít nhất một điều đúng:
 
@@ -94,11 +98,11 @@ Ví dụ:
 
 | Thành phần | Card? | Lý do |
 | --- | --- | --- |
-| River Area | Không mặc định | visual/rulescope |
+| River Area | Không là target vuông mặc định | Area identity và visual/rulescope; không cần lá riêng trên bàn |
 | Today's Catch | Có | exact opportunity + commit target |
 | Fishing Spot duy nhất trong River | Không cần | trùng chức năng với Area + Catch |
 | Hai fishing spots có pool/rule khác nhau | Có thể | mỗi spot tạo target/state riêng |
-| Mine Area | Không mặc định | visual/rulescope |
+| Mine Area | Không là target vuông mặc định | Area identity và visual/rulescope; không cần lá riêng trên bàn |
 | Locked/Collapsed Entrance | Có tạm thời | repair/unlock state có verb |
 | Current Depth/checkpoint | Không là square card | state độc lập nằm trong horizontal status rail |
 | Route có lựa chọn thật | Có khi được authored | target để preview/commit một nhánh cụ thể; không tự tạo route ngoài CP3 |
