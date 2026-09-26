@@ -65,6 +65,11 @@ class RegisterStoreTests(unittest.TestCase):
         with self.assertRaises(ValidationError):
             self.store.add(self.revision, unlabelled_state, [])
         self.assertEqual(self.path.read_bytes(), before)
+        old_type = self.values()
+        old_type['Type'] = 'Tool card'
+        with self.assertRaises(ValidationError):
+            self.store.add(self.revision, old_type, [])
+        self.assertEqual(self.path.read_bytes(), before)
 
     def test_stale_revision_and_feedback(self):
         first_id = self.document['entries'][0]['id']

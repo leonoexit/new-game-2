@@ -70,6 +70,7 @@ function detailMarkup(entry) {
 function fieldInput(field, value) {
   const multiline = ['Description', 'Action', 'State notes (dev)', 'Open questions', 'References', 'Source / destination', 'Transformation / result', 'Encyclopedia'].includes(field);
   const required = ['Identity', 'Type', 'Base identity'].includes(field) ? 'required' : '';
+  if (field === 'Type') return `<label class="editor-field">Type<select name="Type" required><option value="">Choose a type</option>${options(data.types, value)}</select></label>`;
   return `<label class="editor-field">${esc(field)}${multiline ? `<textarea name="${esc(field)}" ${required}>${esc(value)}</textarea>` : `<input name="${esc(field)}" value="${esc(value)}" ${required}>`}</label>`;
 }
 function artRow(variant = { label: '', path: '' }) {

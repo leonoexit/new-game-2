@@ -17,6 +17,29 @@
     "References",
     "Base identity"
   ],
+  "types": [
+    "World",
+    "Region",
+    "Container",
+    "Plot",
+    "Obstacle",
+    "Vegetation",
+    "Source",
+    "Building",
+    "Equipment",
+    "Person",
+    "Tool",
+    "Utility",
+    "Item",
+    "Item · Seed",
+    "Item · Seed · Sapling",
+    "Item · Crop",
+    "Item · Crop · Berry",
+    "Item · Crop · Herb",
+    "Item · Crop · Fruit",
+    "Item · Fish",
+    "Item · Material"
+  ],
   "entries": [
     {
       "id": "entry-70c07ec18ef8",
@@ -44,7 +67,7 @@
       "id": "entry-70f8bb9a8a53",
       "values": {
         "Identity": "Home",
-        "Type": "Region card",
+        "Type": "Region",
         "State": "",
         "Action": "",
         "Description": "",
@@ -66,7 +89,7 @@
       "id": "entry-f41c4e4dab0b",
       "values": {
         "Identity": "Forest",
-        "Type": "Region card",
+        "Type": "Region",
         "State": "",
         "Action": "",
         "Description": "",
@@ -88,7 +111,7 @@
       "id": "entry-de019a901d1a",
       "values": {
         "Identity": "River",
-        "Type": "Region card",
+        "Type": "Region",
         "State": "",
         "Action": "",
         "Description": "",
@@ -110,7 +133,7 @@
       "id": "entry-d42af7968b5c",
       "values": {
         "Identity": "Mine",
-        "Type": "Region card",
+        "Type": "Region",
         "State": "",
         "Action": "",
         "Description": "",
@@ -132,7 +155,7 @@
       "id": "entry-d3440a619712",
       "values": {
         "Identity": "Commerce",
-        "Type": "Region card",
+        "Type": "Region",
         "State": "",
         "Action": "",
         "Description": "",
@@ -154,7 +177,7 @@
       "id": "entry-c65d489c9e64",
       "values": {
         "Identity": "Hand",
-        "Type": "Tool card",
+        "Type": "Tool",
         "State": "",
         "Action": "",
         "Description": "",
@@ -176,7 +199,7 @@
       "id": "entry-dd0484d3aa53",
       "values": {
         "Identity": "Turnip Seed",
-        "Type": "Item / Seed",
+        "Type": "Item · Seed",
         "State": "",
         "Action": "",
         "Description": "",
@@ -323,7 +346,7 @@
       "id": "entry-0e774fe27a11",
       "values": {
         "Identity": "Watering Can",
-        "Type": "Tool card",
+        "Type": "Tool",
         "State": "",
         "Action": "",
         "Description": "",
@@ -345,7 +368,7 @@
       "id": "entry-c905e6d96c2b",
       "values": {
         "Identity": "Fishing Rod",
-        "Type": "Tool card",
+        "Type": "Tool",
         "State": "",
         "Action": "",
         "Description": "",
@@ -367,7 +390,7 @@
       "id": "entry-ce02c8572e8b",
       "values": {
         "Identity": "Pickaxe",
-        "Type": "Tool card",
+        "Type": "Tool",
         "State": "",
         "Action": "",
         "Description": "",
@@ -411,7 +434,7 @@
       "id": "entry-a2d1ad066101",
       "values": {
         "Identity": "Fishing Spot (Ready)",
-        "Type": "Source card",
+        "Type": "Source",
         "State": "Ready",
         "Action": "",
         "Description": "",
@@ -433,7 +456,7 @@
       "id": "entry-9d9f19d01892",
       "values": {
         "Identity": "Fishing Spot (Used today)",
-        "Type": "Source card",
+        "Type": "Source",
         "State": "Used today",
         "Action": "",
         "Description": "",
@@ -455,7 +478,7 @@
       "id": "entry-b0f45360f1d0",
       "values": {
         "Identity": "Rock (Ready)",
-        "Type": "Source card",
+        "Type": "Source",
         "State": "Ready",
         "Action": "",
         "Description": "",
@@ -477,7 +500,7 @@
       "id": "entry-724a2cf5809b",
       "values": {
         "Identity": "Rock (Spent)",
-        "Type": "Source card",
+        "Type": "Source",
         "State": "Spent",
         "Action": "",
         "Description": "",
@@ -499,7 +522,7 @@
       "id": "entry-f5147583f84e",
       "values": {
         "Identity": "Ore Rock (Ordinary)",
-        "Type": "Source card",
+        "Type": "Source",
         "State": "Ordinary",
         "Action": "",
         "Description": "",
@@ -521,7 +544,7 @@
       "id": "entry-b3f27f46a10e",
       "values": {
         "Identity": "Ore Rock (Dense)",
-        "Type": "Source card",
+        "Type": "Source",
         "State": "Dense",
         "Action": "",
         "Description": "",
@@ -543,7 +566,7 @@
       "id": "entry-54d193e0c197",
       "values": {
         "Identity": "Ore Rock (Spent)",
-        "Type": "Source card",
+        "Type": "Source",
         "State": "Spent",
         "Action": "",
         "Description": "",
@@ -565,7 +588,7 @@
       "id": "entry-ccde90705430",
       "values": {
         "Identity": "Copper Pickaxe",
-        "Type": "Tool card",
+        "Type": "Tool",
         "State": "",
         "Action": "",
         "Description": "",
@@ -587,7 +610,7 @@
       "id": "entry-fc36b77a2afe",
       "values": {
         "Identity": "Ore",
-        "Type": "Item / output",
+        "Type": "Item",
         "State": "",
         "Action": "",
         "Description": "",
@@ -609,7 +632,7 @@
       "id": "entry-cc8f86c2a3e6",
       "values": {
         "Identity": "Nell",
-        "Type": "Person card",
+        "Type": "Person",
         "State": "",
         "Action": "",
         "Description": "",
@@ -631,7 +654,7 @@
       "id": "entry-7247fb59abbd",
       "values": {
         "Identity": "Supermarket",
-        "Type": "Building card",
+        "Type": "Building",
         "State": "",
         "Action": "",
         "Description": "",
@@ -653,7 +676,7 @@
       "id": "entry-060a11b0d2f9",
       "values": {
         "Identity": "Shipping Bin",
-        "Type": "Equipment card · Thiết bị",
+        "Type": "Equipment",
         "State": "",
         "Action": "",
         "Description": "",
@@ -675,7 +698,7 @@
       "id": "entry-872a9849e277",
       "values": {
         "Identity": "Farmhouse",
-        "Type": "Building card",
+        "Type": "Building",
         "State": "",
         "Action": "",
         "Description": "",
@@ -697,7 +720,7 @@
       "id": "entry-b96304459958",
       "values": {
         "Identity": "TV (Unwatched)",
-        "Type": "Equipment card · Thiết bị",
+        "Type": "Equipment",
         "State": "Unwatched",
         "Action": "",
         "Description": "",
@@ -719,7 +742,7 @@
       "id": "entry-1ba60e26d273",
       "values": {
         "Identity": "TV (Watched)",
-        "Type": "Equipment card · Thiết bị",
+        "Type": "Equipment",
         "State": "Watched",
         "Action": "",
         "Description": "",
@@ -741,7 +764,7 @@
       "id": "entry-a05e89a5e733",
       "values": {
         "Identity": "Valley Almanac",
-        "Type": "Utility card",
+        "Type": "Utility",
         "State": "",
         "Action": "",
         "Description": "",
@@ -763,7 +786,7 @@
       "id": "entry-205b8356f29c",
       "values": {
         "Identity": "Soil (Empty Soil)",
-        "Type": "Plot card",
+        "Type": "Plot",
         "State": "Empty Soil",
         "Action": "Till\nPlant",
         "Description": "An open Field plot. Hoe changes it to Tilled Soil; a sapling can grow here without tilling.",
@@ -790,7 +813,7 @@
       "id": "entry-3c804a1bb2a5",
       "values": {
         "Identity": "Soil (Overgrown Soil)",
-        "Type": "Plot card",
+        "Type": "Plot",
         "State": "Overgrown Soil",
         "Action": "",
         "Description": "",
@@ -817,7 +840,7 @@
       "id": "entry-f2c7f4651a4f",
       "values": {
         "Identity": "Soil (Tilled Soil)",
-        "Type": "Plot card",
+        "Type": "Plot",
         "State": "Tilled Soil",
         "Action": "",
         "Description": "",
@@ -844,7 +867,7 @@
       "id": "entry-0e88e3645484",
       "values": {
         "Identity": "Field Rock",
-        "Type": "Obstacle card · tên làm việc",
+        "Type": "Obstacle",
         "State": "",
         "Action": "",
         "Description": "",
@@ -871,7 +894,7 @@
       "id": "entry-c326a4660b67",
       "values": {
         "Identity": "Field",
-        "Type": "Container card; nhãn loại còn mở",
+        "Type": "Container",
         "State": "",
         "Action": "",
         "Description": "",
@@ -882,7 +905,7 @@
         "State notes (dev)": "Container: tối đa 8 vị trí đất, riêng với Home",
         "Encyclopedia": "Ghi Field khi lá hiện; lá đất ghi khi từng identity hiện",
         "Decision status": "Owner ủy quyền chốt Field V0 · CG-35–39",
-        "Open questions": "V0: 2 Soil trống + 3 Soil có bụi + 3 Field Rock; Clear đá thay lá tại cùng vị trí",
+        "Open questions": "Container là nhãn Type làm việc, chưa chốt tên loại cuối; V0: 2 Soil trống + 3 Soil có bụi + 3 Field Rock; Clear đá thay lá tại cùng vị trí",
         "References": "Decision 09 · CG-25/27/35–39; Farm land contract 01",
         "Base identity": "Field"
       },
@@ -893,7 +916,7 @@
       "id": "entry-1a706e2365dd",
       "values": {
         "Identity": "Bed",
-        "Type": "Equipment card · Thiết bị",
+        "Type": "Equipment",
         "State": "No tracked state",
         "Action": "Sleep",
         "Description": "Sleeping starts a new day and resolves daily changes.",
@@ -915,7 +938,7 @@
       "id": "entry-ad2d4403854c",
       "values": {
         "Identity": "Sickle",
-        "Type": "Tool card",
+        "Type": "Tool",
         "State": "",
         "Action": "",
         "Description": "",
@@ -937,7 +960,7 @@
       "id": "entry-ee6e7093bc29",
       "values": {
         "Identity": "Hoe",
-        "Type": "Tool card",
+        "Type": "Tool",
         "State": "",
         "Action": "",
         "Description": "",
@@ -959,7 +982,7 @@
       "id": "entry-029690b00bcd",
       "values": {
         "Identity": "Stone",
-        "Type": "Item / material",
+        "Type": "Item · Material",
         "State": "",
         "Action": "",
         "Description": "",
@@ -981,7 +1004,7 @@
       "id": "entry-476cc4e142eb",
       "values": {
         "Identity": "Runner Bean Seed",
-        "Type": "Item / Seed",
+        "Type": "Item · Seed",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1101,7 +1124,7 @@
       "id": "entry-ec82d007387a",
       "values": {
         "Identity": "Lemon Balm Seed",
-        "Type": "Item / Seed",
+        "Type": "Item · Seed",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1189,7 +1212,7 @@
       "id": "entry-6a04cf8dd07a",
       "values": {
         "Identity": "Lemon Balm",
-        "Type": "Item · Crop · Herb subtype",
+        "Type": "Item · Crop · Herb",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1211,7 +1234,7 @@
       "id": "entry-640b2a63fbe0",
       "values": {
         "Identity": "Hedgerow (Berries ready)",
-        "Type": "Vegetation · bụi cây bám đất",
+        "Type": "Vegetation",
         "State": "Berries ready",
         "Action": "",
         "Description": "",
@@ -1233,7 +1256,7 @@
       "id": "entry-1dfb11813bc9",
       "values": {
         "Identity": "Hedgerow (Picked)",
-        "Type": "Vegetation · bụi cây bám đất",
+        "Type": "Vegetation",
         "State": "Picked",
         "Action": "",
         "Description": "",
@@ -1255,7 +1278,7 @@
       "id": "entry-dda9e71cef5b",
       "values": {
         "Identity": "Hedgerow Berry",
-        "Type": "Item · Crop · Berry subtype",
+        "Type": "Item · Crop · Berry",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1277,7 +1300,7 @@
       "id": "entry-3be0091f8c98",
       "values": {
         "Identity": "Oak Tree (Mature)",
-        "Type": "Vegetation · cây bám đất",
+        "Type": "Vegetation",
         "State": "Mature",
         "Action": "",
         "Description": "",
@@ -1299,7 +1322,7 @@
       "id": "entry-85d7f2bd5b86",
       "values": {
         "Identity": "Oak Tree (Stump)",
-        "Type": "Vegetation · cây bám đất",
+        "Type": "Vegetation",
         "State": "Stump",
         "Action": "",
         "Description": "",
@@ -1321,7 +1344,7 @@
       "id": "entry-62e5150d94df",
       "values": {
         "Identity": "Maple Tree (Mature)",
-        "Type": "Vegetation · cây bám đất",
+        "Type": "Vegetation",
         "State": "Mature",
         "Action": "",
         "Description": "",
@@ -1343,7 +1366,7 @@
       "id": "entry-d254a7b75856",
       "values": {
         "Identity": "Maple Tree (Stump)",
-        "Type": "Vegetation · cây bám đất",
+        "Type": "Vegetation",
         "State": "Stump",
         "Action": "",
         "Description": "",
@@ -1365,7 +1388,7 @@
       "id": "entry-381064e3ec39",
       "values": {
         "Identity": "Pine Tree (Mature)",
-        "Type": "Vegetation · cây bám đất",
+        "Type": "Vegetation",
         "State": "Mature",
         "Action": "",
         "Description": "",
@@ -1387,7 +1410,7 @@
       "id": "entry-31c3c5986868",
       "values": {
         "Identity": "Pine Tree (Stump)",
-        "Type": "Vegetation · cây bám đất",
+        "Type": "Vegetation",
         "State": "Stump",
         "Action": "",
         "Description": "",
@@ -1409,7 +1432,7 @@
       "id": "entry-7ed611de7d17",
       "values": {
         "Identity": "Axe",
-        "Type": "Tool card",
+        "Type": "Tool",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1431,7 +1454,7 @@
       "id": "entry-b3b5a34500ef",
       "values": {
         "Identity": "Wood",
-        "Type": "Item / material",
+        "Type": "Item · Material",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1453,7 +1476,7 @@
       "id": "entry-91fe9d781882",
       "values": {
         "Identity": "Sap",
-        "Type": "Item / material",
+        "Type": "Item · Material",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1475,7 +1498,7 @@
       "id": "entry-dda025df025f",
       "values": {
         "Identity": "Apricot Tree (Young)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Young",
         "Action": "",
         "Description": "",
@@ -1497,7 +1520,7 @@
       "id": "entry-a21a5b96ece1",
       "values": {
         "Identity": "Apricot Tree (Fruit ready)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Fruit ready",
         "Action": "",
         "Description": "",
@@ -1519,7 +1542,7 @@
       "id": "entry-1e8d16a38284",
       "values": {
         "Identity": "Apricot Tree (Regrowing)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Regrowing",
         "Action": "",
         "Description": "",
@@ -1541,7 +1564,7 @@
       "id": "entry-f81dfb8e847a",
       "values": {
         "Identity": "Apricot Tree (No fruit)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "No fruit",
         "Action": "",
         "Description": "",
@@ -1563,7 +1586,7 @@
       "id": "entry-e02ab8630e93",
       "values": {
         "Identity": "Cherry Tree (Young)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Young",
         "Action": "",
         "Description": "",
@@ -1585,7 +1608,7 @@
       "id": "entry-0396c975157a",
       "values": {
         "Identity": "Cherry Tree (Fruit ready)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Fruit ready",
         "Action": "",
         "Description": "",
@@ -1607,7 +1630,7 @@
       "id": "entry-740f1b6528af",
       "values": {
         "Identity": "Cherry Tree (Regrowing)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Regrowing",
         "Action": "",
         "Description": "",
@@ -1629,7 +1652,7 @@
       "id": "entry-6344b5800a5b",
       "values": {
         "Identity": "Cherry Tree (No fruit)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "No fruit",
         "Action": "",
         "Description": "",
@@ -1651,7 +1674,7 @@
       "id": "entry-76efffa4b13b",
       "values": {
         "Identity": "Apricot Sapling",
-        "Type": "Item / Seed · Sapling",
+        "Type": "Item · Seed · Sapling",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1673,7 +1696,7 @@
       "id": "entry-ad82a5b09375",
       "values": {
         "Identity": "Cherry Sapling",
-        "Type": "Item / Seed · Sapling",
+        "Type": "Item · Seed · Sapling",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1695,7 +1718,7 @@
       "id": "entry-a569f065ec60",
       "values": {
         "Identity": "Apricot",
-        "Type": "Item · Crop · fruit",
+        "Type": "Item · Crop · Fruit",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1717,7 +1740,7 @@
       "id": "entry-d6eee90533df",
       "values": {
         "Identity": "Cherry",
-        "Type": "Item · Crop · fruit",
+        "Type": "Item · Crop · Fruit",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1739,7 +1762,7 @@
       "id": "entry-2cc8d0041f4e",
       "values": {
         "Identity": "Orange Tree (Young)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Young",
         "Action": "",
         "Description": "",
@@ -1761,7 +1784,7 @@
       "id": "entry-c02a21873406",
       "values": {
         "Identity": "Orange Tree (Fruit ready)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Fruit ready",
         "Action": "",
         "Description": "",
@@ -1783,7 +1806,7 @@
       "id": "entry-89e0697ad44d",
       "values": {
         "Identity": "Orange Tree (Regrowing)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Regrowing",
         "Action": "",
         "Description": "",
@@ -1805,7 +1828,7 @@
       "id": "entry-9057cb844cd1",
       "values": {
         "Identity": "Orange Tree (No fruit)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "No fruit",
         "Action": "",
         "Description": "",
@@ -1827,7 +1850,7 @@
       "id": "entry-155c21a4502b",
       "values": {
         "Identity": "Peach Tree (Young)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Young",
         "Action": "",
         "Description": "",
@@ -1849,7 +1872,7 @@
       "id": "entry-99cac5e62dbf",
       "values": {
         "Identity": "Peach Tree (Fruit ready)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Fruit ready",
         "Action": "",
         "Description": "",
@@ -1871,7 +1894,7 @@
       "id": "entry-f3de47c3c405",
       "values": {
         "Identity": "Peach Tree (Regrowing)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Regrowing",
         "Action": "",
         "Description": "",
@@ -1893,7 +1916,7 @@
       "id": "entry-22c7bcf270fc",
       "values": {
         "Identity": "Peach Tree (No fruit)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "No fruit",
         "Action": "",
         "Description": "",
@@ -1915,7 +1938,7 @@
       "id": "entry-9e9b13ea2068",
       "values": {
         "Identity": "Orange Sapling",
-        "Type": "Item / Seed · Sapling",
+        "Type": "Item · Seed · Sapling",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1937,7 +1960,7 @@
       "id": "entry-21847741d84d",
       "values": {
         "Identity": "Peach Sapling",
-        "Type": "Item / Seed · Sapling",
+        "Type": "Item · Seed · Sapling",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1959,7 +1982,7 @@
       "id": "entry-09fb6aaba794",
       "values": {
         "Identity": "Orange",
-        "Type": "Item · Crop · fruit",
+        "Type": "Item · Crop · Fruit",
         "State": "",
         "Action": "",
         "Description": "",
@@ -1981,7 +2004,7 @@
       "id": "entry-9d572da10245",
       "values": {
         "Identity": "Peach",
-        "Type": "Item · Crop · fruit",
+        "Type": "Item · Crop · Fruit",
         "State": "",
         "Action": "",
         "Description": "",
@@ -2003,7 +2026,7 @@
       "id": "entry-2a4919d122db",
       "values": {
         "Identity": "Apple Tree (Young)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Young",
         "Action": "",
         "Description": "",
@@ -2025,7 +2048,7 @@
       "id": "entry-119226942293",
       "values": {
         "Identity": "Apple Tree (Fruit ready)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Fruit ready",
         "Action": "",
         "Description": "",
@@ -2047,7 +2070,7 @@
       "id": "entry-89891e0c65e2",
       "values": {
         "Identity": "Apple Tree (Regrowing)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Regrowing",
         "Action": "",
         "Description": "",
@@ -2069,7 +2092,7 @@
       "id": "entry-d4216c895e93",
       "values": {
         "Identity": "Apple Tree (No fruit)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "No fruit",
         "Action": "",
         "Description": "",
@@ -2091,7 +2114,7 @@
       "id": "entry-c5aa4b3d0e0e",
       "values": {
         "Identity": "Pomegranate Tree (Young)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Young",
         "Action": "",
         "Description": "",
@@ -2113,7 +2136,7 @@
       "id": "entry-9ff53cad94ae",
       "values": {
         "Identity": "Pomegranate Tree (Fruit ready)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Fruit ready",
         "Action": "",
         "Description": "",
@@ -2135,7 +2158,7 @@
       "id": "entry-35b38fd5c4e6",
       "values": {
         "Identity": "Pomegranate Tree (Regrowing)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "Regrowing",
         "Action": "",
         "Description": "",
@@ -2157,7 +2180,7 @@
       "id": "entry-bc16f5c80cc2",
       "values": {
         "Identity": "Pomegranate Tree (No fruit)",
-        "Type": "Vegetation · cây ăn quả bám đất",
+        "Type": "Vegetation",
         "State": "No fruit",
         "Action": "",
         "Description": "",
@@ -2179,7 +2202,7 @@
       "id": "entry-d1764f655a95",
       "values": {
         "Identity": "Apple Sapling",
-        "Type": "Item / Seed · Sapling",
+        "Type": "Item · Seed · Sapling",
         "State": "",
         "Action": "",
         "Description": "",
@@ -2201,7 +2224,7 @@
       "id": "entry-cb8acdc50eae",
       "values": {
         "Identity": "Pomegranate Sapling",
-        "Type": "Item / Seed · Sapling",
+        "Type": "Item · Seed · Sapling",
         "State": "",
         "Action": "",
         "Description": "",
@@ -2223,7 +2246,7 @@
       "id": "entry-476432a3e85a",
       "values": {
         "Identity": "Apple",
-        "Type": "Item · Crop · fruit",
+        "Type": "Item · Crop · Fruit",
         "State": "",
         "Action": "",
         "Description": "",
@@ -2245,7 +2268,7 @@
       "id": "entry-f483353bc705",
       "values": {
         "Identity": "Pomegranate",
-        "Type": "Item · Crop · fruit",
+        "Type": "Item · Crop · Fruit",
         "State": "",
         "Action": "",
         "Description": "",
@@ -2267,7 +2290,7 @@
       "id": "entry-10b219654e6d",
       "values": {
         "Identity": "Mahogany Tree (Mature)",
-        "Type": "Vegetation · cây bám đất",
+        "Type": "Vegetation",
         "State": "Mature",
         "Action": "",
         "Description": "",
@@ -2289,7 +2312,7 @@
       "id": "entry-e23fd2313ddf",
       "values": {
         "Identity": "Mahogany Tree (Stump)",
-        "Type": "Vegetation · cây bám đất",
+        "Type": "Vegetation",
         "State": "Stump",
         "Action": "",
         "Description": "",
@@ -2311,7 +2334,7 @@
       "id": "entry-35774ac1f1c0",
       "values": {
         "Identity": "Hardwood",
-        "Type": "Item / material",
+        "Type": "Item · Material",
         "State": "",
         "Action": "",
         "Description": "",
@@ -2531,7 +2554,7 @@
       "id": "entry-d4c4155d8398",
       "values": {
         "Identity": "Farm Pond",
-        "Type": "Source card",
+        "Type": "Source",
         "State": "",
         "Action": "",
         "Description": "",

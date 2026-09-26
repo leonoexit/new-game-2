@@ -35,7 +35,7 @@ class NotFoundError(RegisterError):
     pass
 
 
-def validate_values(values: object, fields: list[str]) -> None:
+def validate_values(values: object, fields: list[str], types: list[str]) -> None:
     if not isinstance(values, dict) or set(values) != set(fields):
         raise ValidationError('Entry fields must match the register schema')
     if any(not isinstance(value, str) for value in values.values()):
@@ -45,6 +45,8 @@ def validate_values(values: object, fields: list[str]) -> None:
     state = values['State'].strip()
     if not identity or not values['Type'].strip() or not base:
         raise ValidationError('Identity, Type and Base identity are required')
+    if values['Type'] not in types:
+        raise ValidationError('Choose a Type from the canonical register vocabulary')
     if identity == base and state and state != 'No tracked state':
         raise ValidationError('A named state needs Identity (State)')
     if identity != base and (not state or identity != f'{base} ({state})'):
@@ -84,10 +86,13 @@ def validate_register(document: object, assets_dir: Path = ASSETS) -> None:
         raise ValidationError('Unsupported Card Register schema')
     fields = document.get('fields')
     entries = document.get('entries')
+    types = document.get('types')
     if not isinstance(fields, list) or fields[:5] != CORE_FIELDS or 'Base identity' not in fields:
         raise ValidationError('The five card fields and Base identity are required')
     if any(not isinstance(field, str) or not field for field in fields) or len(set(fields)) != len(fields):
         raise ValidationError('Register field names must be unique text')
+    if not isinstance(types, list) or not types or any(not isinstance(item, str) or not item.strip() for item in types) or len(set(types)) != len(types):
+        raise ValidationError('Canonical Type vocabulary must be unique nonempty text')
     if not isinstance(entries, list):
         raise ValidationError('Register entries must be a list')
     ids = set()
@@ -98,7 +103,7 @@ def validate_register(document: object, assets_dir: Path = ASSETS) -> None:
         if entry['id'] in ids:
             raise ValidationError(f'Duplicate entry ID: {entry["id"]}')
         ids.add(entry['id'])
-        validate_values(entry.get('values'), fields)
+        validate_values(entry.get('values'), fields, types)
         label = entry['values']['Identity'].strip().casefold()
         if label in identities:
             raise ValidationError(f'Duplicate Identity (State): {entry["values"]["Identity"]}')
