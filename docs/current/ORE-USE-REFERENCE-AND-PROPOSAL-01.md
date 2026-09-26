@@ -1,6 +1,6 @@
 # Công dụng Ore — tham chiếu và đề xuất 01
 
-Ngày đối chiếu: 2026-09-25. Trạng thái: **CG-11/13/19 giữ hướng Ore và tác dụng Tool; CG-20 đã chốt Mine/Copper cụ thể trong [Mine contract 01](MINE-CURRENT-CONTRACT-01.md). Fixture chưa triển khai.** Gói miễn AP lần đầu/+Ore cũ đã rút; không nhầm với giảm phí Break theo cấp Tool tại §8. Đọc cùng [card grammar §10](ON-TABLE-CARD-SHAPE-DECISION-09.md) và [danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx).
+Ngày đối chiếu: 2026-09-25. Trạng thái: **CG-11/13/19 giữ hướng Ore và tác dụng Tool; CG-20 đã chốt Mine/Copper cụ thể trong [Mine contract 01](MINE-CURRENT-CONTRACT-01.md). Fixture chưa triển khai.** Gói miễn AP lần đầu/+Ore cũ đã rút; không nhầm với giảm phí Break theo cấp Tool tại §8. Đọc cùng [card grammar §10](ON-TABLE-CARD-SHAPE-DECISION-09.md) và [danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.json).
 
 **Cập nhật CG-26:** Farm V0 chỉ dùng Watering Can thường, Water từng crop 1 AP; không có nâng Can trong V0. Bảng phạm vi/sức chứa ở §4/7 là tham chiếu sau V0. Copper Pickaxe theo CG-20 vẫn thuộc V0.
 

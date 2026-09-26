@@ -23,4 +23,4 @@ Khung `Vegetation` dùng logic cây/bụi bám đất của CG-57; Hand Harvest 
 | Sét | Cây bị sét tạm cho Coal thay quả rồi hồi lại | Không tự thêm Weather action, Coal output hoặc state cháy vào V0 |
 | Banana/Mango trong quà tặng | Game gốc xếp sở thích Gift khác nhóm fruit-tree fruit thông thường | Không ghi đè luật Gift của NPC trong Little Valley Cards |
 
-Nguồn game gốc dùng 28 ngày để trưởng thành, mỗi ngày một quả và giữ tối đa ba quả trước khi hái. Các số này **chỉ là dữ kiện tham chiếu**; lô nháp không gán ngày giấy, AP, xác suất, giá, recipe hoặc sink. Không lá cây, sapling hay quả nào trong lô này được kích hoạt trong [danh mục V0](../current/LITTLE-VALLEY-CARD-REGISTER-V0.xlsx).
+Nguồn game gốc dùng 28 ngày để trưởng thành, mỗi ngày một quả và giữ tối đa ba quả trước khi hái. Các số này **chỉ là dữ kiện tham chiếu**; lô nháp không gán ngày giấy, AP, xác suất, giá, recipe hoặc sink. Không lá cây, sapling hay quả nào trong lô này được kích hoạt trong [danh mục V0](../current/LITTLE-VALLEY-CARD-REGISTER-V0.json).

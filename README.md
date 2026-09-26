@@ -2,12 +2,12 @@
 
 Repository này chứa luật giấy, chứng cứ thử nghiệm, nghiên cứu hình ảnh và [bản chơi thử V0 chạy trên trình duyệt](prototype/README.md). Prototype dùng fixture cho những thông số chưa chốt; luật hiện hành vẫn do các contract trong `docs/current/` sở hữu.
 
-[Card Register devtool](prototype/card-register.html) cho phép đọc/sắp xếp toàn bộ danh mục lá V0 theo từng state và ghi phản hồi ảnh; [cách chạy và xuất dữ liệu từ workbook](prototype/README.md#card-register-devtool).
+[Card Register devtool](prototype/card-register.html) cho phép đọc/sắp xếp toàn bộ danh mục lá V0 theo từng state, ghi phản hồi ảnh, thêm và sửa lá trực tiếp; [cách chạy devtool](prototype/README.md#card-register-devtool).
 
 ## Bắt đầu từ đâu
 
 1. [Bản đồ nguồn luật hiện hành](docs/current/README.md) chỉ rõ tài liệu nào sở hữu từng cơ chế và tài liệu nào là snapshot. Bắt đầu ở đây trước khi sửa luật.
-2. [Nhật ký quyết định](docs/current/ON-TABLE-CARD-SHAPE-DECISION-09.md) ghi điều đã chốt và nguồn gốc quyết định; [danh mục lá V0](docs/current/LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) ghi identity/loại/nơi/vai trò của từng lá. Luật chơi chi tiết nằm trong contract của cơ chế được liệt kê ở bản đồ.
+2. [Nhật ký quyết định](docs/current/ON-TABLE-CARD-SHAPE-DECISION-09.md) ghi điều đã chốt và nguồn gốc quyết định; [danh mục lá V0](docs/current/LITTLE-VALLEY-CARD-REGISTER-V0.json) ghi identity/loại/nơi/vai trò của từng lá. Luật chơi chi tiết nằm trong contract của cơ chế được liệt kê ở bản đồ.
 3. [Goal nội dung năm Region](docs/current/FIRST-PLAYABLE-FIVE-REGION-CONTENT-GOAL-01.md), [gói Year 1](docs/current/YEAR-1-PAPER-DESIGN-PACKAGE-V1.md), [graph Year 1](docs/current/YEAR-1-PROGRESSION-DEPENDENCY-GRAPH-V1.md) và [mô hình Area cũ](docs/current/SCROLLABLE-AREA-TABLEAU-MODEL-08.md) là hồ sơ theo thời điểm viết để đọc tiến trình thiết kế, không phải nơi chốt luật hiện hành.
 
 Thêm nội dung mới theo [quy trình batch](docs/current/CONTENT-BATCH-WORKFLOW-01.md): nhập cả họ theo nguồn trước, rà logic chung sau, rồi mới đưa phần được chọn vào danh mục V0.

@@ -5,7 +5,7 @@ Thư mục này chứa cả luật đang dùng và hồ sơ cũ. **Đường d�
 | Thông tin | Nơi sở hữu nội dung hiện hành | Chỉ ghi gì ở nơi khác |
 | --- | --- | --- |
 | Chủ dự án đã chốt gì, điều gì do dự án chuyển thể, phạm vi và quyết định thay thế | [Nhật ký quyết định và card grammar](ON-TABLE-CARD-SHAPE-DECISION-09.md) | Mã quyết định và liên kết, không chép lại toàn bộ luật |
-| Card identity, loại lá, nơi thuộc về và vai trò của từng lá V0 | [Danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) | Tên lá và liên kết tới danh mục khi cần |
+| Card identity, loại lá, nơi thuộc về và vai trò của từng lá V0 | [Danh mục JSON V0](LITTLE-VALLEY-CARD-REGISTER-V0.json) | Tên lá và liên kết tới danh mục khi cần |
 | World/Region, quan hệ chứa và điều hướng | [World architecture](WORLD-NESTED-CARD-ARCHITECTURE-01.md) | Chỉ mô tả đường đi cần cho phép thử |
 | Field, đất, Clear/Till và sức chứa | [Farm land contract](FARM-V0-LAND-AND-PLOT-CONTRACT-01.md) | Dẫn contract; không lặp phân bố Soil/đá hoặc phí |
 | Plant/Water/Harvest, Rain/Sleep và AP ở Farm | [Farm action grammar](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) | Dẫn contract; không lặp bảng action |
@@ -16,6 +16,8 @@ Thư mục này chứa cả luật đang dùng và hồ sơ cũ. **Đường d�
 | Break/Next/Descend, Ore và Copper Pickaxe | [Mine contract](MINE-CURRENT-CONTRACT-01.md) | Dẫn contract |
 | Fishing Spot, Cast và Fish output | [Fishing contract](FISHING-CURRENT-CONTRACT-01.md) | Dẫn contract |
 | UI hoặc cơ chế chưa có contract riêng, gồm Nell/Gift, Bed, Commerce, Valley Almanac | [Nhật ký quyết định](ON-TABLE-CARD-SHAPE-DECISION-09.md) | Khi cần chi tiết hơn, lập một contract của cơ chế rồi cập nhật bảng này |
+
+Danh mục JSON là nguồn dữ liệu duy nhất cho lá/state. [Card Register devtool](../../prototype/card-register.html) đọc và sửa trực tiếp danh mục đó; workbook cũ đã nghỉ dùng. Devtool không sở hữu luật gameplay.
 
 ## Hồ sơ không phải nguồn luật hiện hành
 

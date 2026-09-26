@@ -4,7 +4,7 @@ Ngày lập: 2026-09-21.
 
 Mục đích: chọn bộ content fixture nhỏ nhất đủ để Producer, Connector và Collector dùng chung một vocabulary trong các vòng calendar/economy sensitivity kế tiếp. Tài liệu này không phải danh sách content Year 1, không chốt balance, không cho phép code/prototype và không biến tên hay rule fixture thành luật.
 
-**Trạng thái: snapshot phục vụ phép thử sensitivity, không sở hữu luật V0.** Các phần bên dưới giữ vocabulary, giả định và kết quả theo thời điểm viết; một số tên, action, giá và Project đã bị thay. Tra [bản đồ nguồn luật](README.md) để tìm contract của cơ chế và [danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) để xác định lá đang chơi. Không thêm đoạn “update hiện hành” vào registry khi một luật đổi.
+**Trạng thái: snapshot phục vụ phép thử sensitivity, không sở hữu luật V0.** Các phần bên dưới giữ vocabulary, giả định và kết quả theo thời điểm viết; một số tên, action, giá và Project đã bị thay. Tra [bản đồ nguồn luật](README.md) để tìm contract của cơ chế và [danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.json) để xác định lá đang chơi. Không thêm đoạn “update hiện hành” vào registry khi một luật đổi.
 
 ## 1. Phân loại trạng thái
 

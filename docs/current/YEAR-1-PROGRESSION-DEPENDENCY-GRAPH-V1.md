@@ -4,7 +4,7 @@ Ngày tổng hợp: 2026-09-21; evidence integration pass: 2026-09-22; post-remo
 
 Trạng thái: graph v1 tích hợp content-minimum registry, calendar sensitivity, economy ledger v2 và Person kernel audit. `Year 1` là horizon content/balance, không phải ending, reset hoặc deadline. Graph dùng state/reveal bands; exact Season/day placement chỉ được ghi nơi sensitivity có bằng chứng, không suy từ fixture thành luật.
 
-**Trạng thái: graph/snapshot của các giả định và phép thử theo thời điểm viết, không sở hữu luật V0.** Node lịch sử có thể chứa nguồn, action, giá, lịch, Project hoặc reward đã bị thay. Tra [bản đồ nguồn luật](README.md), [nhật ký quyết định](ON-TABLE-CARD-SHAPE-DECISION-09.md) và [danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) trước khi dùng một node làm đường chơi. Không vá graph này mỗi khi contract đổi; chỉ lập graph phiên bản mới khi cần kiểm tiến trình mới.
+**Trạng thái: graph/snapshot của các giả định và phép thử theo thời điểm viết, không sở hữu luật V0.** Node lịch sử có thể chứa nguồn, action, giá, lịch, Project hoặc reward đã bị thay. Tra [bản đồ nguồn luật](README.md), [nhật ký quyết định](ON-TABLE-CARD-SHAPE-DECISION-09.md) và [danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.json) trước khi dùng một node làm đường chơi. Không vá graph này mỗi khi contract đổi; chỉ lập graph phiên bản mới khi cần kiểm tiến trình mới.
 
 Nguồn chính:
 

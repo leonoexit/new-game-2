@@ -3,7 +3,7 @@
 Đây là **prototype gameplay chạy trên trình duyệt**, tách khỏi luật giấy. Nó đọc theo [bản đồ nguồn luật](../docs/current/README.md), không tự sửa contract. Chạy bằng Python có sẵn:
 
 ```sh
-python3 -m http.server 4173 --directory prototype
+python3 scripts/run_prototype.py
 ```
 
 Mở `http://localhost:4173`. Dữ liệu lượt chơi lưu tự động trong `localStorage` của trình duyệt đó. Nút **Bắt đầu lại** xóa lượt thử sau khi xác nhận.
@@ -34,11 +34,13 @@ Card grammar đã đủ cho **demo đầu tiên**, nhưng demo đang **pending k
 
 ## Card Register devtool
 
-Mở [Card Register](card-register.html) tại `http://localhost:4173/card-register.html` để xem **toàn bộ 113 dòng có dữ liệu** từ [workbook V0](../docs/current/LITTLE-VALLEY-CARD-REGISTER-V0.xlsx). Nhiều lá có một dòng cho mỗi named State; `Identity` trong workbook có nhãn dạng `Soil (Tilled Soil)`, còn `Base identity` giữ identity thật là `Soil`. Một dòng trống trong workbook (dòng 14) là dấu phân cách, không là lá. Danh sách tìm trên mọi cột, lọc theo nhóm Type, State, tình trạng ảnh runtime và feedback; sắp xếp theo dòng Excel, Identity, Base identity, Type, State, Belongs to hoặc Decision status. Chọn một dòng để đọc đủ 15 trường, số dòng Excel và ảnh được prototype dùng cho state đó. “No runtime image assigned” nghĩa là chưa gán art cho bản chơi thử, không kết luận file ảnh bị lỗi.
+Chạy `python3 scripts/run_prototype.py`, rồi mở [Card Register](card-register.html) tại `http://localhost:4173/card-register.html`. [Danh mục JSON V0](../docs/current/LITTLE-VALLEY-CARD-REGISTER-V0.json) là nguồn dữ liệu duy nhất cho 113 dòng lá/state; workbook cũ đã nghỉ dùng và chỉ còn trong Git history. Game rule vẫn thuộc các contract, không thuộc devtool.
 
-Năm trường đầu của workbook nay trùng tên lá full: `Identity`, `Type`, `State`, `Action`, `Description`. Các giá trị `State` cũ chứa ghi chú cơ chế nên nằm ở `State notes (dev)`; `Action`/`Description` cho người chơi đang trống khi chưa biên soạn copy, không tự lấy lời mô tả luật hoặc Bách Khoa để lấp. Ba mẫu đã có trong [UI study](full-card-study.html) (`Soil (Empty Soil)`, `Turnip Crop (Growing)`, `Bed`) được ghi lại ở các cột này. Devtool giữ nguyên văn bản workbook, kể cả ghi chú tiếng Việt; phần điều khiển giao diện dùng tiếng Anh.
+Tìm, lọc, sắp xếp và chọn lá để đọc đủ 15 trường. Năm trường đầu khớp lá full: `Identity`, `Type`, `State`, `Action`, `Description`; trường phát triển nằm bên dưới. Nhấn **Add card** để tạo lá, **Edit entry** để sửa, hoặc **Add state** để thêm state cho identity đang chọn. State dùng nhãn `Base identity (State)`, ví dụ `Soil (Tilled Soil)`; devtool tự gợi ý nhãn này. Ba trường `Identity`, `Type`, `Base identity` là bắt buộc. Có thể gán ảnh runtime sẵn trong `prototype/assets/`; không cần điền mọi trường phát triển ngay. “No runtime image assigned” chỉ nghĩa là chưa gán art.
 
-Ở từng lá, chọn loại lỗi ảnh, biến thể và ghi chú rồi **Save feedback**. Nút **Copy card report** tạo đoạn văn để dán vào chat; **Export feedback JSON** tải tất cả phản hồi. Feedback chỉ lưu trong `localStorage` của trình duyệt hiện tại, tách khỏi save gameplay; chưa có server nhận tự động. Để cập nhật devtool sau khi sửa workbook (cần Python `openpyxl`), chạy `python3 scripts/export_card_register.py`; `--check` kiểm bản JSON có khớp nguồn không. File JSON đã xuất nằm trong repo để trang chạy không cần đọc `.xlsx` trực tiếp.
+**Save entry** ghi trực tiếp vào JSON trong repo, giữ ID ổn định khi sửa. Devtool từ chối identity trùng, nhãn state không khớp và đường ảnh sai; nếu dữ liệu đã đổi ở tab khác, trang báo cần tải lại trước khi lưu. Feedback ảnh cũng ghi trong JSON bằng **Save feedback**; **Copy card report** và **Export feedback JSON** vẫn tiện để gửi phản hồi. Ghi chú từng lưu trong `localStorage` sẽ hiện lại nếu chưa có trong repo; nhấn Save feedback để chuyển chúng vào dự án. Nội dung cũ từ workbook được giữ nguyên, kể cả ghi chú tiếng Việt; điều khiển giao diện dùng tiếng Anh. Sau khi sửa, xem `git diff` và commit để chia sẻ thay đổi.
+
+Đây là server chỉ nghe tại `127.0.0.1` cho môi trường phát triển. Trang chỉ mở qua static server sẽ không có API lưu. Có thể dùng `--port` và `--register` để chạy trên bản JSON tạm khi kiểm thử. Sau khi sửa JSON trực tiếp, chạy `python3 scripts/run_prototype.py --check` để kiểm cấu trúc, nhãn state, identity trùng và đường ảnh.
 
 ## Fixture chưa chốt
 

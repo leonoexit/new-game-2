@@ -2,7 +2,7 @@
 
 Ngày: 2026-09-26. Trạng thái: **năm trường nội dung đã chốt ở UI-52; các trường phụ và hierarchy còn mở**. Chủ dự án yêu cầu dựng mẫu thử trước, sau đó liệt kê thông tin bắt buộc trên lá full rồi mới quyết định layout/hierarchy. [Mẫu ba lá](../../prototype/full-card-study.html) là phép thử riêng; panel demo cùng dùng năm nhãn nhưng chưa khóa layout cuối.
 
-Nguồn đối chiếu: [danh mục identity/loại/nơi](../current/LITTLE-VALLEY-CARD-REGISTER-V0.xlsx), [nhật ký quyết định UI-50 và card grammar](../current/ON-TABLE-CARD-SHAPE-DECISION-09.md), [Farm land](../current/FARM-V0-LAND-AND-PLOT-CONTRACT-01.md), [Farm action](../current/FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md), [Fruit Tree](../current/FIRST-PLAYABLE-FRUIT-TREE-CONTENT-BATCH-01.md), [Mine](../current/MINE-CURRENT-CONTRACT-01.md), [Fishing](../current/FISHING-CURRENT-CONTRACT-01.md). Danh mục đã được rà theo các họ `World/Region/Container`, `Plot/Vegetation/Source`, `Tool/Item/Seed`, `Equipment/Utility/Person`; không lấy cột điểm còn mở làm thông tin người chơi.
+Nguồn đối chiếu: [danh mục identity/loại/nơi](../current/LITTLE-VALLEY-CARD-REGISTER-V0.json), [nhật ký quyết định UI-50 và card grammar](../current/ON-TABLE-CARD-SHAPE-DECISION-09.md), [Farm land](../current/FARM-V0-LAND-AND-PLOT-CONTRACT-01.md), [Farm action](../current/FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md), [Fruit Tree](../current/FIRST-PLAYABLE-FRUIT-TREE-CONTENT-BATCH-01.md), [Mine](../current/MINE-CURRENT-CONTRACT-01.md), [Fishing](../current/FISHING-CURRENT-CONTRACT-01.md). Danh mục đã được rà theo các họ `World/Region/Container`, `Plot/Vegetation/Source`, `Tool/Item/Seed`, `Equipment/Utility/Person`; không lấy cột điểm còn mở làm thông tin người chơi.
 
 ## 1. Năm trường nội dung đã chốt
 

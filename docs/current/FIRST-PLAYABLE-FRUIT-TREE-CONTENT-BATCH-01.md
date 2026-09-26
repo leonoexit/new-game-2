@@ -1,6 +1,6 @@
 # Fruit Trees · gói Home/Field V0
 
-Ngày: 2026-09-26. Trạng thái: **lựa chọn chuyển thể giấy V0 · CG-59–61**, không phải lời chốt trực tiếp của chủ dự án về các con số. Contract này sở hữu Plant, growth, Harvest và Chop của **Apricot/Cherry** (Spring), **Orange/Peach** (Summer) và **Apple/Pomegranate** (Fall). CG-60/61 mở rộng cùng mẫu đã chọn ở CG-59, không thêm action mới. [Farm land contract](FARM-V0-LAND-AND-PLOT-CONTRACT-01.md) sở hữu tám vị trí Field; [Farm action grammar](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) tiếp tục sở hữu crop thường. [Danh mục V0](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) sở hữu identity, loại và nơi của lá.
+Ngày: 2026-09-26. Trạng thái: **lựa chọn chuyển thể giấy V0 · CG-59–61**, không phải lời chốt trực tiếp của chủ dự án về các con số. Contract này sở hữu Plant, growth, Harvest và Chop của **Apricot/Cherry** (Spring), **Orange/Peach** (Summer) và **Apple/Pomegranate** (Fall). CG-60/61 mở rộng cùng mẫu đã chọn ở CG-59, không thêm action mới. [Farm land contract](FARM-V0-LAND-AND-PLOT-CONTRACT-01.md) sở hữu tám vị trí Field; [Farm action grammar](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) tiếp tục sở hữu crop thường. [Danh mục V0](LITTLE-VALLEY-CARD-REGISTER-V0.json) sở hữu identity, loại và nơi của lá.
 
 ## 1. Nguồn, vị trí và lá
 

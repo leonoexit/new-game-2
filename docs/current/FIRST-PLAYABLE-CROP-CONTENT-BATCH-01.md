@@ -4,7 +4,7 @@ Ngày: 2026-09-25. Trạng thái: **lựa chọn chuyển thể để đổ nộ
 
 ## 1. Chỗ thưa hiện có
 
-Đọc [danh mục V0](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) cùng contract hiện hành, không đếm các hàng fixture lịch sử của [registry 01](CONTENT-MINIMUM-REGISTRY-01.md) như lá đang hoạt động.
+Đọc [danh mục V0](LITTLE-VALLEY-CARD-REGISTER-V0.json) cùng contract hiện hành, không đếm các hàng fixture lịch sử của [registry 01](CONTENT-MINIMUM-REGISTRY-01.md) như lá đang hoạt động.
 
 | Region | Lá/action đang có trong V0 | Chỗ thiếu nội dung thấy được |
 | --- | --- | --- |

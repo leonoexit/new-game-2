@@ -9,6 +9,10 @@ const CARD_MODE_KEY = 'little-valley-cards-v0-card-mode';
 const PHASE_ICONS = ['sunrise', 'sun-medium', 'sunset', 'moon'];
 const FISH_NAMES = ['Silver Minnow', 'Chub', 'Smallmouth Bass', 'Pike', 'Perch', 'Shad', 'Catfish', 'Walleye', 'Sunfish', 'Rainbow Trout'];
 const root = document.querySelector('#app');
+let registerArt = new Map();
+function artFor(base, state = '') {
+  return registerArt.get(state ? `${base} (${state})` : base) || '';
+}
 let display = { font: 'itim', scale: 100 };
 try {
   const savedDisplay = JSON.parse(localStorage.getItem(SETTINGS_KEY));
@@ -110,15 +114,14 @@ function fieldCards() {
     if (p.kind === 'Soil') {
       name = 'Soil'; sub = p.soil === 'empty' ? 'Empty Soil' : p.soil === 'tilled' ? 'Tilled Soil' : 'Overgrown Soil';
       detail = p.soil === 'empty' ? 'Hoe → Till · Seed/Sapling → Plant' : p.soil === 'tilled' ? 'Seed/Sapling → Plant' : 'Sickle → Clear';
-      art = p.soil === 'empty' ? 'empty-soil-512-v0.1.png' : p.soil === 'tilled' ? 'turned-garden-512-v0.1.png' : 'forgotten-garden-512-v0.1.png';
+      art = artFor('Soil', sub);
     } else if (p.kind === 'Field Rock') {
       name = 'Field Rock'; sub = 'Blocked plot'; detail = 'Hoe → Clear · gain Stone';
-      art = 'field-rock-512-v0.1.png';
+      art = artFor('Field Rock');
     } else if (p.kind === 'Crop') {
       name = `${p.name} Crop`; sub = p.growth >= CROPS[p.name].days ? 'Mature' : `Growing ${p.growth}/${CROPS[p.name].days}${p.watered ? ' · Watered today' : ''}`;
       detail = p.growth >= CROPS[p.name].days ? 'Hand → Harvest' : p.watered ? 'Watered today' : game.canWater <= 0 ? 'Can empty · refill at Farm Pond' : 'Watering Can → Water';
-      if (p.name === 'Turnip') art = p.growth >= CROPS.Turnip.days ? 'turnip-mature-512-v0.1.png' : p.watered ? 'turnip-watered-512-v0.1.png' : 'turnip-growing-512-v0.1.png';
-      if (p.name === 'Runner Bean' && p.growth < CROPS[p.name].days) art = 'young-bean-trellis-512-v0.2.png';
+      art = artFor(name, p.growth >= CROPS[p.name].days ? 'Mature' : p.watered ? 'Watered' : 'Growing');
     } else {
       name = `${p.name} Tree`; sub = p.growth < 6 ? `Young ${p.growth}/6` : p.fruitReady ? 'Fruit ready' : FRUITS[p.name] === currentSeason(game) ? `Regrowing ${p.regrow}/3` : 'No fruit';
       detail = p.fruitReady ? 'Hand → Harvest · Axe → Chop' : 'Axe → Chop';
@@ -428,4 +431,10 @@ root.addEventListener('wheel', event => {
 window.addEventListener('resize', fitTableau);
 window.visualViewport?.addEventListener('resize', fitTableau);
 document.fonts.ready.then(fitTableau);
-render();
+fetch('/api/card-register', { cache:'no-store' })
+  .then(response => response.ok ? response.json() : Promise.reject(new Error('Card Register unavailable')))
+  .then(payload => {
+    registerArt = new Map(payload.register.entries.filter(entry => entry.art[0]).map(entry => [entry.values.Identity, entry.art[0].path.split('/').at(-1)]));
+    render();
+  })
+  .catch(() => render());

@@ -4,7 +4,7 @@ Ngày khóa vòng tích hợp: 2026-09-22; post-removal consistency update: 2026
 
 Trạng thái: paper-design package v1; không phải implementation spec hoặc content lock. Tài liệu này giữ structural package của [v0](../evidence/YEAR-1-PAPER-DESIGN-PACKAGE-V0.md), thay các open placeholder bằng registry/sensitivity evidence mới và liên kết graph v1. Không code/prototype được dùng để tạo kết luận.
 
-**Trạng thái: snapshot tích hợp Year 1 theo thời điểm viết, không sở hữu luật V0.** Các trace, bảng action, roster, giá và đề xuất bên dưới là chứng cứ thiết kế; có thể đã bị quyết định sau đó thay thế. Tra [bản đồ nguồn luật](README.md) để tìm contract hiện hành, [nhật ký quyết định](ON-TABLE-CARD-SHAPE-DECISION-09.md) để biết lời chốt mới nhất và [danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) để biết lá đang chơi. Không chép cập nhật luật mới vào package này. `Year 1` là phạm vi nội dung/cân bằng, không phải kết thúc hay reset save.
+**Trạng thái: snapshot tích hợp Year 1 theo thời điểm viết, không sở hữu luật V0.** Các trace, bảng action, roster, giá và đề xuất bên dưới là chứng cứ thiết kế; có thể đã bị quyết định sau đó thay thế. Tra [bản đồ nguồn luật](README.md) để tìm contract hiện hành, [nhật ký quyết định](ON-TABLE-CARD-SHAPE-DECISION-09.md) để biết lời chốt mới nhất và [danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.json) để biết lá đang chơi. Không chép cập nhật luật mới vào package này. `Year 1` là phạm vi nội dung/cân bằng, không phải kết thúc hay reset save.
 
 ## 1. Status legend
 
@@ -49,7 +49,7 @@ Tất cả schedule/economy/graph dùng cùng `[FIXTURE]` vocabulary:
 - Collection: Valley Journal; Field Notes (`COL-1`) record 3-of-4 family → chọn Runner Bean/Lemon Balm Seed; Connections (`COL-N`) pages pass paper timing under independent source delivery `DL-6`, final cadence/value open.
 - Persons: Mira, Nell and Bram remain canonical paper names, but §7.4 selects **Nell alone** for the first-playable roster. A/C/K are prior paper role assignments. Nell's old C Hold and the crop-only Harvest Assist are retired; §7.2 sets her V0 paper ability to 2 AP of same-day relief for 1 Nell Heart. Mira/Bram are deferred content identities, without active V0 Gift/Heart/card rules. Nell's first-Season appearance schedule is CG-46; CG-47 selects the same Season-relative dates for later S18 Seasons. CG-49 selects Wild Herb in Item as Nell's sole V0 Gift item.
 
-For the current Forest roster and interactions, use the [Forest content contract](FIRST-PLAYABLE-FOREST-CONTENT-BATCH-01.md) and [V0 register](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx). The vocabulary in this package remains a historical fixture.
+For the current Forest roster and interactions, use the [Forest content contract](FIRST-PLAYABLE-FOREST-CONTENT-BATCH-01.md) and [V0 register](LITTLE-VALLEY-CARD-REGISTER-V0.json). The vocabulary in this package remains a historical fixture.
 
 Provenance clarification: `Grove Footbridge`, `Harvest Bench`, and `Upper Grove` are original **Little Valley Cards paper-design** names/contexts. They are not claimed as named content from the Stardew Valley video game or *Stardew Valley: The Board Game*. The latter is a design reference, not the source of these three identities. Canonical paper naming approval in [proposal 23](../evidence/CANONICAL-IDENTITY-CONSOLIDATED-PROPOSAL-23.md) records this project's vocabulary, not source-game authenticity.
 
