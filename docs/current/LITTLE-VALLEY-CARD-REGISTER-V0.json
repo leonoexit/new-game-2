@@ -253,14 +253,14 @@
         "State notes (dev)": "Growth, Watered, Mature qua visual",
         "Encyclopedia": "Mục riêng khi crop lần đầu hiện",
         "Decision status": "Owner chốt loại · Crop",
-        "Open questions": "Identity riêng với Turnip thu hoạch; art và nhịp growth còn mở",
+        "Open questions": "Identity riêng với Turnip thu hoạch; nhịp growth và art các state khác còn mở",
         "References": "Decision 09 §10 · CG-02–03, CG-06",
         "Base identity": "Turnip Crop"
       },
       "art": [
         {
           "label": "Growing",
-          "path": "./assets/turnip-growing-512-v0.1.png"
+          "path": "./assets/turnip-crop-growing-mbe-512-v0.1.png"
         }
       ],
       "legacyWorkbookRow": 16
@@ -314,7 +314,7 @@
       "art": [
         {
           "label": "Mature",
-          "path": "./assets/turnip-mature-512-v0.1.png"
+          "path": "./assets/turnip-crop-mature-mbe-512-v0.1.png"
         }
       ],
       "legacyWorkbookRow": 18
@@ -734,7 +734,12 @@
         "References": "Decision 09 · CG-07/35/36, UI-33",
         "Base identity": "Farmhouse"
       },
-      "art": [],
+      "art": [
+        {
+          "label": "Farmhouse",
+          "path": "./assets/farmhouse-mbe-512-v0.1.png"
+        }
+      ],
       "legacyWorkbookRow": 37
     },
     {
@@ -906,7 +911,7 @@
       "art": [
         {
           "label": "Blocked plot",
-          "path": "./assets/field-rock-512-v0.1.png"
+          "path": "./assets/field-rock-mbe-512-v0.1.png"
         }
       ],
       "legacyWorkbookRow": 44
@@ -1270,7 +1275,12 @@
         "References": "Decision 09 · CG-55–57; Forest content batch 01; Stardew Wiki Salmonberry",
         "Base identity": "Hedgerow"
       },
-      "art": [],
+      "art": [
+        {
+          "label": "Berries ready",
+          "path": "./assets/hedgerow-berries-ready-mbe-512-v0.1.png"
+        }
+      ],
       "legacyWorkbookRow": 60
     },
     {
@@ -2590,7 +2600,12 @@
         "References": "Decision 09 · CG-18/22–24/64–67; Fishing contract 01; River Fish batch 04",
         "Base identity": "Farm Pond"
       },
-      "art": [],
+      "art": [
+        {
+          "label": "Pond",
+          "path": "./assets/farm-pond-mbe-512-v0.1.png"
+        }
+      ],
       "legacyWorkbookRow": 120
     }
   ]

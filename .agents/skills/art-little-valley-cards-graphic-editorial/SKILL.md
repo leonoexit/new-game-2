@@ -1,11 +1,13 @@
 ---
-name: little-valley-cards-graphic-editorial-art
+name: art-little-valley-cards-graphic-editorial
 description: Explore original flat graphic editorial art motifs for Little Valley Cards style studies. Use only when this optional direction is explicitly requested; it is not an approved production style. Keep card frames and UI in code.
 ---
 
 # Little Valley Cards Graphic Editorial Art
 
-Use this skill to revisit the compact graphic language tested in [`editorial-square-card-v0.1`](../../../art/style-studies/editorial-square-card-v0.1/record.md). The owner found the first implementation attractive but rejected it for the game because it felt like educational content. Treat that result as a limitation to solve in an explicit study, never as permission to replace the active pixel art or the game's skin.
+Use this skill to revisit the compact graphic language tested in [`editorial-square-card-v0.1`](../../../art/style-studies/editorial-square-card-v0.1/record.md). The owner found the first implementation attractive but rejected it for the game because it felt like educational content. Treat that result as a limitation to solve in an explicit study, never as permission to replace the approved MBE art or the game's skin.
+
+The two owner references used by this skill are stored here: [Seafood](assets/owner-seafood-reference.png) and [Coffee](assets/owner-coffee-reference.png). Use them for broad layout and visual-language analysis, without copying their branded content or exact compositions.
 
 ## Visual language
 

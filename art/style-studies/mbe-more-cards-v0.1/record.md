@@ -1,0 +1,20 @@
+# MBE three more card images v0.1
+
+- Date: 2026-09-26. Tool: built-in `image_gen`; model version and seed unavailable.
+- Status: `runtime approved` for the V0 visual test, with individual identity/style feedback still open. MBE is an approved style direction; runtime use does not mean final production approval for each image.
+- Style reference: [MBE continuity board](../../../.agents/skills/art-little-valley-cards-mbe/assets/mbe-continuity-board.png), used for broad visual properties, not as an edit target. The owner's [MBE inspiration](../../../.agents/skills/art-little-valley-cards-mbe/assets/owner-mbe-reference.png) remains in the MBE skill.
+- Source images: [Farm Pond](source/farm-pond-mbe-source-v0.1.png), [Field Rock](source/field-rock-mbe-source-v0.1.png), [Turnip Crop Growing](source/turnip-crop-growing-mbe-source-v0.1.png).
+- Runtime images: [Farm Pond](processed/farm-pond-mbe-512-v0.1.png), [Field Rock](processed/field-rock-mbe-512-v0.1.png), [Turnip Crop Growing](processed/turnip-crop-growing-mbe-512-v0.1.png). Each entire square source was scaled to 512 × 512 without crop or subject extraction, copied to `prototype/assets/`, and assigned in the Card Register.
+- Scope: art only. Farm Pond is a Home water source, Field Rock is an obstacle in a Field plot, and Turnip Crop (Growing) is an early crop state. The crop's `Watered` state still uses the existing V0 art; the older Turnip image-order issue remains for later review.
+
+## Exact prompts
+
+Each generated image used this shared instruction:
+
+> Use case: stylized-concept. Asset type: a complete square Little Valley Cards game card illustration, no UI. The attached image is our OWN three-subject continuity board, a style and palette reference only, NOT an edit target. Make one new original isolated subject on a uniform warm off-white square canvas. Match the board's simple rounded geometric masses, cheerful flat lime/green/cobalt/violet/terracotta palette, colored thick contour strokes with deliberate short gaps, a few tiny dots or crosses and compact broken baseline marks. Subject fills about 70-75% of square and reads at 160 px. No frame, no text, no labels, no arrow, no logo, no infographic, no educational poster, no scene, no gradient, no shadow. Keep the entire square intact for object-fit contain.
+
+- **Farm Pond:** “SUBJECT: FARM POND, a small permanent water source in the Home area. Show a compact oval pool of vivid cobalt blue water with two or three simple concentric ripple shapes, a low green grassy bank hugging the pond edge, and one small blue water drop rising above it. Clearly a pond built into the land, not a bucket, fountain, river, or watering can. No face.”
+- **Field Rock:** “SUBJECT: FIELD ROCK, one squat immovable gray-blue stone embedded in a small patch of brown field soil. It is a rough obstacle blocking a plot; do not draw loose collectible Stone pieces. Use very few broad facets, one darker contour gap, tiny green grass marks. No face.”
+- **Turnip Crop (Growing):** “SUBJECT: TURNIP CROP in GROWING state, three tiny green turnip shoots with short rounded leaves just emerged together from one brown cultivated soil patch. This must be recognizably earlier than the mature turnips on the reference board: no visible large white or purple roots above the soil and no flowers. Give the center seedling a little more height for clear growth state. No face.”
+
+The first Pond result had transparency around the subject. `image_gen` then edited it using this instruction before any resize: “Use case: precise-object-edit. Image 1 is the edit target, a Little Valley Cards Farm Pond illustration. Preserve the pond, water ripple, grass, tiny rocks, flowers, colors, shapes and their placement exactly. Change ONLY the surrounding transparent/black-looking background into a fully opaque uniform warm off-white canvas (#fffdf5), matching the background treatment of the other MBE card assets. Entire output must be square, fully opaque edge to edge, with no transparency, no black field, no new objects, no text, no frame.” The edited result is the saved Pond source.

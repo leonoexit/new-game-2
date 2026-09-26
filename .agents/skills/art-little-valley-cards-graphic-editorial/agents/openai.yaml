@@ -1,0 +1,4 @@
+interface:
+  display_name: "Art · LVC Graphic Editorial"
+  short_description: "Explore an optional graphic card-art direction"
+  default_prompt: "Use $art-little-valley-cards-graphic-editorial to study this visual direction without changing runtime art."

@@ -32,7 +32,7 @@ try {
   if (/[À-ỹ]/.test(game.notice)) game.notice = 'Ready to play.';
   if (currentView(game) === 'Home') game.seen['Farm Pond'] = true;
 } catch { game = newGame(); }
-let flash = game.notice;
+let pendingToast = game.notice;
 let resetConfirm = false;
 let handOpen = false;
 let settingsOpen = false;
@@ -59,7 +59,7 @@ function send(action) {
     localStorage.setItem(KEY, JSON.stringify(game));
   }
   if (action.type !== 'select') handOpen = false;
-  flash = result.notice;
+  pendingToast = result.notice;
   render();
 }
 function card({ name, type = 'card', sub = '', detail = '', cost = null, action = '', selected = false, disabled = false, art = '', position = '' }) {
@@ -132,7 +132,7 @@ function fieldCards() {
   }).join('');
 }
 function forestCards() {
-  let html = card({ name:'Hedgerow', type:'vegetation', sub:game.forest.berry ? 'Berries ready' : 'Picked', detail:game.forest.berry ? 'Hand → Pick Berry' : 'Returns next season', cost:hasSources('Hand') && game.forest.berry ? shownCost(game,1) : null, action:'forest:Hedgerow' });
+  let html = card({ name:'Hedgerow', type:'vegetation', sub:game.forest.berry ? 'Berries ready' : 'Picked', detail:game.forest.berry ? 'Hand → Pick Berry' : 'Returns next season', cost:hasSources('Hand') && game.forest.berry ? shownCost(game,1) : null, action:'forest:Hedgerow', art:game.forest.berry ? artFor('Hedgerow', 'Berries ready') : artFor('Hedgerow', 'Picked') });
   for (const [name, state] of Object.entries(game.forest.trees)) {
     if (state === 'Waiting') continue;
     html += card({ name, type:'vegetation', sub:state, detail:state === 'Mature' ? 'Axe → Chop' : 'Axe → Chop Stump', cost:hasSources('Axe') ? shownCost(game,1) : null, action:`forest:${name}` });
@@ -159,8 +159,8 @@ function content() {
   if (view === 'World') return card({ name:'World', type:'place hero-card world-card', sub:'Open five Regions', detail:'Tap to begin', action:'open:Regions' });
   if (view === 'Regions') return regionCards();
   if (view === 'Home') return card({ name:'Field', type:'place region-field', sub:'8 plots', detail:'Open the field', action:'open:Field' })
-    + card({ name:'Farm Pond', type:'water', sub:`Can ${game.canWater}/${CAN_CAPACITY}`, detail:'Watering Can → Refill', cost:hasSources('Watering Can') && game.canWater < CAN_CAPACITY ? 0 : null, action:'pond' })
-    + card({ name:'Farmhouse', type:'place region-home', sub:'TV · Bed', detail:'Go inside', action:'open:Farmhouse' })
+    + card({ name:'Farm Pond', type:'water', sub:`Can ${game.canWater}/${CAN_CAPACITY}`, detail:'Watering Can → Refill', cost:hasSources('Watering Can') && game.canWater < CAN_CAPACITY ? 0 : null, action:'pond', art:artFor('Farm Pond') })
+    + card({ name:'Farmhouse', type:'place region-home', sub:'TV · Bed', detail:'Go inside', action:'open:Farmhouse', art:artFor('Farmhouse') })
     + card({ name:'Shipping Bin', type:'equipment', sub:`${game.pendingGold} Gold pending`, detail:'Select a sellable item, then tap', action:'bin' });
   if (view === 'Field') return fieldCards();
   if (view === 'Farmhouse') return card({ name:'TV', type:'equipment', sub:game.tvSeen ? `Tomorrow: ${game.tomorrow}` : 'Tomorrow’s forecast', detail:'Tap to watch', cost:game.tvSeen ? null : 0, action:'tv' })
@@ -389,9 +389,11 @@ function fitTableau() {
 function render() {
   const view = currentView(game);
   const handScroll = root.querySelector('.hand-cards')?.scrollLeft || 0;
-  root.innerHTML = `<div class="app-shell" data-font="${display.font}"><div class="topbar"><header class="status"><div class="status-top"><span class="eyebrow">${uiIcon('flower-2')} LITTLE VALLEY CARDS · V0</span><div class="header-actions"><button class="settings-trigger" data-action="settings" aria-label="Options" title="Options">${uiIcon('settings')}</button><button class="reset-link" data-action="reset">Start over</button></div></div><div class="status-cluster" role="group" aria-label="Today’s status"><div class="status-unit calendar-status"><strong>${currentSeason(game)}</strong><span>D${game.day}/18</span></div><div class="status-unit weather-status">${uiIcon(game.weather === 'Rain' ? 'cloud-rain' : 'sun', 'status-icon')}<span>${game.weather}</span></div><div class="status-unit phase-status">${uiIcon(PHASE_ICONS[game.phase], 'status-icon')}<span>${PHASES[game.phase]}</span></div></div></header>
-  <div class="nav"><button class="back" data-action="back" ${game.location.length <= 1 ? 'disabled' : ''}>${uiIcon('arrow-left')} Back</button><div><span class="breadcrumb">${game.location.map(esc).join(' / ')}</span><h1>${esc(view === 'Regions' ? 'Five Regions' : view)}</h1></div><button class="phase" data-action="phase" ${game.phase === 3 ? 'disabled' : ''}>${game.phase === 3 ? 'Night · Sleep in Bed' : `Next Phase ${uiIcon('arrow-right')} ${PHASES[game.phase + 1]}`}</button></div></div>
-  <main><div class="notice" role="status">${esc(flash || game.notice)}</div>${view === 'Mine' ? `<div class="section-meta">Depth ${game.mine.depth} · ${game.mine.routeOpen ? 'Descent open' : 'No descent yet'} · ${game.mine.visible.length + game.mine.queue.length} sources left</div>` : ''}<div class="tableau-toolbar"><button class="tableau-mode ${cardMode}" data-action="cardMode" aria-label="Card mode: ${cardMode === 'action' ? 'Action; switch to Preview' : 'Preview; switch to Action'}" title="Switch card tap mode"><span aria-hidden="true">${cardMode === 'action' ? '▶' : '◉'}</span> ${cardMode === 'action' ? 'Action' : 'Preview'}</button><small>${cardMode === 'action' ? 'Tap cards to act' : 'Tap cards to read'}</small></div><div class="tableau ${view === 'World' ? 'world-tableau' : ''}">${content()}</div></main>${dock()}${panel()}</div>`;
+  const toast = pendingToast;
+  pendingToast = '';
+  root.innerHTML = `<div class="app-shell" data-font="${display.font}"><div class="topbar"><header class="status"><div class="status-top"><div class="header-actions"><button class="settings-trigger" data-action="settings" aria-label="Options" title="Options">${uiIcon('settings')}</button><button class="reset-link" data-action="reset">Start over</button></div></div><div class="status-cluster" role="group" aria-label="Today’s status"><div class="status-unit calendar-status"><strong>${currentSeason(game)}</strong><span>D${game.day}/18</span></div><div class="status-unit weather-status">${uiIcon(game.weather === 'Rain' ? 'cloud-rain' : 'sun', 'status-icon')}<span>${game.weather}</span></div><div class="status-unit phase-status"><div class="phase-current">${uiIcon(PHASE_ICONS[game.phase], 'status-icon')}<span>${PHASES[game.phase]}</span></div><button class="phase-advance" data-action="phase" aria-label="${game.phase === 3 ? 'Night; sleep in Bed to start a new day' : `Next Phase: ${PHASES[game.phase + 1]}`}" title="${game.phase === 3 ? 'Sleep in Bed to start a new day' : `Next Phase: ${PHASES[game.phase + 1]}`}" ${game.phase === 3 ? 'disabled' : ''}>${uiIcon('arrow-right')}</button></div></div></header>
+  <div class="nav"><button class="back" data-action="back" ${game.location.length <= 1 ? 'disabled' : ''}>${uiIcon('arrow-left')} Back</button><div><span class="breadcrumb">${game.location.map(esc).join(' / ')}</span><h1>${esc(view === 'Regions' ? 'Five Regions' : view)}</h1></div></div></div>
+  <main>${view === 'Mine' ? `<div class="section-meta">Depth ${game.mine.depth} · ${game.mine.routeOpen ? 'Descent open' : 'No descent yet'} · ${game.mine.visible.length + game.mine.queue.length} sources left</div>` : ''}<div class="tableau-toolbar"><button class="tableau-mode ${cardMode}" data-action="cardMode" aria-label="Card mode: ${cardMode === 'action' ? 'Action; switch to Preview' : 'Preview; switch to Action'}" title="Switch card tap mode"><span aria-hidden="true">${cardMode === 'action' ? '▶' : '◉'}</span> ${cardMode === 'action' ? 'Action' : 'Preview'}</button><small>${cardMode === 'action' ? 'Tap cards to act' : 'Tap cards to read'}</small></div><div class="tableau ${view === 'World' ? 'world-tableau' : ''}">${content()}</div></main>${dock()}${panel()}${toast ? `<div class="game-toast" role="status">${esc(toast)}</div>` : ''}</div>`;
   if (handOpen) root.querySelector('.hand-cards').scrollLeft = handScroll;
   fitTableau();
 }
@@ -427,7 +429,7 @@ root.addEventListener('click', event => {
   if (kind === 'resetCancel') { resetConfirm = false; render(); return; }
   if (kind === 'resetDo') {
     game = newGame(); localStorage.setItem(KEY, JSON.stringify(game));
-    handOpen = false; resetConfirm = false; flash = game.notice; render(); return;
+    handOpen = false; resetConfirm = false; pendingToast = game.notice; render(); return;
   }
   if (kind === 'handToggle') { handOpen = !handOpen; render(); return; }
   if (kind === 'open') return send({ type:'open', view:value });

@@ -1,19 +1,19 @@
 # Abstract chibi pixel and MBE study v0.1
 
 - Purpose: compare the owner's two new visual references using the same three Little Valley Cards identities at tableau size.
-- Status: `study`; neither direction is approved for runtime or as a new art skill.
+- Status: MBE rounded-outline direction `approved reference` by the owner on 2026-09-26; abstract chibi pixel remains `study`. This board itself is a continuity reference, not an individual runtime card asset.
 - Date: 2026-09-26.
 - Tool: built-in `image_gen`; model version and seed unavailable.
 - Source boards: [abstract chibi pixel](source/chibi-pixel-board-v0.1.png), [MBE-inspired rounded outline](source/mbe-board-v0.1.png). The [first pixel attempt](source/chibi-pixel-initial-board-v0.1.png) is retained to show the simplification pass.
 - Display test: [160 px square tableau comparison](index.html). Names are HTML overlays, not generated text.
-- Reference role: the two owner-provided images in the 2026-09-26 conversation guided broad visual properties only. They are not edit targets, are not stored in the repo, and their characters, objects, lettering and composition were not copied.
+- Reference role: the two owner-provided images in the 2026-09-26 conversation guided broad visual properties only. They are stored with their separate skills: [chibi pixel reference](../../../.agents/skills/art-little-valley-cards-chibi-pixel/assets/owner-chibi-pixel-reference.png) and [MBE reference](../../../.agents/skills/art-little-valley-cards-mbe/assets/owner-mbe-reference.png). They are not edit targets; their characters, objects, lettering and composition were not copied.
 
 ## Initial reading
 
 - The pixel reference is a collection of very small, stout, abstract sprites. The first generated board remained too detailed, especially the hedge and house; a second pass removed flowers, roof texture and fine architecture. The revised board is a clearer test of the requested abstraction, though whether it has enough personality remains open.
-- The MBE reference combines rounded objects, deliberate breaks in colored outlines, tiny faces on suitable subjects, short baseline marks and sparse accents. This first board can be checked for whether it still feels too much like generic icon art.
+- The MBE reference combines rounded objects, deliberate breaks in colored outlines, tiny faces on suitable subjects, short baseline marks and sparse accents. The owner selected this direction for official development; each individual card image still needs its own identity/state and mobile-size check.
 - Both studies keep the same card identity meanings: the Hedgerow is rooted, the Turnip Crop grows in soil, and the Farmhouse is a place. Neither assumes every card needs a mascot face.
-- The preceding [editorial square-card study](../editorial-square-card-v0.1/record.md) was rejected as game art because it felt educational. Its frame, side-band and title hierarchy can be tested independently of its art. Adopting that entire graphic style would also entail a separate typography and whole-game skin decision.
+- The preceding [editorial square-card study](../editorial-square-card-v0.1/record.md) was rejected as game art because it felt educational. Its angled top name label was briefly tried on the tableau, then replaced by a bottom name overlay in the still-open UI-67 trial. Complete square MBE images fill the square card box, and the original dark game UI remains in place.
 - Japan-inspired art and setting remain future ideas, not project decisions.
 
 ## Generation prompts

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Art · LVC Chibi Pixel"
+  short_description: "Explore abstract chibi pixel card art"
+  default_prompt: "Use $art-little-valley-cards-chibi-pixel for this explicit style study."

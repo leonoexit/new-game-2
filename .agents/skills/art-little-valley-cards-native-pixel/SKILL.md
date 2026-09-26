@@ -1,23 +1,17 @@
 ---
-name: little-valley-cards-pixel-art
-description: Explore, generate, edit, and review square raster artwork for Little Valley Cards while preserving its approved native-pixel language, universal 1:1 card-art contract, mobile readability, and asset records. Use for action illustrations, crop/plot art, NPC portraits, items, and style studies; do not use for card frames, UI layout, icons better authored in code/vector, or non-art implementation.
+name: art-little-valley-cards-native-pixel
+description: Revisit Little Valley Cards' earlier native-pixel art language for explicit comparison or maintenance of legacy assets. MBE is the approved direction for new production art.
 ---
 
 # Little Valley Cards Pixel Art
 
-Create a coherent library of readable card artwork, not decorative images that happen to sit inside cards. The action must read at phone size before detail or beauty.
+Maintain or compare the earlier native-pixel card artwork. The owner approved the MBE direction for new production art on 2026-09-26; this skill remains for explicit native-pixel studies and legacy asset maintenance. The action must read at phone size before detail or beauty.
 
 ## Read project context
 
-Before art work, read:
+Before art work, read the relevant records under `art/`, then `references/prompt-system.md` when generating or editing and `references/asset-records.md` when saving, naming, approving or superseding an asset.
 
-- `STYLE.md`;
-- `little-valley-cards-art-bible-v0.1.md`;
-- the relevant records under `art/`;
-- `references/prompt-system.md` when generating or editing;
-- `references/asset-records.md` when saving, naming, approving or superseding an asset.
-
-The active rendering reference is `art/approved/style-references/farm-high-key-style-reference-v0.1.png`. It controls pixel construction, color behavior, edge treatment and material language. It does not import characters or narrative from the previous project.
+The historical native-pixel reference is stored inside this skill at [native-pixel reference](assets/native-pixel-reference.png). It controls pixel construction when this older direction is specifically requested. It does not import characters or narrative from the previous project.
 
 ## Operating modes
 
@@ -40,9 +34,9 @@ Use when one study is promising enough to reproduce.
 - Record both successful properties and prohibited drift.
 - Require explicit user approval before changing canonical direction.
 
-### Production
+### Legacy production maintenance
 
-Use only after the relevant direction or identity is approved.
+Use only for existing native-pixel assets or an explicitly requested comparison. New MBE assets follow the separate `art-little-valley-cards-mbe` skill.
 
 - Treat approved references as invariants.
 - Review at the actual logical display size.
@@ -77,7 +71,7 @@ Judge every candidate on:
 2. **Target:** Is it clear what the action affects?
 3. **Phone readability:** Does it work in the actual square slot and at `160x160`?
 4. **Density:** Is every visible object helping the verb, target or world identity?
-5. **Continuity:** Does it match approved pixel scale, materials and color behavior?
+5. **Continuity:** For historical native-pixel assets, does it match their established pixel scale, materials and color behavior?
 6. **Originality:** Does it feel native to Little Valley Cards?
 7. **Production fit:** Can this treatment repeat across the whole action library?
 

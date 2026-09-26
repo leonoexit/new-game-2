@@ -1,0 +1,4 @@
+interface:
+  display_name: "Art · LVC MBE"
+  short_description: "Create and review approved MBE card art"
+  default_prompt: "Use $art-little-valley-cards-mbe to make and review this square card artwork."

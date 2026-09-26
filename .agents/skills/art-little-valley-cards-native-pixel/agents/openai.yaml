@@ -1,0 +1,4 @@
+interface:
+  display_name: "Art · LVC Native Pixel"
+  short_description: "Maintain or compare the earlier pixel art direction"
+  default_prompt: "Use $art-little-valley-cards-native-pixel to review this legacy pixel asset."
