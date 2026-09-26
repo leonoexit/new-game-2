@@ -70,6 +70,11 @@ class RegisterStoreTests(unittest.TestCase):
         with self.assertRaises(ValidationError):
             self.store.add(self.revision, old_type, [])
         self.assertEqual(self.path.read_bytes(), before)
+        invented_action = self.values()
+        invented_action['Action'] = 'Farm'
+        with self.assertRaises(ValidationError):
+            self.store.add(self.revision, invented_action, [])
+        self.assertEqual(self.path.read_bytes(), before)
 
     def test_stale_revision_and_feedback(self):
         first_id = self.document['entries'][0]['id']

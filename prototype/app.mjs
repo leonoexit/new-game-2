@@ -10,6 +10,7 @@ const PHASE_ICONS = ['sunrise', 'sun-medium', 'sunset', 'moon'];
 const FISH_NAMES = ['Silver Minnow', 'Chub', 'Smallmouth Bass', 'Pike', 'Perch', 'Shad', 'Catfish', 'Walleye', 'Sunfish', 'Rainbow Trout'];
 const root = document.querySelector('#app');
 let registerArt = new Map();
+let registerActions = new Map();
 function artFor(base, state = '') {
   return registerArt.get(state ? `${base} (${state})` : base) || '';
 }
@@ -215,13 +216,13 @@ function dock() {
     ${game.nell.owned ? `<button class="small-button" data-action="nellAbility" ${game.nell.used || !game.nell.hearts ? 'disabled' : ''}>Nell · ${game.nell.hearts}/2 ♡ → 2 relief</button>` : ''}</div>` : '<button class="hand-peek" data-action="handToggle" aria-label="Open hand to select a card"></button>'}
   </aside>`;
 }
-function fullCardActions(info) {
+function fallbackFullCardActions(info) {
   if (info.location === 'Hand') {
     if (info.name === 'Valley Almanac') return ['Open'];
     const byName = {
       Hand:['Collect', 'Pick Berry', 'Harvest'], Hoe:['Till', 'Clear'], Sickle:['Clear'],
-      'Watering Can':['Water', 'Refill'], Axe:['Chop'], 'Fishing Rod':['Cast'],
-      Pickaxe:['Break'], 'Copper Pickaxe':['Break'], 'Wild Herb':['Gift', 'Ship'],
+      'Watering Can':['Water', 'Refill'], Axe:['Chop', 'Chop Stump'], 'Fishing Rod':['Cast'],
+      Pickaxe:['Break', 'Upgrade'], 'Copper Pickaxe':['Break'], 'Wild Herb':['Gift', 'Ship'],
     };
     if (byName[info.name]) return byName[info.name];
     if (info.name.endsWith(' Seed') || info.name.endsWith(' Sapling')) return ['Plant'];
@@ -235,10 +236,33 @@ function fullCardActions(info) {
     'Wild Herb':['Collect'], 'Fishing Spot':info.state === 'Ready' ? ['Cast'] : [],
     Nell:info.detail === 'Gifted today' || info.state === 'Heart 2/2' ? [] : ['Gift'],
     Rock:['Break'], 'Ore Rock':['Break'], 'Farm Pond':['Refill'],
-    'Shipping Bin':['Ship'], TV:['Watch TV'], Bed:['Sleep'], Descend:['Descend'],
+    'Shipping Bin':['Ship'], TV:['Watch'], Bed:['Sleep'], Descend:['Descend'],
   };
   if (byName[info.name]) return byName[info.name];
   return info.action?.startsWith('open:') || info.action === 'shop' ? ['Open'] : [];
+}
+function registerActionKey(info) {
+  const { name, state, location } = info;
+  if (location === 'Hand') return name;
+  if (name === 'TV') return `TV (${game.tvSeen ? 'Watched' : 'Unwatched'})`;
+  if (name === 'Rock') return 'Rock (Ready)';
+  if (name === 'Ore Rock') return `Ore Rock (${state === 'Dense' ? 'Dense' : 'Ordinary'})`;
+  if (name === 'Soil' || name === 'Hedgerow' || name === 'Fishing Spot') return `${name} (${state})`;
+  if (name.endsWith(' Crop')) return `${name} (${state.startsWith('Mature') ? 'Mature' : state.includes('Watered today') ? 'Watered' : 'Growing'})`;
+  if (name.endsWith(' Tree')) {
+    const namedState = state.startsWith('Young') ? 'Young' : state.startsWith('Regrowing') ? 'Regrowing' : state;
+    return `${name} (${namedState})`;
+  }
+  return name;
+}
+function fullCardActions(info) {
+  const key = registerActionKey(info);
+  if (!registerActions.has(key)) return fallbackFullCardActions(info);
+  let actions = registerActions.get(key);
+  if (info.name === 'Wild Herb') actions = actions.filter(action => info.location === 'Hand' ? action !== 'Collect' : action === 'Collect');
+  if (info.location === 'Hand' && info.name.endsWith(' Seed')) actions = actions.filter(action => action !== 'Buy');
+  if (info.name === 'Nell' && (info.detail === 'Gifted today' || info.state === 'Heart 2/2')) return [];
+  return actions;
 }
 function fullCardState(info) {
   if (info.location === 'Hand') {
@@ -252,13 +276,13 @@ function fullCardState(info) {
 function fullCardActionContext(info, action) {
   if (info.location === 'Hand') return '';
   if (action === 'Open') return '';
-  if (['Sleep', 'Watch TV', 'Descend', 'Refill', 'Ship'].includes(action)) {
+  if (['Sleep', 'Watch', 'Descend', 'Refill', 'Ship'].includes(action)) {
     const source = action === 'Refill' ? 'Watering Can · ' : action === 'Ship' ? 'Sellable item · ' : '';
     return `${source}0 AP`;
   }
   const source = ({
     Till:'Hoe', Plant:info.state === 'Empty Soil' ? 'Sapling' : 'Seed / Sapling',
-    Water:'Watering Can', Harvest:'Hand', Chop:'Axe',
+    Water:'Watering Can', Harvest:'Hand', Chop:'Axe', 'Chop Stump':'Axe',
     Clear:info.name === 'Field Rock' ? 'Hoe' : 'Sickle',
     'Pick Berry':'Hand', Collect:'Hand', Cast:'Fishing Rod',
     Break:game.copperPickaxe ? 'Copper Pickaxe' : 'Pickaxe', Gift:'Wild Herb',
@@ -435,6 +459,7 @@ fetch('/api/card-register', { cache:'no-store' })
   .then(response => response.ok ? response.json() : Promise.reject(new Error('Card Register unavailable')))
   .then(payload => {
     registerArt = new Map(payload.register.entries.filter(entry => entry.art[0]).map(entry => [entry.values.Identity, entry.art[0].path.split('/').at(-1)]));
+    registerActions = new Map(payload.register.entries.map(entry => [entry.values.Identity, entry.values.Action.split('\n').filter(Boolean)]));
     render();
   })
   .catch(() => render());

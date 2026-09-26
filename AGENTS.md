@@ -5,7 +5,7 @@ Repo này có **luật giấy, thử nghiệm, nghiên cứu art và bản chơi
 ## Nguồn quyết định
 
 - Ưu tiên quyết định mới nhất được chủ dự án nói rõ trong hội thoại. Ghi quyết định đã chốt vào [decision log/card grammar](docs/current/ON-TABLE-CARD-SHAPE-DECISION-09.md); chỉ sửa contract sở hữu **khi hành vi đổi** và danh mục lá **khi thông tin của lá đổi**. Không đồng bộ các snapshot lịch sử.
-- Dùng [bản đồ nguồn luật](docs/current/README.md) để tìm contract sở hữu từng cơ chế và [danh mục lá V0 JSON](docs/current/LITTLE-VALLEY-CARD-REGISTER-V0.json) cho identity, loại, nơi và vai trò; sửa qua Card Register devtool hoặc sửa JSON rồi chạy `python3 scripts/run_prototype.py --check`. Giá trị `Type` phải thuộc mảng `types` của danh mục; ghi chú taxonomy hoặc nhãn làm việc nằm ở trường phát triển, không gắn vào `Type`. Không tự suy nguồn chuẩn từ tên thư mục hay tên file.
+- Dùng [bản đồ nguồn luật](docs/current/README.md) để tìm contract sở hữu từng cơ chế và [danh mục lá V0 JSON](docs/current/LITTLE-VALLEY-CARD-REGISTER-V0.json) cho identity, loại, nơi và vai trò; sửa qua Card Register devtool hoặc sửa JSON rồi chạy `python3 scripts/run_prototype.py --check`. Giá trị `Type` phải thuộc mảng `types`, mỗi dòng `Action` phải thuộc mảng `actions` của danh mục; ghi chú taxonomy/điều kiện hoặc nhãn làm việc nằm ở trường phát triển, không gắn vào tên loại/động từ. Không tự suy nguồn chuẩn từ tên thư mục hay tên file.
 - `docs/evidence/`, `paper-tests/` và các hồ sơ không sở hữu luật được chỉ rõ trong [bản đồ nguồn](docs/current/README.md) là chứng cứ hoặc snapshot, dù nằm ở `docs/current/`. Luôn phân biệt **đã chốt**, **đề xuất**, **giả định phép thử** và **đã triển khai**; không tự nâng một con số trong phép thử thành luật.
 
 ## Xử lý nhanh các bước thiết kế nhỏ

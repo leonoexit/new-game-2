@@ -68,9 +68,13 @@ function detailMarkup(entry) {
     <div class="feedback-actions"><button class="primary-button" type="submit">Save feedback</button><button class="ghost-button" type="button" id="copy-report">Copy card report</button>${saved.issue ? '<button class="ghost-button" type="button" id="delete-feedback">Clear feedback</button>' : ''}<span id="feedback-status" class="feedback-status" aria-live="polite"></span></div></form></section>`;
 }
 function fieldInput(field, value) {
-  const multiline = ['Description', 'Action', 'State notes (dev)', 'Open questions', 'References', 'Source / destination', 'Transformation / result', 'Encyclopedia'].includes(field);
+  const multiline = ['Description', 'State notes (dev)', 'Open questions', 'References', 'Source / destination', 'Transformation / result', 'Encyclopedia'].includes(field);
   const required = ['Identity', 'Type', 'Base identity'].includes(field) ? 'required' : '';
   if (field === 'Type') return `<label class="editor-field">Type<select name="Type" required><option value="">Choose a type</option>${options(data.types, value)}</select></label>`;
+  if (field === 'Action') {
+    const selected = value.split('\n').filter(Boolean);
+    return `<details class="editor-field action-picker"><summary>Action · <span>${esc(selected.join(', ') || 'Choose actions')}</span></summary><p>Potential actions for this card; availability still depends on its state and context.</p><div class="action-options">${data.actions.map(action => `<label><input type="checkbox" name="action-option" value="${esc(action)}" ${selected.includes(action) ? 'checked' : ''}>${esc(action)}</label>`).join('')}</div></details>`;
+  }
   return `<label class="editor-field">${esc(field)}${multiline ? `<textarea name="${esc(field)}" ${required}>${esc(value)}</textarea>` : `<input name="${esc(field)}" value="${esc(value)}" ${required}>`}</label>`;
 }
 function artRow(variant = { label: '', path: '' }) {
@@ -140,10 +144,15 @@ function initEvents() {
     if (event.target === identity) identity.dataset.auto = 'false';
     if (event.target === base) base.dataset.auto = 'false';
   });
+  document.querySelector('#detail').addEventListener('change', event => {
+    if (event.target.name !== 'action-option') return;
+    const picker = event.target.closest('.action-picker');
+    picker.querySelector('summary span').textContent = [...picker.querySelectorAll('[name="action-option"]:checked')].map(input => input.value).join(', ') || 'Choose actions';
+  });
   document.querySelector('#detail').addEventListener('submit', async event => {
     event.preventDefault();
     if (event.target.id === 'entry-form') {
-      const form = new FormData(event.target), values = Object.fromEntries(data.fields.map(field => [field, String(form.get(field) || '').trim()]));
+      const form = new FormData(event.target), values = Object.fromEntries(data.fields.map(field => [field, field === 'Action' ? form.getAll('action-option').join('\n') : String(form.get(field) || '').trim()]));
       const labels = [...event.target.querySelectorAll('[name="art-label"]')], paths = [...event.target.querySelectorAll('[name="art-path"]')];
       const art = labels.map((label, index) => ({ label: label.value.trim(), path: paths[index].value })).filter(item => item.label || item.path);
       try { const result = await apiWrite(mode === 'edit' ? 'PUT' : 'POST', mode === 'edit' ? `${API}/entries/${encodeURIComponent(selected)}` : `${API}/entries`, { values, art, ...(mode === 'state' ? { afterId: selected } : {}) }); selected = result.entryId; mode = 'detail'; notice = 'Entry saved to the project register.'; history.replaceState(null, '', `#${selected}`); renderDetail(); }
