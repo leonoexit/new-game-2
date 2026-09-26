@@ -1,0 +1,135 @@
+{
+  "batch_id": "MINE-BREAK-NODES-05",
+  "status": "imported_draft",
+  "scope": "source-first intake of named Mine ore and gem nodes; no V0 floor placement or card promotion",
+  "source_facts": [
+    {
+      "source": "Stardew Valley Wiki — Mining",
+      "url": "https://stardewvalleywiki.com/Mining",
+      "fact": "Copper Nodes yield Copper Ore and may occur on any Mines floor; Iron Nodes yield Iron Ore and concentrate on floors 40–79; Gold Nodes yield Gold Ore and occur from floor 80. Amethyst and Topaz Nodes can occur throughout the Mines and yield their respective gems. These source-game floors are not LVC Depth numbers."
+    },
+    {
+      "source": "Stardew Valley Wiki — Geode",
+      "url": "https://stardewvalleywiki.com/Geode",
+      "fact": "Ordinary Mines rocks can drop Geodes, whose opening is a separate process. A named Geode Node is not assumed to occupy an LVC Mine source slot."
+    },
+    {
+      "source": "Stardew Valley: The Board Game rulebook — Explore the Mine, p. 17",
+      "path": "stardew rules.pdf",
+      "fact": "Explore the Mine compresses mining into one action with possible Stone, Ore, Geode, Staircase and other results; its Mine Level card determines available Ore and Geodes. This is evidence for family-level compression, not for copying its dice or result table."
+    }
+  ],
+  "adaptation": {
+    "label": "candidate Break family scaffold; not owner-approved V0 law",
+    "card_type": "Mine source candidate",
+    "location": "Mine candidate; no V0 floor or slot assigned",
+    "tool": "Pickaxe or Copper Pickaxe candidate",
+    "action": "Break",
+    "target": "one visible node source",
+    "result": "one committed Break would give the variant's Item output and mark that source spent",
+    "state_transition": "ready -> spent",
+    "output": null,
+    "output_quantity": null,
+    "base_ap": null,
+    "notes": "The one-commit Break and spent pattern reuses the LVC Mine grammar only as a candidate. No node enters the current six-source floor table. Source-game ore quantities, hit counts and floor numbers do not set LVC yield, AP, depth or upgrade cost."
+  },
+  "variants": [
+    {
+      "identity": "Copper Node",
+      "source_difference": "source-game Mine ore node; Copper Ore; any floor",
+      "pilot_override": {
+        "source_location": "Mines, any floor in source game",
+        "output": "Copper Ore"
+      }
+    },
+    {
+      "identity": "Iron Node",
+      "source_difference": "source-game Mine ore node; Iron Ore; concentrated on floors 40–79",
+      "pilot_override": {
+        "source_location": "Mines floors 40–79 in source game",
+        "output": "Iron Ore"
+      }
+    },
+    {
+      "identity": "Gold Node",
+      "source_difference": "source-game Mine ore node; Gold Ore; floors 80 and deeper",
+      "pilot_override": {
+        "source_location": "Mines floors 80+ in source game",
+        "output": "Gold Ore"
+      }
+    },
+    {
+      "identity": "Amethyst Node",
+      "source_difference": "source-game gemstone node; fixed Amethyst output; can occur throughout the Mines",
+      "pilot_override": {
+        "source_location": "Mines, any floor in source game",
+        "output": "Amethyst"
+      }
+    },
+    {
+      "identity": "Topaz Node",
+      "source_difference": "source-game gemstone node; fixed Topaz output; can occur throughout the Mines",
+      "pilot_override": {
+        "source_location": "Mines, any floor in source game",
+        "output": "Topaz"
+      }
+    }
+  ],
+  "support_cards": [
+    {
+      "identity": "Copper Ore",
+      "type": "Item / material candidate",
+      "role": "Copper Node output; distinct from current generic Ore until a family-level identity decision"
+    },
+    {
+      "identity": "Iron Ore",
+      "type": "Item / material candidate",
+      "role": "Iron Node output; use and upgrade path deferred"
+    },
+    {
+      "identity": "Gold Ore",
+      "type": "Item / material candidate",
+      "role": "Gold Node output; not Gold currency"
+    },
+    {
+      "identity": "Amethyst",
+      "type": "Item / gem candidate",
+      "role": "Amethyst Node output"
+    },
+    {
+      "identity": "Topaz",
+      "type": "Item / gem candidate",
+      "role": "Topaz Node output"
+    }
+  ],
+  "issues": [
+    {
+      "scope": "family progression",
+      "topic": "six-source floor occupancy",
+      "status": "open",
+      "note": "CG-20 fixes the first floor at 2 Rock + 2 normal Ore Rock + 2 Dense Ore Rock and every later floor at 2 Rock + 4 Dense Ore Rock. Adding or replacing a source changes the owner-approved floor composition; no candidate receives a slot here. A later depth band with its own source distribution is a proposal, not a decision."
+    },
+    {
+      "scope": "family identity and economy",
+      "topic": "generic Ore versus typed ores",
+      "status": "open",
+      "note": "Current Ore Rock produces generic Ore, and three generic Ore guarantee the Copper Pickaxe upgrade. Named Copper/Iron/Gold Ore outputs must not silently replace that item or alter the upgrade path."
+    },
+    {
+      "scope": "family adaptation",
+      "topic": "depth, AP and output quantity",
+      "status": "open",
+      "note": "The source game's 40/80 floor bands, multiple pickaxe hits and variable ore yields have no direct LVC Depth, AP or quantity mapping. Resolve once for a selected Mine expansion, not node by node."
+    }
+  ],
+  "deferred": [
+    "Geode as a possible ordinary-Rock output and its separate opening action",
+    "other gemstone nodes and random Gem Node output",
+    "prices, recipes, secondary sinks, art and runtime implementation"
+  ],
+  "selection_review": {
+    "decision": "CG-68",
+    "result": "no_v0_promotion",
+    "reason": "The named nodes share a candidate Break-to-Item-to-spent loop, but cannot be placed into CG-20's fixed six-source floors or substituted for generic Ore without changing progression. Their source-game depth and quantity data are recorded as references only."
+  }
+}

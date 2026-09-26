@@ -1,0 +1,165 @@
+{
+  "batch_id": "FOREST-COMMON-TREES-WOOD-01",
+  "status": "partially_selected",
+  "scope": "source-first family intake; Oak/Maple/Pine and shared Axe/Wood/Sap selected by CG-58; Mahogany/Hardwood selected by CG-63; seeds, Moss and tapping remain draft",
+  "source_facts": [
+    {
+      "source": "Stardew Valley video game wiki — Trees",
+      "url": "https://stardewvalleywiki.com/Trees",
+      "fact": "Oak, Maple, Pine and Mahogany are common non-fruit tree species. Axe chopping leaves a stump; Oak/Maple/Pine yield Wood, while Mahogany yields Hardwood. Species have related seeds and distinct tapper outputs."
+    },
+    {
+      "source": "Stardew Valley video game wiki — Axes and Wood",
+      "url": "https://stardewvalleywiki.com/Axes",
+      "fact": "Axe is the tool for chopping trees and small stumps."
+    },
+    {
+      "source": "Stardew Valley video game wiki — Wood",
+      "url": "https://stardewvalleywiki.com/Wood",
+      "fact": "Wood is a resource obtained from trees and branches; the original game has multiple uses."
+    },
+    {
+      "source": "Stardew Valley: The Board Game rulebook, page 11",
+      "path": "stardew rules.pdf",
+      "fact": "Tree tiles become Wood when claimed; board-game movement and free pickup are not Little Valley Cards action rules."
+    },
+    {
+      "source": "Stardew Valley Wiki — Mahogany Tree and Hardwood",
+      "url": "https://stardewvalleywiki.com/Mahogany_Tree",
+      "fact": "Mahogany Tree grows from Mahogany Seed and Axe chopping yields Hardwood rather than Wood. The general common-tree source records Sap and a Stump; the stump yields Wood/Sap. Wild Mahogany appears on Ginger Island or under conditions in Dangerous Mines; see https://stardewvalleywiki.com/Hardwood and https://stardewvalleywiki.com/Trees."
+    }
+  ],
+  "adaptation": {
+    "label": "source-shaped common-tree family; CG-58/63 select V0 behavior in Forest contract",
+    "card_type": "Vegetation",
+    "location": "Forest",
+    "tool": "Axe",
+    "action": "Chop",
+    "base_ap": 1,
+    "target": "one visible mature tree card",
+    "result": "Mature Tree -> Stump on the same identity; 2 Wood + 1 Sap for Oak/Maple/Pine, or 2 Hardwood + 1 Sap for Mahogany; Chop Stump 1 AP gives 1 Wood and moves tree to next-Season wait pile",
+    "state_transition": "Mature Tree -> Stump on the same tree identity",
+    "output": "Wood",
+    "related_outputs": [
+      "Sap",
+      "Acorn",
+      "Maple Seed",
+      "Pine Cone",
+      "Moss"
+    ],
+    "output_quantity": 2,
+    "replenishment": "After Chop Stump, same tree identity returns Mature at start of next Season; undisturbed Stump does not regrow",
+    "notes": "All four common-tree variants are selected as one Mature Vegetation card each in Forest from the start. Mahogany placement in Forest is an explicit LVC paper adaptation; source locations differ. Wood/Hardwood are distinct Items. Seeds, Moss and tapping remain draft; prices and sinks are deferred."
+  },
+  "promotion": {
+    "decision": "CG-58/63",
+    "selected_variants": [
+      "Oak Tree",
+      "Maple Tree",
+      "Pine Tree",
+      "Mahogany Tree"
+    ],
+    "selected_support_cards": [
+      "Axe",
+      "Wood",
+      "Sap",
+      "Hardwood"
+    ],
+    "contract": "docs/current/FIRST-PLAYABLE-FOREST-CONTENT-BATCH-01.md",
+    "note": "Four-tree Forest packet selected: CG-58 Oak/Maple/Pine and CG-63 Mahogany. Mahogany follows same Axe/Chop/Stump/Season loop with 2 Hardwood + 1 Sap from mature tree, 1 Wood from stump; source seed/Moss/tapping remain draft."
+  },
+  "variants": [
+    {
+      "identity": "Oak Tree",
+      "source_difference": "Acorn and Oak Resin exist in the source game",
+      "pilot_override": null
+    },
+    {
+      "identity": "Maple Tree",
+      "source_difference": "Maple Seed and Maple Syrup exist in the source game",
+      "pilot_override": null
+    },
+    {
+      "identity": "Pine Tree",
+      "source_difference": "Pine Cone and Pine Tar exist in the source game",
+      "pilot_override": null
+    },
+    {
+      "identity": "Mahogany Tree",
+      "source_difference": "Chop yields Hardwood rather than the common Wood output; Mahogany Seed is a possible related drop",
+      "pilot_override": {
+        "output": "Hardwood",
+        "related_outputs": [
+          "Sap",
+          "Mahogany Seed"
+        ]
+      }
+    }
+  ],
+  "support_cards": [
+    {
+      "identity": "Axe",
+      "type": "Tool card",
+      "role": "shared action source; V0 ownership/access not selected"
+    },
+    {
+      "identity": "Wood",
+      "type": "Item / material",
+      "role": "shared output kept in Item; no recipe or sink required to record output"
+    },
+    {
+      "identity": "Hardwood",
+      "type": "Item / material",
+      "role": "Mahogany Chop output in source; no recipe or sink required at intake"
+    },
+    {
+      "identity": "Sap",
+      "type": "Item / material",
+      "role": "source-related Chop output in draft; quantity not adapted"
+    },
+    {
+      "identity": "Acorn",
+      "type": "Item / tree seed",
+      "role": "possible Oak Tree drop in source; Little Valley Cards drop rule not selected"
+    },
+    {
+      "identity": "Maple Seed",
+      "type": "Item / tree seed",
+      "role": "possible Maple Tree drop in source; Little Valley Cards drop rule not selected"
+    },
+    {
+      "identity": "Pine Cone",
+      "type": "Item / tree seed",
+      "role": "possible Pine Tree drop in source; Little Valley Cards drop rule not selected"
+    },
+    {
+      "identity": "Mahogany Seed",
+      "type": "Item / tree seed",
+      "role": "possible Mahogany Tree drop in source; Little Valley Cards drop rule not selected"
+    },
+    {
+      "identity": "Moss",
+      "type": "Item / material",
+      "role": "conditional source-game tree product; Little Valley Cards action not selected"
+    }
+  ],
+  "issues": [
+    {
+      "scope": "unselected outputs",
+      "topic": "seed and Moss drops",
+      "status": "open",
+      "note": "Acorn, Maple Seed, Pine Cone, Mahogany Seed and Moss are source facts or draft candidates; no V0 drop/Plant rule is selected."
+    },
+    {
+      "scope": "deferred systems",
+      "topic": "tapping and additional sources",
+      "status": "open",
+      "note": "Sap from Mahogany Tapper, resin/syrup/tar, wild Island/Dangerous Mines access and extra Hardwood sources are not V0 actions."
+    }
+  ],
+  "deferred": [
+    "tree planting and species-specific tapping, resin, syrup and tar",
+    "Wood sale price, recipes, buildings and other sinks",
+    "art and runtime implementation"
+  ]
+}

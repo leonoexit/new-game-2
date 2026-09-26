@@ -1,0 +1,87 @@
+/* Fit every square world card between the header and the hand. */
+html,
+body { height: 100%; overflow: hidden; }
+#app { height: 100dvh; min-height: 0; overflow: hidden; }
+.app-shell {
+  height: 100dvh;
+  min-height: 0;
+  padding-bottom: var(--dock-height, 7rem);
+  overflow: hidden;
+}
+.topbar { position: relative; flex: 0 0 auto; }
+.status-top { display: flex; align-items: center; justify-content: space-between; gap: .4rem; }
+.reset-link {
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #a9a9a9;
+  font-size: .7rem;
+  text-decoration: underline;
+}
+.reset-link:hover { color: #fff; }
+main {
+  display: flex;
+  min-height: 0;
+  width: 100%;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow: hidden;
+  padding: .35rem clamp(1rem, 3vw, 2rem) .2rem;
+}
+.notice {
+  flex: 0 0 auto;
+  max-height: 3.4rem;
+  overflow: hidden;
+  margin: .2rem 0 .55rem;
+  font-size: .83rem;
+  line-height: 1.2;
+}
+.section-meta { flex: 0 0 auto; margin-bottom: .45rem; padding: .3rem .55rem; font-size: .75rem; }
+.tableau,
+.tableau.world-tableau {
+  display: grid;
+  min-height: 0;
+  width: 100%;
+  flex: 1 1 auto;
+  grid-template-columns: repeat(var(--columns, 1), var(--tile-size, 140px));
+  grid-template-rows: repeat(var(--rows, 1), var(--tile-row, 140px));
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.tableau .card {
+  width: var(--tile-size, 140px);
+  height: var(--tile-size, 140px);
+  aspect-ratio: 1;
+}
+.tableau .art-window {
+  position: absolute;
+  z-index: 1;
+  top: 4%;
+  left: 50%;
+  width: 54%;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  overflow: hidden;
+  border-radius: .4rem;
+  pointer-events: none;
+}
+.tableau .art-window img { display: block; width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+.tableau .mine-slot { width: var(--tile-size, 140px); height: var(--tile-row, 140px); gap: 4px; }
+.tableau .mine-slot .small-button { padding: .28rem .2rem; font-size: .7rem; white-space: nowrap; }
+.tableau.compact .card { border-width: 2px; border-radius: .78rem; padding: .2rem; }
+.tableau.compact .card::before { inset: 3px; border-radius: .6rem; }
+.tableau.compact .card::after { left: 3px; right: 3px; bottom: 3px; height: 43%; border-radius: .35rem .35rem .55rem .55rem; }
+.tableau.compact .card-copy { left: 4px; right: 4px; bottom: 4px; height: 43%; gap: 0; padding: .1rem; }
+.tableau.compact .card strong { font-size: clamp(.6rem, calc(var(--tile-size) * .09), .87rem); line-height: 1; }
+.tableau.compact .card .sub { font-size: clamp(.48rem, calc(var(--tile-size) * .065), .65rem); }
+.tableau.compact .card small { display: none; }
+.tableau.compact .glyph { top: 8%; font-size: calc(var(--tile-size) * .38); }
+.tableau.compact .cost,
+.tableau.compact .slot { top: .2rem; font-size: .53rem; padding: .08rem .18rem; }

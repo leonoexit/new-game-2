@@ -1,0 +1,219 @@
+{
+  "batch_id": "SPECIAL-NONFRUIT-TREES-02",
+  "status": "imported_draft",
+  "scope": "source-first intake of special non-fruit trees; no V0 card activation",
+  "source_facts": [
+    {
+      "source": "Stardew Valley Wiki — Palm Tree",
+      "url": "https://stardewvalleywiki.com/Palm_Tree",
+      "fact": "Palms occur in the Desert and on Ginger Island. Shaking or chopping can yield Coconut after Foraging level 1, and island palms can yield Golden Coconut; this source is not used here to assert a guaranteed Wood drop."
+    },
+    {
+      "source": "Stardew Valley Wiki — Mushroom Tree",
+      "url": "https://stardewvalleywiki.com/Mushroom_Tree",
+      "fact": "Mushroom Trees can appear on the farm when a common tree transforms in Fall; chopping gives Red or Purple Mushrooms and leaves a stump, which can regrow in Spring. Tapping is a separate source of mushrooms."
+    },
+    {
+      "source": "Stardew Valley Wiki — Mystic Tree",
+      "url": "https://stardewvalleywiki.com/Mystic_Tree",
+      "fact": "Mystic Trees grow from crafted Mystic Tree Seeds after Foraging Mastery; chopping produces Hardwood and leaves a stump. Tapping produces Mystic Syrup."
+    },
+    {
+      "source": "Stardew Valley Wiki — Green Rain Trees",
+      "url": "https://stardewvalleywiki.com/Green_Rain_Trees",
+      "fact": "Green Rain Tree Types 1 and 2 have Wood/Sap outputs, while Type 3 has Fiddlehead Fern output; some common trees temporarily transform during Green Rain or Fall. Chopping leaves a stump."
+    }
+  ],
+  "adaptation": {
+    "label": "source-shaped special-tree scaffold; not owner-approved V0 law",
+    "card_type": "Vegetation",
+    "location": null,
+    "tool": "Axe",
+    "action": "Chop",
+    "base_ap": null,
+    "target": "one visible mature tree card",
+    "result": "tree identity remains in a draft Stump state; each variant records its own candidate Item outputs",
+    "state_transition": "Mature Tree -> Stump on the same tree identity",
+    "output": null,
+    "output_quantity": null,
+    "replenishment": null,
+    "notes": "There is no shared Wood or Forest default for this batch. The draft tree-to-stump pattern does not decide whether source-game transformations become separate identities or states in LVC. Source locations, drops and seasons do not decide paper AP."
+  },
+  "variants": [
+    {
+      "identity": "Palm Tree",
+      "source_difference": "Desert or Ginger Island; shake/chop may give Coconut after Foraging level 1 and Island may give Golden Coconut; guaranteed Wood output not asserted",
+      "pilot_override": {
+        "source_location": "Desert / Ginger Island",
+        "output_options": [
+          "Coconut",
+          "Golden Coconut"
+        ]
+      }
+    },
+    {
+      "identity": "Mushroom Tree",
+      "source_difference": "rare Fall transformation of a farm tree; Chop gives Red/Purple Mushrooms; seasonal stump regrowth and tapping differ",
+      "pilot_override": {
+        "source_location": "Farm",
+        "output_options": [
+          "Red Mushroom",
+          "Purple Mushroom"
+        ]
+      }
+    },
+    {
+      "identity": "Mystic Tree",
+      "source_difference": "crafted seed after Foraging Mastery; Hardwood and a separate Mystic Syrup tapper output",
+      "pilot_override": {
+        "source_location": "player-planted",
+        "output": "Hardwood"
+      }
+    },
+    {
+      "identity": "Green Rain Tree Type 1",
+      "source_difference": "weather or Mossy Seed conditional; Wood/Sap and possible Moss or Mossy Seed",
+      "pilot_override": {
+        "source_location": "Green Rain conditional",
+        "output": "Wood",
+        "related_outputs": [
+          "Sap",
+          "Moss",
+          "Mossy Seed"
+        ]
+      }
+    },
+    {
+      "identity": "Green Rain Tree Type 2",
+      "source_difference": "weather or Mossy Seed conditional; Wood/Sap and possible Moss or Mossy Seed",
+      "pilot_override": {
+        "source_location": "Green Rain conditional",
+        "output": "Wood",
+        "related_outputs": [
+          "Sap",
+          "Moss",
+          "Mossy Seed"
+        ]
+      }
+    },
+    {
+      "identity": "Green Rain Tree Type 3",
+      "source_difference": "Fiddlehead Fern and possible Mossy Seed instead of a stated Wood output; tapping also yields Fiddlehead Fern",
+      "pilot_override": {
+        "source_location": "Green Rain conditional",
+        "output": "Fiddlehead Fern",
+        "related_outputs": [
+          "Mossy Seed"
+        ]
+      }
+    }
+  ],
+  "support_cards": [
+    {
+      "identity": "Axe",
+      "type": "Tool card",
+      "role": "shared Chop tool; V0 access unresolved"
+    },
+    {
+      "identity": "Wood",
+      "type": "Item / material",
+      "role": "Type 1 and 2 candidate output"
+    },
+    {
+      "identity": "Hardwood",
+      "type": "Item / material",
+      "role": "Mystic Tree candidate output"
+    },
+    {
+      "identity": "Sap",
+      "type": "Item / material",
+      "role": "related output for Green Rain Types 1 and 2"
+    },
+    {
+      "identity": "Moss",
+      "type": "Item / material",
+      "role": "conditional related output"
+    },
+    {
+      "identity": "Mossy Seed",
+      "type": "Item / tree seed",
+      "role": "conditional related output; planting deferred"
+    },
+    {
+      "identity": "Coconut",
+      "type": "Item / forage",
+      "role": "possible Palm product; action trigger not yet adapted"
+    },
+    {
+      "identity": "Golden Coconut",
+      "type": "Item / forage",
+      "role": "possible island Palm product; action trigger not yet adapted"
+    },
+    {
+      "identity": "Red Mushroom",
+      "type": "Item / forage",
+      "role": "Mushroom Tree candidate output"
+    },
+    {
+      "identity": "Purple Mushroom",
+      "type": "Item / forage",
+      "role": "Mushroom Tree candidate output"
+    },
+    {
+      "identity": "Fiddlehead Fern",
+      "type": "Item / forage",
+      "role": "Green Rain Type 3 candidate output"
+    }
+  ],
+  "issues": [
+    {
+      "scope": "family",
+      "topic": "action and output trigger",
+      "status": "open",
+      "note": "Palm's conditional shake/chop output and separate tapper products need paper action rules only if those variants are selected."
+    },
+    {
+      "scope": "family",
+      "topic": "temporary transformations",
+      "status": "open",
+      "note": "Mushroom and Green Rain trees can arise by transforming common trees in the source; whether LVC treats these as identity change or state/overlay is unresolved."
+    },
+    {
+      "scope": "family",
+      "topic": "AP and output quantity",
+      "status": "open",
+      "note": "No paper AP, exact quantity or drop probability is assigned at intake."
+    },
+    {
+      "scope": "family",
+      "topic": "Stump and regrowth",
+      "status": "open",
+      "note": "Chop-to-Stump is a draft skeleton; stump removal and Mushroom Tree seasonal regrowth need family-level treatment."
+    },
+    {
+      "scope": "V0",
+      "topic": "world placement and progression",
+      "status": "open",
+      "note": "Desert/Island, Farm, mastery and Green Rain source conditions are not mapped into Little Valley Cards regions or progression."
+    }
+  ],
+  "deferred": [
+    "tapping outputs and tapper timing",
+    "seed crafting, planting, weather and seasonal systems",
+    "item prices, recipes, sinks, art and runtime implementation"
+  ],
+  "selection_review": {
+    "decision": "CG-62",
+    "result": "no_v0_promotion",
+    "review": "docs/evidence/TREE-FAMILY-EXCEPTION-REVIEW-01.md",
+    "reason": "All six variants have source-conditioned appearance outside the current Forest V0 tree loop. Their Chop outputs are recorded, but source placement, transformation identity/state, Green Rain, mastery or Island/Desert access must be resolved at family level before V0 activation.",
+    "variant_gates": {
+      "Palm Tree": "Desert/Island source outside the five V0 Regions; Coconut output is conditional",
+      "Mushroom Tree": "Farm common-tree transformation or later seed access; identity-versus-state and placement unresolved",
+      "Mystic Tree": "crafted Mystic Tree Seed after Foraging Mastery; no V0 mastery/seed path",
+      "Green Rain Tree Type 1": "Green Rain/Mossy Seed source and temporary common-tree transformation unresolved",
+      "Green Rain Tree Type 2": "Green Rain/Mossy Seed source and temporary common-tree transformation unresolved",
+      "Green Rain Tree Type 3": "Green Rain/Mossy Seed source and temporary transformation unresolved; Fiddlehead Fern rather than Wood baseline"
+    }
+  }
+}

@@ -4,9 +4,9 @@ Ngày cập nhật: 2026-09-25. **CG-17/19/20 đã được chủ dự án chố
 
 ## 1. Card grammar và hành động
 
-Mine là Area với nguồn đang thấy: **đối tượng → chọn tác động → trả AP → nhận hệ quả**. Không giả lập di chuyển giữa các ô. `Character` là Person card, `Pickaxe`/`Copper Pickaxe` là Tool card, `Ore` là Item output riêng với nguồn `Ore Rock`.
+Mine là Region card con trực tiếp của World, mở tableau với nguồn đang thấy: **đối tượng → chọn tác động → trả AP → nhận hệ quả**. Không giả lập di chuyển giữa các ô. Người chơi là tác nhân mặc định theo UI-45; `Pickaxe`/`Copper Pickaxe` là Tool card, `Ore` là Item output riêng với nguồn `Ore Rock`.
 
-Ba nguồn mở sẵn cùng lúc. Xem, chọn và cuộn tới Mine không trả AP. `Character + Pickaxe → Break` là **một commit**: kiểm target/Tool/AP, trừ phí hiển thị, giải kết quả, rồi đánh dấu nguồn spent. Không có nhát trung gian hoặc phí `Extract` thứ hai. Thiếu AP hoặc target/Tool không hợp lệ thì không commit, không trừ AP và không đổi nguồn.
+Ba nguồn mở sẵn cùng lúc. Xem, chọn và cuộn tới Mine không trả AP. `Pickaxe → Break` là **một commit**: kiểm target/Tool/AP, trừ phí hiển thị, giải kết quả, rồi đánh dấu nguồn spent. Không có nhát trung gian hoặc phí `Extract` thứ hai. Thiếu AP hoặc target/Tool không hợp lệ thì không commit, không trừ AP và không đổi nguồn.
 
 | Nguồn | Phí `Break` bằng Pickaxe thường | Phí bằng Copper Pickaxe | Kết quả |
 | --- | ---: | ---: | --- |
@@ -41,4 +41,4 @@ Hai `Ore Rock` thường và một Dense ở tầng đầu cho 3 Ore với `1 + 
 
 ## 5. Ranh giới triển khai
 
-CG-20 chốt **luật và thông số Mine V0 qua Copper**, không biến các prototype `Dig → flip → Extract` hoặc `Search → Exposed Ore → Extract` thành code hiện hành. Workbook danh mục được đồng bộ trong lượt này; các fixture Mine vẫn chưa triển khai CG-17/19/20. Rời Area đã chốt giữ state trong lượt chơi; persistence qua reload/save trên đĩa vẫn là yêu cầu triển khai chưa có, không đồng nhất với cadence `Sleep` đã chốt.
+CG-20 chốt **luật và thông số Mine V0 qua Copper**, không biến các prototype `Dig → flip → Extract` hoặc `Search → Exposed Ore → Extract` thành code hiện hành. Workbook danh mục được đồng bộ trong lượt này; các fixture Mine vẫn chưa triển khai CG-17/19/20. Rời Mine đã chốt giữ state trong lượt chơi; persistence qua reload/save trên đĩa vẫn là yêu cầu triển khai chưa có, không đồng nhất với cadence `Sleep` đã chốt.

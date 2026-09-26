@@ -4,45 +4,7 @@ Ngày lập: 2026-09-21.
 
 Mục đích: chọn bộ content fixture nhỏ nhất đủ để Producer, Connector và Collector dùng chung một vocabulary trong các vòng calendar/economy sensitivity kế tiếp. Tài liệu này không phải danh sách content Year 1, không chốt balance, không cho phép code/prototype và không biến tên hay rule fixture thành luật.
 
-**Phạm vi lá/entity V0 hiện hành:** tra [danh mục card grammar §10](ON-TABLE-CARD-SHAPE-DECISION-09.md) trước khi dùng bất kỳ tên nào bên dưới. Registry này giữ các tên và phép thử lịch sử, kể cả `Field Notes` reward, Runner Bean/Lemon Balm Seed chưa có nguồn, Project đã bị bác bỏ và nguồn ngoài vòng đầu; chúng không tự trở thành card V0. Khi hai tài liệu khác nhau, danh mục card grammar V0 có ưu tiên cho loại lá, nơi xuất hiện và trạng thái quyết định.
-
-**Field V0 · CG-38/39:** [Farm land contract 01](FARM-V0-LAND-AND-PLOT-CONTRACT-01.md) chốt tám vị trí trong lá `Field` ở tầng dưới Home: 2 Soil trống, 3 Soil có bụi và 3 lá đá. Sickle 1 AP dọn bụi, đổi ảnh trong Soil; Hoe 1 AP đập lá đá, thay bằng Soil trống ở cùng vị trí và nhận 1 Stone. Các dòng lịch sử bên dưới về Farm phẳng, sức chứa khác hoặc đất mở thêm theo tiến độ không thay quyết định này.
-
-**Till V0 · CG-40:** Hoe lên Soil trống, 1 AP, đổi trạng thái/ảnh của **cùng lá Soil** sang đã cày. `Tilled Soil` là tên state để đọc/lọc, không là identity/Bách Khoa riêng. Plant vẫn đổi Soil đã cày thành Crop identity; Harvest trả về Soil đã cày.
-
-**Stone · CG-41:** Clear đá Field vẫn trả Stone. Công dụng/giá bán/nguồn khác của Stone được hoãn đến giai đoạn đổ nội dung; không lấy các recipe hoặc Project lịch sử bên dưới làm luật hiện hành.
-
-**Mine update · 2026-09-25:** registry bên dưới còn giữ `Search → Exposed Ore → Extract`, Stone source và cadence Sleep của phép thử cũ. Gameplay Mine CG-17/19/20, gồm `Break / Next / Descend`, phí và refresh, nằm trong [Mine contract 01](MINE-CURRENT-CONTRACT-01.md). Không lấy các hàng Mine lịch sử ở đây để ghi đè nguồn hoặc phí đã chốt.
-
-**Fishing update · 2026-09-25:** §5 giữ fixture hai Fish để đọc chứng cứ cũ. [Fishing contract 01](FISHING-CURRENT-CONTRACT-01.md) là V0 hiện hành: ba `Fishing Spot` với odds ẩn, `Cast` 1 AP, một output `Silver Minnow`. `Blue Eel`/Rain Catch không nằm trong roster V0; không lấy hàng FI-R hoặc exact `Catch` bên dưới để thêm lại Fish thứ hai.
-
-**Taxonomy correction CG-06/07 · 2026-09-24:** Character là Person card, Hand là Tool card; Fish là Item nhóm Fish; cây hoang dã, cây đang trồng và nông sản thu hoạch là Item nhóm Crop. Farmhouse là Building card thuộc Farm, chứa TV sub-card. Các tag `Forage` và phép chia raw item bên dưới là nhãn thử lịch sử nếu chúng xung đột với phân loại này.
-
-**Taxonomy correction CG-09 · 2026-09-25:** Supermarket là Building card ở Commerce. Shipping Bin và TV cùng thuộc loại Thiết bị (Equipment), lần lượt ở Home/Farm và bên trong Farmhouse. `Sub-card` mô tả quan hệ chứa của TV; các tương tác đã chốt giữ nguyên.
-
-Trạng thái cập nhật 2026-09-23: **partially superseded for Processing utility and Mine source topology**. Crop/item/Project/collection vocabulary remains reusable. Processing templates remain compatibility fixtures only; every requirement below that Processor create a positive minimum-loop branch, premium, request or raw-vs-Processed economic win is historical and is superseded by [post-removal audit 11](../evidence/CORE-YEAR-1-POST-REMOVAL-CONSISTENCY-GAP-AUDIT-11.md). Stone sourcing now follows Search-once → persistent source → Extract → Sleep refresh; Direct Descent never grants Stone.
-
-Canonical paper identity update 2026-09-23: [crop identity audit 20](../evidence/CANONICAL-CROP-IDENTITY-AUDIT-20.md) replaces the active crop labels `Shortroot / Tallbean / Dewleaf` with `Turnip / Runner Bean / Lemon Balm`. Historical test logs keep the old labels; roles, tags, access and numerical fixtures are unchanged.
-
-Canonical paper identity update 2026-09-23: [Catch identity audit 21](../evidence/CANONICAL-CATCH-IDENTITY-AUDIT-21.md) replaces the active Catch labels `River Minnow / Rain Eel` with `Silver Minnow / Blue Eel`. Rain remains the exact FI-R eligibility condition; historical test logs keep the old labels.
-
-Canonical paper identity update 2026-09-23: [consolidated proposal 23](../evidence/CANONICAL-IDENTITY-CONSOLIDATED-PROPOSAL-23.md) selects `Hedgerow Berry / Wood / Stone / Ore / Wild Herb`, source-card labels `Hedgerow / Woodlot / Exposed Ore / Exposed Stone / Grove Batch`, Projects `Water Trough / Harvest Bench / Grove Footbridge`, Persons `Mira=A / Nell=C / Bram=K`, and `Valley Journal → Field Notes / Connections`. Mechanics and values are unchanged; historical aliases remain in completed logs.
-
-Grove readiness update 2026-09-23: [contract 36](../evidence/FIRST-PLAYABLE-GROVE-BATCH-CONTRACT-36.md) tested `G-V` for the current one-output V0: exact Wild Herb opportunity visible at day setup, free inspect, 1-AP Collect, Sleep expiry unless Nell holds it. The paid Search/multi-item batch below is historical fixture grammar, not an approved hidden V0 result. Actual appearance cadence remains open. The ordinary Wild Herb source does **not** require PJ-X/Upper Grove.
-
-Ontology correction after owner challenge: [audit 40](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md) finds that `Grove Batch` is an approved paper **source-card name**, but `Grove` alone has no selected Area/place/action type. The word “Batch” may mislead for a zero-or-one Wild Herb source. `G-V`'s AP comparison remains conditional; its player-facing presentation promotion is paused until the name and source/opportunity surface are clear.
-
-Latest Wild Herb V0 paper decision, 2026-09-24: [audit 40 §8](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md) places one visible world-item card at most in the new Rìa Rừng / Woodland Edge Area, with a five-slip automatic New-Day appearance cycle, 1-AP Hand Collect and Season-boundary cleanup. The earlier `Grove Batch` source card, paid Search and one-Sleep expiry are historical paper models; Nell's old Hold Open target is no longer valid. [Package v1 §7.1–7.2](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) records the withdrawn crop-only Harvest Assist and Nell's current 2-AP same-day relief rule. Hand Collect retains its normal 1-AP cost unless Nell's general relief is active. The Herb rule is a paper baseline requested by the owner, not a final product lock.
-
-Latest paper audit: [consistency audit 37](../evidence/FIRST-PLAYABLE-V0-CONSISTENCY-AUDIT-37.md) keeps PJ-X's reward and Mira/Bram abilities open; [Herb cadence test 38](../evidence/FIRST-PLAYABLE-WILD-HERB-CADENCE-PAPER-TEST-38.md) compares source phases without selecting a generator; [role options 39](../evidence/FIRST-PLAYABLE-MIRA-BRAM-ABILITY-OPTIONS-39.md) selects no replacement ability. [Package §7.4](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) records the owner's confirmation of Nell alone in the first-playable Person roster; Mira/Bram remain named later-content identities with no active V0 appearance, Gift, Heart or card. The registry's older minimum-set claims below remain historical where they imply a complete three-ability roster or a playable Upper-Grove reward.
-
-First-loop source update 2026-09-24: [package §6.9](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) supersedes this registry's finite/delayed Turnip restock assumption and COL-1 “at a restock” timing for the working first loop. Two Turnip Seeds and 0G open the paper game; Commerce lists Turnip Seed without a daily quantity cap through the first paper Season; Field Notes chooses one free Bean/Lemon Balm Seed on the **next New Day after** the third family record. CP3 first Ore has collection value; Woodlot Collect, CP6 Stone and repeated Ore are outside the active first-loop reward scope until a native use exists. Names below remain reusable identities, not active V0 obligations. Later-Season Seed availability and numerical prices remain open.
-
-Project purpose review 2026-09-24: [package v1 §6.4](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) recommends working `B2 — Water Trough + Harvest Bench` for first playable. The Grove Footbridge name and X0 no-fee shape remain historical/conditional, but no playable PJ-X card or Upper-Grove reward enters that working scope. This count change is **not yet owner confirmed**; earlier B3 references below remain source-test fixtures.
-
-Final owner correction: [package v1 §6.5](YEAR-1-PAPER-DESIGN-PACKAGE-V1.md) rejects **Water Trough, Harvest Bench and Grove Footbridge as designs**, not merely as first-playable content. There are zero selected or reserved Project cards/Work targets; Upper Grove is also not a reserved Area. Section 7 and the Project columns/route diagrams below preserve discarded paper fixtures only and must not be used to plan later content.
-
-Current Farm grammar: [Farm action and AP rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) defines Plant, one-target Watering Can, Rain, Sleep growth and Hand Harvest without Projects. `Care` in this older registry means successful daily growth, not an extra payable action. Its 2/3/4 crop counts and one-item yield remain working numeric fixtures.
+**Trạng thái: snapshot phục vụ phép thử sensitivity, không sở hữu luật V0.** Các phần bên dưới giữ vocabulary, giả định và kết quả theo thời điểm viết; một số tên, action, giá và Project đã bị thay. Tra [bản đồ nguồn luật](README.md) để tìm contract của cơ chế và [danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) để xác định lá đang chơi. Không thêm đoạn “update hiện hành” vào registry khi một luật đổi.
 
 ## 1. Phân loại trạng thái
 
@@ -149,6 +111,8 @@ Hai crop chỉ đủ so short/long nhưng không thử cross-category. Bốn cro
 | I-STN | Stone | `Raw · Material · Stone` | Band source từ CP6 trở đi; Search một lần rồi Extract | Dùng AP lấy material so với tiếp tục Descend |
 | I-ORE | Ore | `Raw · Material · Ore` | Mine checkpoint source | Relief Project so với gateway Project |
 | I-HRB | Wild Herb | `Fresh · Forage · Herb` after collection | Visible world-item card in Rìa Rừng; automatic New-Day appearance under audit 40 §8 | Gift/Sell/record/Keep after 1-AP Hand Collect |
+
+**Cách đọc hiện hành cho I-HRB:** hàng `[FIXTURE]` giữ tag `Forage` và tên bối cảnh cũ để đối chiếu phép thử. CG-43 đặt nguồn ở `Forest`, CG-06 ghi Wild Herb là `Item · Crop`, và CG-49 chọn **identity `Wild Herb` đã Collect vào Item** làm quà Nell V0; không dùng tag fixture để tự nhận thêm `Lemon Balm` hay output Prepared.
 
 Crop harvest và Catch ở §3/§5 cũng là raw item; bảng này chỉ chứa source ngoài Farm/Fishing.
 
@@ -400,7 +364,7 @@ Processor load cost + completion timing + slot count (conditional arm only)
 Seed restock timing
 ```
 
-Không được lấy một giá trị cũ như `6 AP`, `cap 2`, `Catch 2 AP`, `checkpoint 3/6/9/12` hoặc `3G→5G` làm luật ngầm. Nếu dùng lại, nó phải là một arm được ghi rõ của sensitivity test.
+Không được lấy một giá trị cũ như `6 AP`, `cap 2`, `Catch 2 AP`, `checkpoint 3/6/9/12` hoặc `3G→5G` làm luật ngầm. Dòng này là cảnh báo của registry trước các quyết định mới: **CG-51 nay chọn cap 2 riêng Nell V0** sau kiểm giấy; những giá trị khác chỉ được dùng khi contract hiện hành đã chọn hoặc trong arm sensitivity có ghi rõ.
 
 ## 13. Kết luận
 

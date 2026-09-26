@@ -1,0 +1,195 @@
+{
+  "batch_id": "RIVER-FISH-04",
+  "status": "selected",
+  "scope": "source-first River Fish intake; four seasonal Fish selected by CG-64, Shad/Catfish by CG-65, Walleye and Sunny Sunfish/Rainbow Trout by CG-66/67",
+  "source_facts": [
+    {
+      "source": "Stardew Valley Wiki — Chub",
+      "url": "https://stardewvalleywiki.com/Chub",
+      "fact": "Chub is catchable in the Cindersap Forest River in every season, at any time and in any weather. It is not a Pelican Town river fish."
+    },
+    {
+      "source": "Stardew Valley Wiki — Smallmouth Bass",
+      "url": "https://stardewvalleywiki.com/Smallmouth_Bass",
+      "fact": "Smallmouth Bass is catchable in the Pelican Town river in Spring and Fall, at any time and in any weather; the Cindersap Forest location is its pond."
+    },
+    {
+      "source": "Stardew Valley Wiki — Pike",
+      "url": "https://stardewvalleywiki.com/Pike",
+      "fact": "Pike is catchable in the town or forest river in Summer and Winter, at any time and in any weather."
+    },
+    {
+      "source": "Stardew Valley Wiki — Perch",
+      "url": "https://stardewvalleywiki.com/Perch",
+      "fact": "Perch is catchable in the town or forest river in Winter, at any time and in any weather."
+    },
+    {
+      "source": "Stardew Valley Wiki — Shad",
+      "url": "https://stardewvalleywiki.com/Shad",
+      "fact": "Shad is catchable in the river during Spring, Summer and Fall in Rain, from 9am to 2am."
+    },
+    {
+      "source": "Stardew Valley Wiki — Catfish",
+      "url": "https://stardewvalleywiki.com/Catfish",
+      "fact": "Catfish is catchable in the river during Spring and Fall in Rain, from 6am to midnight. Summer Secret Woods and Winter Rain Totem exceptions are separate source locations/conditions."
+    },
+    {
+      "source": "Stardew Valley Wiki — Walleye",
+      "url": "https://stardewvalleywiki.com/Walleye",
+      "fact": "Walleye is catchable in the river in Fall Rain from 12pm to 2am; Winter requires a Rain Totem. It is described as a night fish."
+    },
+    {
+      "source": "Stardew Valley Wiki — Sunfish",
+      "url": "https://stardewvalleywiki.com/Sunfish",
+      "fact": "Sunfish is catchable in the river from 6am to 7pm in Spring and Summer in Sun or Wind weather. Tutorial and Magic Bait exceptions are outside the ordinary river pool."
+    },
+    {
+      "source": "Stardew Valley Wiki — Rainbow Trout",
+      "url": "https://stardewvalleywiki.com/Rainbow_Trout",
+      "fact": "Rainbow Trout is catchable in the river from 6am to 7pm in Summer in Sun weather. Trout Derby and Magic Bait are separate exceptions."
+    },
+    {
+      "source": "Current Little Valley Cards fishing contract",
+      "path": "docs/current/FISHING-CURRENT-CONTRACT-01.md",
+      "fact": "CG-24 already supplies three visually identical Fishing Spot instances with hidden 25/50/75 success odds, one 1 AP Cast per spot per day and Sleep refresh. Silver Minnow is the original Fish output."
+    }
+  ],
+  "adaptation": {
+    "label": "CG-64–67 family-level paper adaptation; source locations and hours compressed into the LVC River Region and four forward-only phases",
+    "card_type": "Item / Fish",
+    "location": "River Cast success -> Item",
+    "tool": "Character + Fishing Rod",
+    "action": "Cast",
+    "base_ap": 1,
+    "target": "one ready Fishing Spot",
+    "result": "success yields exactly one Fish Item; No Bite yields none; spot spent either way",
+    "output": null,
+    "output_options": ["Silver Minnow", "Chub", "Smallmouth Bass", "Pike", "Perch", "Shad", "Catfish", "Walleye", "Sunfish", "Rainbow Trout"],
+    "output_selection": "On success only, draw uniformly and independently from eligible Fish identities filtered by Season, Today Weather and current phase; on No Bite draw no identity. Spot success odds and hidden assignment are unchanged.",
+    "time_window_rule": "CG-66 uses Morning -> Noon -> Afternoon -> Night, advanced manually and only forward with a 0 AP Next Phase control. Walleye is Noon/Afternoon/Night; Sunfish and Rainbow Trout are Morning/Noon/Afternoon; broad Shad/Catfish source windows are compressed to all four phases.",
+    "notes": "Uniform identity draw and phase compression are LVC paper rules, not Stardew catch rates or exact hours. No Fish is tied to a Fishing Spot tier. River compresses Town/Forest River. Wind, Trout Derby, Winter Rain Totem, price, quality, recipes and other uses are deferred."
+  },
+  "variants": [
+    {
+      "identity": "Chub",
+      "source_difference": "Forest River, all Seasons, any time/weather",
+      "pilot_override": {
+        "eligible_seasons": ["Spring", "Summer", "Fall", "Winter"]
+      }
+    },
+    {
+      "identity": "Smallmouth Bass",
+      "source_difference": "Town River, Spring/Fall, any time/weather",
+      "pilot_override": {
+        "eligible_seasons": ["Spring", "Fall"]
+      }
+    },
+    {
+      "identity": "Pike",
+      "source_difference": "Town/Forest River, Summer/Winter, any time/weather",
+      "pilot_override": {
+        "eligible_seasons": ["Summer", "Winter"]
+      }
+    },
+    {
+      "identity": "Perch",
+      "source_difference": "Town/Forest River, Winter, any time/weather",
+      "pilot_override": {
+        "eligible_seasons": ["Winter"]
+      }
+    },
+    {
+      "identity": "Shad",
+      "source_difference": "River, Spring/Summer/Fall, Rain and 9am–2am",
+      "pilot_override": {
+        "eligible_seasons": ["Spring", "Summer", "Fall"],
+        "required_weather": "Rain",
+        "eligible_phases": ["Morning", "Noon", "Afternoon", "Night"]
+      }
+    },
+    {
+      "identity": "Catfish",
+      "source_difference": "River, Spring/Fall, Rain and 6am–12am; different location/Totem exceptions omitted",
+      "pilot_override": {
+        "eligible_seasons": ["Spring", "Fall"],
+        "required_weather": "Rain",
+        "eligible_phases": ["Morning", "Noon", "Afternoon", "Night"]
+      }
+    },
+    {
+      "identity": "Walleye",
+      "source_difference": "River, Fall, Rain and 12pm–2am; Winter requires Rain Totem",
+      "pilot_override": {
+        "eligible_seasons": ["Fall"],
+        "required_weather": "Rain",
+        "eligible_phases": ["Noon", "Afternoon", "Night"]
+      }
+    },
+    {
+      "identity": "Sunfish",
+      "source_difference": "River, Spring/Summer, Sun or Wind, 6am–7pm",
+      "pilot_override": {
+        "eligible_seasons": ["Spring", "Summer"],
+        "required_weather": "Sunny",
+        "eligible_phases": ["Morning", "Noon", "Afternoon"]
+      }
+    },
+    {
+      "identity": "Rainbow Trout",
+      "source_difference": "River, Summer, Sun, 6am–7pm; Trout Derby exception",
+      "pilot_override": {
+        "eligible_seasons": ["Summer"],
+        "required_weather": "Sunny",
+        "eligible_phases": ["Morning", "Noon", "Afternoon"]
+      }
+    }
+  ],
+  "support_cards": [
+    {
+      "identity": "Silver Minnow",
+      "type": "Item / Fish",
+      "role": "existing original Fish, eligible in every Season"
+    },
+    {
+      "identity": "Fishing Spot",
+      "type": "Source card",
+      "role": "existing three-instance River target; unchanged success odds and spent/Sleep cadence"
+    },
+    {
+      "identity": "Fishing Rod",
+      "type": "Tool card",
+      "role": "existing Cast source"
+    },
+    {
+      "identity": "Character",
+      "type": "Person card",
+      "role": "existing Cast source"
+    }
+  ],
+  "issues": [
+    {
+      "scope": "deferred source exceptions",
+      "topic": "Wind, Trout Derby and Winter Rain Totem",
+      "status": "deferred",
+      "note": "CG-66/67 selects four phases and ordinary River catches. Wind-only Sunfish access, Derby Rainbow Trout exceptions and Winter Walleye with Rain Totem have no matching V0 source/system."
+    },
+    {
+      "scope": "selected variants",
+      "topic": "catch weights and economy",
+      "status": "deferred",
+      "note": "Uniform eligible-identity draw is the current paper rule. Species-specific weights, sale prices and balance are not assigned by the source facts."
+    }
+  ],
+  "deferred": [
+    "Blue Eel from historical fixtures; no V0 source or Rain condition",
+    "sale prices, fish quality, bait, recipes, gifts and secondary sources",
+    "art and runtime implementation"
+  ],
+  "promotion": {
+    "decision": "CG-64–67",
+    "selected_variants": ["Chub", "Smallmouth Bass", "Pike", "Perch", "Shad", "Catfish", "Walleye", "Sunfish", "Rainbow Trout"],
+    "selected_support_cards": ["Silver Minnow", "Fishing Spot", "Fishing Rod", "Character"],
+    "contract": "docs/current/FISHING-CURRENT-CONTRACT-01.md",
+    "note": "CG-64 adds four Season-filtered Fish; CG-65 adds Rain Shad/Catfish; CG-66/67 select four day phases plus Walleye and Sunny Sunfish/Rainbow Trout. AP, spot count, success odds, spent state and Sleep cadence retain CG-24. Source exceptions remain deferred."
+  }
+}

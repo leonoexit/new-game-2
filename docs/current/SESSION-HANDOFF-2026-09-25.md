@@ -1,5 +1,7 @@
 # Prompt bàn giao — Little Valley Cards — 2026-09-25
 
+**Snapshot bàn giao theo ngày, không phải hướng dẫn hiện hành.** Tra [README của repo](../../README.md), [bản đồ nguồn luật](README.md) và lời mới nhất của chủ dự án trước khi dùng các chỉ dẫn bên dưới.
+
 Hãy tiếp tục dự án **Little Valley Cards** trong repo `/Volumes/LeNguyen02SSD/Programming/new-game-2`. Trao đổi với tôi bằng **tiếng Việt**; tên card, Tool, action và state dùng **tiếng Anh nhất quán**. Đây là dự án **thiết kế luật giấy và thử nghiệm**, chưa có gameplay runtime. Đọc `AGENTS.md`, `README.md` và các contract hiện hành trước khi sửa.
 
 ## 1. Điểm nối của phiên mới

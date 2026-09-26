@@ -12,11 +12,16 @@ Trạng thái: **working paper rule after owner request to resolve Farm**. This 
 
 **CG-40 (2026-09-25):** `Till` nay dùng Hoe lên Soil trống, **1 AP**, đổi ảnh/state **trong cùng identity Soil** sang đã cày. `Tilled Soil` trong bảng/trace cũ bên dưới là tên state, không phải identity/Bách Khoa riêng. Harvest trả về Soil đã cày. Phí/Tool Till không còn mở.
 
+**CG-59–61 (2026-09-26):** bảng Plant/Water/Harvest dưới đây áp cho **crop thường**. Sáu `Fruit Tree` Spring/Summer/Fall đã chọn dùng [Fruit Tree contract](FIRST-PLAYABLE-FRUIT-TREE-CONTENT-BATCH-01.md): sapling có thể Plant trên Empty/Tilled Soil, cây không Water, Hand Harvest giữ cây ở Field và Axe Chop trả vị trí về Empty Soil.
+
+**CG-69 (2026-09-26):** chủ dự án yêu cầu lá nguồn nước ở Home. `Farm Pond` là nguồn múc cho Watering Can thường; đây là bổ sung mới thay ranh giới “không refill trong V0” của CG-26, nhưng **không mở lại nâng Can**. Lựa chọn chuyển thể V0: chạm Can → Pond nạp đầy, 0 AP; Water một crop hợp lệ vẫn 1 AP và dùng một lượng nước. Sức chứa `40` và một lượng/crop trong prototype lấy từ Can thường của Stardew, là **fixture để test**, chưa là số cân bằng chủ dự án chốt. Can đầy thì không cần commit múc; Can cạn thì phải múc mới Water được. Mưa không dùng nước Can. Nước còn lại giữ qua Sleep/Back.
+
 ## 1. What the source games establish
 
 | Source | Actual farming relationship | What this card game carries |
 | --- | --- | --- |
 | [Stardew Valley: Watering Cans](https://stardewvalleywiki.com/Watering_Cans) and [Crops](https://stardewvalleywiki.com/Crops) | Watering Can waters crop/soil; rain waters outdoor crops; an unwatered immature crop pauses rather than dies; ripe single-harvest crops can wait. Upgraded cans cover more tiles. | The player targets a Growing Crop with a Watering Can card. Watered state advances growth once at Sleep. Rain supplies that state without a manual action. Mature Crop waits for the Hand. |
+| [Stardew Valley: Farm Pond](https://stardewvalleywiki.com/Farm_Pond), [Well](https://stardewvalleywiki.com/Well) and [Watering Cans](https://stardewvalleywiki.com/Watering_Cans) | Farm ponds refill the Can; Well is a purchasable building; the basic Can has 40 charges. | Use the already-present Farm Pond as a Home source card. Watering Can targets Pond to refill; `40` is a prototype fixture, not a final balance rule. |
 | [Stardew Valley: The Board Game, official rules](https://www.dropbox.com/s/ek7h6zn9ul2gxp1/Stardew%20Rules%20v2%20for%20Download.pdf?dl=0), p. 13 | One Water Crops action advances **all** planted crops on the track and automatically harvests crops leaving it; crops do not wither. | The board game demonstrates a valid global abstraction, but its automatic harvest would erase the owner-selected Hand interaction. We retain visible growth progress and, for this first-playable paper rule, no automatic Season-boundary wither. |
 
 The exact AP values below are **Little Valley Cards** paper costs, not rules attributed to either Stardew game. Area grouping and visual stacks do not determine how many crops an action affects; [action granularity test 01](../evidence/ACTION-GRANULARITY-PAPER-TEST-01.md) already rejected that shortcut.
@@ -27,7 +32,8 @@ The exact AP values below are **Little Valley Cards** paper costs, not rules att
 | --- | --- | --- | --- |
 | Till | Reusable **Hoe** on one empty Soil; **1 AP** | Same Soil card changes visual/state to tilled; no item | Ready to Plant now |
 | Plant | Seed on one tilled Soil; **1 AP** | Consume one Seed; card at that position changes identity to Growing Crop at `0/N` | Can gain the day's first growth if Watered |
-| Water | Reusable **Watering Can** on one unwatered Growing Crop; **1 AP** | Mark that crop Watered for today; a second Water has no effect | If Watered, growth `+1`, maximum once this day |
+| Múc nước | **Watering Can → Farm Pond** ở Home; **0 AP** | Nạp đầy Can; không tiêu Pond hoặc đổi lá nước | Lượng nước còn lại giữ qua Sleep |
+| Water | **Watering Can còn nước** trên một Growing Crop chưa Watered; **1 AP** | Dùng một lượng nước, đánh dấu đúng crop Watered; Water lần hai không có hiệu lực | Nếu Watered, growth `+1`, tối đa một lần/ngày |
 | Rain | All outdoor Growing Crops, including crops planted later that day; **0 AP** | They count as Watered today without a Water action | Each gains at most one growth |
 | Harvest | Reusable **Hand / Bàn tay** on one Mature Crop; **1 AP** | Gain the printed Fresh output; return that position to Soil in tilled state | No further growth on the harvested crop |
 

@@ -1,0 +1,310 @@
+{
+  "batch_id": "FRUIT-TREES-HARVEST-03",
+  "status": "partially_selected",
+  "scope": "source-first intake of eight fruit-tree species; Apricot/Cherry (CG-59), Orange/Peach (CG-60), Apple/Pomegranate (CG-61) selected for Home/Field V0; Banana/Mango remain draft",
+  "source_facts": [
+    {
+      "source": "Stardew Valley Wiki — Fruit Trees",
+      "url": "https://stardewvalleywiki.com/Fruit_Trees",
+      "fact": "Eight fruit trees produce their matching fruit when mature and in season: Apricot/Cherry in Spring, Banana/Mango/Orange/Peach in Summer, and Apple/Pomegranate in Fall. The source game produces one fruit per day and can hold up to three before harvest; these numbers are not paper cadence."
+    },
+    {
+      "source": "Stardew Valley Wiki — Fruit Trees",
+      "url": "https://stardewvalleywiki.com/Fruit_Trees",
+      "fact": "Axe chopping a fruit tree yields normal Wood and a matching sapling; an immature stage-1 tree yields only its sapling. The source page does not specify a Little Valley Cards stump rule."
+    },
+    {
+      "source": "Stardew Valley Wiki — Fruit Trees",
+      "url": "https://stardewvalleywiki.com/Fruit_Trees",
+      "fact": "Fruit trees grow from saplings planted on untilled ground. Banana and Mango saplings have island-linked acquisition in the source; mature trees on Ginger Island or in the Greenhouse bear fruit year-round. Lightning can temporarily replace fruit production with Coal."
+    },
+    {
+      "source": "Stardew Valley Wiki — Orange Sapling / Peach Sapling",
+      "url": "https://stardewvalleywiki.com/Orange_Sapling",
+      "fact": "Orange and Peach saplings are conventional shop-sourced fruit trees in the source game; both produce matching fruit in Summer. See https://stardewvalleywiki.com/Peach_Sapling for Peach."
+    },
+    {
+      "source": "Stardew Valley Wiki — Apple Sapling / Pomegranate Sapling",
+      "url": "https://stardewvalleywiki.com/Apple_Sapling",
+      "fact": "Apple and Pomegranate saplings have shop sources in the source game and produce matching fruit in Fall. See https://stardewvalleywiki.com/Pomegranate_Sapling for Pomegranate."
+    }
+  ],
+  "adaptation": {
+    "label": "source-shaped family scaffold; CG-59–61 select six ordinary Spring/Summer/Fall species via the current contract",
+    "card_type": "Vegetation",
+    "location": "Home / Field for six selected species; Banana/Mango unassigned",
+    "tool": "Hand",
+    "action": "Harvest",
+    "base_ap": 1,
+    "target": "one mature fruit-tree card with fruit available",
+    "result": "matching fruit enters Item; tree identity remains rooted and fruit availability changes state",
+    "state_transition": "Selected six: Young 0/6 -> Mature; seasonal Fruit Available -> Harvested 0/3 -> Fruit Available after 3 Sleep entering that species fruit season; Banana/Mango remain draft",
+    "output": null,
+    "output_quantity": 1,
+    "replenishment": "Selected four: 3 Sleep entering each species fruit season; season boundary resets mature tree to Fruit Available",
+    "secondary_action": {
+      "tool": "Axe",
+      "action": "Chop",
+      "target": "one fruit-tree card",
+      "source_output": "Wood plus matching Sapling when mature; Sapling only at source-game stage 1",
+      "candidate_result": "Selected six: Young returns matching Sapling only; Mature returns Sapling + 2 Wood; position becomes Empty Soil, no Stump",
+      "base_ap": 1
+    },
+    "notes": "CG-59–61 select Apricot/Cherry/Orange/Peach/Apple/Pomegranate as Vegetation in one of eight Field positions. Empty/Tilled Soil can receive matching Sapling; this is a paper adaptation. Banana/Mango remain draft because Island access and year-round exception are not selected. Matching fruit output is recorded per selected variant pilot_override."
+  },
+  "variants": [
+    {
+      "identity": "Apricot Tree",
+      "source_difference": "Spring fruit",
+      "pilot_override": {
+        "source_season": "Spring",
+        "harvest_output": "Apricot",
+        "chop_outputs": [
+          "Wood",
+          "Apricot Sapling"
+        ]
+      }
+    },
+    {
+      "identity": "Cherry Tree",
+      "source_difference": "Spring fruit",
+      "pilot_override": {
+        "source_season": "Spring",
+        "harvest_output": "Cherry",
+        "chop_outputs": [
+          "Wood",
+          "Cherry Sapling"
+        ]
+      }
+    },
+    {
+      "identity": "Banana Tree",
+      "source_difference": "Summer fruit in the valley; year-round on Ginger Island; island-linked sapling source",
+      "pilot_override": {
+        "source_season": "Summer",
+        "harvest_output": "Banana",
+        "chop_outputs": [
+          "Wood",
+          "Banana Sapling"
+        ]
+      }
+    },
+    {
+      "identity": "Mango Tree",
+      "source_difference": "Summer fruit in the valley; year-round on Ginger Island; island-linked sapling source",
+      "pilot_override": {
+        "source_season": "Summer",
+        "harvest_output": "Mango",
+        "chop_outputs": [
+          "Wood",
+          "Mango Sapling"
+        ]
+      }
+    },
+    {
+      "identity": "Orange Tree",
+      "source_difference": "Summer fruit",
+      "pilot_override": {
+        "source_season": "Summer",
+        "harvest_output": "Orange",
+        "chop_outputs": [
+          "Wood",
+          "Orange Sapling"
+        ]
+      }
+    },
+    {
+      "identity": "Peach Tree",
+      "source_difference": "Summer fruit",
+      "pilot_override": {
+        "source_season": "Summer",
+        "harvest_output": "Peach",
+        "chop_outputs": [
+          "Wood",
+          "Peach Sapling"
+        ]
+      }
+    },
+    {
+      "identity": "Apple Tree",
+      "source_difference": "Fall fruit",
+      "pilot_override": {
+        "source_season": "Fall",
+        "harvest_output": "Apple",
+        "chop_outputs": [
+          "Wood",
+          "Apple Sapling"
+        ]
+      }
+    },
+    {
+      "identity": "Pomegranate Tree",
+      "source_difference": "Fall fruit",
+      "pilot_override": {
+        "source_season": "Fall",
+        "harvest_output": "Pomegranate",
+        "chop_outputs": [
+          "Wood",
+          "Pomegranate Sapling"
+        ]
+      }
+    }
+  ],
+  "support_cards": [
+    {
+      "identity": "Hand",
+      "type": "Tool card",
+      "role": "candidate Harvest source; existing V0 Tool, new target not activated"
+    },
+    {
+      "identity": "Axe",
+      "type": "Tool card",
+      "role": "source-game Chop tool; V0 ownership/access not selected"
+    },
+    {
+      "identity": "Wood",
+      "type": "Item / material",
+      "role": "mature fruit-tree Chop output; no sink needed at intake"
+    },
+    {
+      "identity": "Apricot",
+      "type": "Item / Crop",
+      "role": "Apricot Tree fruit Harvest output"
+    },
+    {
+      "identity": "Cherry",
+      "type": "Item / Crop",
+      "role": "Cherry Tree fruit Harvest output"
+    },
+    {
+      "identity": "Banana",
+      "type": "Item / Crop",
+      "role": "Banana Tree fruit Harvest output"
+    },
+    {
+      "identity": "Mango",
+      "type": "Item / Crop",
+      "role": "Mango Tree fruit Harvest output"
+    },
+    {
+      "identity": "Orange",
+      "type": "Item / Crop",
+      "role": "Orange Tree fruit Harvest output"
+    },
+    {
+      "identity": "Peach",
+      "type": "Item / Crop",
+      "role": "Peach Tree fruit Harvest output"
+    },
+    {
+      "identity": "Apple",
+      "type": "Item / Crop",
+      "role": "Apple Tree fruit Harvest output"
+    },
+    {
+      "identity": "Pomegranate",
+      "type": "Item / Crop",
+      "role": "Pomegranate Tree fruit Harvest output"
+    },
+    {
+      "identity": "Apricot Sapling",
+      "type": "Item / sapling",
+      "role": "matching Chop output and potential planting source"
+    },
+    {
+      "identity": "Cherry Sapling",
+      "type": "Item / sapling",
+      "role": "matching Chop output and potential planting source"
+    },
+    {
+      "identity": "Banana Sapling",
+      "type": "Item / sapling",
+      "role": "matching Chop output and potential planting source"
+    },
+    {
+      "identity": "Mango Sapling",
+      "type": "Item / sapling",
+      "role": "matching Chop output and potential planting source"
+    },
+    {
+      "identity": "Orange Sapling",
+      "type": "Item / sapling",
+      "role": "matching Chop output and potential planting source"
+    },
+    {
+      "identity": "Peach Sapling",
+      "type": "Item / sapling",
+      "role": "matching Chop output and potential planting source"
+    },
+    {
+      "identity": "Apple Sapling",
+      "type": "Item / sapling",
+      "role": "matching Chop output and potential planting source"
+    },
+    {
+      "identity": "Pomegranate Sapling",
+      "type": "Item / sapling",
+      "role": "matching Chop output and potential planting source"
+    },
+    {
+      "identity": "Coal",
+      "type": "Item / material",
+      "role": "source-game lightning exception; no LVC weather output selected"
+    }
+  ],
+  "issues": [
+    {
+      "scope": "unselected variants",
+      "topic": "placement, access and cadence",
+      "status": "open",
+      "note": "CG-59–61 resolve Field position, starter Sapling, AP, growth, Harvest and Chop for six ordinary Spring/Summer/Fall species; Banana/Mango have no V0 activation."
+    },
+    {
+      "scope": "unselected variants",
+      "topic": "island and Greenhouse access",
+      "status": "open",
+      "note": "Banana/Mango source access and year-round Island/Greenhouse output are not mapped into LVC V0."
+    },
+    {
+      "scope": "deferred exception",
+      "topic": "lightning and gift classes",
+      "status": "open",
+      "note": "Coal during lightning and source-game Banana/Mango gifting exceptions do not define LVC Weather or NPC Gift rules."
+    }
+  ],
+  "deferred": [
+    "prices, later sapling sources, fruit quality, processing, recipes and gift preferences",
+    "Greenhouse/Island production and lightning system",
+    "art and runtime implementation"
+  ],
+  "promotion": {
+    "decision": "CG-59–61",
+    "selected_variants": [
+      "Apricot Tree",
+      "Cherry Tree",
+      "Orange Tree",
+      "Peach Tree",
+      "Apple Tree",
+      "Pomegranate Tree"
+    ],
+    "selected_support_cards": [
+      "Apricot Sapling",
+      "Cherry Sapling",
+      "Orange Sapling",
+      "Peach Sapling",
+      "Apple Sapling",
+      "Pomegranate Sapling",
+      "Apricot",
+      "Cherry",
+      "Orange",
+      "Peach",
+      "Apple",
+      "Pomegranate",
+      "Hand",
+      "Axe",
+      "Wood"
+    ],
+    "contract": "docs/current/FIRST-PLAYABLE-FRUIT-TREE-CONTENT-BATCH-01.md",
+    "note": "Spring CG-59, Summer CG-60 and Fall CG-61 share one family rule: one opening sapling each, Field occupancy, Plant, growth, Harvest, Chop and replenishment. Hand/Axe/Wood are existing shared V0 identities. Banana/Mango and their fruit/saplings stay draft with Island exceptions."
+  }
+}

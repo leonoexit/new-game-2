@@ -4,6 +4,8 @@ Ngày đối chiếu: 2026-09-25. Trạng thái: **CG-11/13/19 giữ hướng Or
 
 **Cập nhật CG-26:** Farm V0 chỉ dùng Watering Can thường, Water từng crop 1 AP; không có nâng Can trong V0. Bảng phạm vi/sức chứa ở §4/7 là tham chiếu sau V0. Copper Pickaxe theo CG-20 vẫn thuộc V0.
 
+**Cảnh báo sau CG-69:** các câu cũ bên dưới nói Can V0 không có refill là snapshot trước khi chủ dự án yêu cầu lá `Farm Pond` ở Home. Quy tắc múc nước hiện hành nằm ở [Farm action grammar](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md); hoãn nâng Can vẫn giữ.
+
 **Cập nhật CG-14:** tạm dừng thông số/triển khai nâng Tool, thiết kế gameplay Mine rồi Fishing trước. Hai nguồn tham khảo cơ chế là [board và Fantasy Life](MINE-FISHING-REFERENCE-DIRECTIONS-02.md). §7 giữ lịch sử định hướng tác dụng Tool; không bắt loop mới có hit/độ cứng hoặc cấm xem xét dice/map.
 
 **Điểm tiếp tục sau CG-17/18:** chủ dự án coi khung chơi Mine và Fishing đã chốt, đồng thời **bỏ qua việc dựng bản chơi tích hợp một ngày**. CG-20 đã duyệt [gói Mine/Copper](MINE-AND-COPPER-PICKAXE-LOCK-PROPOSAL-01.md) sau [phép thử challenge hữu hạn](PICKAXE-MINE-CHALLENGE-PAPER-TEST-01.md). Các mô tả Search → Exposed Ore → Extract hoặc “hoãn fishing” bên dưới là lịch sử; dùng [Mine contract 01](MINE-CURRENT-CONTRACT-01.md) cho luật Mine hiện hành.

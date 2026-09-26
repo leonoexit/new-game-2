@@ -1,0 +1,157 @@
+/* A compact card fan in the player's hand. It changes presentation only. */
+.app-shell { padding-bottom: 8rem; }
+.dock.hand {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 8;
+  width: 100%;
+  padding: 0 0 env(safe-area-inset-bottom);
+  border-top: 2px solid #ddc597;
+  border-radius: 1.35rem 1.35rem 0 0;
+  background: #fff9edfa;
+  box-shadow: 0 -8px 28px #6a614139;
+  color: #405743;
+  transition: box-shadow .18s ease;
+}
+.dock.hand.open { box-shadow: 0 -16px 45px #554d3d66; }
+.hand-toggle {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .45rem;
+  width: 100%;
+  min-height: 3.5rem;
+  padding: .55rem clamp(1rem, 3vw, 2rem);
+  border: 0;
+  border-radius: 1.25rem 1.25rem 0 0;
+  background: #fff9ed;
+  color: #49684e;
+  text-align: left;
+}
+.hand-label { display: flex; flex: 1; flex-direction: column; min-width: 0; gap: .1rem; }
+.hand-toggle strong { font-size: .88rem; font-weight: 900; }
+.hand-toggle small { overflow: hidden; color: #8d7657; font-size: .74rem; font-weight: 750; text-overflow: ellipsis; white-space: nowrap; }
+.hand-resources { display: flex; flex: 0 0 auto; flex-direction: column; align-items: center; gap: .12rem; }
+.hand-resource-row { display: flex; align-items: center; gap: .3rem; }
+.hand-ap {
+  min-width: 4.25rem;
+  padding: .3rem .43rem;
+  border: 1.5px solid #96c9a2;
+  border-radius: 999px;
+  background: #d7edda;
+  box-shadow: 0 2px 0 #b9d6b8;
+  color: #2e6546;
+  font-size: .78rem;
+  font-weight: 900;
+  text-align: center;
+  white-space: nowrap;
+}
+.hand-ap.exhausted { border-color: #e4ad9e; background: #fde3d6; box-shadow: 0 2px 0 #e3c0ae; color: #8d5148; }
+.hand-gold {
+  min-width: 4.65rem;
+  padding: .3rem .43rem;
+  border: 1.5px solid #e8cd78;
+  border-radius: 999px;
+  background: #fff0bb;
+  box-shadow: 0 2px 0 #e7d7a7;
+  color: #765b2e;
+  font-size: .78rem;
+  font-weight: 900;
+  text-align: center;
+  white-space: nowrap;
+}
+.hand-relief { color: #996760; font-size: .62rem; font-weight: 900; white-space: nowrap; }
+.hand-chevron { font-size: 1.5rem; font-weight: 900; line-height: 1; }
+.hand-cards { position: relative; }
+.hand:not(.open) .hand-cards { height: 4.15rem; overflow: hidden; pointer-events: none; }
+.hand:not(.open) .hand-card {
+  position: absolute;
+  top: .1rem;
+  left: 50%;
+  z-index: var(--fan-z);
+  transform: translateX(calc(-50% + var(--fan-x))) translateY(var(--fan-y)) rotate(var(--fan-angle));
+  transform-origin: 50% 130%;
+}
+.hand-peek {
+  position: absolute;
+  z-index: 40;
+  inset: 3.5rem 0 0;
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+.hand.open .hand-cards {
+  display: flex;
+  align-items: flex-end;
+  gap: .55rem;
+  height: 12.2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: .7rem clamp(1rem, 3vw, 2rem) .95rem;
+  scrollbar-color: #c7b186 #fff9ed;
+  scroll-snap-type: x proximity;
+}
+.hand.open .hand-card {
+  flex: 0 0 7.4rem;
+  transform: translateY(var(--open-y)) rotate(var(--open-angle));
+  scroll-snap-align: center;
+}
+.hand-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 7.4rem;
+  height: 9.55rem;
+  padding: .23rem;
+  border: 3px solid #fffef4;
+  border-radius: .85rem;
+  background: #fffdf3;
+  box-shadow: 0 0 0 1px #cbbf9e, 0 5px 0 #dbcca8, 0 9px 15px #544d3930;
+  color: #365842;
+  text-align: center;
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+.hand-card-head {
+  display: grid;
+  flex: 0 0 5.1rem;
+  place-items: center;
+  border-radius: .55rem .55rem .3rem .3rem;
+  background: linear-gradient(155deg, #e9f5d8, #a7cda1);
+  box-shadow: inset 0 0 0 1px #ffffffbc;
+}
+.hand-card-head span { font: 2.75rem system-ui, sans-serif; filter: drop-shadow(0 3px 1px #526b4530); }
+.hand-card.item .hand-card-head { background: linear-gradient(155deg, #fff0c9, #e7cc92); }
+.hand-card.person .hand-card-head { background: linear-gradient(155deg, #fce7d5, #edae9f); }
+.hand-card.utility .hand-card-head { background: linear-gradient(155deg, #eee6f9, #cdbfe7); }
+.hand-card strong {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  overflow: hidden;
+  padding: .15rem .18rem 0;
+  font-size: .75rem;
+  font-weight: 900;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+.hand-card small { padding: 0 .1rem .22rem; color: #8a7458; font-size: .65rem; font-weight: 800; }
+.hand-card.on { z-index: 25 !important; border-color: #d37e6e; box-shadow: 0 0 0 2px #fff6e1, 0 5px 0 #c97165, 0 9px 18px #9d63577c; }
+.hand-card.on::after { content: "✓"; position: absolute; top: .2rem; right: .25rem; display: grid; width: 1.2rem; height: 1.2rem; place-items: center; border-radius: 50%; background: #cf7569; color: white; font-size: .8rem; font-weight: 900; }
+.hand.open .hand-card:hover { transform: translateY(-.45rem) rotate(0deg); }
+.hand-actions { display: flex; gap: .4rem; overflow-x: auto; padding: .25rem clamp(1rem, 3vw, 2rem) .7rem; }
+.hand-actions:empty { display: none; }
+.hand-actions .small-button { flex: 0 0 auto; font-size: .73rem; padding: .35rem .55rem; }
+@container (max-width: 650px) {
+  .hand.open .hand-cards { height: 11.6rem; }
+  .hand-card { width: 6.7rem; height: 9rem; }
+  .hand.open .hand-card { flex-basis: 6.7rem; }
+  .hand-card-head { flex-basis: 4.7rem; }
+  .hand-card-head span { font-size: 2.5rem; }
+  .hand-card strong { font-size: .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dock.hand, .hand-card { transition: none; }
+}

@@ -4,19 +4,7 @@ Ngày khóa vòng tích hợp: 2026-09-22; post-removal consistency update: 2026
 
 Trạng thái: paper-design package v1; không phải implementation spec hoặc content lock. Tài liệu này giữ structural package của [v0](../evidence/YEAR-1-PAPER-DESIGN-PACKAGE-V0.md), thay các open placeholder bằng registry/sensitivity evidence mới và liên kết graph v1. Không code/prototype được dùng để tạo kết luận.
 
-**Phạm vi lá/entity V0 hiện hành:** xem [danh mục card grammar §10](ON-TABLE-CARD-SHAPE-DECISION-09.md). Những trace và tên cũ trong package, đặc biệt `Field Notes` reward, `Rìa Rừng` như một Area riêng, Project, Mira/Bram và Seed Bean/Lemon Balm chưa có nguồn, không được dùng để tự thêm card vào V0. Package vẫn là bằng chứng luật giấy và kết quả thử; danh mục card grammar quyết định loại lá, nơi xuất hiện và trạng thái hiện hành.
-
-**Mine update · 2026-09-25:** các đoạn CP3, `Search`, `Exposed Ore`, `Extract` và phí Mine trong package là phép thử cũ. [Mine contract 01](MINE-CURRENT-CONTRACT-01.md) ghi gameplay Mine CG-17/19/20 hiện hành. Workbook đã cập nhật dòng Mine; fixture cũ chưa migrate.
-
-**Fishing update · 2026-09-25:** các trace exact `Catch` 2 AP, Blue Eel khi Rain và hai Fish output trong package là phép thử cũ. [Fishing contract 01](FISHING-CURRENT-CONTRACT-01.md) ghi V0 hiện hành: ba spot giống nhau, odds ẩn, Cast 1 AP và một Fish output `Silver Minnow`. Không thêm lại `Blue Eel` từ các trace cũ.
-
-**Taxonomy correction CG-06/07 · 2026-09-24:** Character thuộc Person, Hand thuộc Tool, Fish là Item/Fish, cây hoang dã/cây đang trồng/nông sản thu hoạch là Item/Crop. Farmhouse là Building card thuộc Farm và chứa TV sub-card theo FH-01 đã được duyệt. Những nhãn `Forage` trong trace cũ không định nghĩa card type hiện hành.
-
-**Taxonomy correction CG-09 · 2026-09-25:** Supermarket là Building card ở Commerce. Shipping Bin và TV cùng thuộc loại Thiết bị (Equipment), lần lượt ở Home/Farm và bên trong Farmhouse. `Sub-card` mô tả quan hệ chứa của TV; các tương tác đã chốt giữ nguyên.
-
-Latest paper reading: [audit 40 §8](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md) sets visible Wild Herb in Rìa Rừng; §7.4 records the owner's Nell-only Person scope; **§6.5 rejects all three proposed Projects as designs**. [Farm rerun 41](FIRST-PLAYABLE-FARM-ACTION-GRAMMAR-AP-RERUN-41.md) supplies the working Watering Can → Growth → Hand Harvest rule and no-Project AP check. **§6.7–6.8** are comparison traces; **§6.9** states the working first-loop shop/Field Notes/Mine scope; **§6.11** marks the Fish/Ore/Gold uses that remain unproven after the first record. Earlier Project/AP/Calendar traces are records of discarded assumptions.
-
-`Year 1` là content/balance horizon. Save, Person, Heart, Mine Depth, Project progress và world state không reset chỉ vì chuyển năm.
+**Trạng thái: snapshot tích hợp Year 1 theo thời điểm viết, không sở hữu luật V0.** Các trace, bảng action, roster, giá và đề xuất bên dưới là chứng cứ thiết kế; có thể đã bị quyết định sau đó thay thế. Tra [bản đồ nguồn luật](README.md) để tìm contract hiện hành, [nhật ký quyết định](ON-TABLE-CARD-SHAPE-DECISION-09.md) để biết lời chốt mới nhất và [danh mục lá V0](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx) để biết lá đang chơi. Không chép cập nhật luật mới vào package này. `Year 1` là phạm vi nội dung/cân bằng, không phải kết thúc hay reset save.
 
 ## 1. Status legend
 
@@ -59,7 +47,9 @@ Tất cả schedule/economy/graph dùng cùng `[FIXTURE]` vocabulary:
 - Projects: **none selected** (§6.5). Water Trough `PJ-M`, Harvest Bench `PJ-B` and Grove Footbridge `PJ-X` are rejected proposals; their names survive only in historical tests, not as reserved future content.
 - Processing: `[crop] Preserve`, `Dried [fish]`, `Prepared [herb]`, giữ subtype/origin.
 - Collection: Valley Journal; Field Notes (`COL-1`) record 3-of-4 family → chọn Runner Bean/Lemon Balm Seed; Connections (`COL-N`) pages pass paper timing under independent source delivery `DL-6`, final cadence/value open.
-- Persons: Mira, Nell and Bram remain canonical paper names, but §7.4 selects **Nell alone** for the first-playable roster. A/C/K are prior paper role assignments. Nell's old C Hold and the crop-only Harvest Assist are retired; §7.2 sets her V0 paper ability to 2 AP of same-day relief for 1 Nell Heart. Mira/Bram are deferred content identities, without active V0 Gift/Heart/card rules. Nell's Gift preference and appearance schedule remain fixtures.
+- Persons: Mira, Nell and Bram remain canonical paper names, but §7.4 selects **Nell alone** for the first-playable roster. A/C/K are prior paper role assignments. Nell's old C Hold and the crop-only Harvest Assist are retired; §7.2 sets her V0 paper ability to 2 AP of same-day relief for 1 Nell Heart. Mira/Bram are deferred content identities, without active V0 Gift/Heart/card rules. Nell's first-Season appearance schedule is CG-46; CG-47 selects the same Season-relative dates for later S18 Seasons. CG-49 selects Wild Herb in Item as Nell's sole V0 Gift item.
+
+For the current Forest roster and interactions, use the [Forest content contract](FIRST-PLAYABLE-FOREST-CONTENT-BATCH-01.md) and [V0 register](LITTLE-VALLEY-CARD-REGISTER-V0.xlsx). The vocabulary in this package remains a historical fixture.
 
 Provenance clarification: `Grove Footbridge`, `Harvest Bench`, and `Upper Grove` are original **Little Valley Cards paper-design** names/contexts. They are not claimed as named content from the Stardew Valley video game or *Stardew Valley: The Board Game*. The latter is a design reference, not the source of these three identities. Canonical paper naming approval in [proposal 23](../evidence/CANONICAL-IDENTITY-CONSOLIDATED-PROPOSAL-23.md) records this project's vocabulary, not source-game authenticity.
 
@@ -74,7 +64,7 @@ Canonical paper graph của package là [Year 1 progression dependency graph v1]
 ```text
 New Day info
   ├─ House/Farm entities → first output → Sell / Gift / Record / Keep
-  ├─ Rìa Rừng → visible Wild Herb / Hedgerow → Collect / Gift / Record / Keep
+  ├─ Forest/Rìa Rừng → Wild Herb: Collect; bụi Hedgerow: Pick Berry → Berry Keep/Sell
   ├─ Mine → deterministic Depth → CP3 Search / first Ore Extract
   ├─ River → condition Catch → Fish record/use
   ├─ Nell context → optional Gift → Nell Heart → 2-AP relief
@@ -276,6 +266,12 @@ D8 Water 2 Turnip + Bean = 3 AP, hai Turnip Mature D9 và Bean `3/4`. D9 cần `
 
 **Kiểm nhanh không dùng restock giả:** trong lịch 0G §6.8, D3 bán **một** Turnip giá fixture 4G thì D4 có đúng 4G mua hai Seed đang niêm yết, còn giữ một Turnip. D6 bán một Turnip nữa sẽ cấp 4G cho hai Seed D7. D3 lấy Ore hoàn tất Fish+Crop+Mine, nên Bean/Lemon Balm Seed đến D4 New Day và có thể gieo D6. Không có ngày chờ shop; thiếu Gold chỉ khi người chơi chủ động giữ tất cả output, và họ vẫn có thể đưa một Turnip giữ trong túi vào Bin cuối ngày để mua vào hôm sau. Với giá sau này, `giá bán Turnip ≥ giá Seed` là điều kiện để bán **cả hai** đủ tiền mua lại hai Seed qua mỗi chu kỳ; muốn bán **một** mà mua hai thì cần `giá bán Turnip ≥ 2 × giá Seed`. Fixture `4G/2G` thỏa cả hai; chưa chọn giá thật.
 
+**Kiểm Gift / Keep / Sell Wild Herb:** [trace kinh tế Nell 07](../evidence/NELL-WILD-HERB-GIFT-KEEP-SELL-ECONOMY-CHECK-07.md) giữ `P_H` là giá bán Herb **chưa chọn**. Với ví 0G và không bán item khác D6, hai Turnip Seed giá fixture 2G chỉ mua được D7 sau khi bán Herb D6 nếu `P_H ≥ 4G`; `4G` trong ledger cũ là điểm so, không phải giá V0. Trong đường Farm đang dùng vẫn có Turnip để bán, nên Sell Herb không phải điều kiện bắt buộc để tái gieo. Gift D6 tốn thêm 1 AP và đổi Herb lấy Nell/+1 Heart; tối đa 2 AP relief chỉ có giá trị khi còn action có phí sau activation. Keep giữ quyền Gift ở lần Nell hiện sau hoặc Sell muộn, nhưng dời Heart/Gold. Heart đầy xử lý theo CG-48, không ép tiêu Gift. Chưa có tỷ giá Heart–Gold hay ưu tiên chung cho ba lựa chọn.
+
+**Kiểm trọn Season bằng công thức:** [ledger S18 08](../evidence/FIRST-SEASON-FARM-NELL-BIN-FORMULA-AUDIT-08.md) cho một đường Sunny có thể chơi hết 18 ngày với hai luống, 0G đầu, Gift Nell D6/D12 và Keep Herb D18 khi Heart đầy; không cần dùng Nell relief hoặc bán Herb để cứu vòng Farm. Với giá Turnip Seed `C` và giá Sell Turnip `S`, bán **một** trong hai output mỗi vụ để mua lại hai Seed ngày kế cần `S ≥ 2C`; bán **cả hai** để mua lại hai Seed cần `S ≥ C`. Giá fixture `2G/4G` thỏa nhánh đầu, nhưng không được nâng thành giá đã chốt. Bin trả cuối ngày khiến lần đầu mua Seed thay thế sớm nhất D4 từ Harvest D3 khi mở đầu 0G, bất kể `S` cao đến đâu.
+
+**Ghép Mine/Fishing vào cùng lịch:** [overlay AP 09](../evidence/FIRST-SEASON-MINE-FISHING-AP-OVERLAY-09.md) dùng AP còn trống D2–D6 để lấy 3 Ore và nâng Copper Pickaxe, tìm route, thử Dense tầng sau, cùng bảy Cast hợp lệ; không ngày nào vượt 6 AP, không dùng Nell relief hay doanh thu Fish/Ore. Bảy Cast có kỳ vọng 3,5 Silver Minnow theo odds hiện hành nhưng vẫn có thể đều `No Bite`; đây là kiểm cùng tồn tại AP/nguồn, không là cam kết output, giá bán hoặc loop Mine/Fishing dài hạn.
+
 `[RANH GIỚI]` Shop ổn định giải quyết nguồn Seed, không làm Nell/Herb xuất hiện đúng ngày, không tạo mục đích cho Stone/Wood, và không chứng minh Water vui tay. Một Mine chỉ tới Ore đầu đủ kiểm tương tác Depth/Search/Extract và mở Field Notes; chiều sâu Mine sau đó cần phần thưởng tự thân trước khi thành target V0. Không thêm Water Trough, Harvest Bench, Grove Footbridge, Project Work hoặc nguồn Gold giả.
 
 ### 6.10. Nhánh mưa + Herb muộn (2026-09-24)
@@ -316,10 +312,10 @@ Hai nguồn lấy nhóm thứ ba thực sự thay thế nhau: sau Fish + Crop, n
 | Person | Kernel | Gift tag | Safety boundary |
 | --- | --- | --- | --- |
 | Mira | historical A Preview | `Fresh · Forage · Berry` | no validated V0 target under visible Grove; no reroll |
-| Nell | 2-AP same-day relief (§7.2); historical C Hold retired | `Fresh · Forage · Herb` fixture | spend 1 Nell Heart, 0 AP, once/day; next payable AP costs consume up to 2 credit; Gift and all other paid actions qualify; unused credit expires at Sleep |
+| Nell | 2-AP same-day relief (§7.2); historical C Hold retired | `Wild Herb` item đã Collect · CG-49; tag `Fresh · Forage · Herb` chỉ là fixture cũ | spend 1 Nell Heart, 0 AP, once/day; next payable AP costs consume up to 2 credit; Gift and all other paid actions qualify; unused credit expires at Sleep |
 | Bram | historical K Divide/Focus | `Fresh · Crop · Root` | total Progress conserved; no Q4 saving demonstrated |
 
-Product owner previously chose `R3 — A+C+K` as the minimum functional-roster direction and later approved the three names/role assignments at paper level. The names remain selected, but §7.4 rechecks the first-playable count against current rules. Nell's V0 paper ability is §7.2; Mira A and Bram K are historical assignments without playable V0 effects. Only Nell's Gift tag and appearance schedule remain active fixtures. E/J remain conditional because their printed targets are not active in the current minimum, and D/I/M lack sufficient native grammar.
+Product owner previously chose `R3 — A+C+K` as the minimum functional-roster direction and later approved the three names/role assignments at paper level. The names remain selected, but §7.4 rechecks the first-playable count against current rules. Nell's V0 paper ability is §7.2; Mira A and Bram K are historical assignments without playable V0 effects. CG-49 selects her exact Wild Herb item; CG-46 locks her first-Season appearance schedule and CG-47 selects later S18 Season-relative dates. E/J remain conditional because their printed targets are not active in the current minimum, and D/I/M lack sufficient native grammar.
 
 After the [Wild Herb appearance decision in audit 40 §8](FIRST-PLAYABLE-GROVE-ONTOLOGY-NAMING-AUDIT-40.md), the owner correctly rejected Nell's old C Hold as a functional V0 ability. The later crop-only Harvest Assist attempt in §7.1 was also withdrawn. Section 7.2 now sets the owner's original general AP-relief idea as Nell's V0 paper ability, counted in AP points rather than action count.
 
@@ -347,7 +343,9 @@ This withdrawn crop-only effect is not Nell's current ability. Section 7.2 suppl
 
 `[V0 PAPER RULE SELECTED AFTER OWNER REQUEST TO DECIDE]` Once Nell is owned, spend **1 Nell Heart and 0 AP**, at most **once per day**, to gain **2 AP of relief for the rest of that day**. Starting with the next action that has a positive payable AP cost, automatically apply as much remaining relief as possible; pay any uncovered cost from the normal daily AP pool. Actions already at 0 AP spend no relief. Unused relief expires at Sleep and never stacks across days. There is no Crop/Herb or system exception: Watering Can, Plant, Hand→Crop, Hand→Wild Herb, Gift and Catch all qualify. Rejected Project Work has no active target. Items, materials, target conditions and outputs stay unchanged. This does not alter the ordinary 6-AP daily allowance; it can make up to 2 additional AP of paid actions affordable that day.
 
-The owner first described N free AP-cost **actions**, then clarified that N counts **AP points**. Two 2-AP actions therefore cannot each be made free with one activation. The current-cost examples below use Gift 1 AP, Hand Collect 1 AP and atomic Catch 2 AP; the Q4 Work and D11 farm-route rows are **historical** after §6.5 removes Projects. One valid Nell Gift grants 1 Nell Heart in this V0 paper rule; the first Gift also acquires Nell, and its Heart may be spent that same day. The accepted `Fresh · Forage · Herb` Gift item and Nell's appearance dates remain content/schedule fixtures.
+The owner first described N free AP-cost **actions**, then clarified that N counts **AP points**. Two 2-AP actions therefore cannot each be made free with one activation. The examples below use Gift 1 AP, Hand Collect 1 AP and a historical atomic Catch 2 AP; the current Fishing contract instead has Cast 1 AP. Q4 Work and D11 farm-route rows are also **historical** after §6.5 removes Projects. CG-50 selects 1 AP gốc and +1 Nell Heart for a valid Gift in V0 paper play; the first Gift also acquires Nell, and its Heart may be spent after commit that same day. CG-49 selects exact `Wild Herb` item after Collect instead of the older `Fresh · Forage · Herb` fixture tag. CG-46 locks Nell's first-Season dates; CG-47 selects the same dates relative to later S18 Seasons.
+
+[Two-Season Nell Gift/Heart check 03](../evidence/NELL-TWO-SEASON-GIFT-HEART-CAP-PAPER-CHECK-03.md) found no paper reason to increase its then-fixture cap 2: six possible visit windows do not mean six Gifts. [Cross-system check 06](../evidence/NELL-HEART-CAP-FARM-MINE-FISHING-PAPER-CHECK-06.md) later selected **cap 2 Nell Heart for V0 paper play** as CG-51; one activation/day remains the relief limit. This is Nell-specific, not a cap for future Persons or final shipped balance. **CG-48 chốt Gift khi Heart đầy không hợp lệ:** giữ item, không tiêu AP/đánh dấu Gift; có thể dùng ability để hạ Heart rồi Gift khi còn đúng lịch và điều kiện.
 
 | Case | Normal cost | With one 2-AP budget | Consequence |
 | --- | --- | --- | --- |
@@ -358,7 +356,7 @@ The owner first described N free AP-cost **actions**, then clarified that N coun
 | Historical D11 all-Sunny route with an **optional exact Catch** (§6.5) | Farm 5 + deferred setup 1 + Catch 2 = 8 AP, above the 6-AP day. D6 Herb Collect and D10 Nell Gift supplied her first Heart while preserving the former D8 M route. | Activate D11; spend both credit points on Catch. Farm 5 + setup 1 = 6 AP, with Catch completed. | Conditional old-route example only; removing M changes farm AP and requires a new trace before claiming this timing win. |
 | Stored Heart before a later Nell Gift | Gift 1 AP + one valid Herb → 1 Nell Heart | Activate first; credit pays Gift 1 AP, Gift returns the spent Heart, and 1 AP credit remains | One Gift/person/day and Herb supply bound this refill. It is not an infinite Heart loop, but Gift eligibility has value. |
 
-`[BOUNDARY]` One activation saves **at most 2 AP**. A stored Heart can make a later Nell Gift free and be replaced by that Gift, but the Herb item is consumed, that Gift uses 1 AP of relief, and the once-per-day activation limit prevents a second same-day use. Catch, Watering Can, Plant, Hand and Gift remain eligible paid actions; `Care` itself has no AP cost (§6.6). Q4 Work and the old D11 farm route no longer validate first-playable value. Rerun 41 shows a conditional 2-AP expanded Farm shortfall, but Nell's Heart availability on that day still needs schedule evidence.
+`[BOUNDARY]` One activation saves **at most 2 AP**. A stored Heart can make a later Nell Gift free and be replaced by that Gift, but the Herb item is consumed, that Gift uses 1 AP of relief, and the once-per-day activation limit prevents a second same-day use. Catch, Watering Can, Plant, Hand and Gift remain eligible paid actions; `Care` itself has no AP cost (§6.6). Q4 Work and the old D11 farm route no longer validate first-playable value. Rerun 41 shows a conditional 2-AP expanded Farm shortfall; Nell's schedule is now CG-46/47, while a Heart on the specific crowded day still depends on an actual valid Gift.
 
 ### 7.3. Next Person check — Mira and Bram after Nell
 
@@ -553,9 +551,9 @@ Today's Weather thuộc global UI scope, không phải Eel tag hoặc River stat
 
 ## 14. Non-conclusions
 
-- A6/S18 remains the owner-selected paper test frame. Rerun 41 checks Farm AP without Projects, but old Project-assisted completion dates do not transfer. Seed prices/stock, Weather rate, crop duration/yield values and Nell's appearance timing remain open.
+- A6/S18 remains the owner-selected paper test frame. Rerun 41 checks Farm AP without Projects, but old Project-assisted completion dates do not transfer. Seed prices/stock, Weather rate and crop duration/yield values remain open; CG-46 locks Nell's first-Season dates and CG-47 selects the same dates for later S18 Seasons.
 - No final Area order, card density, world node count, square logical size or runtime tile size.
-- Proposal 23 keeps Mira, Nell and Bram as canonical paper names and records earlier A/C/K assignments. Section 7.4 records the owner's confirmation that `R3` is withdrawn as the first-playable minimum; only Nell has an active V0 Person card and ability. Mira/Bram return to active content only after useful abilities are specified. Nell's Gift preference, schedule, Heart cap, appearance and art remain open.
+- Proposal 23 keeps Mira, Nell and Bram as canonical paper names and records earlier A/C/K assignments. Section 7.4 records the owner's confirmation that `R3` is withdrawn as the first-playable minimum; only Nell has an active V0 Person card and ability. Mira/Bram return to active content only after useful abilities are specified. Nell's art, timing under a Season length other than S18 and final balance remain open; River appearance follows CG-45–47, Wild Herb item eligibility follows CG-49, V0 paper Gift AP/Heart values follow CG-50, and Nell cap 2 follows CG-51.
 - `B3`, `B2` and all three named Project designs are rejected after §6.5. No Project is selected or reserved for later content, and this correction selects no replacement relief mechanism.
 - `G0` locks only the minimum Gold promise; it does not prove a long-horizon strategic sink or select final Seed/sell prices.
 - `L-I` selects work order only; it does not make any fixture name, total content count or numerical value canonical by itself.

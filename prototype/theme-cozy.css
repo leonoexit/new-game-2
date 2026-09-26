@@ -1,0 +1,310 @@
+/* Prototype UI skin: warm paper, soft garden colors, and rounded controls.
+   Decorative emoji are placeholders; card identities and artwork contracts do not change. */
+:root {
+  color-scheme: light;
+  font-family: ui-rounded, "Avenir Next", "Trebuchet MS", system-ui, sans-serif;
+  color: #405743;
+  background: #f8f2df;
+  --ink: #405743;
+  --quiet: #647768;
+  --paper: #fffdf3;
+  --paper-deep: #f8edcf;
+  --leaf: #72a874;
+  --leaf-deep: #50815c;
+  --peach: #f9c3a4;
+  --coral: #d87469;
+  --butter: #f7db8a;
+  --outline: #d7c9a6;
+}
+body { color: var(--ink); background: #f8f2df; }
+.app-shell {
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 12% 20%, #ffffffb9 0 3px, transparent 4px),
+    radial-gradient(circle at 88% 36%, #e5cda9a1 0 3px, transparent 4px),
+    radial-gradient(ellipse at 10% 85%, #d3e5bc9c, transparent 32%),
+    radial-gradient(ellipse at 94% 5%, #f7dab7aa, transparent 36%),
+    #f8f2df;
+  background-size: 110px 120px, 155px 145px, auto, auto, auto;
+}
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  border-bottom: 2px solid #d4c6a3;
+  background: #fff9e9f5;
+  box-shadow: 0 7px 22px #8a79512b;
+  backdrop-filter: blur(14px);
+}
+.status {
+  position: static;
+  z-index: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  padding: .55rem clamp(1rem, 3vw, 2rem) .4rem;
+  gap: .35rem;
+  backdrop-filter: none;
+}
+.eyebrow { color: #858969; font-size: .68rem; font-weight: 800; letter-spacing: .09em; }
+.status-cluster {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  overflow: hidden;
+  border: 1.5px solid #d7cba9;
+  border-radius: .9rem;
+  background: #fffdf3;
+  box-shadow: 0 3px 0 #e6dcbf;
+}
+.status-unit {
+  display: flex;
+  min-width: 0;
+  min-height: 3.15rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .05rem;
+  border-right: 1px solid #e1d8bf;
+  color: #536d54;
+  font-size: .72rem;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+.status-unit:last-child { border-right: 0; }
+.status-unit .status-icon { font-size: 1.16rem; line-height: 1.2; }
+.calendar-status { background: #f7efda; }
+.calendar-status strong { color: #426749; font-size: .94rem; font-weight: 900; }
+.calendar-status span { color: #8c7657; }
+.weather-status { background: #edf5e4; }
+.phase-status { background: #f0ebf6; }
+.nav {
+  padding: .35rem clamp(1rem, 3vw, 2rem) .7rem;
+  color: var(--ink);
+}
+.nav h1 {
+  color: #47694b;
+  font-family: ui-rounded, "Avenir Next", "Trebuchet MS", system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: -.045em;
+  font-size: clamp(1.45rem, 3vw, 2.25rem);
+  margin-top: .05rem;
+}
+.breadcrumb { color: #8b927c; font-size: .77rem; font-weight: 750; }
+.back, .phase, .small-button, .primary {
+  color: #3e6048;
+  background: #f5f8e7;
+  border: 1.5px solid #b6cfae;
+  border-radius: 999px;
+  box-shadow: 0 3px 0 #c5d5b6;
+  font-weight: 800;
+  padding: .55rem .85rem;
+  transition: transform .12s, background .12s, box-shadow .12s;
+}
+.back:hover, .phase:hover, .small-button:hover, .primary:hover { color: #2b543b; background: #e5f1d7; }
+.back:active, .phase:active, .small-button:active, .primary:active { transform: translateY(2px); box-shadow: 0 1px 0 #c5d5b6; }
+.back:disabled, .phase:disabled, .small-button:disabled { opacity: .5; }
+.phase { background: #ffe6cb; border-color: #e8be95; color: #875d3e; box-shadow: 0 3px 0 #eac9a6; }
+.phase:hover { background: #ffdbb8; color: #765238; }
+main { padding-bottom: 2.25rem; }
+.notice {
+  position: relative;
+  background: var(--paper);
+  color: #57725a;
+  border: 1.5px solid #ddcda9;
+  border-radius: 1rem;
+  box-shadow: 0 4px 0 #e5d8b8;
+  padding: .72rem 1rem .72rem 2.75rem;
+  font-size: .9rem;
+  font-weight: 700;
+}
+.notice::before { content: "✿"; position: absolute; left: .85rem; top: .54rem; color: #db9083; font-size: 1.35rem; }
+.section-meta {
+  display: inline-block;
+  background: #e8e1f2;
+  border: 1px solid #cfbee2;
+  border-radius: 999px;
+  color: #665a79;
+  font-weight: 800;
+  padding: .5rem .8rem;
+}
+.tableau { gap: 1rem; padding: .4rem .15rem .8rem; }
+.card {
+  --scene: linear-gradient(155deg, #dceccd, #a9cfa8);
+  --accent: #6d9f70;
+  isolation: isolate;
+  border: 4px solid #fffcf1;
+  border-radius: 1.45rem;
+  background: #fffaf0;
+  color: var(--ink);
+  box-shadow: 0 0 0 1.5px #d2c7a8, 0 7px 0 #ddcca9, 0 14px 24px #8a79512b;
+  padding: 1rem .65rem .75rem;
+  gap: .15rem;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  z-index: 0;
+  border-radius: 1.1rem;
+  background: var(--scene);
+  box-shadow: inset 0 0 0 1px #ffffffc9;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  height: 40%;
+  border-radius: .7rem .7rem 1.05rem 1.05rem;
+  background: #fffdf1e8;
+  border-top: 1px solid #ffffffeb;
+}
+.card-copy {
+  position: absolute;
+  z-index: 1;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  height: 40%;
+  padding: .28rem .35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .15rem;
+  text-align: center;
+  pointer-events: none;
+}
+.card:hover:not(:disabled) {
+  transform: translateY(-3px) rotate(-.4deg);
+  box-shadow: 0 0 0 1.5px #cbbb96, 0 10px 0 #ddcca9, 0 20px 28px #8a795135;
+}
+.card:active:not(:disabled) { transform: translateY(3px); box-shadow: 0 0 0 1.5px #d2c7a8, 0 3px 0 #ddcca9; }
+.card:focus-visible, button:focus-visible { outline: 3px solid #db8674; outline-offset: 3px; }
+.card strong {
+  z-index: 1;
+  color: #365a43;
+  font-family: ui-rounded, "Avenir Next", "Trebuchet MS", system-ui, sans-serif;
+  font-size: clamp(.98rem, 1.7vw, 1.1rem);
+  font-weight: 900;
+  letter-spacing: -.025em;
+}
+.card .sub { color: var(--accent); font-weight: 800; font-size: .74rem; }
+.card small { color: #5c6c5d; font-size: .65rem; font-weight: 650; }
+.glyph {
+  z-index: 1;
+  top: 12%;
+  font: 6.4rem system-ui, sans-serif;
+  color: inherit;
+  text-shadow: none;
+  filter: drop-shadow(0 5px 1px #526b4530);
+  transform: rotate(-6deg);
+}
+.cost {
+  background: #fff2bd;
+  border: 1.5px solid #d7b660;
+  border-radius: 999px;
+  color: #805e2d;
+  box-shadow: 0 2px 0 #dbc27b;
+  padding: .18rem .42rem;
+}
+.slot { z-index: 2; background: #fffaf0d9; color: #64745c; padding: .15rem .34rem; border-radius: .4rem; font-weight: 800; }
+.card.place { --scene: linear-gradient(155deg, #e5f4d8 5%, #a8d1ad 60%, #83b999); background: #fffaf0; }
+.card.water, .card.equipment, .card.stone, .card.field-rock, .card.field-crop,
+.card.field-fruit-tree, .card.vegetation, .card.person, .card.item-card { background: #fffaf0; }
+.card.region-home, .card.region-field { --scene: linear-gradient(155deg, #ffe7ca 5%, #f6c8ab 60%, #daa889); --accent: #a56b54; }
+.card.region-forest, .card.vegetation { --scene: linear-gradient(155deg, #eff5cc 5%, #b8d998 62%, #8cbf8e); --accent: #5a915d; }
+.card.region-river, .card.water { --scene: linear-gradient(155deg, #e4f6ef 5%, #b9e0e5 62%, #92c7da); --accent: #50879b; }
+.card.region-mine, .card.stone, .card.field-rock { --scene: linear-gradient(155deg, #f0e8f4 5%, #d8c5e2 62%, #b9adc9); --accent: #796a8e; }
+.card.region-commerce, .card.equipment { --scene: linear-gradient(155deg, #fff2d1 5%, #f5d99c 62%, #e6bd8f); --accent: #9a7750; }
+.card.person { --scene: linear-gradient(155deg, #ffe9e2 5%, #f7c4bc 62%, #e8a5ac); --accent: #af6875; }
+.card.item-card, .card.field-crop, .card.field-fruit-tree { --scene: linear-gradient(155deg, #fff0ce 5%, #e9d6a6 55%, #b6ce91); --accent: #7c9257; }
+.card.soil-overgrown { --scene: linear-gradient(155deg, #e9ebc6, #c4d092 60%, #94b27b); }
+.card.soil-tilled { --scene: linear-gradient(155deg, #e8d6b5, #bb997e 70%, #a47c69); }
+.card.crop-watered { --scene: linear-gradient(155deg, #ddf3da, #a7d4bc 55%, #88bcbb); }
+.card.world-card { --scene: linear-gradient(155deg, #fef1c9 4%, #c7e3ba 56%, #91b99c); }
+.card.place::before, .card.vegetation::before, .card.field-crop::before, .card.field-fruit-tree::before {
+  background:
+    radial-gradient(circle at 84% 21%, #fff9d2 0 8%, transparent 9%),
+    radial-gradient(ellipse at 17% 102%, #afd18d 0 36%, transparent 37%),
+    radial-gradient(ellipse at 90% 106%, #8bbc8e 0 41%, transparent 42%),
+    var(--scene);
+}
+.card.disabled { filter: saturate(.42); opacity: .78; }
+.hero-card { width: min(65vw, 290px); }
+.mine-slot .small-button { color: #765f87; background: #ede5f5; border-color: #d1c1df; box-shadow: 0 3px 0 #d4c7df; }
+.dock {
+  background: #fff9eefa;
+  border-top: 3px solid #e6cc9e;
+  box-shadow: 0 -7px 22px #8a79512e;
+  backdrop-filter: blur(14px);
+  color: var(--ink);
+}
+.dock-head { color: var(--ink); font-size: .82rem; }
+.dock-head strong { color: #5c7c5f; }
+.dock-head span { color: #a47c5b; font-weight: 700; }
+.source-scroll { scrollbar-color: #d3bb93 #fff7df; }
+.source {
+  min-height: 3.05rem;
+  border: 1.5px solid #b6d0a7;
+  border-radius: .85rem;
+  background: #e8f3dd;
+  color: #42624a;
+  box-shadow: 0 3px 0 #cbdabf;
+  font-weight: 800;
+}
+.source span { color: inherit; font: 1.15rem system-ui, sans-serif; }
+.source.item { color: #755e47; background: #fff1d5; border-color: #e5ca9c; box-shadow: 0 3px 0 #e7d4b0; }
+.source.utility { color: #6e648e; background: #eee8f7; border-color: #d5c9e8; box-shadow: 0 3px 0 #ded5ec; }
+.source.on { color: #fffdf5; background: #df8c77; border: 2px solid #b85d53; box-shadow: 0 3px 0 #c96d62; }
+.dock-actions .small-button { color: #63745c; background: #f4f2e4; border-color: #d8d5bb; box-shadow: 0 2px 0 #dad4bd; }
+footer { color: #8e927c; }
+footer button { color: #9c7060; font-weight: 800; }
+.overlay { background: #3e4e3dbd; backdrop-filter: blur(3px); }
+.panel {
+  color: var(--ink);
+  border: 4px solid #fff9e7;
+  border-radius: 1.6rem;
+  background: #fff8e8;
+  box-shadow: 0 0 0 1.5px #d3bb93, 0 20px 60px #4d503e70;
+}
+.panel h2 { color: #4e754f; font-family: ui-rounded, "Avenir Next", "Trebuchet MS", system-ui, sans-serif; font-weight: 900; }
+.panel header button { color: #a67865; }
+.panel p { color: #647764; }
+.shop-item { color: var(--ink); border: 1.5px solid #d7c4a4; border-radius: 1rem; background: #fffef4; box-shadow: 0 4px 0 #ead9b9; }
+.mini-glyph { color: #7ca96a; }
+.panel input { color: var(--ink); background: #fffefa; border-color: #b9cbaa; }
+.shop-item button, .panel .primary { background: #f6d681; border: 1.5px solid #d0aa5e; color: #795b35; box-shadow: 0 3px 0 #dbb96f; border-radius: .65rem; }
+.seen-list span { color: #55715b; border-color: #c0d5b6; background: #e8f3e0; }
+.empty { color: #738373; }
+@container (max-width: 650px) {
+  .eyebrow { font-size: .58rem; }
+  .nav { display: grid; grid-template-columns: auto minmax(0,1fr); gap: .35rem .6rem; }
+  .nav > div { order: 0; }
+  .back { order: 0; padding: .44rem .65rem; }
+  .phase { order: 0; grid-column: 1 / -1; width: 100%; padding: .42rem; }
+  .breadcrumb { font-size: .66rem; }
+  .nav h1 { font-size: 1.38rem; }
+  .tableau { gap: .7rem; }
+  .card { border-width: 3px; border-radius: 1.1rem; padding: .7rem .35rem .55rem; }
+  .card::before { border-radius: .85rem; }
+  .card::after { border-radius: .55rem .55rem .8rem .8rem; height: 43%; }
+  .card-copy { height: 43%; }
+  .card strong { font-size: .92rem; }
+  .card .sub { font-size: .65rem; }
+  .card small { font-size: .58rem; line-height: 1.13; }
+  .glyph { top: 9%; font-size: 4.1rem; }
+  .cost { top: .3rem; right: .3rem; font-size: .64rem; }
+  .slot { top: .3rem; left: .3rem; font-size: .62rem; }
+  .dock { padding-top: .45rem; padding-bottom: .45rem; }
+  .source { min-height: 2.65rem; font-size: .75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card, .back, .phase, .small-button, .primary { transition: none; }
+}

@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("./fonts/PixelifySans.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+.app-shell[data-font="itim"] { --ui-font: "Itim", ui-rounded, sans-serif; --title-font: "Patrick Hand", "Itim", sans-serif; }
+.app-shell[data-font="patrick"] { --ui-font: "Patrick Hand", ui-rounded, sans-serif; --title-font: "Patrick Hand", sans-serif; }
+.app-shell[data-font="pixel"] { --ui-font: "Pixelify Sans", monospace; --title-font: "Pixelify Sans", monospace; }
+.app-shell,
+.app-shell button,
+.app-shell input,
+.app-shell .hand-card,
+.app-shell .hand-card strong,
+.app-shell .card strong { font-family: var(--ui-font); }
+.app-shell .nav h1,
+.app-shell .panel h2 { font-family: var(--title-font); }
+.app-shell[data-font="pixel"] .card strong { letter-spacing: 0; }
+.app-shell[data-font="pixel"] .eyebrow { letter-spacing: .08em; }
+.app-shell[data-font="pixel"] .tableau.compact .card strong { font-size: clamp(.68rem, calc(var(--tile-size) * .1), .9rem); }
+.app-shell[data-font="pixel"] .tableau.compact .card .sub { font-size: clamp(.5rem, calc(var(--tile-size) * .07), .66rem); }
+.header-actions { display: flex; align-items: center; gap: .5rem; }
+.settings-trigger {
+  display: inline-grid;
+  place-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  padding: .25rem;
+  border: 1px solid #777;
+  border-radius: .5rem;
+  color: #eee;
+  background: #292929;
+}
+.settings-trigger .ui-icon { width: 1.1rem; height: 1.1rem; }
+.settings-panel { display: flex; flex-direction: column; gap: 1rem; }
+.setting-group { display: flex; flex-direction: column; gap: .5rem; }
+.setting-group > strong { font-size: 1rem; }
+.setting-group > small { color: #bbb; }
+.setting-fonts { display: flex; flex-wrap: wrap; gap: .4rem; }
+.setting-fonts .small-button { padding: .45rem .65rem; }
+.setting-fonts .active { color: #111; background: #fff; border-color: #fff; }
+.setting-size { display: flex; align-items: center; gap: .75rem; }
+.setting-size .small-button { width: 2.5rem; padding: .35rem; font-size: 1.3rem; }
+.setting-size output { min-width: 3rem; text-align: center; }

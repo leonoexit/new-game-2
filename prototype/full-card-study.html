@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>Little Valley Cards · Full card study</title>
+  <link rel="stylesheet" href="./full-card-study.css?v=4">
+</head>
+<body>
+  <main class="study-shell">
+    <header class="study-header">
+      <span>Little Valley Cards · UI study 01</span>
+      <h1>Full card</h1>
+      <p>Three cards, five shared fields, two visual directions.</p>
+    </header>
+    <nav class="style-tabs" aria-label="Card design direction">
+      <a href="?style=ink" data-style-link="ink">Ink hierarchy</a>
+      <a href="?style=reference" data-style-link="reference">Reference study</a>
+    </nav>
+    <nav class="sample-tabs" aria-label="Example cards">
+      <button type="button" data-card="soil" aria-pressed="true">Soil</button>
+      <button type="button" data-card="crop" aria-pressed="false">Turnip Crop</button>
+      <button type="button" data-card="bed" aria-pressed="false">Bed</button>
+    </nav>
+    <article class="full-card" aria-labelledby="card-title">
+      <div class="card-topline"><span>Type</span><strong id="card-type">Plot</strong></div>
+      <div class="card-heading"><span class="field-label">Identity</span><h2 id="card-title">Soil</h2></div>
+      <div class="card-art"><img id="card-image" src="./assets/empty-soil-512-v0.1.png" alt=""></div>
+      <dl class="card-fields">
+        <div class="card-field state-field"><dt>State</dt><dd id="card-state">Empty Soil</dd></div>
+        <div class="card-field action-field"><dt>Action</dt><dd id="card-actions"></dd></div>
+        <div class="card-field description-field"><dt>Description</dt><dd id="card-description"></dd></div>
+      </dl>
+    </article>
+    <p class="study-note">The two directions show the same five fields. Neither puts a gameplay button on the card.</p>
+  </main>
+  <script>
+    const examples = {
+      soil: {
+        type:'Plot', name:'Soil', state:'Empty Soil', image:'empty-soil-512-v0.1.png',
+        actions:[['Till', 'Hoe · 1 AP'], ['Plant', 'Sapling · 1 AP']],
+        description:'An open Field plot. Hoe changes it to Tilled Soil; a sapling can grow here without tilling.',
+      },
+      crop: {
+        type:'Item · Crop', name:'Turnip Crop', state:'Growing 0/2', image:'turnip-growing-512-v0.1.png',
+        actions:[['Water', 'Watering Can · 1 AP']],
+        description:'This crop advances one growth step after Sleep when watered. It can be harvested once mature.',
+      },
+      bed: {
+        type:'Equipment', name:'Bed', state:'No tracked state', image:null,
+        actions:[['Sleep', '0 AP']],
+        description:'Sleeping starts a new day and resolves daily changes.',
+      },
+    };
+    const byId = id => document.getElementById(id);
+    const style = new URLSearchParams(location.search).get('style') === 'reference' ? 'reference' : 'ink';
+    document.body.dataset.style = style;
+    document.querySelectorAll('[data-style-link]').forEach(link => {
+      if (link.dataset.styleLink === style) link.setAttribute('aria-current', 'page');
+    });
+    function showCard(key) {
+      const card = examples[key];
+      byId('card-type').textContent = card.type;
+      byId('card-title').textContent = card.name;
+      byId('card-state').textContent = card.state;
+      document.querySelector('.state-field').dataset.empty = String(card.state === 'No tracked state');
+      const art = document.querySelector('.card-art');
+      art.replaceChildren();
+      if (card.image) {
+        const image = document.createElement('img');
+        image.src = `./assets/${card.image}`;
+        image.alt = '';
+        art.append(image);
+      } else {
+        const mark = document.createElement('span');
+        mark.className = 'art-placeholder';
+        mark.textContent = '🛏️';
+        art.append(mark);
+      }
+      byId('card-actions').replaceChildren(...card.actions.map(([name, context]) => {
+        const row = document.createElement('div');
+        row.className = 'action-row';
+        const verb = document.createElement('strong'); verb.textContent = name;
+        const detail = document.createElement('span'); detail.textContent = context;
+        row.append(verb, detail);
+        return row;
+      }));
+      byId('card-description').textContent = card.description;
+      document.querySelectorAll('.sample-tabs button').forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.card === key));
+      });
+    }
+    document.querySelector('.sample-tabs').addEventListener('click', event => {
+      const key = event.target.closest('[data-card]')?.dataset.card;
+      if (key) showCard(key);
+    });
+    showCard('soil');
+  </script>
+</body>
+</html>

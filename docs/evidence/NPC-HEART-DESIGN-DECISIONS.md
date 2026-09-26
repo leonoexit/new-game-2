@@ -75,7 +75,15 @@ Ban đầu AI đề xuất Heart là tài nguyên chung. Sau đó người dùng
 - Mỗi Person nhận tối đa một món quà/ngày; tổng số người có thể tặng còn phụ thuộc AP và tài nguyên.
 - Giới hạn tặng quà là giới hạn nguồn sinh Heart, **chưa đồng nghĩa với chỉ được chơi Person một lần/ngày**. Nếu cho tích trữ Heart thì có thể có nhiều lần sử dụng, trừ khi bổ sung giới hạn khác.
 - **Đã chốt: Heart tồn tại qua ngày và có giới hạn tích trữ riêng cho từng Person.** Chưa chốt con số giới hạn.
-- Chưa chốt lượng Heart mỗi món quà, chi phí mỗi khả năng và các điều kiện sử dụng khác. Không mặc định một quà bằng một lần chơi lá.
+- Ở khung Person chung ban đầu, lượng Heart mỗi quà và chi phí mỗi khả năng còn mở; **Nell V0 về sau có luật riêng CG-50**: một Gift hợp lệ cho 1 Nell Heart, ability dùng 1 Heart/lần. Không áp số Nell cho Person tương lai.
+
+**CG-48 · chủ dự án chốt khi Heart đã đầy (2026-09-25):** nếu Heart của Person đang bằng cap riêng, người chơi giữ quà và chưa dùng Gift. Chạm Gift lúc này là thao tác **không hợp lệ**: không tiêu item, AP, không ghi đã Gift hôm nay và không tạo Heart. Quà đã Collect ở Item vẫn ở Item; Wild Herb chưa Collect thì vẫn là world card theo luật tồn tại riêng, không tự chuyển vào túi. Khi Heart giảm xuống dưới cap, có thể Gift trong một ngày Person hiện diện nếu các điều kiện Gift khác còn đúng. Đây là quy tắc chung cho Person; V0 hiện chỉ có Nell hoạt động. Quyết định **không chốt con số cap**, Gift preference hoặc phí Gift cụ thể. [Kiểm giấy Nell hai Season 03](NELL-TWO-SEASON-GIFT-HEART-CAP-PAPER-CHECK-03.md) dùng cap `2` như fixture riêng.
+
+**CG-49 · lựa chọn chuyển thể về quà Nell V0 (2026-09-25):** theo ủy quyền xử lý Gift preference, đúng item identity `Wild Herb` đã Collect vào Item là quà hợp lệ duy nhất cho Nell trong V0; [kiểm nguồn 04](NELL-WILD-HERB-GIFT-ELIGIBILITY-AUDIT-04.md) ghi lý do và ngoại lệ. Đây không là danh mục quà chung cho mọi Person. Phí Gift, lượng Heart và trị số cap vẫn phải phân biệt với điều kiện item này; `Fresh · Forage · Herb` trong fixture cũ không còn là cách kiểm loại lá/nguồn Gift hiện hành.
+
+**CG-50 · lựa chọn chuyển thể cho Nell V0 sau trace (2026-09-25):** [kiểm D6/D12/D18 05](NELL-GIFT-AP-HEART-DAYS-6-12-18-PAPER-CHECK-05.md) chọn phí gốc **1 AP/Gift** và **+1 Nell Heart/Gift hợp lệ**, kể cả Gift đầu sở hữu Nell. Heart mới dùng được sau commit cùng ngày; Nell credit kích hoạt trước Gift có thể trả AP Gift. Đây là luật giấy V0 riêng cho Nell, không phải số do chủ dự án chốt trực tiếp hoặc luật chung cho mọi Person. Cap số `2` vẫn là fixture; CG-48 tiếp tục chặn Gift khi Heart đầy.
+
+**CG-51 · lựa chọn chuyển thể cap Nell V0 (2026-09-25):** [kiểm Farm/Mine/Fishing 06](NELL-HEART-CAP-FARM-MINE-FISHING-PAPER-CHECK-06.md) chọn **cap 2 Nell Heart** cho luật giấy V0. Heart `2/2` chặn Gift và giữ quà theo CG-48; sau khi kích hoạt ability hạ xuống `1/2`, Gift lại được xét nếu Nell đang hiện và đủ item/AP. Cap 2 cho hai ngày cần AP relief liên tiếp sau hai Gift; cap 3 có lợi trong một nhánh ba ngày nhưng cần ba quà và mục tiêu phù hợp. Đây là lựa chọn của trợ lý sau phép kiểm, **không phải trị số chủ dự án nói trực tiếp**, không mặc định cho Person khác hoặc là cân bằng phát hành đã kiểm người chơi.
 
 Ý tưởng chơi đúng ngày/mùa được tăng cường vẫn là giả thuyết, chưa chốt.
 
@@ -125,9 +133,9 @@ Thiết kế mục tiêu phải giữ khả năng sống theo nhiều hướng �
 
 ## 6. Câu hỏi tiếp tục, theo mức phụ thuộc
 
-Cadence cap/timing đã được paper-test trong [PERSON-HEART-CADENCE-PAPER-SIMULATION-01.md](PERSON-HEART-CADENCE-PAPER-SIMULATION-01.md). Kết quả tạm, chưa phải quyết định đã chốt: cap 2 và cho dùng Heart vừa nhận trong cùng ngày là baseline mạnh hơn cap 1 hoặc next-day lock; chưa có bằng chứng cần cooldown chung.
+Cadence cap/timing đã được paper-test trong [PERSON-HEART-CADENCE-PAPER-SIMULATION-01.md](PERSON-HEART-CADENCE-PAPER-SIMULATION-01.md). Kết quả của phép thử cũ chỉ là fixture; về sau CG-51 đã chọn cap 2 **riêng Nell V0**, và §7.2 cho dùng Heart vừa nhận trong cùng ngày. Chưa có bằng chứng cần cooldown chung hoặc cap chung cho Person về sau.
 
-1. Giới hạn Heart của từng Person là bao nhiêu, và giới hạn đó tạo nhịp sử dụng Person thế nào?
+1. Khi thêm Person sau Nell V0, giới hạn Heart riêng của họ là bao nhiêu và tạo nhịp sử dụng thế nào? Nell đã có cap 2 theo CG-51.
 2. Cơ hội gặp Person được tự động công bố đầu ngày sẽ được biểu đạt như thế nào để đọc là “có thể gặp hôm nay”, không phải Person đứng chờ cả ngày?
 3. Nếu không có di chuyển trên map, địa điểm hoặc hoàn cảnh gắn với mỗi cơ hội gặp được biểu đạt bằng cấu trúc nào?
 4. Khả năng cụ thể của Person là gì; ngoài chi phí Heart còn có điều kiện hoặc giới hạn sử dụng nào?
