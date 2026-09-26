@@ -2,6 +2,8 @@
 
 Repository này chứa luật giấy, chứng cứ thử nghiệm, nghiên cứu hình ảnh và [bản chơi thử V0 chạy trên trình duyệt](prototype/README.md). Prototype dùng fixture cho những thông số chưa chốt; luật hiện hành vẫn do các contract trong `docs/current/` sở hữu.
 
+[Card Register devtool](prototype/card-register.html) cho phép đọc/sắp xếp toàn bộ danh mục lá V0 theo từng state và ghi phản hồi ảnh; [cách chạy và xuất dữ liệu từ workbook](prototype/README.md#card-register-devtool).
+
 ## Bắt đầu từ đâu
 
 1. [Bản đồ nguồn luật hiện hành](docs/current/README.md) chỉ rõ tài liệu nào sở hữu từng cơ chế và tài liệu nào là snapshot. Bắt đầu ở đây trước khi sửa luật.
