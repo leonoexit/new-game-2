@@ -1,0 +1,24 @@
+:root { font-family: ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif; color: #252b30; background: #ebeae6; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(100%, 420px); min-height: 100vh; padding: 26px 18px 38px; margin: 0 auto; background: #faf9f6; box-shadow: 0 0 30px #00000018; }
+h1, h2, p { margin-top: 0; }
+.eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+h1 { font-size: 28px; line-height: 1.06; margin: 12px 0 10px; }
+header p, .note, .footnote { color: #5d6367; font-size: 13px; line-height: 1.4; }
+section { margin-top: 28px; }
+.section-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.number { display: grid; place-items: center; width: 28px; height: 28px; border: 2px solid currentColor; border-radius: 50%; font-size: 12px; font-weight: 800; }
+h2 { font-size: 17px; margin: 0; }
+.note { margin-bottom: 12px; }
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 160px)); gap: 12px; }
+.card { position: relative; width: 160px; height: 160px; overflow: hidden; border: 2px solid #2a2e35; border-radius: 9px; background: #fff; box-shadow: 0 2px 0 #2a2e35; }
+.art { width: 100%; height: 100%; background-repeat: no-repeat; background-size: 300% 300%; }
+.pixel .art { background-image: url("source/chibi-pixel-board-v0.1.png"); image-rendering: pixelated; }
+.mbe .art { background-image: url("source/mbe-board-v0.1.png"); }
+.hedgerow { background-position: 0% 50%; }
+.turnip { background-position: 50% 50%; }
+.farmhouse { background-position: 100% 50%; }
+.name { position: absolute; bottom: 7px; left: 7px; right: 7px; color: #fff; font-size: 16px; font-weight: 900; line-height: 1.1; text-shadow: -1px -1px 0 #1e2530, 1px -1px 0 #1e2530, -1px 1px 0 #1e2530, 1px 1px 0 #1e2530, 0 2px 2px #1e2530; }
+.footnote { margin: 28px 0 0; }
+@media (max-width: 380px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } .card { width: 100%; height: auto; aspect-ratio: 1; } }

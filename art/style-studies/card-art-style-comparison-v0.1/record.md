@@ -1,7 +1,7 @@
 # Card art style comparison v0.1
 
 - Purpose: compare four visual languages on the same three V0 subjects before choosing any new production direction.
-- Status: `study` for all four boards. None is an approved reference or runtime asset.
+- Status: `superseded` study. The owner rejected the refined-pixel, storybook-gouache, and cut-paper directions on 2026-09-26. The first bold-outline trial also missed the key iconized composition of the owner's reference; later studies replace it. None is an approved reference or runtime asset.
 - Date: 2026-09-26.
 - Tool: built-in `image_gen`; model version and seed unavailable.
 - Shared subjects, left to right: Hedgerow with blue berries; Mature Turnip Crop with three white bulbs and violet shoulders; cream Farmhouse with terracotta roof and blue shutters.
@@ -18,7 +18,7 @@
 - **Cut paper:** clear layered shapes and a calmer surface, although this first board retains more background detail than the hypothesis called for.
 - **Bold-outline kawaii:** strongest immediate subject separation and mobile readability. Its playful toy-like energy may shift the world's tone away from the existing farm setting; evaluate that preference with the owner, not as a technical defect.
 - All four preserve the same basic subject identities, but generated compositions differ slightly. The comparison tests direction, not final production consistency or state-to-state continuity.
-- Approval: pending owner review. Do not assign these studies to the Card Register or playable build.
+- Approval: not granted. Do not assign these studies to the Card Register or playable build.
 
 ## Final prompts
 
