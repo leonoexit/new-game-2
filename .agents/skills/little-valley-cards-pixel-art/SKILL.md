@@ -1,9 +1,9 @@
 ---
-name: little-valley-cards-art
+name: little-valley-cards-pixel-art
 description: Explore, generate, edit, and review square raster artwork for Little Valley Cards while preserving its approved native-pixel language, universal 1:1 card-art contract, mobile readability, and asset records. Use for action illustrations, crop/plot art, NPC portraits, items, and style studies; do not use for card frames, UI layout, icons better authored in code/vector, or non-art implementation.
 ---
 
-# Little Valley Cards Art
+# Little Valley Cards Pixel Art
 
 Create a coherent library of readable card artwork, not decorative images that happen to sit inside cards. The action must read at phone size before detail or beauty.
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Little Valley Cards Pixel Art"
+  short_description: "Develop consistent card art for Little Valley Cards"
+  default_prompt: "Use $little-valley-cards-pixel-art to explore, generate, or review this card asset."
